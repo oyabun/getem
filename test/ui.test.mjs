@@ -23,6 +23,9 @@ window.Element.prototype.scrollTo = () => {};
 window.navigator.clipboard = { writeText: async () => {} };
 const icons = readFileSync(root + "icons.js", "utf8").replace(/^export /gm, "");
 const code = icons + "\n" + readFileSync(root + "app.js", "utf8").replace(/^import .*icons\.js";\n/m, "");
+// Most of these checks walk through the sidebar, so this page starts with it open (a new visitor's starts hidden:
+// see "a first visit starts with the sidebar hidden" below).
+window.localStorage.setItem("sidebarShown", "1");
 try { window.eval(code); } catch (e) { errors.push("eval: " + e.stack); }
 await new Promise((r) => setTimeout(r, 300));
 
@@ -404,6 +407,7 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   page2.q("#share").dispatchEvent(new page2.w.MouseEvent("click", { bubbles: true })); await new Promise((r) => setTimeout(r, 20));
   check("the same selection always gives the same code", page2.copied() === copiedLink);
   const page3 = await bootAt("http://localhost:3000/#vlc,iina,keka");
+  check("a first visit starts with the sidebar hidden, packs and categories in the toolbar", page3.w.document.body.dataset.sidebar === "hidden" && page3.qa("#filters .tool-field").length === 2);
   check("older #a,b,c links still work", picked(page3) === "IINA|Keka|VLC", picked(page3));
   const page4 = await bootAt("http://localhost:3000/#s=!!!not-a-code!!!");
   check("a broken code is ignored without errors", page4.qa("#catalog .app").length > 50 && page4.q("#bar").hidden);

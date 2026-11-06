@@ -15,7 +15,8 @@ const SHOW_INSTALL_FILTER = false;
 const DEFAULT_PRICE = "all";
 const filters = { price: store.get("price") || DEFAULT_PRICE, source: SHOW_INSTALL_FILTER ? store.get("source") || "any" : "any" };
 // ☰ shows or hides the sidebar; « (inside it) switches between full width and an icon rail.
-let sidebarShown = store.get("sidebarShown") !== "0";
+// The sidebar starts hidden (packs and categories are dropdowns in the toolbar); ☰ opens it, and that is remembered.
+let sidebarShown = store.get("sidebarShown") === "1";
 let sidebarWide = store.get("sidebarWide") !== "0";
 const sidebarMode = () => (!sidebarShown ? "hidden" : sidebarWide ? "expanded" : "rail");
 document.body.dataset.sidebar = sidebarMode();

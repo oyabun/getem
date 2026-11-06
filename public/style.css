@@ -1075,3 +1075,11 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
   .tagline { margin: 0.45rem 0 0.35rem; font-size: 1.2rem; line-height: 1.35; text-wrap: balance; }
   .subline { max-width: 30ch; margin: 0 auto; text-wrap: balance; }
 }
+
+/* the "beta" tag after the wordmark */
+.wordmark .beta {
+  display: inline-block; margin-left: 0.5rem; padding: 0.22em 0.6em; vertical-align: 0.95em;
+  font-size: 0.22em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1;
+  color: #fff; background: linear-gradient(135deg, #8b7bf2, #6a59e0); border-radius: 999px;
+  box-shadow: 0 4px 12px rgb(106 89 224 / 0.35); -webkit-text-fill-color: #fff;
+}
