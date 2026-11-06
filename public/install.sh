@@ -48,7 +48,8 @@ load_catalog() {
 
 # Print the catalog row for an app id.
 lookup() {
-  printf '%s\n' "$CATALOG" | awk -F'\t' -v id="$1" '$1 == id { print; exit }'
+  # A here-string, not a pipe: with pipefail, awk stopping early would kill the writer with SIGPIPE and fail the lookup.
+  awk -F'\t' -v id="$1" '$1 == id { print; exit }' <<<"$CATALOG"
 }
 
 macos_major() { sw_vers -productVersion 2>/dev/null | cut -d. -f1; }
