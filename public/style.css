@@ -1076,10 +1076,12 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
   .subline { max-width: 30ch; margin: 0 auto; text-wrap: balance; }
 }
 
-/* the "beta" tag after the wordmark */
+.top .wordmark { position: relative; width: fit-content; }
+/* the "beta" tag: a small sticker, tilted, tucked against the top of the wordmark */
 .wordmark .beta {
-  display: inline-block; margin-left: 0.5rem; padding: 0.22em 0.6em; vertical-align: 0.95em;
-  font-size: 0.22em; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1;
-  color: #fff; background: linear-gradient(135deg, #8b7bf2, #6a59e0); border-radius: 999px;
-  box-shadow: 0 4px 12px rgb(106 89 224 / 0.35); -webkit-text-fill-color: #fff;
+  position: absolute; top: 0.05em; left: 100%; margin-left: 0.1rem; padding: 3px 7px 2px; white-space: nowrap;
+  transform: rotate(-12deg); transform-origin: left bottom;
+  font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.2;
+  color: #fff; -webkit-text-fill-color: #fff; background: linear-gradient(135deg, #8b7bf2, #6a59e0); border-radius: 5px;
+  box-shadow: 0 2px 6px rgb(106 89 224 / 0.35);
 }
