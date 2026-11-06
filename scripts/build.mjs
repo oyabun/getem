@@ -417,6 +417,20 @@ async function main() {
   if (siteUrl) installer = installer.replaceAll("__SITE_URL__", siteUrl);
   await writeFile(path("public/install.sh"), installer, { mode: 0o755 });
 
+  // Cache busting: GitHub Pages lets browsers keep files for 10 minutes, so a fresh page could otherwise run with
+  // the previous script. The page's links to its script and stylesheet (and the script's import of the icons)
+  // carry a fingerprint of the file's content, which changes only when the file does.
+  const fingerprint = (text) => createHash("sha256").update(text).digest("hex").slice(0, 10);
+  let appJs = await readFile(path("public/app.js"), "utf8");
+  const iconsJs = await readFile(path("public/icons.js"), "utf8");
+  appJs = appJs.replace(/from "\.\/icons\.js(\?v=[0-9a-f]+)?"/, `from "./icons.js?v=${fingerprint(iconsJs)}"`);
+  await writeFile(path("public/app.js"), appJs);
+  const styleCss = await readFile(path("public/style.css"), "utf8");
+  const page = (await readFile(path("public/index.html"), "utf8"))
+    .replace(/href="style\.css(\?v=[0-9a-f]+)?"/, `href="style.css?v=${fingerprint(styleCss)}"`)
+    .replace(/src="app\.js(\?v=[0-9a-f]+)?"/, `src="app.js?v=${fingerprint(appJs)}"`);
+  await writeFile(path("public/index.html"), page);
+
   await writeFile(path("data/hashes.json"), JSON.stringify(Object.fromEntries(hashCache), null, 1) + "\n");
   await writeFile(path("data/skipped.txt"), skipped.sort().join("\n") + "\n");
   console.log(`catalog: ${unique.length} installable apps, ${skipped.length} skipped (see data/skipped.txt)`);

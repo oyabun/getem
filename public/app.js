@@ -1,4 +1,4 @@
-import { lucide } from "./icons.js";
+import { lucide } from "./icons.js?v=b4d60b8c7f";
 const $ = (sel) => document.querySelector(sel);
 // A link carries the selection as #s=<code> (see encodeSelection) or, in older links, as a plain list #a,b,c.
 const rawHash = location.hash.slice(1);
@@ -1078,7 +1078,7 @@ const aiPrompt = () => [
 ].join("\n");
 async function copyAiPrompt() {
   await navigator.clipboard.writeText(aiPrompt());
-  toast("Copied a prompt for your AI assistant: paste it into ChatGPT, Claude or any other");
+  toast("Copied! Paste it into ChatGPT, Claude or any AI assistant and let it check the command for you");
 }
 
 async function copyCommand() {
@@ -1366,7 +1366,7 @@ async function main() {
     openDropdown(btn, [
       { value: "copy", text: "Copy command", icon: "copy", hint: "Paste it into Terminal" },
       { value: "download", text: "Download .sh", icon: "download", hint: "A script with your apps built in; works offline" },
-      { value: "ask-ai", text: "Ask your AI first", icon: "bot", hint: "Copies a prompt for ChatGPT, Claude or any assistant to check the command" },
+      { value: "ask-ai", text: "Not feeling safe? Ask your AI", icon: "bot", hint: "Copies the command with a prompt: paste it into ChatGPT, Claude or any assistant and let it check it for you" },
     ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadScript(); else copyAiPrompt(); });
   });
   // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
@@ -1380,5 +1380,5 @@ async function main() {
 }
 
 main().catch((err) => {
-  $("#catalog").replaceChildren(el("p", {}, `Could not load the app list: ${err.message}. Run npm run build first.`));
+  $("#catalog").replaceChildren(el("p", {}, `Could not load the app list (${err.message}). Please reload the page.`));
 });

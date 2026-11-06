@@ -8,7 +8,7 @@ import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../public/", import.meta.url));
-const html = readFileSync(root + "index.html", "utf8").replace(/<script[^>]*src="app.js"[^>]*><\/script>/, "");
+const html = readFileSync(root + "index.html", "utf8").replace(/<script[^>]*src="app\.js[^"]*"[^>]*><\/script>/, "");
 const catalog = JSON.parse(readFileSync(root + "catalog.json", "utf8"));
 const errors = [];
 const dom = new JSDOM(html, { url: "http://localhost:3000/", runScripts: "outside-only", pretendToBeVisual: true });
@@ -22,7 +22,7 @@ window.HTMLDialogElement.prototype.close = function () { this.removeAttribute("o
 window.Element.prototype.scrollTo = () => {};
 window.navigator.clipboard = { writeText: async () => {} };
 const icons = readFileSync(root + "icons.js", "utf8").replace(/^export /gm, "");
-const code = icons + "\n" + readFileSync(root + "app.js", "utf8").replace(/^import .*icons\.js";\n/m, "");
+const code = icons + "\n" + readFileSync(root + "app.js", "utf8").replace(/^import .*icons\.js[^"]*";\n/m, "");
 // Most of these checks walk through the sidebar, so this page starts with it open (a new visitor's starts hidden:
 // see "a first visit starts with the sidebar hidden" below).
 window.localStorage.setItem("sidebarShown", "1");
@@ -430,7 +430,7 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   check("Download .sh is no longer a separate button", !$("#download") && !!$(".split #copy") && !!$(".split #get-more"));
   click($("#get-more"));
   const opts = $$(".dd-menu .dd-opt-name").map((n) => n.textContent);
-  check("the arrow offers Copy command, Download .sh and Ask your AI first", opts.join("|") === "Copy command|Download .sh|Ask your AI first", opts.join("|"));
+  check("the arrow offers Copy command, Download .sh and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Download .sh|Not feeling safe? Ask your AI", opts.join("|"));
   let clip = ""; window.navigator.clipboard = { writeText: async (t) => { clip = t; } };
   click($$(".dd-menu .dd-opt").find((o) => /Ask your AI/.test(o.textContent)));
   await new Promise((r) => setTimeout(r, 20));
