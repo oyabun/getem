@@ -1240,13 +1240,13 @@ function setupTheme() {
 
 // Words in the FAQ that do what they say: open an app, show a pack, copy a command, toggle --dry-run.
 // The ones that need a list ("Copy link", "--dry-run", "Download .sh") only work once you've picked something.
-const FAQ_ICON = { "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
+const FAQ_ICON = { app: "link", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
 function setupFaqActions() {
   for (const b of document.querySelectorAll(".faq-act")) {
     const act = b.dataset.act;
     const app = act === "app" ? byId(b.dataset.app) : null;
     if (act === "app" && !app) { b.replaceWith(document.createTextNode(b.textContent)); continue; }
-    b.append(el("span", { className: "faq-act-ic", ariaHidden: "true" }, app ? icon(app, "icon icon-xs") : lucide(FAQ_ICON[act], 14)));
+    b.append(el("span", { className: "faq-act-ic", ariaHidden: "true" }, lucide(FAQ_ICON[act], 14)));
     b.title = {
       app: `About ${app?.name}`, profile: "Show this starter pack", "copy-update": "Copy this command",
       "copy-link": "Copy a link to your install list", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
