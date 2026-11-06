@@ -1,16 +1,26 @@
-# Getem.sh
+<p align="center">
+  <img src="public/img/logo-288.png" width="160" alt="Get'Em! mascot: a happy folder full of apps">
+</p>
 
-A curated list of Mac apps for setting up a new Mac quickly. Pick apps (or a starter pack for your role) on a web page and get one Terminal command that installs them all:
+<h1 align="center">Get'Em!</h1>
+
+<p align="center"><strong>New Mac? One command, and you're ready to go.</strong><br>
+Hand-picked Mac apps, installed straight from each publisher and checksum-verified.</p>
+
+![Get'Em! with the Developer starter pack chosen and ten apps in the install list](docs/screenshot.png)
+
+Pick apps (or a starter pack for your role) on a web page and get one Terminal command that installs them all:
 
 ```sh
 curl -fsSL https://your-site/install.sh | bash -s -- iina rectangle stats
 ```
 
 - **The list is ours.** `data/apps.json` holds the core picks, `data/extras.json` the apps added later and `data/builtins.json` the ones installed through Apple or npm. Nothing is pulled in automatically, so an app is listed only if we chose it.
-- **Starter packs:** `data/profiles.json` defines the role packs (Developer, Designer ...). Apps in the chosen pack get a Recommended badge. `data/families.json` groups apps from one publisher.
+- **Starter packs:** `data/profiles.json` defines the role packs (Developer, Designer ...). A pack is either a plain list or parts to choose from: pick one (an editor, a browser), pick any (runtimes, chat apps) or included. `data/families.json` groups apps from one publisher.
+- **Versions:** Java, Node.js, Python and Go are one card each with a version dropdown.
 - **Versions, download URLs and SHA-256 checksums:** from the [Homebrew Cask API](https://formulae.brew.sh/api/cask.json) or, for apps outside Homebrew, the publisher's GitHub release page or a fixed download link. Homebrew itself is not needed on the user's Mac.
-- **Installer:** downloads from each publisher, verifies the checksum, and handles dmg, zip, tar and pkg files. It picks the Apple Silicon or Intel build and skips apps that are already up to date. Add `--dry-run` to preview or `--force` to reinstall.
-- **Download .sh:** the page can also produce a script with the chosen apps built in.
+- **Installer:** downloads from each publisher, verifies the checksum, and handles dmg, zip, tar and pkg files. It picks the Apple Silicon or Intel build and skips apps that are already up to date. Add `--dry-run` to preview, `--force` to reinstall or `--update` to refresh everything installed from the list.
+- **Share and download:** a short link restores the same selection, and **Download .sh** produces a script with the chosen apps built in.
 
 ## Develop
 
@@ -27,10 +37,9 @@ are listed in `data/skipped.txt`, with the reason.
 
 ## Deploy
 
-Any static host works. On Vercel, `vercel.json` already sets the build. `SITE_URL` is filled in
-from `VERCEL_PROJECT_PRODUCTION_URL`; set `SITE_URL` yourself for other hosts. Versions are
-fixed at build time, so rebuild daily (for example with a scheduled GitHub Action calling a Vercel
-deploy hook) to stay current.
+It's a static site: run `npm run build` and publish the `public/` folder on any static host. Set `SITE_URL`
+to the site's address when building, so the generated `install.sh` knows where to fetch the catalog from.
+Versions are fixed at build time, so rebuild regularly (daily, for example) to stay current.
 
 ## Credits
 
