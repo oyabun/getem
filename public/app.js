@@ -1240,7 +1240,7 @@ function setupTheme() {
 
 // Words in the FAQ that do what they say: open an app, show a pack, copy a command, toggle --dry-run.
 // The ones that need a list ("Copy link", "--dry-run", "Download .sh") only work once you've picked something.
-const FAQ_ICON = { app: "link", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
+const FAQ_ICON = { app: "square-plus", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
 function setupFaqActions() {
   for (const b of document.querySelectorAll(".faq-act")) {
     const act = b.dataset.act;
@@ -1248,12 +1248,15 @@ function setupFaqActions() {
     if (act === "app" && !app) { b.replaceWith(document.createTextNode(b.textContent)); continue; }
     b.append(el("span", { className: "faq-act-ic", ariaHidden: "true" }, lucide(FAQ_ICON[act], 14)));
     b.title = {
-      app: `About ${app?.name}`, profile: "Show this starter pack", "copy-update": "Copy this command",
+      app: `Add ${app?.name} to your install list`, profile: "Show this starter pack", "copy-update": "Copy this command",
       "copy-link": "Copy a link to your install list", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
     }[act];
     b.addEventListener("click", async () => {
       if (b.getAttribute("aria-disabled") === "true") { toast("Pick some apps first"); return; }
-      if (act === "app") openModal(app);
+      if (act === "app") {
+        if (selected.has(app.id)) toast(`${app.name} is already in your install list`);
+        else { selected.add(app.id); update(); toast(`${app.name} added to your install list`); }
+      }
       else if (act === "profile") { setProfile(b.dataset.profile); window.scrollTo({ top: Math.max(0, $("#catalog").getBoundingClientRect().top + scrollY - (($("#topbar").offsetHeight || 0) + 16)), behavior: "smooth" }); }
       else if (act === "copy-update") { await navigator.clipboard.writeText($("#update-cmd").textContent); toast("Update command copied"); }
       else if (act === "copy-link") { await copyLink(); toast("Link to your install list copied"); }
