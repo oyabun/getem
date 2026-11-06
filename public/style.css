@@ -1009,3 +1009,22 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 }
 #copy:not(.done):active { transform: translateY(1px); }
 @media (prefers-reduced-motion: reduce) { #copy:not(.done):hover { animation: none; background-position: 30% 50%; } }
+
+/* install list: more air between rows, a wider panel, and the trash icons stay quiet until you point at a row */
+.drawer { width: min(380px, calc(100vw - 1.5rem)); }
+.drawer-head { padding: 1rem 1.15rem; }
+.drawer-list { padding: 0.4rem 0.75rem 1rem; }
+.drawer-cat { margin: 1.1rem 0.5rem 0.45rem; }
+.drawer-cat:first-child { margin-top: 0.7rem; }
+.row { gap: 0.8rem; padding: 0.5rem 0.55rem; }
+.row + .row { margin-top: 2px; }
+.row .icon-sm { width: 32px; height: 32px; }
+.row-x { width: 30px; height: 30px; border-radius: 8px; opacity: 0.45; transition: opacity 0.15s, background 0.15s, color 0.15s; }
+.row:hover .row-x, .row-x:focus-visible { opacity: 1; }
+.row-x:hover { background: #ef4444; color: #fff; }
+@media (hover: none) { .row-x { opacity: 0.8; } }
+@media (max-width: 760px) { .drawer { width: auto; } }
+/* once the real icon has loaded, the coloured tint behind it must not bleed through the rounded edge */
+.icon.has-img .icon-clip { background: transparent; }
+/* the install list opens above the sticky top bar, not under it */
+.drawer { z-index: 32; }
