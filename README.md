@@ -28,7 +28,11 @@ curl -fsSL https://your-site/install.sh | bash -s -- iina rectangle stats
 npm run build   # refresh versions and checksums → public/catalog.json, catalog.tsv, install.sh
 npm run media   # find icons and screenshots for new apps (add -- --deep for a harder pass)
 npm run dev     # http://localhost:3000
+npm test        # catalog checks, the installer in --dry-run, and the page itself in jsdom
 ```
+
+The tests run on every push (`.github/workflows/test.yml`) and before each deploy. The page tests use real apps
+and packs from the catalog (Developer, Muggle, VLC ...), so when you curate those, a test may need the new name.
 
 Curating: see `data/README.md` for what each file does. In short: delete an entry from `data/apps.json` to
 drop an app (or from `data/extras.json` for later additions), change its `category` there to move it, and use

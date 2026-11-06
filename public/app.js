@@ -272,7 +272,9 @@ function openLightbox(urls, index, alt) {
 $("#lb-close").addEventListener("click", () => lightbox.close());
 $("#lb-prev").addEventListener("click", () => showShot(lbIndex - 1));
 $("#lb-next").addEventListener("click", () => showShot(lbIndex + 1));
-lightbox.addEventListener("click", (e) => { if (e.target === lightbox) lightbox.close(); });
+let lbPressedOnBackdrop = false;
+lightbox.addEventListener("pointerdown", (e) => { lbPressedOnBackdrop = e.target === lightbox; });
+lightbox.addEventListener("click", (e) => { if (e.target === lightbox && lbPressedOnBackdrop) lightbox.close(); lbPressedOnBackdrop = false; });
 lightbox.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") { e.preventDefault(); showShot(lbIndex - 1); }
   if (e.key === "ArrowRight") { e.preventDefault(); showShot(lbIndex + 1); }
@@ -1337,7 +1339,12 @@ async function main() {
   new ResizeObserver(measure).observe($("#count"));
   addEventListener("resize", measure);
   $("#download").addEventListener("click", downloadScript);
-  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+  // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
+  // on different elements is delivered to their common parent (the dialog itself), so without this a press on
+  // "Add to install list" that ends a little off the button would close the details.
+  let pressedOnBackdrop = false;
+  dialog.addEventListener("pointerdown", (e) => { pressedOnBackdrop = e.target === dialog; });
+  dialog.addEventListener("click", (e) => { if (e.target === dialog && pressedOnBackdrop) dialog.close(); pressedOnBackdrop = false; });
   render();
   update();
 }

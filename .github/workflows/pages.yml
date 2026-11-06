@@ -26,6 +26,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
+      - run: npm ci
       - id: pages
         uses: actions/configure-pages@v5
       # SITE_URL is where install.sh fetches the catalog from: the Pages address, or a custom domain set as the
@@ -33,6 +35,8 @@ jobs:
       - run: npm run build
         env:
           SITE_URL: ${{ vars.SITE_URL || steps.pages.outputs.base_url }}
+      # The fresh catalog has to pass the tests before it goes live; if it doesn't, the last good site stays up.
+      - run: npm test
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public
