@@ -1,0 +1,105 @@
+{
+  "blender": {
+    "homepage": "https://www.blender.org/"
+  },
+  "maccy": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ba/7c/1c/ba7c1c30-46f5-ff64-f126-407fde858b2d/AppIcon-0-0-85-220-0-0-6-0-2x.png/512x512bb.png",
+    "screenshots": [
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/59/12/d8/5912d8f7-936d-992a-fbd3-c2ac51ab4984/ed8f76c6-46a1-46b2-b7ac-ff420a8f8c26_01-Main.png/800x500bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f5/b1/46/f5b14653-90fa-1467-8c9e-aace4f98df1d/cb67dc6d-b92a-43f9-93dc-f9739691d437_02-Types.png/800x500bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b1/47/96/b147962c-a405-9415-7553-7dd9182a3a6f/03-Search.png/800x500bb.jpg"
+    ]
+  },
+  "shinybox": {
+    "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/59/8b/35/598b355c-166b-1671-73b6-50966d633d32/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "screenshots": [
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ae/49/b6/ae49b6c5-f608-808a-e80d-8c0f4bed0304/01-library-iphone-17.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1c/2e/ec/1c2eec5b-0202-3799-778e-9c6117c12d5b/02-lists-iphone-17.png/320x480bb.jpg",
+      "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e9/ae/72/e9ae7264-db88-4c74-41a7-97977290bc32/03-links-iphone-17.png/320x480bb.jpg"
+    ]
+  },
+  "photocraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/photocraft/HEAD/assets/app-icon/photocraft-1024.png"
+  },
+  "vectorcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/vectorcraft/HEAD/assets/app-icon/vectorcraft-macos-512.png"
+  },
+  "filmcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/filmcraft/HEAD/assets/app-icon/filmcraft-macos-512.png"
+  },
+  "lightcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/lightcraft/HEAD/assets/app-icon/lightcraft-macos-512.png"
+  },
+  "pdfcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/pdfcraft/HEAD/assets/app-icon/pdfcraft-1024.png"
+  },
+  "effectcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/effectcraft/HEAD/assets/app-icon/effectcraft-macos-512.png"
+  },
+  "designcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/designcraft/HEAD/assets/app-icon/designcraft-macos-512.png"
+  },
+  "figcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/figcraft/HEAD/assets/app-icon/figcraft-1024.png"
+  },
+  "texturecraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/texturecraft/HEAD/assets/app-icon/texturecraft-1024.png"
+  },
+  "materialcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/materialcraft/HEAD/assets/app-icon/materialcraft-1024.png"
+  },
+  "wordcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/wordcraft/HEAD/assets/app-icon/wordcraft-macos-512.png"
+  },
+  "soundcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/soundcraft/HEAD/assets/app-icon/soundcraft-macos-512.png"
+  },
+  "deckcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/deckcraft/HEAD/assets/app-icon/deckcraft-1024.png"
+  },
+  "cadcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/cadcraft/HEAD/assets/app-icon/cadcraft-macos-512.png"
+  },
+  "gridcraft": {
+    "icon": "https://raw.githubusercontent.com/storytold/gridcraft/HEAD/assets/app-icon/gridcraft-macos-512.png"
+  },
+  "craft-anything": {
+    "icon": "https://raw.githubusercontent.com/storytold/craft-anything/HEAD/assets/app-icon/craft-anything-1024.png"
+  },
+  "artcraft": {
+    "icon": "https://getartcraft.com/artcraft-icon.svg"
+  },
+  "intellij-idea": {
+    "icon": "https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png"
+  },
+  "pycharm": {
+    "icon": "https://resources.jetbrains.com/storage/products/pycharm/img/meta/pycharm_logo_300x300.png"
+  },
+  "webstorm": {
+    "icon": "https://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png"
+  },
+  "goland": {
+    "icon": "https://resources.jetbrains.com/storage/products/goland/img/meta/goland_logo_300x300.png"
+  },
+  "clion": {
+    "icon": "https://resources.jetbrains.com/storage/products/clion/img/meta/clion_logo_300x300.png"
+  },
+  "rider": {
+    "icon": "https://resources.jetbrains.com/storage/products/rider/img/meta/rider_logo_300x300.png"
+  },
+  "phpstorm": {
+    "icon": "https://resources.jetbrains.com/storage/products/phpstorm/img/meta/phpstorm_logo_300x300.png"
+  },
+  "datagrip": {
+    "icon": "https://resources.jetbrains.com/storage/products/datagrip/img/meta/datagrip_logo_300x300.png"
+  },
+  "rubymine": {
+    "icon": "https://resources.jetbrains.com/storage/products/rubymine/img/meta/rubymine_logo_300x300.png"
+  },
+  "jetbrains-toolbox": {
+    "icon": "https://resources.jetbrains.com/storage/products/toolbox/img/meta/toolbox_logo_300x300.png"
+  },
+  "rustrover": {
+    "noIcon": true
+  }
+}

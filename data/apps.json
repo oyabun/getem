@@ -1,0 +1,2731 @@
+{
+ "apps": [
+  {
+   "name": "Ollama",
+   "repo": "ollama/ollama",
+   "description": "Run LLMs locally (Llama, Gemma, Mistral, and more)",
+   "category": "ai",
+   "homepage": "https://ollama.com",
+   "icon": "https://github.com/ollama.png?size=256",
+   "stars": 185660,
+   "slug": "ollama"
+  },
+  {
+   "name": "Excalidraw",
+   "repo": "excalidraw/excalidraw",
+   "description": "Virtual whiteboard for hand-drawn diagrams",
+   "category": "design",
+   "homepage": "https://excalidraw.com",
+   "icon": "https://github.com/excalidraw.png?size=256",
+   "stars": 135024,
+   "slug": "excalidraw"
+  },
+  {
+   "name": "Neovim",
+   "repo": "neovim/neovim",
+   "description": "Hyperextensible Vim-based text editor",
+   "category": "code-editors",
+   "homepage": "https://neovim.io",
+   "icon": "https://github.com/neovim.png?size=256",
+   "stars": 103298,
+   "slug": "neovim"
+  },
+  {
+   "name": "LocalSend",
+   "repo": "localsend/localsend",
+   "description": "Share files to nearby devices",
+   "category": "files",
+   "homepage": "https://localsend.org",
+   "icon": "https://github.com/localsend.png?size=256",
+   "stars": 97031,
+   "slug": "localsend"
+  },
+  {
+   "name": "Zed",
+   "repo": "zed-industries/zed",
+   "description": "High-performance multiplayer code editor",
+   "category": "code-editors",
+   "homepage": "https://zed.dev",
+   "icon": "https://avatars.githubusercontent.com/u/79345384?s=200&v=4",
+   "screenshot": "https://zed.dev/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flanguage-aware.147d5036.png&w=3840&q=75",
+   "stars": 92543,
+   "slug": "zed"
+  },
+  {
+   "name": "NextChat",
+   "repo": "ChatGPTNextWeb/NextChat",
+   "description": "Light and fast AI chat assistant",
+   "category": "ai",
+   "homepage": "https://nextchat.club",
+   "icon": "https://github.com/ChatGPTNextWeb.png?size=256",
+   "stars": 88937,
+   "slug": "nextchat"
+  },
+  {
+   "name": "LobeHub",
+   "repo": "lobehub/lobehub",
+   "description": "Modern AI chat framework with plugins",
+   "category": "ai",
+   "homepage": "https://lobehub.com",
+   "icon": "https://github.com/lobehub.png?size=256",
+   "stars": 83706,
+   "slug": "lobehub"
+  },
+  {
+   "name": "Hoppscotch",
+   "repo": "hoppscotch/hoppscotch",
+   "description": "Open-source API development ecosystem",
+   "category": "api",
+   "homepage": "https://hoppscotch.io",
+   "icon": "https://hoppscotch.io/icon.png",
+   "screenshot": "https://raw.githubusercontent.com/hoppscotch/hoppscotch/main/packages/hoppscotch-common/public/images/banner-dark.png",
+   "stars": 80722,
+   "slug": "hoppscotch"
+  },
+  {
+   "name": "OBS Studio",
+   "repo": "obsproject/obs-studio",
+   "description": "Video recording and live streaming",
+   "category": "screen-capture",
+   "homepage": "https://obsproject.com",
+   "icon": "https://github.com/obsproject.png?size=256",
+   "stars": 78823,
+   "slug": "obs-studio"
+  },
+  {
+   "name": "GPT4All",
+   "repo": "nomic-ai/gpt4all",
+   "description": "Run local LLMs on CPU/GPU with M-series support",
+   "category": "ai",
+   "homepage": "https://nomic.ai/gpt4all",
+   "icon": "https://github.com/nomic-ai.png?size=256",
+   "stars": 77347,
+   "slug": "gpt4all"
+  },
+  {
+   "name": "Tabby",
+   "repo": "Eugeny/tabby",
+   "description": "Modern terminal with serial port support",
+   "category": "terminal",
+   "homepage": "https://tabby.sh/",
+   "icon": "https://tabby.sh/32bf32ff6c87e8d18932.svg",
+   "screenshot": "https://github.com/Eugeny/tabby/raw/master/docs/readme.png",
+   "stars": 75261,
+   "slug": "tabby"
+  },
+  {
+   "name": "Mole",
+   "repo": "tw93/Mole",
+   "description": "Clean, optimize and monitor your Mac from a native app or the command line",
+   "category": "system-utilities",
+   "homepage": "https://mole.fit",
+   "stars": 73617,
+   "slug": "mole"
+  },
+  {
+   "name": "AnythingLLM",
+   "repo": "Mintplex-Labs/anything-llm",
+   "description": "All-in-one AI app with document chat",
+   "category": "ai",
+   "homepage": "https://anythingllm.com",
+   "icon": "https://github.com/Mintplex-Labs.png?size=256",
+   "stars": 67849,
+   "slug": "anythingllm"
+  },
+  {
+   "name": "Alacritty",
+   "repo": "alacritty/alacritty",
+   "description": "GPU-accelerated terminal emulator",
+   "category": "terminal",
+   "homepage": "https://alacritty.org",
+   "icon": "https://alacritty.org/alacritty-simple.svg",
+   "screenshot": "https://alacritty.org/alacritty_example.png",
+   "stars": 66105,
+   "slug": "alacritty"
+  },
+  {
+   "name": "draw.io",
+   "repo": "jgraph/drawio-desktop",
+   "description": "Diagram and flowchart maker",
+   "category": "design",
+   "homepage": "https://www.diagrams.net",
+   "icon": "https://github.com/jgraph.png?size=256",
+   "stars": 63772,
+   "slug": "draw-io"
+  },
+  {
+   "name": "MarkText",
+   "repo": "marktext/marktext",
+   "description": "Simple and elegant markdown editor",
+   "category": "notes-writing",
+   "homepage": "https://www.marktext.me",
+   "icon": "https://github.com/marktext.png?size=256",
+   "stars": 63497,
+   "slug": "marktext"
+  },
+  {
+   "name": "Ghostty",
+   "repo": "ghostty-org/ghostty",
+   "description": "Fast native terminal with modern features",
+   "category": "terminal",
+   "homepage": "https://ghostty.org",
+   "icon": "https://github.com/ghostty-org.png?size=256",
+   "stars": 63257,
+   "slug": "ghostty"
+  },
+  {
+   "name": "Joplin",
+   "repo": "laurent22/joplin",
+   "description": "Note-taking app with sync and encryption",
+   "category": "notes-writing",
+   "homepage": "https://joplinapp.org",
+   "stars": 56987,
+   "slug": "joplin"
+  },
+  {
+   "name": "ImHex",
+   "repo": "WerWolv/ImHex",
+   "description": "Feature-rich hex editor",
+   "category": "developer-tools",
+   "homepage": "https://imhex.werwolv.net/",
+   "stars": 55710,
+   "slug": "imhex"
+  },
+  {
+   "name": "DBeaver",
+   "repo": "dbeaver/dbeaver",
+   "description": "Universal database tool and SQL client",
+   "category": "database",
+   "homepage": "https://dbeaver.io",
+   "icon": "https://github.com/dbeaver.png?size=256",
+   "stars": 52268,
+   "slug": "dbeaver"
+  },
+  {
+   "name": "Upscayl",
+   "repo": "upscayl/upscayl",
+   "description": "AI image upscaler",
+   "category": "ai",
+   "homepage": "https://upscayl.org",
+   "icon": "https://github.com/upscayl.png?size=256",
+   "stars": 51625,
+   "slug": "upscayl"
+  },
+  {
+   "name": "Bruno",
+   "repo": "usebruno/bruno",
+   "description": "API client",
+   "category": "api",
+   "homepage": "https://www.usebruno.com/",
+   "icon": "https://github.com/usebruno/bruno/raw/main/assets/images/logo-transparent.png",
+   "screenshot": "https://github.com/usebruno/bruno/raw/main/assets/images/landing-2.png",
+   "stars": 47987,
+   "slug": "bruno"
+  },
+  {
+   "name": "IINA",
+   "repo": "iina/iina",
+   "description": "Modern video player with minimalist design for macOS",
+   "category": "video",
+   "homepage": "https://iina.io/",
+   "icon": "https://github.com/iina/iina/raw/master/iina/Assets.xcassets/AppIcon.appiconset/iina-icon-256.png",
+   "screenshot": "https://iina.io/images/sc-sky.png",
+   "stars": 46983,
+   "slug": "iina"
+  },
+  {
+   "name": "Helix",
+   "repo": "helix-editor/helix",
+   "description": "Post-modern modal text editor in Rust",
+   "category": "code-editors",
+   "homepage": "https://helix-editor.com",
+   "icon": "https://github.com/helix-editor.png?size=256",
+   "stars": 46767,
+   "slug": "helix"
+  },
+  {
+   "name": "LosslessCut",
+   "repo": "mifi/lossless-cut",
+   "description": "Trim and cut video/audio without re-encoding",
+   "category": "audio",
+   "homepage": "https://losslesscut.app/",
+   "stars": 45611,
+   "slug": "losslesscut"
+  },
+  {
+   "name": "Zen Browser",
+   "repo": "zen-browser/desktop",
+   "description": "Firefox-based browser focused on privacy",
+   "category": "browsers",
+   "homepage": "https://zen-browser.app",
+   "icon": "https://github.com/zen-browser.png?size=256",
+   "stars": 45514,
+   "slug": "zen-browser"
+  },
+  {
+   "name": "Logseq",
+   "repo": "logseq/logseq",
+   "description": "Privacy-first knowledge management system",
+   "category": "notes-writing",
+   "homepage": "https://logseq.com",
+   "icon": "https://github.com/logseq.png?size=256",
+   "stars": 45456,
+   "slug": "logseq"
+  },
+  {
+   "name": "Jan",
+   "repo": "janhq/jan",
+   "description": "Run AI models locally on your computer",
+   "category": "ai",
+   "homepage": "https://jan.ai/",
+   "icon": "https://avatars.githubusercontent.com/u/102363196?s=48&v=4",
+   "screenshot": "https://github.com/janhq/jan/raw/dev/demo.gif",
+   "stars": 45321,
+   "slug": "jan"
+  },
+  {
+   "name": "Hyper",
+   "repo": "vercel/hyper",
+   "description": "Electron-based terminal with web technologies",
+   "category": "terminal",
+   "homepage": "https://hyper.is/",
+   "icon": "https://jasonkenison.com/wp-content/uploads/2020/08/Hyper-800x800.png",
+   "stars": 44764,
+   "slug": "hyper"
+  },
+  {
+   "name": "Stats",
+   "repo": "exelban/stats",
+   "description": "System monitor in your menu bar",
+   "category": "menu-bar",
+   "homepage": "https://mac-stats.com",
+   "icon": "https://github.com/exelban/stats/raw/master/Stats/Supporting%20Files/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+   "screenshot": "https://camo.githubusercontent.com/e4df0668fca7f5c077f1a77a9e2ec76b0462efbeae381aebc1ffbdd38dd34554/68747470733a2f2f7365726869792e73332e65752d63656e7472616c2d312e616d617a6f6e6177732e636f6d2f4769746875625f7265706f2f73746174732f706f7075707325334676322e332e322e706e673f7633",
+   "stars": 43050,
+   "slug": "stats"
+  },
+  {
+   "name": "Sunshine",
+   "repo": "LizardByte/Sunshine",
+   "description": "Self-hosted game streaming",
+   "category": "remote-desktop",
+   "homepage": "http://app.lizardbyte.dev/Sunshine/",
+   "icon": "https://github.com/LizardByte.png?size=256",
+   "stars": 42912,
+   "slug": "sunshine"
+  },
+  {
+   "name": "Sniffnet",
+   "repo": "GyulyVGC/sniffnet",
+   "description": "Monitor your network traffic",
+   "category": "api",
+   "homepage": "https://sniffnet.app",
+   "stars": 41810,
+   "slug": "sniffnet"
+  },
+  {
+   "name": "qBittorrent",
+   "repo": "qbittorrent/qBittorrent",
+   "description": "Feature-rich BitTorrent client",
+   "category": "files",
+   "homepage": "https://www.qbittorrent.org",
+   "icon": "https://github.com/qbittorrent.png?size=256",
+   "stars": 41310,
+   "slug": "qbittorrent"
+  },
+  {
+   "name": "Vim",
+   "repo": "vim/vim",
+   "description": "The ubiquitous text editor",
+   "category": "code-editors",
+   "homepage": "https://www.vim.org",
+   "icon": "https://github.com/vim.png?size=256",
+   "stars": 41179,
+   "slug": "vim"
+  },
+  {
+   "name": "Insomnia",
+   "repo": "Kong/insomnia",
+   "description": "API client for REST and GraphQL",
+   "category": "api",
+   "homepage": "https://insomnia.rest/",
+   "icon": "https://pbs.twimg.com/profile_images/1367596400410722305/-X7hZiSm_400x400.jpg",
+   "screenshot": "https://raw.githubusercontent.com/Kong/insomnia/develop/screenshots/main.png",
+   "stars": 40110,
+   "slug": "insomnia"
+  },
+  {
+   "name": "Mattermost",
+   "repo": "mattermost/mattermost",
+   "description": "Open source Slack alternative",
+   "category": "communication",
+   "homepage": "https://mattermost.com",
+   "icon": "https://github.com/mattermost.png?size=256",
+   "stars": 39506,
+   "slug": "mattermost"
+  },
+  {
+   "name": "Folo",
+   "repo": "RSSNext/Folo",
+   "description": "Modern RSS reader",
+   "category": "reading",
+   "homepage": "https://app.folo.is",
+   "icon": "https://github.com/RSSNext.png?size=256",
+   "stars": 39214,
+   "slug": "folo"
+  },
+  {
+   "name": "Lapce",
+   "repo": "lapce/lapce",
+   "description": "Lightning-fast code editor written in Rust",
+   "category": "code-editors",
+   "homepage": "https://lap.dev/lapce/",
+   "icon": "https://github.com/lapce.png?size=256",
+   "stars": 38970,
+   "slug": "lapce"
+  },
+  {
+   "name": "mpv",
+   "repo": "mpv-player/mpv",
+   "description": "Powerful command-line media player",
+   "category": "video",
+   "homepage": "https://mpv.io",
+   "icon": "https://github.com/mpv-player.png?size=256",
+   "stars": 37669,
+   "slug": "mpv"
+  },
+  {
+   "name": "bitchat",
+   "repo": "permissionlesstech/bitchat",
+   "description": "Bluetooth mesh chat that works without internet",
+   "category": "communication",
+   "icon": "https://github.com/permissionlesstech.png?size=256",
+   "stars": 37056,
+   "slug": "bitchat"
+  },
+  {
+   "name": "UTM",
+   "repo": "utmapp/UTM",
+   "description": "Virtual machines for iOS and macOS",
+   "category": "virtualization",
+   "homepage": "https://getutm.app",
+   "icon": "https://github.com/utmapp.png?size=256",
+   "stars": 36651,
+   "slug": "utm"
+  },
+  {
+   "name": "Kitty",
+   "repo": "kovidgoyal/kitty",
+   "description": "Fast GPU-based terminal with advanced features",
+   "category": "terminal",
+   "homepage": "https://sw.kovidgoyal.net/kitty/",
+   "stars": 35508,
+   "slug": "kitty"
+  },
+  {
+   "name": "Another Redis Desktop Manager",
+   "repo": "qishibo/AnotherRedisDesktopManager",
+   "description": "Fast Redis desktop manager",
+   "category": "database",
+   "stars": 34838,
+   "slug": "another-redis-desktop-manager"
+  },
+  {
+   "name": "Etcher",
+   "repo": "balena-io/etcher",
+   "description": "Flash OS images to SD cards and USB drives",
+   "category": "system-utilities",
+   "homepage": "https://etcher.io/",
+   "icon": "https://github.com/balena-io.png?size=256",
+   "stars": 34647,
+   "slug": "etcher"
+  },
+  {
+   "name": "MonitorControl",
+   "repo": "MonitorControl/MonitorControl",
+   "description": "Control display brightness and volume",
+   "category": "menu-bar",
+   "homepage": "https://monitorcontrol.app/",
+   "icon": "https://github.com/MonitorControl/MonitorControl/raw/main/.github/Icon-cropped.png",
+   "screenshot": "https://github.com/MonitorControl/MonitorControl/raw/main/.github/screenshot.png",
+   "stars": 34618,
+   "slug": "monitorcontrol"
+  },
+  {
+   "name": "BetterDisplay",
+   "repo": "waydabber/BetterDisplay",
+   "description": "HiDPI scaling, XDR/HDR brightness, virtual screens",
+   "category": "system-utilities",
+   "homepage": "https://betterdisplay.pro",
+   "stars": 34352,
+   "slug": "betterdisplay"
+  },
+  {
+   "name": "Pear Desktop",
+   "repo": "pear-devs/pear-desktop",
+   "description": "YouTube Music desktop app with plugins",
+   "category": "video",
+   "icon": "https://github.com/pear-devs.png?size=256",
+   "stars": 33970,
+   "slug": "pear-desktop"
+  },
+  {
+   "name": "Hiddify",
+   "repo": "hiddify/hiddify-app",
+   "description": "Multi-platform proxy client",
+   "category": "security",
+   "homepage": "https://hiddify.com",
+   "icon": "https://github.com/hiddify.png?size=256",
+   "stars": 33594,
+   "slug": "hiddify"
+  },
+  {
+   "name": "ShadowsocksX-NG",
+   "repo": "shadowsocks/ShadowsocksX-NG",
+   "description": "Shadowsocks proxy client",
+   "category": "security",
+   "icon": "https://github.com/shadowsocks.png?size=256",
+   "stars": 32864,
+   "slug": "shadowsocksx-ng"
+  },
+  {
+   "name": "Flameshot",
+   "repo": "flameshot-org/flameshot",
+   "description": "Screenshot tool with annotation",
+   "category": "screen-capture",
+   "homepage": "https://flameshot.org/",
+   "icon": "https://github.com/flameshot-org/flameshot/raw/master/data/img/app/org.flameshot.Flameshot.svg",
+   "screenshot": "https://raw.githubusercontent.com/flameshot-org/flameshot/master/data/img/preview/animatedUsage.gif",
+   "stars": 31392,
+   "slug": "flameshot"
+  },
+  {
+   "name": "Rectangle",
+   "repo": "rxhanson/Rectangle",
+   "description": "Move and resize windows with shortcuts",
+   "category": "window-management",
+   "homepage": "https://rectangleapp.com/",
+   "icon": "https://github.com/rxhanson/Rectangle/blob/master/Rectangle/Assets.xcassets/AppIcon.appiconset/mac512pts1x.png?raw=true",
+   "screenshot": "https://user-images.githubusercontent.com/13651296/183785536-a67a2e2a-7c55-4c19-9bf8-482e734b1632.png",
+   "stars": 30209,
+   "slug": "rectangle"
+  },
+  {
+   "name": "Ice",
+   "repo": "jordanbaird/Ice",
+   "description": "Powerful menu bar manager",
+   "category": "menu-bar",
+   "homepage": "https://icemenubar.app",
+   "icon": "https://github.com/jordanbaird/Ice/raw/main/Ice/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+   "screenshot": "https://private-user-images.githubusercontent.com/90936861/289307663-3a666903-59f7-4833-a843-8c44be8c6b6e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcxNzk0ODgsIm5iZiI6MTcwNzE3OTE4OCwicGF0aCI6Ii85MDkzNjg2MS8yODkzMDc2NjMtM2E2NjY5MDMtNTlmNy00ODMzLWE4NDMtOGM0NGJlOGM2YjZlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMDYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjA2VDAwMjYyOFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUxNWFkMDI5NGQzZTdjMDY0MjRhOWNjZGQ4NWUzNzg4NDZjODkwYTk1MjE3OTQ3MTgzNzQ3NDRmZjhkNmIxMDQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.DWRqqh2lbw44FuUHnQyuWjxnU_eLIF81wsrDw5-J-s4",
+   "stars": 29942,
+   "slug": "ice"
+  },
+  {
+   "name": "yabai",
+   "repo": "asmvik/yabai",
+   "description": "Tiling window manager for macOS",
+   "category": "window-management",
+   "stars": 29799,
+   "slug": "yabai"
+  },
+  {
+   "name": "KeePassXC",
+   "repo": "keepassxreboot/keepassxc",
+   "description": "Cross-platform password manager",
+   "category": "security",
+   "homepage": "https://keepassxc.org/",
+   "icon": "https://keepassxc.org/assets/img/keepassxc.svg",
+   "stars": 29704,
+   "slug": "keepassxc"
+  },
+  {
+   "name": "Koodo Reader",
+   "repo": "koodo-reader/koodo-reader",
+   "description": "Cross-platform e-book reader",
+   "category": "reading",
+   "homepage": "https://koodoreader.com",
+   "icon": "https://github.com/koodo-reader.png?size=256",
+   "stars": 28698,
+   "slug": "koodo-reader"
+  },
+  {
+   "name": "cmux",
+   "repo": "manaflow-ai/cmux",
+   "description": "Ghostty-based terminal with vertical tabs and notifications for AI coding agents",
+   "category": "terminal",
+   "homepage": "https://cmux.com",
+   "icon": "https://github.com/manaflow-ai.png?size=256",
+   "stars": 28647,
+   "slug": "cmux"
+  },
+  {
+   "name": "PicGo",
+   "repo": "Molunerfinn/PicGo",
+   "description": "Image upload and management tool",
+   "category": "design",
+   "homepage": "https://picgo.app/",
+   "stars": 27453,
+   "slug": "picgo"
+  },
+  {
+   "name": "Focalboard",
+   "repo": "mattermost-community/focalboard",
+   "description": "Open source project management",
+   "category": "productivity",
+   "homepage": "https://www.focalboard.com",
+   "icon": "https://github.com/mattermost-community.png?size=256",
+   "stars": 26536,
+   "slug": "focalboard"
+  },
+  {
+   "name": "Calibre",
+   "repo": "kovidgoyal/calibre",
+   "description": "E-book management",
+   "category": "reading",
+   "homepage": "https://calibre-ebook.com",
+   "stars": 26327,
+   "slug": "calibre"
+  },
+  {
+   "name": "Readest",
+   "repo": "readest/readest",
+   "description": "Modern e-book reader",
+   "category": "reading",
+   "homepage": "https://readest.com",
+   "icon": "https://github.com/readest.png?size=256",
+   "stars": 25862,
+   "slug": "readest"
+  },
+  {
+   "name": "Responsively",
+   "repo": "responsively-org/responsively-app",
+   "description": "Preview all screen sizes at once",
+   "category": "developer-tools",
+   "homepage": "https://responsively.app",
+   "icon": "https://github.com/responsively-org.png?size=256",
+   "stars": 25512,
+   "slug": "responsively"
+  },
+  {
+   "name": "NextAI Translator",
+   "repo": "nextai-translator/nextai-translator",
+   "description": "AI-powered translation app",
+   "category": "translation",
+   "icon": "https://github.com/nextai-translator.png?size=256",
+   "stars": 25022,
+   "slug": "nextai-translator"
+  },
+  {
+   "name": "HandBrake",
+   "repo": "HandBrake/HandBrake",
+   "description": "Open-source video transcoder available for Linux, Mac, and Windows",
+   "category": "video",
+   "homepage": "https://handbrake.fr/",
+   "icon": "https://handbrake.fr/img/logo.png",
+   "screenshot": "https://handbrake.fr/img/slides/slide1_mac.png",
+   "stars": 24857,
+   "slug": "handbrake"
+  },
+  {
+   "name": "DB Browser for SQLite",
+   "repo": "sqlitebrowser/sqlitebrowser",
+   "description": "Visual tool for SQLite databases",
+   "category": "database",
+   "homepage": "https://sqlitebrowser.org",
+   "icon": "https://github.com/sqlitebrowser.png?size=256",
+   "stars": 24748,
+   "slug": "db-browser-for-sqlite"
+  },
+  {
+   "name": "Brave",
+   "repo": "brave/brave-browser",
+   "description": "Privacy-focused browser with ad blocking",
+   "category": "browsers",
+   "homepage": "https://www.brave.com/",
+   "icon": "https://brave.com/static-assets/images/brave-logo-sans-text.svg",
+   "screenshot": "https://brave.com/static-assets/images/optimized/desktop-hero-screenshot@2x.png",
+   "stars": 24074,
+   "slug": "brave"
+  },
+  {
+   "name": "Beekeeper Studio",
+   "repo": "beekeeper-studio/beekeeper-studio",
+   "description": "Modern SQL editor and database manager",
+   "category": "database",
+   "homepage": "https://www.beekeeperstudio.io",
+   "icon": "https://github.com/beekeeper-studio.png?size=256",
+   "stars": 23834,
+   "slug": "beekeeper-studio"
+  },
+  {
+   "name": "AeroSpace",
+   "repo": "nikitabobko/AeroSpace",
+   "description": "i3-like tiling window manager",
+   "category": "window-management",
+   "homepage": "https://nikitabobko.github.io/AeroSpace/guide",
+   "stars": 23717,
+   "slug": "aerospace"
+  },
+  {
+   "name": "CodeEdit",
+   "repo": "CodeEditApp/CodeEdit",
+   "description": "Native macOS code editor built in Swift",
+   "category": "code-editors",
+   "homepage": "https://codeedit.app/",
+   "icon": "https://github.com/CodeEditApp/CodeEdit/raw/main/.github/CodeEdit-Icon-128@2x.png?raw=true",
+   "screenshot": "https://user-images.githubusercontent.com/806104/194004176-3143d19f-1ad9-449c-bd41-8c4f9998f44b.png",
+   "stars": 23103,
+   "slug": "codeedit"
+  },
+  {
+   "name": "Karabiner-Elements",
+   "repo": "pqrs-org/Karabiner-Elements",
+   "description": "Powerful keyboard customization",
+   "category": "system-utilities",
+   "homepage": "https://karabiner-elements.pqrs.org/",
+   "icon": "https://karabiner-elements.pqrs.org/images/logo.png",
+   "stars": 23042,
+   "slug": "karabiner-elements"
+  },
+  {
+   "name": "Wave Terminal",
+   "repo": "wavetermdev/waveterm",
+   "description": "AI-native terminal with inline rendering",
+   "category": "terminal",
+   "homepage": "https://www.waveterm.dev",
+   "icon": "https://github.com/wavetermdev.png?size=256",
+   "stars": 22638,
+   "slug": "wave-terminal"
+  },
+  {
+   "name": "FreeTube",
+   "repo": "FreeTubeApp/FreeTube",
+   "description": "Privacy-focused YouTube desktop client",
+   "category": "video",
+   "homepage": "https://freetubeapp.io/",
+   "icon": "https://github.com/FreeTubeApp.png?size=256",
+   "stars": 22293,
+   "slug": "freetube"
+  },
+  {
+   "name": "Screenpipe",
+   "repo": "screenpipe/screenpipe",
+   "description": "AI-powered screen and audio capture",
+   "category": "screen-capture",
+   "homepage": "https://screenpipe.com",
+   "icon": "https://github.com/screenpipe.png?size=256",
+   "stars": 22209,
+   "slug": "screenpipe"
+  },
+  {
+   "name": "Maccy",
+   "repo": "p0deje/Maccy",
+   "description": "Clipboard manager",
+   "category": "clipboard",
+   "homepage": "https://maccy.app/",
+   "icon": "https://camo.githubusercontent.com/952dc92c8eeaf0cb292f581579924cb1d719d67bd3c170c2d524cdab046cc620/68747470733a2f2f6d616363792e6170702f696d672f6d616363792f4c6f676f2e706e67",
+   "screenshot": "https://maccy.app/img/maccy/Instructions.png",
+   "stars": 22181,
+   "slug": "maccy"
+  },
+  {
+   "name": "GitHub Desktop",
+   "repo": "desktop/desktop",
+   "description": "GitHub Desktop application",
+   "category": "git",
+   "homepage": "https://github.com/apps/desktop",
+   "icon": "https://github.com/desktop.png?size=256",
+   "stars": 22042,
+   "slug": "github-desktop"
+  },
+  {
+   "name": "GitButler",
+   "repo": "gitbutlerapp/gitbutler",
+   "description": "Git client for modern workflows",
+   "category": "git",
+   "homepage": "https://gitbutler.com",
+   "icon": "https://github.com/gitbutlerapp.png?size=256",
+   "stars": 21907,
+   "slug": "gitbutler"
+  },
+  {
+   "name": "Blender",
+   "repo": "blender/blender",
+   "description": "3D creation suite",
+   "category": "design",
+   "homepage": "https://developer.blender.org/docs/handbook/contributing/using_git/#github-mirror",
+   "icon": "https://github.com/blender.png?size=256",
+   "stars": 21532,
+   "slug": "blender"
+  },
+  {
+   "name": "Kodi",
+   "repo": "xbmc/xbmc",
+   "description": "Kodi media center for organizing and streaming content",
+   "category": "video",
+   "homepage": "https://kodi.tv/",
+   "icon": "https://github.com/xbmc.png?size=256",
+   "stars": 21419,
+   "slug": "kodi"
+  },
+  {
+   "name": "Aerial",
+   "repo": "JohnCoates/Aerial",
+   "description": "Apple TV Aerial Screensaver for Mac",
+   "category": "system-utilities",
+   "screenshot": "https://cloud.githubusercontent.com/assets/499192/10754100/c0e1cc4c-7c95-11e5-9d3b-842d3acc2fd5.gif",
+   "stars": 21183,
+   "slug": "aerial"
+  },
+  {
+   "name": "VLC",
+   "repo": "videolan/vlc",
+   "description": "Cross-platform multimedia player that plays most formats",
+   "category": "video",
+   "homepage": "http://www.videolan.org/vlc",
+   "icon": "https://github.com/videolan.png?size=256",
+   "stars": 20306,
+   "slug": "vlc"
+  },
+  {
+   "name": "RPCS3",
+   "repo": "RPCS3/rpcs3",
+   "description": "PlayStation 3 emulator",
+   "category": "games",
+   "homepage": "https://rpcs3.net/",
+   "icon": "https://github.com/RPCS3.png?size=256",
+   "stars": 20301,
+   "slug": "rpcs3"
+  },
+  {
+   "name": "BlackHole",
+   "repo": "ExistentialAudio/BlackHole",
+   "description": "Virtual audio driver for routing audio between apps",
+   "category": "audio",
+   "icon": "https://github.com/ExistentialAudio.png?size=256",
+   "stars": 20000,
+   "slug": "blackhole"
+  },
+  {
+   "name": "Kap",
+   "repo": "wulkano/Kap",
+   "description": "Screen recorder built with web tech",
+   "category": "screen-capture",
+   "homepage": "https://getkap.co",
+   "icon": "https://github.com/wulkano.png?size=256",
+   "stars": 19412,
+   "slug": "kap"
+  },
+  {
+   "name": "Background Music",
+   "repo": "kyleneideck/BackgroundMusic",
+   "description": "Per-app volume control and audio recording",
+   "category": "audio",
+   "icon": "https://github.com/kyleneideck/BackgroundMusic/raw/master/Images/README/FermataIcon.png",
+   "screenshot": "https://github.com/kyleneideck/BackgroundMusic/raw/master/Images/README/Screenshot.png",
+   "stars": 19370,
+   "slug": "background-music"
+  },
+  {
+   "name": "Audacity",
+   "repo": "audacity/audacity",
+   "description": "Multi-track audio editor and recorder",
+   "category": "audio",
+   "homepage": "https://www.audacityteam.org/manual/getting-started/",
+   "icon": "https://github.com/audacity.png?size=256",
+   "stars": 18923,
+   "slug": "audacity"
+  },
+  {
+   "name": "Nuclear",
+   "repo": "nukeop/nuclear",
+   "description": "Streaming music player from free sources",
+   "category": "audio",
+   "homepage": "https://nuclearplayer.com",
+   "stars": 18852,
+   "slug": "nuclear"
+  },
+  {
+   "name": "Quick Look Plugins",
+   "repo": "sindresorhus/quick-look-plugins",
+   "description": "Collection of useful QuickLook plugins",
+   "category": "files",
+   "stars": 18800,
+   "slug": "quick-look-plugins"
+  },
+  {
+   "name": "iTerm2",
+   "repo": "gnachman/iTerm2",
+   "description": "Feature-rich terminal replacement for macOS",
+   "category": "terminal",
+   "homepage": "https://iterm2.com/",
+   "icon": "https://iterm2.com/img/logo2x.jpg",
+   "screenshot": "https://iterm2.com/img/screenshots/split_panes.png",
+   "stars": 18247,
+   "slug": "iterm2"
+  },
+  {
+   "name": "Signal",
+   "repo": "signalapp/Signal-Desktop",
+   "description": "Private messaging app",
+   "category": "communication",
+   "homepage": "https://signal.org/download",
+   "icon": "https://github.com/signalapp.png?size=256",
+   "stars": 16644,
+   "slug": "signal"
+  },
+  {
+   "name": "Lantern",
+   "repo": "getlantern/lantern",
+   "description": "Free internet access tool",
+   "category": "security",
+   "icon": "https://github.com/getlantern.png?size=256",
+   "stars": 16639,
+   "slug": "lantern"
+  },
+  {
+   "name": "Omnivore",
+   "repo": "omnivore-app/omnivore",
+   "description": "Free, open source read-it-later app focused on distraction-free reading",
+   "category": "reading",
+   "homepage": "https://omnivore.app/",
+   "icon": "https://avatars.githubusercontent.com/u/70113176?s=400&u=506b21d9f019f3160963c010ef363667fb24c7c9&v=4",
+   "screenshot": "https://private-user-images.githubusercontent.com/75189/258374667-df7c797a-4255-42f4-a686-ad94866cb580.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDYwMTY3MDksIm5iZiI6MTcwNjAxNjQwOSwicGF0aCI6Ii83NTE4OS8yNTgzNzQ2NjctZGY3Yzc5N2EtNDI1NS00MmY0LWE2ODYtYWQ5NDg2NmNiNTgwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMjMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTIzVDEzMjY0OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYyYTBiNmJiOWMxZGFjMzI0YzdjNTA5MjcyYTM2YjNhODU1MDZjYWI5N2ViZDFkOTNlMjYyZTk4NzllNWQ4MTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.ap4qVYTknXowNDDdhEO3JdLDKPIhF8WZMnq85XxJH3I",
+   "stars": 16401,
+   "slug": "omnivore"
+  },
+  {
+   "name": "Amethyst",
+   "repo": "ianyh/Amethyst",
+   "description": "Automatic tiling window manager",
+   "category": "window-management",
+   "homepage": "https://ianyh.com/amethyst/",
+   "stars": 16304,
+   "slug": "amethyst"
+  },
+  {
+   "name": "Dolphin",
+   "repo": "dolphin-emu/dolphin",
+   "description": "GameCube and Wii emulator",
+   "category": "games",
+   "homepage": "https://dolphin-emu.org",
+   "icon": "https://github.com/dolphin-emu.png?size=256",
+   "stars": 15755,
+   "slug": "dolphin"
+  },
+  {
+   "name": "Transmission",
+   "repo": "transmission/transmission",
+   "description": "Fast and lightweight BitTorrent client",
+   "category": "files",
+   "homepage": "https://transmissionbt.com/",
+   "icon": "https://transmissionbt.com/assets/images/Transmission_icon.png",
+   "screenshot": "https://transmissionbt.com/assets/images/homepage/carousel_homepage/screenshot_apple_light.png",
+   "stars": 15372,
+   "slug": "transmission"
+  },
+  {
+   "name": "Hidden Bar",
+   "repo": "dwarvesf/hidden",
+   "description": "Hide menu bar items",
+   "category": "menu-bar",
+   "homepage": "https://d.foundation/opensource",
+   "icon": "https://github.com/dwarvesf/hidden/raw/develop/img/icon_512%402x.png?raw=true",
+   "screenshot": "https://github.com/dwarvesf/hidden/raw/develop/img/screen1.png",
+   "stars": 15313,
+   "slug": "hidden-bar"
+  },
+  {
+   "name": "KeyCastr",
+   "repo": "keycastr/keycastr",
+   "description": "Keystroke visualizer for screencasts",
+   "category": "screen-capture",
+   "icon": "https://github.com/keycastr.png?size=256",
+   "screenshot": "https://github.com/keycastr/keycastr/raw/main/assets/mouse-click-visualizer.gif",
+   "stars": 15182,
+   "slug": "keycastr"
+  },
+  {
+   "name": "PearCleaner",
+   "repo": "alienator88/Pearcleaner",
+   "description": "Completely uninstall apps",
+   "category": "files",
+   "homepage": "https://itsalin.com/appInfo/?id=pearcleaner",
+   "icon": "https://user-images.githubusercontent.com/6263626/283968256-e6829883-894e-49a1-bc75-2c4550593b98.png",
+   "screenshot": "https://private-user-images.githubusercontent.com/6263626/286016909-db6aae06-be0d-42af-bcab-cdb8e5bda42a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDcwNTk3MjMsIm5iZiI6MTcwNzA1OTQyMywicGF0aCI6Ii82MjYzNjI2LzI4NjAxNjkwOS1kYjZhYWUwNi1iZTBkLTQyYWYtYmNhYi1jZGI4ZTViZGE0MmEucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDIwNCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDAyMDRUMTUxMDIzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YjYzODJhYTg1M2RkMWNjOTQzZDc4NmRkZWU3Yjc0YzA0ZjM2MGU2YTNlNzE2NmNmOGRjNmM0ZGVlYTY3MjYxNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.8EHAAXuSb8nxiTfyu-ylBOtS7YDIhTA7UxvMIsfY9d4",
+   "stars": 15028,
+   "slug": "pearcleaner"
+  },
+  {
+   "name": "ImageGlass",
+   "repo": "d2phap/ImageGlass",
+   "description": "Fast image viewer for 90+ formats including WebP, AVIF and HEIC",
+   "category": "images",
+   "homepage": "https://imageglass.org",
+   "stars": 14788,
+   "slug": "imageglass"
+  },
+  {
+   "name": "Bitwarden",
+   "repo": "bitwarden/clients",
+   "description": "Open source password manager",
+   "category": "security",
+   "homepage": "https://bitwarden.com/",
+   "icon": "https://github.com/bitwarden.png?size=256",
+   "screenshot": "https://raw.githubusercontent.com/bitwarden/brand/master/screenshots/apps-combo-logo.png",
+   "stars": 14130,
+   "slug": "bitwarden"
+  },
+  {
+   "name": "Zettlr",
+   "repo": "Zettlr/Zettlr",
+   "description": "Markdown editor for academic writing",
+   "category": "notes-writing",
+   "homepage": "https://www.zettlr.com/",
+   "icon": "https://raw.githubusercontent.com/Zettlr/Zettlr/master/resources/icons/png/256x256.png",
+   "screenshot": "https://github.com/Zettlr/Zettlr/raw/develop/resources/screenshots/zettlr_view.png",
+   "stars": 13851,
+   "slug": "zettlr"
+  },
+  {
+   "name": "Element",
+   "repo": "element-hq/element-web",
+   "description": "Matrix protocol client",
+   "category": "communication",
+   "homepage": "https://element.io",
+   "icon": "https://github.com/element-hq.png?size=256",
+   "stars": 13632,
+   "slug": "element"
+  },
+  {
+   "name": "DiffusionBee",
+   "repo": "divamgupta/diffusionbee-stable-diffusion-ui",
+   "description": "Stable Diffusion on your Mac",
+   "category": "ai",
+   "homepage": "https://diffusionbee.com/",
+   "icon": "https://diffusionbee.com/imgs/bee_logo.png",
+   "screenshot": "https://private-user-images.githubusercontent.com/1890549/290290019-3ee8e70b-ea17-4b26-8069-6d8c65aaa729.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU2NjQyODQsIm5iZiI6MTcwNTY2Mzk4NCwicGF0aCI6Ii8xODkwNTQ5LzI5MDI5MDAxOS0zZWU4ZTcwYi1lYTE3LTRiMjYtODA2OS02ZDhjNjVhYWE3MjkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MDExOSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDAxMTlUMTEzMzA0WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9ODA5MzU1NDQzYzcyYjIzZjQ1YjliMDczMTA3YWVlODBkYzFiMTgwODBiMmNkY2U0MjU1Y2E0ZjU4MjlkNjNkZCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.jssFTv9UCc_eL56GePf199iqrAZbrsmhj2JQI2HJeMM",
+   "stars": 13591,
+   "slug": "diffusionbee"
+  },
+  {
+   "name": "LuLu",
+   "repo": "objective-see/LuLu",
+   "description": "macOS firewall to block unknown connections",
+   "category": "security",
+   "homepage": "https://objective-see.org/products/lulu.html",
+   "icon": "https://avatars.githubusercontent.com/u/11327812?s=48&v=4",
+   "screenshot": "https://camo.githubusercontent.com/8905602ff032d03d790ec79de46b35cb222bfc5a459527ffa49352ed213f3c06/68747470733a2f2f6f626a6563746976652d7365652e636f6d2f696d616765732f4c4c2f6c756c752e706e67",
+   "stars": 13486,
+   "slug": "lulu"
+  },
+  {
+   "name": "Darktable",
+   "repo": "darktable-org/darktable",
+   "description": "Photography workflow and RAW editor",
+   "category": "design",
+   "homepage": "https://www.darktable.org",
+   "icon": "https://github.com/darktable-org.png?size=256",
+   "stars": 13382,
+   "slug": "darktable"
+  },
+  {
+   "name": "CopyQ",
+   "repo": "hluk/CopyQ",
+   "description": "Advanced clipboard manager",
+   "category": "clipboard",
+   "stars": 12580,
+   "slug": "copyq"
+  },
+  {
+   "name": "SketchyBar",
+   "repo": "FelixKratz/SketchyBar",
+   "description": "Highly customizable menu bar replacement",
+   "category": "menu-bar",
+   "homepage": "https://felixkratz.github.io/SketchyBar/",
+   "stars": 12556,
+   "slug": "sketchybar"
+  },
+  {
+   "name": "Thaw",
+   "repo": "thaw-app/Thaw",
+   "description": "Hide, rearrange and manage menu bar items",
+   "category": "menu-bar",
+   "homepage": "https://www.getthaw.app",
+   "icon": "https://github.com/thaw-app.png?size=256",
+   "stars": 12495,
+   "slug": "thaw"
+  },
+  {
+   "name": "Escrcpy",
+   "repo": "viarotel-org/escrcpy",
+   "description": "Display and control Android devices",
+   "category": "remote-desktop",
+   "homepage": "https://viarotel.eu.org/",
+   "icon": "https://github.com/viarotel-org.png?size=256",
+   "stars": 12268,
+   "slug": "escrcpy"
+  },
+  {
+   "name": "GitUp",
+   "repo": "git-up/GitUp",
+   "description": "Fast Git GUI with visual history",
+   "category": "git",
+   "homepage": "http://gitup.co",
+   "icon": "https://github.com/git-up.png?size=256",
+   "stars": 12153,
+   "slug": "gitup"
+  },
+  {
+   "name": "PlayCover",
+   "repo": "PlayCover/PlayCover",
+   "description": "Run iOS apps and games on Apple Silicon",
+   "category": "games",
+   "homepage": "https://playcover.io",
+   "icon": "https://github.com/PlayCover.png?size=256",
+   "stars": 12077,
+   "slug": "playcover"
+  },
+  {
+   "name": "Loop",
+   "repo": "mrkai77/Loop",
+   "description": "Elegant window management",
+   "category": "window-management",
+   "icon": "https://github.com/MrKai77/Loop/blob/develop/Loop/Assets.xcassets/App%20Icons/AppIcon-Classic.appiconset/Classic-512.png?raw=true",
+   "screenshot": "https://github.com/MrKai77/Loop/raw/develop/assets/graphics/loop_demo.gif",
+   "stars": 11921,
+   "slug": "loop"
+  },
+  {
+   "name": "qutebrowser",
+   "repo": "qutebrowser/qutebrowser",
+   "description": "Keyboard-driven browser with Vim bindings",
+   "category": "browsers",
+   "homepage": "https://www.qutebrowser.org/",
+   "icon": "https://github.com/qutebrowser.png?size=256",
+   "stars": 11734,
+   "slug": "qutebrowser"
+  },
+  {
+   "name": "Medis",
+   "repo": "luin/medis",
+   "description": "Beautiful Redis management app",
+   "category": "database",
+   "homepage": "http://getmedis.com",
+   "stars": 11719,
+   "slug": "medis"
+  },
+  {
+   "name": "Boring Notch",
+   "repo": "TheBoredTeam/boring.notch",
+   "description": "Make your MacBook notch useful",
+   "category": "menu-bar",
+   "homepage": "https://theboring.name/",
+   "icon": "https://github.com/TheBoredTeam.png?size=256",
+   "stars": 11233,
+   "slug": "boring-notch"
+  },
+  {
+   "name": "Mac Mouse Fix",
+   "repo": "noah-nuebling/mac-mouse-fix",
+   "description": "Make your mouse better",
+   "category": "system-utilities",
+   "homepage": "https://macmousefix.com/",
+   "icon": "https://github.com/noah-nuebling/mac-mouse-fix/raw/master/Markdown/Media/AppIconRound3.png",
+   "screenshot": "https://github.com/noah-nuebling/mac-mouse-fix/raw/master/Markdown/Media/Apple-Keys-Demo.gif",
+   "stars": 11196,
+   "slug": "mac-mouse-fix"
+  },
+  {
+   "name": "Popcorn Time",
+   "repo": "popcorntime/popcorntime",
+   "description": "Stream movies and shows via torrent",
+   "category": "video",
+   "homepage": "https://popcorntime.app",
+   "icon": "https://github.com/popcorntime.png?size=256",
+   "stars": 10705,
+   "slug": "popcorn-time"
+  },
+  {
+   "name": "Krita",
+   "repo": "KDE/krita",
+   "description": "Professional digital painting app",
+   "category": "design",
+   "homepage": "https://invent.kde.org/graphics/krita",
+   "icon": "https://github.com/KDE.png?size=256",
+   "stars": 10678,
+   "slug": "krita"
+  },
+  {
+   "name": "LMMS",
+   "repo": "LMMS/lmms",
+   "description": "Cross-platform music production software",
+   "category": "audio",
+   "homepage": "https://lmms.io",
+   "icon": "https://github.com/LMMS.png?size=256",
+   "stars": 10585,
+   "slug": "lmms"
+  },
+  {
+   "name": "NetNewsWire",
+   "repo": "Ranchero-Software/NetNewsWire",
+   "description": "Free and open source RSS reader",
+   "category": "reading",
+   "homepage": "https://netnewswire.com/",
+   "icon": "https://netnewswire.com/images/nnw-6-icon-256.png",
+   "screenshot": "https://netnewswire.com/images/NNW5Light-Thumb.png",
+   "stars": 10496,
+   "slug": "netnewswire"
+  },
+  {
+   "name": "Wireshark",
+   "repo": "wireshark/wireshark",
+   "description": "Network protocol analyzer",
+   "category": "api",
+   "homepage": "https://www.wireshark.org",
+   "icon": "https://github.com/wireshark.png?size=256",
+   "stars": 10137,
+   "slug": "wireshark"
+  },
+  {
+   "name": "ImageOptim",
+   "repo": "ImageOptim/ImageOptim",
+   "description": "Image compression without losing quality",
+   "category": "design",
+   "homepage": "https://imageoptim.com/mac",
+   "icon": "https://github.com/ImageOptim.png?size=256",
+   "screenshot": "https://imageoptim.com/ImageOptim-app@2x.png",
+   "stars": 10023,
+   "slug": "imageoptim"
+  },
+  {
+   "name": "FineTune",
+   "repo": "ronitsingh10/FineTune",
+   "description": "Per-app volume control, multi-device output, audio routing and a 10-band EQ",
+   "category": "audio",
+   "stars": 9982,
+   "slug": "finetune"
+  },
+  {
+   "name": "MacDown",
+   "repo": "MacDownApp/macdown",
+   "description": "Open source Markdown editor for macOS",
+   "category": "notes-writing",
+   "homepage": "https://macdown.uranusjr.com/",
+   "icon": "https://macdown.uranusjr.com/static/images/logo.png",
+   "screenshot": "https://github.com/MacDownApp/macdown/raw/master/assets/screenshot.png",
+   "stars": 9846,
+   "slug": "macdown"
+  },
+  {
+   "name": "Bob",
+   "repo": "ripperhe/Bob",
+   "description": "Translation and OCR tool",
+   "category": "translation",
+   "homepage": "https://bobtranslate.com",
+   "stars": 9758,
+   "slug": "bob"
+  },
+  {
+   "name": "Multipass",
+   "repo": "canonical/multipass",
+   "description": "Lightweight Ubuntu VMs",
+   "category": "virtualization",
+   "homepage": "https://canonical.com/multipass",
+   "icon": "https://github.com/canonical.png?size=256",
+   "stars": 9327,
+   "slug": "multipass"
+  },
+  {
+   "name": "Min",
+   "repo": "minbrowser/min",
+   "description": "Fast minimal browser",
+   "category": "browsers",
+   "homepage": "https://minbrowser.org/",
+   "icon": "https://github.com/minbrowser.png?size=256",
+   "stars": 9235,
+   "slug": "min"
+  },
+  {
+   "name": "Soundflower",
+   "repo": "mattingalls/Soundflower",
+   "description": "Audio routing between apps",
+   "category": "audio",
+   "homepage": "https://github.com/mattingalls/Soundflower",
+   "stars": 9035,
+   "slug": "soundflower"
+  },
+  {
+   "name": "Sloth",
+   "repo": "sveinbjornt/Sloth",
+   "description": "Display all open files and sockets",
+   "category": "system-utilities",
+   "homepage": "https://sveinbjorn.org/sloth",
+   "stars": 8989,
+   "slug": "sloth"
+  },
+  {
+   "name": "Clipy",
+   "repo": "Clipy/Clipy",
+   "description": "Clipboard extension app",
+   "category": "clipboard",
+   "homepage": "https://clipy-app.com",
+   "icon": "https://github.com/Clipy.png?size=256",
+   "stars": 8956,
+   "slug": "clipy"
+  },
+  {
+   "name": "VirtualBuddy",
+   "repo": "insidegui/VirtualBuddy",
+   "description": "Run macOS virtual machines on Apple silicon",
+   "category": "virtualization",
+   "stars": 8895,
+   "slug": "virtualbuddy"
+  },
+  {
+   "name": "QuickRecorder",
+   "repo": "lihaoyun6/QuickRecorder",
+   "description": "Lightweight macOS screen recorder",
+   "category": "screen-capture",
+   "homepage": "https://lihaoyun6.github.io/quickrecorder/",
+   "stars": 8765,
+   "slug": "quickrecorder"
+  },
+  {
+   "name": "MiaoYan",
+   "repo": "tw93/MiaoYan",
+   "description": "Quiet, local-first Markdown writing app",
+   "category": "notes-writing",
+   "homepage": "https://miaoyan.app",
+   "stars": 8721,
+   "slug": "miaoyan"
+  },
+  {
+   "name": "Dozer",
+   "repo": "Mortennn/Dozer",
+   "description": "Hide menu bar icons",
+   "category": "menu-bar",
+   "stars": 8719,
+   "slug": "dozer"
+  },
+  {
+   "name": "CotEditor",
+   "repo": "coteditor/CotEditor",
+   "description": "Lightweight plain-text editor for macOS",
+   "category": "code-editors",
+   "homepage": "https://coteditor.com/",
+   "icon": "https://github.com/coteditor.png?size=256",
+   "screenshot": "https://github.com/coteditor/CotEditor/raw/main/screenshot@2x.png",
+   "stars": 8651,
+   "slug": "coteditor"
+  },
+  {
+   "name": "Gifski",
+   "repo": "sindresorhus/Gifski",
+   "description": "Convert videos to high-quality GIFs",
+   "category": "audio",
+   "homepage": "https://sindresorhus.com/gifski",
+   "icon": "https://github.com/sindresorhus/Gifski/raw/main/Stuff/AppIcon-readme.png",
+   "screenshot": "https://github.com/sindresorhus/Gifski/raw/main/Stuff/screenshot2.jpg",
+   "stars": 8594,
+   "slug": "gifski"
+  },
+  {
+   "name": "Cerebro",
+   "repo": "cerebroapp/cerebro",
+   "description": "Extensible launcher",
+   "category": "productivity",
+   "homepage": "https://www.cerebroapp.com/",
+   "icon": "https://github.com/cerebroapp.png?size=256",
+   "stars": 8565,
+   "slug": "cerebro"
+  },
+  {
+   "name": "Mockoon",
+   "repo": "mockoon/mockoon",
+   "description": "Mock API servers locally",
+   "category": "api",
+   "homepage": "https://mockoon.com",
+   "icon": "https://github.com/mockoon.png?size=256",
+   "stars": 8467,
+   "slug": "mockoon"
+  },
+  {
+   "name": "Podman Desktop",
+   "repo": "podman-desktop/podman-desktop",
+   "description": "GUI for managing containers",
+   "category": "virtualization",
+   "homepage": "https://podman-desktop.io",
+   "icon": "https://github.com/podman-desktop.png?size=256",
+   "stars": 8122,
+   "slug": "podman-desktop"
+  },
+  {
+   "name": "FontForge",
+   "repo": "fontforge/fontforge",
+   "description": "Font editor for creating typefaces",
+   "category": "design",
+   "homepage": "http://fontforge.github.io/",
+   "icon": "https://github.com/fontforge.png?size=256",
+   "stars": 8058,
+   "slug": "fontforge"
+  },
+  {
+   "name": "MacVim",
+   "repo": "macvim-dev/macvim",
+   "description": "Vim with macOS GUI integration",
+   "category": "code-editors",
+   "homepage": "https://macvim.org",
+   "icon": "https://github.com/macvim-dev.png?size=256",
+   "stars": 7890,
+   "slug": "macvim"
+  },
+  {
+   "name": "Postgres.app",
+   "repo": "PostgresApp/PostgresApp",
+   "description": "Run PostgreSQL on your Mac",
+   "category": "database",
+   "homepage": "https://postgresapp.com",
+   "icon": "https://github.com/PostgresApp.png?size=256",
+   "stars": 7786,
+   "slug": "postgres-app"
+  },
+  {
+   "name": "Mullvad VPN",
+   "repo": "mullvad/mullvadvpn-app",
+   "description": "Privacy-focused VPN app",
+   "category": "security",
+   "homepage": "https://mullvad.net/",
+   "icon": "https://github.com/mullvad.png?size=256",
+   "stars": 7740,
+   "slug": "mullvad-vpn"
+  },
+  {
+   "name": "Keka",
+   "repo": "aonez/Keka",
+   "description": "The macOS file archiver",
+   "category": "files",
+   "homepage": "https://www.keka.io/",
+   "icon": "https://camo.githubusercontent.com/e5a87bc5395e4e1cdf8bb63711d4953f4d5c22e0b69bb14836d27bc2390824ab/68747470733a2f2f7777772e6b656b612e696f2f696d672f4b656b612d5371756172652d353132783531322e706e67",
+   "screenshot": "https://www.keka.io/img/demo/tasks/Keka-password-b2x.png",
+   "stars": 7600,
+   "slug": "keka"
+  },
+  {
+   "name": "PureMac",
+   "repo": "momenbasel/PureMac",
+   "description": "Free Mac cleaner for caches, Xcode and Homebrew leftovers, with no telemetry",
+   "category": "system-utilities",
+   "homepage": "https://www.moamenbasel.com/PureMac/",
+   "stars": 7591,
+   "slug": "puremac"
+  },
+  {
+   "name": "Sequel Ace",
+   "repo": "Sequel-Ace/Sequel-Ace",
+   "description": "MySQL and MariaDB database manager",
+   "category": "database",
+   "homepage": "https://sequel-ace.com",
+   "icon": "https://github.com/Sequel-Ace.png?size=256",
+   "stars": 7562,
+   "slug": "sequel-ace"
+  },
+  {
+   "name": "Caprine",
+   "repo": "sindresorhus/caprine",
+   "description": "Elegant Facebook Messenger client",
+   "category": "communication",
+   "stars": 7408,
+   "slug": "caprine"
+  },
+  {
+   "name": "Applite",
+   "repo": "milanvarady/Applite",
+   "description": "User-friendly GUI for Homebrew Cask",
+   "category": "developer-tools",
+   "homepage": "https://applite.app/",
+   "stars": 7109,
+   "slug": "applite"
+  },
+  {
+   "name": "LinearMouse",
+   "repo": "linearmouse/linearmouse",
+   "description": "Customize mouse and trackpad settings",
+   "category": "system-utilities",
+   "homepage": "https://linearmouse.app/",
+   "icon": "https://github.com/linearmouse/linearmouse/raw/main/logo.svg",
+   "screenshot": "https://linearmouse.app/_next/static/media/feature-2-dark.26bf178a.png",
+   "stars": 7107,
+   "slug": "linearmouse"
+  },
+  {
+   "name": "Ice Cubes",
+   "repo": "Dimillian/IceCubesApp",
+   "description": "A SwiftUI Mastodon client",
+   "category": "system-utilities",
+   "homepage": "https://apps.apple.com/us/app/ice-cubes-for-mastodon/id6444915884",
+   "icon": "https://github.com/Dimillian/IceCubesApp/blob/main/IceCubesApp/Assets.xcassets/AppIcon.appiconset/macOS512.png?raw=true",
+   "screenshot": "https://github.com/Dimillian/IceCubesApp/raw/main/Images/promo.png",
+   "stars": 7102,
+   "slug": "ice-cubes"
+  },
+  {
+   "name": "KeepingYouAwake",
+   "repo": "newmarcel/KeepingYouAwake",
+   "description": "Prevent your Mac from sleeping",
+   "category": "system-utilities",
+   "homepage": "https://keepingyouawake.app",
+   "stars": 7027,
+   "slug": "keepingyouawake"
+  },
+  {
+   "name": "VimR",
+   "repo": "qvacua/vimr",
+   "description": "Neovim GUI for macOS",
+   "category": "code-editors",
+   "homepage": "https://twitter.com/VimRefined",
+   "stars": 7013,
+   "slug": "vimr"
+  },
+  {
+   "name": "MacPass",
+   "repo": "MacPass/MacPass",
+   "description": "Native macOS KeePass client",
+   "category": "security",
+   "homepage": "http://macpass.app/",
+   "icon": "https://github.com/MacPass.png?size=256",
+   "stars": 6895,
+   "slug": "macpass"
+  },
+  {
+   "name": "eqMac",
+   "repo": "bitgapp/eqMac",
+   "description": "System-wide audio equalizer and volume mixer",
+   "category": "audio",
+   "homepage": "https://eqmac.app",
+   "icon": "https://github.com/bitgapp.png?size=256",
+   "stars": 6824,
+   "slug": "eqmac"
+  },
+  {
+   "name": "Requestly",
+   "repo": "requestly/requestly",
+   "description": "Intercept and modify HTTP requests",
+   "category": "api",
+   "homepage": "https://requestly.com/",
+   "icon": "https://github.com/requestly.png?size=256",
+   "stars": 6759,
+   "slug": "requestly"
+  },
+  {
+   "name": "TablePro",
+   "repo": "TableProApp/TablePro",
+   "description": "Native database client for developers",
+   "category": "database",
+   "homepage": "https://tablepro.app",
+   "icon": "https://github.com/TableProApp.png?size=256",
+   "stars": 6358,
+   "slug": "tablepro"
+  },
+  {
+   "name": "noTunes",
+   "repo": "tombonez/noTunes",
+   "description": "Stop iTunes or Apple Music from launching on their own",
+   "category": "audio",
+   "stars": 6168,
+   "slug": "notunes"
+  },
+  {
+   "name": "Control Room",
+   "repo": "twostraws/ControlRoom",
+   "description": "A macOS app to control the Xcode Simulator",
+   "category": "developer-tools",
+   "icon": "https://github.com/twostraws/ControlRoom/blob/main/ControlRoom/Assets.xcassets/AppIcon.appiconset/icon_512@2x.png?raw=true",
+   "stars": 6121,
+   "slug": "control-room"
+  },
+  {
+   "name": "QOwnNotes",
+   "repo": "pbek/QOwnNotes",
+   "description": "Plain-text notes with Nextcloud integration",
+   "category": "notes-writing",
+   "homepage": "https://www.qownnotes.org/",
+   "stars": 5939,
+   "slug": "qownnotes"
+  },
+  {
+   "name": "Lunar",
+   "repo": "alin23/Lunar",
+   "description": "Adaptive brightness, contrast and volume for external monitors",
+   "category": "system-utilities",
+   "homepage": "https://lunar.fyi",
+   "stars": 5729,
+   "slug": "lunar"
+  },
+  {
+   "name": "Brooklyn",
+   "repo": "pedrommcarrasco/Brooklyn",
+   "description": "Screensaver inspired by Apple",
+   "category": "screen-capture",
+   "screenshot": "https://github.com/pedrommcarrasco/Brooklyn/raw/master/Design/showcase.gif?raw=true",
+   "stars": 5613,
+   "slug": "brooklyn"
+  },
+  {
+   "name": "Ardour",
+   "repo": "Ardour/ardour",
+   "description": "Professional digital audio workstation",
+   "category": "audio",
+   "homepage": "http://ardour.org",
+   "icon": "https://github.com/Ardour.png?size=256",
+   "stars": 5401,
+   "slug": "ardour"
+  },
+  {
+   "name": "MeetingBar",
+   "repo": "leits/MeetingBar",
+   "description": "Show calendar meetings in menu bar",
+   "category": "menu-bar",
+   "homepage": "https://meetingbar.app/",
+   "icon": "https://meetingbar.app/_astro/logomark.7c6317bd_Zm7TIE.png",
+   "screenshot": "https://meetingbar.app/_astro/dropdown.820db2c9_1B6v9W.avif",
+   "stars": 5395,
+   "slug": "meetingbar"
+  },
+  {
+   "name": "Heynote",
+   "repo": "heyman/heynote",
+   "description": "Dedicated scratchpad for developers",
+   "category": "notes-writing",
+   "homepage": "https://heynote.com",
+   "stars": 5379,
+   "slug": "heynote"
+  },
+  {
+   "name": "Atoll",
+   "repo": "Ebullioscopic/Atoll",
+   "description": "Dynamic Island for the MacBook notch",
+   "category": "menu-bar",
+   "homepage": "https://getatoll.app",
+   "stars": 5156,
+   "slug": "atoll"
+  },
+  {
+   "name": "Ferdium",
+   "repo": "ferdium/ferdium-app",
+   "description": "All your messaging services in one place",
+   "category": "communication",
+   "homepage": "https://ferdium.org",
+   "icon": "https://github.com/ferdium.png?size=256",
+   "stars": 4766,
+   "slug": "ferdium"
+  },
+  {
+   "name": "SwiftBar",
+   "repo": "swiftbar/SwiftBar",
+   "description": "Powerful menu bar customization",
+   "category": "menu-bar",
+   "homepage": "https://swiftbar.app/",
+   "icon": "https://github.com/swiftbar/SwiftBar/raw/main/Resources/logo.png",
+   "screenshot": "https://user-images.githubusercontent.com/222100/110520713-d5058000-80dc-11eb-9b15-baa09cb445bf.png",
+   "stars": 4748,
+   "slug": "swiftbar"
+  },
+  {
+   "name": "Ueli",
+   "repo": "oliverschwendener/ueli",
+   "description": "Keystroke launcher for Windows and macOS",
+   "category": "productivity",
+   "homepage": "https://ueli.app",
+   "screenshot": "https://github.com/oliverschwendener/ueli/raw/main/assets/feature-app-search.png",
+   "stars": 4615,
+   "slug": "ueli"
+  },
+  {
+   "name": "BLEUnlock",
+   "repo": "ts1/BLEUnlock",
+   "description": "Lock and unlock your Mac with your iPhone, Apple Watch or any Bluetooth LE device",
+   "category": "security",
+   "stars": 4518,
+   "slug": "bleunlock"
+  },
+  {
+   "name": "SelfControl",
+   "repo": "SelfControlApp/selfcontrol",
+   "description": "Block your own access to distracting websites",
+   "category": "focus",
+   "homepage": "http://selfcontrolapp.com",
+   "icon": "https://avatars.githubusercontent.com/u/8949958?s=48&v=4",
+   "screenshot": "https://github.com/SelfControlApp/selfcontrol/raw/master/.github/docs/screenshot.png",
+   "stars": 4420,
+   "slug": "selfcontrol"
+  },
+  {
+   "name": "RawTherapee",
+   "repo": "RawTherapee/RawTherapee",
+   "description": "Cross-platform RAW image processor",
+   "category": "design",
+   "homepage": "https://rawtherapee.com",
+   "icon": "https://github.com/RawTherapee.png?size=256",
+   "stars": 4265,
+   "slug": "rawtherapee"
+  },
+  {
+   "name": "Lap",
+   "repo": "julyx10/lap",
+   "description": "Offline-first photo manager for large local libraries",
+   "category": "images",
+   "homepage": "https://julyx10.github.io/lap/",
+   "stars": 4166,
+   "slug": "lap"
+  },
+  {
+   "name": "Itsycal",
+   "repo": "sfsam/Itsycal",
+   "description": "Tiny calendar for your menu bar",
+   "category": "menu-bar",
+   "homepage": "https://www.mowglii.com/itsycal/",
+   "icon": "https://static.macupdate.com/products/49674/l/itsycal-logo.webp?v=1671435305",
+   "stars": 4042,
+   "slug": "itsycal"
+  },
+  {
+   "name": "Plash",
+   "repo": "sindresorhus/Plash",
+   "description": "Set any website as wallpaper",
+   "category": "productivity",
+   "homepage": "https://sindresorhus.com/plash",
+   "icon": "https://github.com/sindresorhus/Plash/raw/main/Stuff/AppIcon-readme.png",
+   "screenshot": "https://sindresorhus.com/_astro/screenshot2.e3a30465.jpg",
+   "stars": 4037,
+   "slug": "plash"
+  },
+  {
+   "name": "Reminders MenuBar",
+   "repo": "DamascenoRafael/reminders-menubar",
+   "description": "View Apple Reminders from menu bar",
+   "category": "focus",
+   "icon": "https://github.com/DamascenoRafael/reminders-menubar/raw/master/images/reminders-icon.png",
+   "screenshot": "https://github.com/DamascenoRafael/reminders-menubar/raw/master/images/reminder-menubar-dark.png",
+   "stars": 4004,
+   "slug": "reminders-menubar"
+  },
+  {
+   "name": "JankyBorders",
+   "repo": "FelixKratz/JankyBorders",
+   "description": "Highlight active window with borders",
+   "category": "window-management",
+   "stars": 3891,
+   "slug": "jankyborders"
+  },
+  {
+   "name": "Claude Usage Tracker",
+   "repo": "hamed-elfayome/Claude-Usage-Tracker",
+   "description": "Track Claude usage limits in real time from the menu bar",
+   "category": "ai",
+   "homepage": "https://claudetracker.com",
+   "stars": 3728,
+   "slug": "claude-usage-tracker"
+  },
+  {
+   "name": "uPic",
+   "repo": "gee1k/uPic",
+   "description": "Native macOS image host client",
+   "category": "images",
+   "homepage": "https://blog.svend.cc/upic",
+   "stars": 3724,
+   "slug": "upic"
+  },
+  {
+   "name": "Hush",
+   "repo": "oblador/hush",
+   "description": "Safari content blocker that hides cookie and tracking nags",
+   "category": "security",
+   "homepage": "https://oblador.github.io/hush/",
+   "stars": 3722,
+   "slug": "hush"
+  },
+  {
+   "name": "QLMarkdown",
+   "repo": "sbarex/QLMarkdown",
+   "description": "QuickLook for Markdown files",
+   "category": "files",
+   "stars": 3721,
+   "slug": "qlmarkdown"
+  },
+  {
+   "name": "TomatoBar",
+   "repo": "ivoronin/TomatoBar",
+   "description": "Pomodoro timer in menu bar",
+   "category": "menu-bar",
+   "icon": "https://raw.githubusercontent.com/ivoronin/TomatoBar/main/TomatoBar/Assets.xcassets/AppIcon.appiconset/icon_128x128%402x.png",
+   "screenshot": "https://github.com/ivoronin/TomatoBar/raw/main/screenshot.png?raw=true",
+   "stars": 3578,
+   "slug": "tomatobar"
+  },
+  {
+   "name": "Pine",
+   "repo": "lukakerr/Pine",
+   "description": "A modern, native macOS markdown editor",
+   "category": "notes-writing",
+   "homepage": "https://lukakerr.github.io/Pine",
+   "icon": "https://github.com/lukakerr/Pine/raw/master/Pine/Assets.xcassets/AppIcon.appiconset/pine-512@1x.png",
+   "screenshot": "https://lukakerr.github.io/Pine/img/pine-1.png",
+   "stars": 3484,
+   "slug": "pine"
+  },
+  {
+   "name": "Platypus",
+   "repo": "sveinbjornt/Platypus",
+   "description": "Create Mac apps from scripts",
+   "category": "system-utilities",
+   "homepage": "https://sveinbjorn.org/platypus",
+   "stars": 3459,
+   "slug": "platypus"
+  },
+  {
+   "name": "Sidekick",
+   "repo": "johnbean393/Sidekick",
+   "description": "Chat with a local LLM that can use your files, folders and websites",
+   "category": "ai",
+   "homepage": "https://johnbean393.github.io/Sidekick/",
+   "stars": 3321,
+   "slug": "sidekick"
+  },
+  {
+   "name": "Actions",
+   "repo": "sindresorhus/Actions",
+   "description": "Additional actions for the Shortcuts app",
+   "category": "productivity",
+   "homepage": "https://sindresorhus.com/actions",
+   "icon": "https://github.com/sindresorhus/Actions/raw/main/Stuff/AppIcon-readme.png",
+   "screenshot": "https://github.com/sindresorhus/Actions/raw/main/Stuff/screenshot1.jpg",
+   "stars": 3073,
+   "slug": "actions"
+  },
+  {
+   "name": "Hot",
+   "repo": "macmade/Hot",
+   "description": "Show the CPU speed limit caused by thermal throttling in the menu bar",
+   "category": "menu-bar",
+   "homepage": "https://xs-labs.com/en/apps/hot/",
+   "stars": 3062,
+   "slug": "hot"
+  },
+  {
+   "name": "AirBattery",
+   "repo": "lihaoyun6/AirBattery",
+   "description": "Show battery status for all your devices",
+   "category": "system-utilities",
+   "homepage": "https://lihaoyun6.github.io/airbattery/",
+   "stars": 3002,
+   "slug": "airbattery"
+  },
+  {
+   "name": "ExifCleaner",
+   "repo": "szTheory/exifcleaner",
+   "description": "Remove metadata from images",
+   "category": "files",
+   "homepage": "https://exifcleaner.com",
+   "stars": 2856,
+   "slug": "exifcleaner"
+  },
+  {
+   "name": "AuthPass",
+   "repo": "authpass/authpass",
+   "description": "Password manager compatible with KeePass databases",
+   "category": "security",
+   "homepage": "https://authpass.app/",
+   "icon": "https://github.com/authpass.png?size=256",
+   "stars": 2810,
+   "slug": "authpass"
+  },
+  {
+   "name": "Flycut",
+   "repo": "TermiT/Flycut",
+   "description": "Clean and simple clipboard manager",
+   "category": "clipboard",
+   "icon": "https://camo.githubusercontent.com/8b2b6a90114beec9770239158fd0ba06b600fe1d69285936cad87eeb358908e1/687474703a2f2f61332e6d7a7374617469632e636f6d2f75732f72313030302f3034372f507572706c652f66622f35332f66322f6d7a692e6d63617877796a6d2e313735783137352d37352e706e67",
+   "screenshot": "https://is1-ssl.mzstatic.com/image/thumb/Purple/f4/1b/fe/mzl.kzsfkdsh.png/313x0w.webp",
+   "stars": 2697,
+   "slug": "flycut"
+  },
+  {
+   "name": "Antares",
+   "repo": "antares-sql/antares",
+   "description": "Modern SQL client focused on UX",
+   "category": "database",
+   "homepage": "https://antares-sql.app",
+   "icon": "https://github.com/antares-sql.png?size=256",
+   "stars": 2668,
+   "slug": "antares"
+  },
+  {
+   "name": "Pika",
+   "repo": "superhighfives/pika",
+   "description": "Native color picker for macOS",
+   "category": "design",
+   "homepage": "https://superhighfives.com/pika",
+   "icon": "https://user-images.githubusercontent.com/449385/103492506-4dbd3700-4e23-11eb-97ca-44a959f171c6.png",
+   "screenshot": "https://superhighfives.com/assets/pika-screenshot-dark@2x.jpg",
+   "stars": 2610,
+   "slug": "pika"
+  },
+  {
+   "name": "Kaset",
+   "repo": "sozercan/kaset",
+   "description": "Native YouTube Music app",
+   "category": "audio",
+   "homepage": "https://sozercan.github.io/kaset/",
+   "stars": 2496,
+   "slug": "kaset"
+  },
+  {
+   "name": "Rem",
+   "repo": "jasonjmcghee/rem",
+   "description": "Remember everything you see on your Mac",
+   "category": "productivity",
+   "homepage": "https://jasonjmcghee.github.io/rem-homepage/",
+   "stars": 2488,
+   "slug": "rem"
+  },
+  {
+   "name": "Better Shot",
+   "repo": "KartikLabhshetwar/better-shot",
+   "description": "Screenshots, screen recording and a video editor in one native app",
+   "category": "screen-capture",
+   "homepage": "https://www.bettershot.site",
+   "stars": 2431,
+   "slug": "better-shot"
+  },
+  {
+   "name": "Calendr",
+   "repo": "pakerwreah/Calendr",
+   "description": "Menu bar calendar for macOS",
+   "category": "menu-bar",
+   "icon": "https://github.com/pakerwreah/Calendr/blob/master/Calendr/Assets/Images.xcassets/AppIcon.appiconset/1024.png?raw=true",
+   "screenshot": "https://github.com/pakerwreah/Calendr/raw/master/resources/screenshot.png",
+   "stars": 2427,
+   "slug": "calendr"
+  },
+  {
+   "name": "Synfig",
+   "repo": "synfig/synfig",
+   "description": "2D vector animation software",
+   "category": "design",
+   "homepage": "https://synfig.org",
+   "icon": "https://github.com/synfig.png?size=256",
+   "stars": 2328,
+   "slug": "synfig"
+  },
+  {
+   "name": "PasteBar",
+   "repo": "PasteBar/PasteBarApp",
+   "description": "Free clipboard manager with unlimited history, snippets and collections",
+   "category": "clipboard",
+   "icon": "https://github.com/PasteBar.png?size=256",
+   "stars": 2194,
+   "slug": "pastebar"
+  },
+  {
+   "name": "WeekToDo",
+   "repo": "manuelernestog/weektodo",
+   "description": "Minimalist weekly planner and to-do list focused on privacy",
+   "category": "productivity",
+   "homepage": "https://weektodo.me",
+   "stars": 2187,
+   "slug": "weektodo"
+  },
+  {
+   "name": "DevHub",
+   "repo": "jaywcjlove/DevHub",
+   "description": "Offline toolbox of everyday developer utilities",
+   "category": "developer-tools",
+   "homepage": "https://wangchujiang.com/DevHub",
+   "stars": 2043,
+   "slug": "devhub"
+  },
+  {
+   "name": "LosslessSwitcher",
+   "repo": "vincentneo/LosslessSwitcher",
+   "description": "Switch the output sample rate to match Apple Music Lossless tracks",
+   "category": "audio",
+   "stars": 2017,
+   "slug": "losslessswitcher"
+  },
+  {
+   "name": "DeaDBeeF",
+   "repo": "DeaDBeeF-Player/deadbeef",
+   "description": "Modular music player for many audio formats",
+   "category": "audio",
+   "homepage": "https://deadbeef.sourceforge.io/",
+   "icon": "https://github.com/DeaDBeeF-Player.png?size=256",
+   "stars": 1985,
+   "slug": "deadbeef"
+  },
+  {
+   "name": "Vienna",
+   "repo": "ViennaRSS/vienna-rss",
+   "description": "RSS/Atom reader for macOS",
+   "category": "reading",
+   "homepage": "https://www.vienna-rss.com",
+   "icon": "https://github.com/ViennaRSS.png?size=256",
+   "stars": 1980,
+   "slug": "vienna"
+  },
+  {
+   "name": "TypeWhisper",
+   "repo": "TypeWhisper/typewhisper-mac",
+   "description": "Private, on-device speech to text",
+   "category": "ai",
+   "icon": "https://github.com/TypeWhisper.png?size=256",
+   "stars": 1897,
+   "slug": "typewhisper"
+  },
+  {
+   "name": "Pencil",
+   "repo": "pencil2d/pencil",
+   "description": "2D animation software",
+   "category": "design",
+   "homepage": "http://pencil2d.org",
+   "icon": "https://github.com/pencil2d.png?size=256",
+   "stars": 1816,
+   "slug": "pencil"
+  },
+  {
+   "name": "Sentinel",
+   "repo": "alienator88/Sentinel",
+   "description": "Manage Gatekeeper, remove apps from quarantine and self-sign apps",
+   "category": "security",
+   "homepage": "https://itsalin.com/appInfo/?id=sentinel",
+   "stars": 1779,
+   "slug": "sentinel"
+  },
+  {
+   "name": "CameraController",
+   "repo": "itaybre/CameraController",
+   "description": "Control the settings of USB cameras",
+   "category": "system-utilities",
+   "stars": 1764,
+   "slug": "cameracontroller"
+  },
+  {
+   "name": "Petrichor",
+   "repo": "kushalpandya/Petrichor",
+   "description": "Offline music player for your local library",
+   "category": "audio",
+   "homepage": "https://petrichor.page",
+   "stars": 1751,
+   "slug": "petrichor"
+  },
+  {
+   "name": "BetterCapture",
+   "repo": "jsattler/BetterCapture",
+   "description": "Native screen recorder with a clean interface",
+   "category": "screen-capture",
+   "homepage": "https://bettercapture.app/",
+   "stars": 1705,
+   "slug": "bettercapture"
+  },
+  {
+   "name": "HapticKey",
+   "repo": "niw/HapticKey",
+   "description": "Haptic feedback for Touch Bar",
+   "category": "system-utilities",
+   "stars": 1671,
+   "slug": "haptickey"
+  },
+  {
+   "name": "ExcalidrawZ",
+   "repo": "chocoford/ExcalidrawZ",
+   "description": "Native Excalidraw app for hand-drawn diagrams",
+   "category": "design",
+   "homepage": "https://excalidrawz.chocoford.com",
+   "stars": 1533,
+   "slug": "excalidrawz"
+  },
+  {
+   "name": "LinkLiar",
+   "repo": "halo/LinkLiar",
+   "description": "MAC address spoofer for privacy",
+   "category": "security",
+   "homepage": "http://halo.github.io/LinkLiar",
+   "stars": 1493,
+   "slug": "linkliar"
+  },
+  {
+   "name": "Localization Editor",
+   "repo": "igorkulman/iOSLocalizationEditor",
+   "description": "Edit iOS and macOS app translations side by side",
+   "category": "developer-tools",
+   "stars": 1483,
+   "slug": "localization-editor"
+  },
+  {
+   "name": "Capso",
+   "repo": "lzhgus/Capso",
+   "description": "Screenshots and screen recording, a native alternative to CleanShot X",
+   "category": "screen-capture",
+   "homepage": "https://www.awesomemacapp.com/app/capso",
+   "stars": 1476,
+   "slug": "capso"
+  },
+  {
+   "name": "Strongbox",
+   "repo": "strongbox-password-safe/Strongbox",
+   "description": "KeePass and Password Safe compatible",
+   "category": "security",
+   "homepage": "https://strongboxsafe.com",
+   "icon": "https://github.com/strongbox-password-safe.png?size=256",
+   "stars": 1473,
+   "slug": "strongbox"
+  },
+  {
+   "name": "Rockxy",
+   "repo": "RockxyApp/Rockxy",
+   "description": "Native HTTP debugging proxy to intercept HTTPS, inspect APIs and mock responses",
+   "category": "api",
+   "homepage": "https://rockxy.io",
+   "icon": "https://github.com/RockxyApp.png?size=256",
+   "stars": 1455,
+   "slug": "rockxy"
+  },
+  {
+   "name": "Mythic",
+   "repo": "MythicApp/Mythic",
+   "description": "Game launcher that plays Windows games through Game Porting Toolkit",
+   "category": "games",
+   "homepage": "https://getmythic.app",
+   "icon": "https://github.com/MythicApp.png?size=256",
+   "stars": 1454,
+   "slug": "mythic"
+  },
+  {
+   "name": "Gray",
+   "repo": "zenangst/Gray",
+   "description": "Pick between light and dark mode per-app",
+   "category": "system-utilities",
+   "homepage": "https://github.com/zenangst",
+   "icon": "https://github.com/zenangst/Gray/raw/master/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png?raw=true",
+   "screenshot": "https://github.com/zenangst/Gray/raw/master/Images/Screenshot.png",
+   "stars": 1447,
+   "slug": "gray"
+  },
+  {
+   "name": "XcodeCleaner",
+   "repo": "waylybaye/XcodeCleaner-SwiftUI",
+   "description": "Clean up Xcode caches and files",
+   "category": "files",
+   "homepage": "https://itunes.apple.com/app/cleaner-for-xcode/id1296084683",
+   "stars": 1423,
+   "slug": "xcodecleaner"
+  },
+  {
+   "name": "System Color Picker",
+   "repo": "sindresorhus/System-Color-Picker",
+   "description": "The macOS color picker as an app with lots of extra features",
+   "category": "design",
+   "homepage": "https://sindresorhus.com/system-color-picker",
+   "icon": "https://github.com/sindresorhus/System-Color-Picker/raw/main/Stuff/AppIcon-readme.png",
+   "screenshot": "https://github.com/sindresorhus/System-Color-Picker/raw/main/Stuff/screenshot1.jpg",
+   "stars": 1415,
+   "slug": "system-color-picker"
+  },
+  {
+   "name": "Multi",
+   "repo": "kofigumbs/multi",
+   "description": "Create custom, lightweight macOS apps from websites",
+   "category": "window-management",
+   "icon": "https://raw.githubusercontent.com/kofigumbs/multi/main/Docs/logo.png",
+   "screenshot": "https://raw.githubusercontent.com/kofigumbs/multi/main/Docs/screenshot.png",
+   "stars": 1413,
+   "slug": "multi"
+  },
+  {
+   "name": "Mac Monitor",
+   "repo": "Brandon7CC/mac-monitor",
+   "description": "Record and analyze Endpoint Security events, like ProcMon for macOS",
+   "category": "security",
+   "stars": 1394,
+   "slug": "mac-monitor"
+  },
+  {
+   "name": "Passepartout",
+   "repo": "partout-io/passepartout",
+   "description": "OpenVPN and WireGuard client focused on privacy",
+   "category": "security",
+   "homepage": "https://partout.io/passepartout/",
+   "icon": "https://github.com/partout-io.png?size=256",
+   "stars": 1389,
+   "slug": "passepartout"
+  },
+  {
+   "name": "Beaver Notes",
+   "repo": "Beaver-Notes/Beaver-Notes",
+   "description": "Local-first notes app for notes, projects and meetings",
+   "category": "notes-writing",
+   "homepage": "https://www.beavernotes.com",
+   "icon": "https://github.com/Beaver-Notes.png?size=256",
+   "stars": 1362,
+   "slug": "beaver-notes"
+  },
+  {
+   "name": "SlowQuitApps",
+   "repo": "dteoh/SlowQuitApps",
+   "description": "Add delay to Cmd+Q to prevent accidental quits",
+   "category": "system-utilities",
+   "icon": "https://avatars.githubusercontent.com/u/200159?s=48&v=4",
+   "screenshot": "https://github.com/dteoh/SlowQuitApps/raw/master/img/preview.gif?raw=true",
+   "stars": 1230,
+   "slug": "slowquitapps"
+  },
+  {
+   "name": "Telephone",
+   "repo": "64characters/Telephone",
+   "description": "SIP softphone for making VoIP calls",
+   "category": "communication",
+   "homepage": "https://www.64characters.com/telephone",
+   "icon": "https://github.com/64characters.png?size=256",
+   "stars": 1177,
+   "slug": "telephone"
+  },
+  {
+   "name": "HiPixel",
+   "repo": "okooo5km/HiPixel",
+   "description": "AI image upscaling powered by Upscayl models",
+   "category": "images",
+   "homepage": "https://hipixel.5km.tech",
+   "stars": 1169,
+   "slug": "hipixel"
+  },
+  {
+   "name": "Tropy",
+   "repo": "tropy/tropy",
+   "description": "Research photo management",
+   "category": "design",
+   "homepage": "https://tropy.org",
+   "icon": "https://github.com/tropy.png?size=256",
+   "stars": 1163,
+   "slug": "tropy"
+  },
+  {
+   "name": "Freeter",
+   "repo": "FreeterApp/Freeter",
+   "description": "Gather everything you need for work in one place, organized by projects and workflows, and have a quick access to them",
+   "category": "browsers",
+   "homepage": "https://freeter.io/",
+   "icon": "https://raw.githubusercontent.com/FreeterApp/Freeter/master/src/assets/app-icons/256.png",
+   "screenshot": "https://freeter.io/images/app-screen.png",
+   "stars": 1029,
+   "slug": "freeter"
+  },
+  {
+   "name": "Stringz",
+   "repo": "heysem-useinsider/Stringz",
+   "description": "Editor for localizing iOS, macOS, tvOS and watchOS apps",
+   "category": "developer-tools",
+   "stars": 1020,
+   "slug": "stringz"
+  },
+  {
+   "name": "ScrollSnap",
+   "repo": "Brkgng/ScrollSnap",
+   "description": "Capture and stitch scrolling screenshots",
+   "category": "screen-capture",
+   "stars": 940,
+   "slug": "scrollsnap"
+  },
+  {
+   "name": "Cling",
+   "repo": "FuzzyIdeas/Cling",
+   "description": "Instant fuzzy search for any file",
+   "category": "files",
+   "homepage": "https://lowtechguys.com/cling",
+   "icon": "https://github.com/FuzzyIdeas.png?size=256",
+   "stars": 935,
+   "slug": "cling"
+  },
+  {
+   "name": "BlockBlock",
+   "repo": "objective-see/BlockBlock",
+   "description": "Monitor persistence locations",
+   "category": "security",
+   "stars": 874,
+   "slug": "blockblock"
+  },
+  {
+   "name": "BatteryBoi",
+   "repo": "thebarbican19/BatteryBoi",
+   "description": "BatteryBoi is a replacement Battery Indicator for the MacOS Menu Bar",
+   "category": "menu-bar",
+   "homepage": "https://batteryboi.ovatar.io/",
+   "icon": "https://raw.githubusercontent.com/thebarbican19/BatteryBoi/main/BatteryBoi/Assets.xcassets/AppIcon.appiconset/512x512.png",
+   "screenshot": "https://camo.githubusercontent.com/26963d986342a1b11f0980aa49aee16d4b5e4360c273613f897b338a6eecc1a6/68747470733a2f2f7075622d33643539323331643765636334336537616633326138323032366639653037312e72322e6465762f42617474657279426f69253230506f737465722e6a7067",
+   "stars": 867,
+   "slug": "batteryboi"
+  },
+  {
+   "name": "Pasteboard Viewer",
+   "repo": "sindresorhus/Pasteboard-Viewer",
+   "description": "Inspect the system pasteboards",
+   "category": "developer-tools",
+   "homepage": "https://sindresorhus.com/pasteboard-viewer",
+   "stars": 866,
+   "slug": "pasteboard-viewer"
+  },
+  {
+   "name": "KnockKnock",
+   "repo": "objective-see/KnockKnock",
+   "description": "Discover persistently installed software",
+   "category": "security",
+   "homepage": "https://objective-see.org/products/knockknock.html",
+   "stars": 827,
+   "slug": "knockknock"
+  },
+  {
+   "name": "OverSight",
+   "repo": "objective-see/OverSight",
+   "description": "Monitor mic and camera access",
+   "category": "security",
+   "stars": 690,
+   "slug": "oversight"
+  },
+  {
+   "name": "SYM",
+   "repo": "zqqf16/SYM",
+   "description": "Symbolicate crash logs with a GUI",
+   "category": "developer-tools",
+   "stars": 610,
+   "slug": "sym"
+  },
+  {
+   "name": "Ejectify",
+   "repo": "nielsmouthaan/ejectify-macos",
+   "description": "Unmount external volumes when your Mac sleeps and remount them on wake",
+   "category": "system-utilities",
+   "homepage": "https://ejectify.app",
+   "stars": 586,
+   "slug": "ejectify"
+  },
+  {
+   "name": "Monolingual",
+   "repo": "IngmarStein/Monolingual",
+   "description": "Remove unneeded language resources to free disk space",
+   "category": "system-utilities",
+   "homepage": "https://ingmarstein.github.io/Monolingual",
+   "stars": 573,
+   "slug": "monolingual"
+  },
+  {
+   "name": "stts",
+   "repo": "inket/stts",
+   "description": "Monitor the status of cloud services from the menu bar",
+   "category": "menu-bar",
+   "stars": 568,
+   "slug": "stts"
+  },
+  {
+   "name": "BrightIntosh",
+   "repo": "niklasr22/BrightIntosh",
+   "description": "Use the full XDR brightness of Apple silicon MacBook Pro displays anytime, not just for HDR content",
+   "category": "system-utilities",
+   "homepage": "https://brightintosh.de",
+   "icon": "https://brightintosh.de/brightintosh_256.png",
+   "screenshot": "https://brightintosh.de/1500x0w.webp",
+   "stars": 559,
+   "slug": "brightintosh"
+  },
+  {
+   "name": "Tuneful",
+   "repo": "martinfekete10/Tuneful",
+   "description": "Tuneful provides a convenient way to control music playback for both Spotify and Apple Music, and see the currently playing song directly in the menu bar",
+   "category": "audio",
+   "homepage": "https://tuneful.app",
+   "icon": "https://github.com/martinfekete10/Tuneful/raw/main/docs/images/icon.png",
+   "screenshot": "https://github.com/martinfekete10/Tuneful/raw/main/docs/images/playback.png",
+   "stars": 538,
+   "slug": "tuneful"
+  },
+  {
+   "name": "MacDown 3000",
+   "repo": "schuyler/macdown3000",
+   "description": "Modern, lightweight Markdown editor, a continuation of MacDown",
+   "category": "notes-writing",
+   "homepage": "https://macdown.app/",
+   "stars": 504,
+   "slug": "macdown-3000"
+  },
+  {
+   "name": "FreeChat",
+   "repo": "psugihara/FreeChat",
+   "description": "Native macOS LLM chat app",
+   "category": "ai",
+   "homepage": "https://www.freechat.run",
+   "stars": 502,
+   "slug": "freechat"
+  },
+  {
+   "name": "CalendarX",
+   "repo": "ZzzM/CalendarX",
+   "description": "A lightweight macOS app for displaying calendar and time",
+   "category": "menu-bar",
+   "icon": "https://raw.githubusercontent.com/ZzzM/CalendarX/master/CalendarX/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+   "screenshot": "https://github.com/ZzzM/CalendarX?tab=readme-ov-file#snapshots",
+   "stars": 484,
+   "slug": "calendarx"
+  },
+  {
+   "name": "Pareto Security",
+   "repo": "ParetoSecurity/pareto-mac",
+   "description": "Security checklist for your Mac",
+   "category": "security",
+   "homepage": "https://paretosecurity.com",
+   "icon": "https://github.com/ParetoSecurity.png?size=256",
+   "stars": 461,
+   "slug": "pareto-security"
+  },
+  {
+   "name": "Brewlet",
+   "repo": "zkokaja/Brewlet",
+   "description": "Keep Homebrew packages up to date from the menu bar",
+   "category": "developer-tools",
+   "stars": 449,
+   "slug": "brewlet"
+  },
+  {
+   "name": "Free Ruler",
+   "repo": "pascalpp/FreeRuler",
+   "description": "Horizontal and vertical on-screen rulers in pixels, millimeters or inches",
+   "category": "design",
+   "homepage": "https://www.pascal.com/freeruler",
+   "icon": "https://github.com/pascalpp/FreeRuler/blob/main/Free%20Ruler/Images.xcassets/AppIcon.appiconset/icon_512x512@2x.png?raw=true",
+   "screenshot": "https://user-images.githubusercontent.com/1355312/57780292-f0c4b880-76f5-11e9-8933-36ab3bfccb14.png",
+   "stars": 441,
+   "slug": "free-ruler"
+  },
+  {
+   "name": "Yippy",
+   "repo": "mattDavo/Yippy",
+   "description": "Clipboard manager with a quick-access history panel",
+   "category": "clipboard",
+   "stars": 400,
+   "slug": "yippy"
+  },
+  {
+   "name": "LeafView",
+   "repo": "sprout2000/leafview",
+   "description": "Minimalist image viewer based on Leaflet.js and Electron",
+   "category": "design",
+   "icon": "https://user-images.githubusercontent.com/52094761/156916014-b9472d73-3270-455a-be95-25e527efeaff.svg",
+   "screenshot": "https://private-user-images.githubusercontent.com/52094761/253443255-070ac55c-a6df-4ac7-b1da-f77aa25545de.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDU1NTY3MzEsIm5iZiI6MTcwNTU1NjQzMSwicGF0aCI6Ii81MjA5NDc2MS8yNTM0NDMyNTUtMDcwYWM1NWMtYTZkZi00YWM3LWIxZGEtZjc3YWEyNTU0NWRlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMTglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTE4VDA1NDAzMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWVjNjE3MDcwNWE2NWM3ZGY3MmQxNjc1ZDY5MWVhYjE4ZTEzOTQ4YjVjMTM5NTYyMTY3YjM4OGEwZjM4MmIwZDgmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.TV511pAr06O_CHvC0wRO77kk7mJLgxXgdpxPnP0Cisw",
+   "stars": 365,
+   "slug": "leafview"
+  },
+  {
+   "name": "Brew Services Menubar",
+   "repo": "andrewn/brew-services-menubar",
+   "description": "Start and stop Homebrew services from the menu bar",
+   "category": "developer-tools",
+   "stars": 358,
+   "slug": "brew-services-menubar"
+  },
+  {
+   "name": "Fazm",
+   "repo": "mediar-ai/fazm",
+   "description": "AI computer agent",
+   "category": "ai",
+   "homepage": "https://fazm.ai/gh",
+   "icon": "https://github.com/mediar-ai.png?size=256",
+   "stars": 348,
+   "slug": "fazm"
+  },
+  {
+   "name": "Claude Usage Bar",
+   "repo": "Artzainnn/ClaudeUsageBar",
+   "description": "Claude API usage monitor",
+   "category": "ai",
+   "homepage": "https://claudeusagebar.com",
+   "stars": 347,
+   "slug": "claude-usage-bar"
+  },
+  {
+   "name": "PDF Archiver",
+   "repo": "PDF-Archiver/PDF-Archiver",
+   "description": "Tag and archive PDF documents",
+   "category": "files",
+   "icon": "https://github.com/PDF-Archiver.png?size=256",
+   "stars": 345,
+   "slug": "pdf-archiver"
+  },
+  {
+   "name": "Tiny Wi-Fi Analyzer",
+   "repo": "nolze/tiny-wifi-analyzer",
+   "description": "Simple, open-source Wi-Fi channel and strength analyzer for macOS",
+   "category": "system-utilities",
+   "homepage": "https://nolze.github.io/tiny-wifi-analyzer/",
+   "icon": "https://raw.githubusercontent.com/nolze/tiny-wifi-analyzer/master/assets/twa.svg",
+   "screenshot": "https://raw.githubusercontent.com/nolze/tiny-wifi-analyzer/master/assets/screenshot.png",
+   "stars": 323,
+   "slug": "tiny-wi-fi-analyzer"
+  },
+  {
+   "name": "Xclean",
+   "repo": "macmade/Xclean",
+   "description": "Clear Xcode derived data and module cache from the menu bar",
+   "category": "developer-tools",
+   "homepage": "https://xs-labs.com/en/apps/xclean/",
+   "stars": 318,
+   "slug": "xclean"
+  },
+  {
+   "name": "HostsX",
+   "repo": "ZzzM/HostsX",
+   "description": "A lightweight macOS app for updating local hosts",
+   "category": "menu-bar",
+   "icon": "https://raw.githubusercontent.com/ZzzM/HostsX/master/HostsX/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+   "screenshot": "https://github.com/ZzzM/HostsX?tab=readme-ov-file#snapshots",
+   "stars": 309,
+   "slug": "hostsx"
+  },
+  {
+   "name": "XcodeColorSense2",
+   "repo": "onmyway133/XcodeColorSense2",
+   "description": "Xcode color preview",
+   "category": "developer-tools",
+   "homepage": "https://onmyway133.com/",
+   "stars": 287,
+   "slug": "xcodecolorsense2"
+  },
+  {
+   "name": "AutoMute",
+   "repo": "yonilevy/automute",
+   "description": "A MacOS menu bar app that mutes the sound on headphones disconnect / awake from sleep",
+   "category": "audio",
+   "icon": "https://raw.githubusercontent.com/yonilevy/automute/master/automute/Assets.xcassets/AppIcon.appiconset/icon_512x512%402x.png",
+   "screenshot": "https://user-images.githubusercontent.com/31284/49688097-ac653900-fb15-11e8-9c48-3db96df5dcbf.png",
+   "stars": 286,
+   "slug": "automute"
+  },
+  {
+   "name": "JukeBox",
+   "repo": "Jaysce/Jukebox",
+   "description": "Jukebox is a macOS application that allows you to display and control the currently playing song from Spotify or Apple Music in the menu bar",
+   "category": "audio",
+   "homepage": "https://www.jaysce.dev/projects/jukebox",
+   "icon": "https://github.com/Jaysce/Jukebox/raw/main/Images/icon.png",
+   "screenshot": "https://github.com/Jaysce/Jukebox/raw/main/Images/example.png",
+   "stars": 261,
+   "slug": "jukebox"
+  },
+  {
+   "name": "Cronica",
+   "repo": "eggerco/cronica",
+   "description": "Cronica is a minimalist watchlist app for all your Apple devices, that reminds you about upcoming releases",
+   "category": "ai",
+   "homepage": "https://cronica.watch",
+   "icon": "https://github.com/MadeiraAlexandre/Cronica/raw/main/Shared/Assets.xcassets/MacAppIcon.appiconset/icon_512x512.png?raw=true",
+   "screenshot": "https://raw.githubusercontent.com/MadeiraAlexandre/Cronica/main/Screenshots/iPhone.webp",
+   "stars": 249,
+   "slug": "cronica"
+  },
+  {
+   "name": "TauView",
+   "repo": "sprout2000/tauview",
+   "description": "Minimalist image viewer based on Leaflet.js and Tauri",
+   "category": "design",
+   "icon": "https://github.com/sprout2000/leafview/assets/52094761/33fe888a-e1bc-4418-a3e6-effdbba7f828",
+   "screenshot": "https://user-images.githubusercontent.com/52094761/227748216-a9c94a97-dfef-42b5-bce4-1df7a142d509.png",
+   "stars": 167,
+   "slug": "tauview"
+  },
+  {
+   "name": "Elephicon",
+   "repo": "sprout2000/elephicon",
+   "description": "Utility to generate Apple ICNS and Microsoft ICO files from PNG files",
+   "category": "system-utilities",
+   "icon": "https://github.com/sprout2000/elephicon/assets/52094761/2b5f1b4d-a64a-4909-9ea6-c6e2274bb950",
+   "stars": 160,
+   "slug": "elephicon"
+  },
+  {
+   "name": "VoiceOver Designer",
+   "repo": "AccessibilityTools/VoiceOverDesigner",
+   "description": "Design, prototype and test accessibility of iOS-apps",
+   "category": "developer-tools",
+   "icon": "https://rubanov.dev/voice-over-designer/images/logo.png",
+   "screenshot": "https://rubanov.dev/voice-over-designer/images/HeaderLight.png",
+   "stars": 122,
+   "slug": "voiceover-designer"
+  },
+  {
+   "name": "Hello HTTP",
+   "repo": "sunny-chung/hello-http",
+   "description": "A cross-platform HTTP client desktop application for testing HTTP and REST APIs, WebSocket, GraphQL (including subscriptions) and gRPC endpoints",
+   "category": "developer-tools",
+   "homepage": "https://sunny-chung.github.io/hello-http/",
+   "icon": "https://raw.githubusercontent.com/sunny-chung/hello-http/main/appicon/appicon.png",
+   "screenshot": "https://raw.githubusercontent.com/sunny-chung/hello-http/main/doc/_include/screenshot1.png",
+   "stars": 116,
+   "slug": "hello-http"
+  },
+  {
+   "name": "Selected",
+   "repo": "sakeven/Selected",
+   "description": "The floating toolbar that appears when you select any text",
+   "category": "system-utilities",
+   "homepage": "https://plus.anynotes.app/",
+   "icon": "https://github.com/sakeven/Selected/blob/main/Selected/Assets.xcassets/AppIcon.appiconset/icon_512x512.png",
+   "screenshot": "https://github.com/sakeven/Selected/blob/main/DocImages/Screenshot.png",
+   "stars": 116,
+   "slug": "selected"
+  },
+  {
+   "name": "ScriptManager",
+   "repo": "DanielFiller30/ScriptManager",
+   "description": "An easy and comfortable macOS menu bar-tool, to organize and use your own terminal-scripts",
+   "category": "developer-tools",
+   "icon": "https://github.com/DanielFiller30/ScriptManager/blob/main/Media/AppIcons/64.png",
+   "screenshot": "https://github.com/DanielFiller30/ScriptManager/blob/main/Media/Screenshots/start_v2.png",
+   "stars": 100,
+   "slug": "scriptmanager"
+  }
+ ],
+ "categories": [
+  {
+   "slug": "menu-bar",
+   "name": "Menu Bar",
+   "description": "Small utilities that live in the menu bar or notch"
+  },
+  {
+   "slug": "window-management",
+   "name": "Window Management",
+   "description": "Tile, move and switch windows"
+  },
+  {
+   "slug": "system-utilities",
+   "name": "System Utilities",
+   "description": "Tweak, monitor and maintain your Mac"
+  },
+  {
+   "slug": "clipboard",
+   "name": "Clipboard",
+   "description": "Clipboard history and managers"
+  },
+  {
+   "slug": "notes-writing",
+   "name": "Notes & Writing",
+   "description": "Note-taking, writing and Markdown"
+  },
+  {
+   "slug": "ai",
+   "name": "AI",
+   "description": "AI assistants, chat clients and local models"
+  },
+  {
+   "slug": "developer-tools",
+   "name": "Developer Tools",
+   "description": "Tools for building software"
+  },
+  {
+   "slug": "code-editors",
+   "name": "Code Editors",
+   "description": "Text and code editors"
+  },
+  {
+   "slug": "terminal",
+   "name": "Terminal",
+   "description": "Terminal emulators"
+  },
+  {
+   "slug": "git",
+   "name": "Git",
+   "description": "Version control clients"
+  },
+  {
+   "slug": "database",
+   "name": "Database",
+   "description": "Database clients and GUIs"
+  },
+  {
+   "slug": "api",
+   "name": "API Development",
+   "description": "API clients and HTTP debugging"
+  },
+  {
+   "slug": "virtualization",
+   "name": "Virtualization",
+   "description": "Virtual machines and containers"
+  },
+  {
+   "slug": "design",
+   "name": "Design, Images & Graphics",
+   "description": "Design, drawing, 3D, photo editing and image tools"
+  },
+  {
+   "slug": "images",
+   "name": "Images",
+   "description": "Image viewers, editors and converters"
+  },
+  {
+   "slug": "screen-capture",
+   "name": "Screen Capture",
+   "description": "Screenshots and screen recording"
+  },
+  {
+   "slug": "video",
+   "name": "Video",
+   "description": "Video players, editors and converters"
+  },
+  {
+   "slug": "audio",
+   "name": "Audio & Music",
+   "description": "Music players, audio editors and routing"
+  },
+  {
+   "slug": "browsers",
+   "name": "Browsers",
+   "description": "Web browsers"
+  },
+  {
+   "slug": "communication",
+   "name": "Communication",
+   "description": "Chat, email and social"
+  },
+  {
+   "slug": "reading",
+   "name": "Reading",
+   "description": "RSS readers and e-books"
+  },
+  {
+   "slug": "files",
+   "name": "Files",
+   "description": "File managers, transfer, downloads and Quick Look"
+  },
+  {
+   "slug": "security",
+   "name": "Security & Privacy",
+   "description": "Passwords, firewalls, VPNs and privacy"
+  },
+  {
+   "slug": "translation",
+   "name": "Translation",
+   "description": "Translation and dictionaries"
+  },
+  {
+   "slug": "voice",
+   "name": "Voice & Dictation",
+   "description": "Speech to text and voice control"
+  },
+  {
+   "slug": "remote-desktop",
+   "name": "Remote Desktop",
+   "description": "Remote access and screen sharing"
+  },
+  {
+   "slug": "games",
+   "name": "Games & Emulators",
+   "description": "Games and emulators"
+  }
+ ]
+}

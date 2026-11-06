@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "email",
+    "name": "Email",
+    "description": "Mail clients and secure email",
+    "after": "communication"
+  },
+  {
+    "slug": "runtimes",
+    "name": "Languages & Runtimes",
+    "description": "Node.js, Python, Go, Java and .NET: the runtimes your tools and projects run on",
+    "after": "developer-tools"
+  },
+  {
+    "slug": "office",
+    "name": "Office & Documents",
+    "description": "Office suites, PDF tools, spreadsheets and presentations",
+    "after": "notes-writing"
+  },
+  {
+    "slug": "launchers",
+    "name": "Launchers",
+    "description": "Launch apps, search and automate with a keystroke",
+    "after": "window-management"
+  },
+  {
+    "slug": "focus",
+    "name": "Focus & Tasks",
+    "description": "Timers, to-do lists and blockers to stay on track",
+    "after": "launchers"
+  },
+  {
+    "slug": "3d-printing",
+    "name": "3D Printing",
+    "description": "Slicers for 3D printers, and CAD tools for modelling parts to print",
+    "after": "design"
+  }
+]

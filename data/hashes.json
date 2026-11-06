@@ -1,0 +1,13 @@
+{
+ "https://github.com/OpenEmu/OpenEmu/releases/download/v2.4.1/OpenEmu_2.4.1.zip": "521ca1305c012d38f6f907f50399fefbf4e45a9bb8d9d4063157ffca78b217d4",
+ "https://github.com/Whisky-App/Whisky/releases/download/v2.3.5/Whisky.zip": "62fce6aa7034cc84e4809a35cb46af37e7932368102450dd2b3d4a18cbc7b94e",
+ "https://disklens.app/downloads/DiskLens-1.0.28-mac-arm64.dmg": "3724b44c9a8fafd744c49d5fb0c410e4d7d7dbf92184d97d10fccd0dd89fef6e",
+ "https://www.betterbird.eu/downloads/MacDiskImage/betterbird-153.6.0esr-bb12.en-US.mac-arm64.dmg": "981fc3b606fe8e5304cac219a10d116bf0af05cfce71a2c27c4e0f95b8d99595",
+ "https://www.betterbird.eu/downloads/MacDiskImage/betterbird-153.6.0esr-bb12.en-US.mac.dmg": "c9bc8a7af549205ea4299dc614ce22905347cc10399cd605be7257efa6a8af84",
+ "https://downloads.aieltokhy.com/PrivacyStage.dmg": "c7bb4c492f866b772aa904c6fca4fc6743f37353711905c5848dd3a0866db282",
+ "https://www.python.org/ftp/python/3.15.2/python-3.15.2-macos11.pkg": "2c6104475535b720b45774c68b0dfc9fcca2235353cf9ff81e05488f89845396",
+ "https://autoupdate.desktop.anaconda.com/kilo-desktop/latest/latest/macos/arm64/Kilo.dmg": "69a4c170eedd5bf390aee7fbc5d4178f66651f61dc9f131e3065e1a478b2bcd8",
+ "https://www.python.org/ftp/python/3.14.10/python-3.14.10-macos11.pkg": "286c7018aa2730f6747ca433dccdc2b31be45f078a9ea0ffa44d5f06368fd2d7",
+ "https://www.python.org/ftp/python/3.13.17/python-3.13.17-macos11.pkg": "3053592af66128269efab37fe7851a4894920b27c442aeec99ce4d34d17c07e3",
+ "https://www.python.org/ftp/python/3.12.10/python-3.12.10-macos11.pkg": "8373e58da4ea146b3eb1c1f9834f19a319440b6b679b06050b1f9ee3237aa8e4"
+}

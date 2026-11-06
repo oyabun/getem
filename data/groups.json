@@ -1,0 +1,42 @@
+[
+  { "slug": "3d-printing", "name": "3D Printing", "icon": "printer", "categories": [{ "slug": "3d-printing" }] },
+  { "slug": "ai", "name": "AI", "icon": "sparkles", "categories": [{ "slug": "ai" }] },
+  { "slug": "design", "name": "Design", "icon": "palette", "categories": [{ "slug": "design" }] },
+  { "slug": "develop", "name": "Development", "icon": "code-xml", "categories": [
+    { "slug": "code-editors", "label": "Editors" },
+    { "slug": "terminal", "label": "Terminal" },
+    { "slug": "git", "label": "Git" },
+    { "slug": "developer-tools", "label": "Tools" },
+    { "slug": "api", "label": "APIs" },
+    { "slug": "database", "label": "Databases" },
+    { "slug": "runtimes", "label": "Runtimes" },
+    { "slug": "virtualization", "label": "Virtual machines" }
+  ] },
+  { "slug": "internet", "name": "Internet", "icon": "globe", "categories": [
+    { "slug": "browsers", "label": "Browsers" },
+    { "slug": "communication", "label": "Communication" },
+    { "slug": "email", "label": "Email" }
+  ] },
+  { "slug": "mac-tools", "name": "Mac Tools", "icon": "wrench", "categories": [
+    { "slug": "system-utilities", "label": "System Utilities" },
+    { "slug": "menu-bar", "label": "Menu Bar" },
+    { "slug": "window-management", "label": "Window Management" },
+    { "slug": "clipboard", "label": "Clipboard" },
+    { "slug": "files", "label": "Files" },
+    { "slug": "remote-desktop", "label": "Remote Desktop" },
+    { "slug": "screen-capture", "label": "Screen Capture" }
+  ] },
+  { "slug": "multimedia", "name": "Multimedia", "icon": "clapperboard", "categories": [
+    { "slug": "audio", "label": "Audio & Music" },
+    { "slug": "video", "label": "Video" }
+  ] },
+  { "slug": "play", "name": "Play", "icon": "gamepad-2", "categories": [{ "slug": "games" }] },
+  { "slug": "security", "name": "Security & Privacy", "icon": "shield", "categories": [{ "slug": "security" }] },
+  { "slug": "work", "name": "Work & Write", "icon": "pen-line", "categories": [
+    { "slug": "notes-writing", "label": "Notes & Writing" },
+    { "slug": "office", "label": "Office & Documents" },
+    { "slug": "reading", "label": "Reading" },
+    { "slug": "focus", "label": "Focus & Tasks" },
+    { "slug": "launchers", "label": "Launchers" }
+  ] }
+]

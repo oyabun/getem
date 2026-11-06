@@ -1,0 +1,131 @@
+Actions: not in Homebrew Cask
+AeroSpace: not in Homebrew Cask
+AirBattery: not in Homebrew Cask
+Alacritty (alacritty): deprecated in Homebrew
+Antares: not in Homebrew Cask
+Apache OpenOffice (openoffice): deprecated in Homebrew
+Ardour: not in Homebrew Cask
+AuthPass: not in Homebrew Cask
+AutoMute: not in Homebrew Cask
+BatteryBoi: not in Homebrew Cask
+BlockBlock (blockblock): unsupported artifact "installer"
+Bob (bob-app): deprecated in Homebrew
+Boring Notch: not in Homebrew Cask
+Brew Services Menubar (brewservicesmenubar): deprecated in Homebrew
+Brewlet (brewlet): deprecated in Homebrew
+BrightIntosh: not in Homebrew Cask
+Brooklyn (brooklyn): deprecated in Homebrew
+CalendarX: not in Homebrew Cask
+Caprine (caprine): deprecated in Homebrew
+Cerebro (cerebro): deprecated in Homebrew
+Claude Usage Bar: not in Homebrew Cask
+Claude Usage Tracker: not in Homebrew Cask
+Cling: not in Homebrew Cask
+Control Room: not in Homebrew Cask
+CopyQ (copyq): deprecated in Homebrew
+Cronica: not in Homebrew Cask
+Darktable (darktable): deprecated in Homebrew
+DeaDBeeF (deadbeef@nightly): deprecated in Homebrew
+DevHub: not in Homebrew Cask
+Dozer: not in Homebrew Cask
+Ejectify: not in Homebrew Cask
+Escrcpy: not in Homebrew Cask
+Excalidraw: not in Homebrew Cask
+ExifCleaner (exifcleaner): deprecated in Homebrew
+Fazm: not in Homebrew Cask
+Flameshot (flameshot): deprecated in Homebrew
+Focalboard: not in Homebrew Cask
+FontForge (fontforge-app): deprecated in Homebrew
+FreeChat: not in Homebrew Cask
+FreeTube (freetube): deprecated in Homebrew
+Freeter: not in Homebrew Cask
+GPT4All (gpt4all): unsupported artifact "installer"
+Gifski: not in Homebrew Cask
+HapticKey (haptickey): deprecated in Homebrew
+Helix: not in Homebrew Cask
+Hello HTTP: not in Homebrew Cask
+HiPixel: not in Homebrew Cask
+Hiddify: not in Homebrew Cask
+Hoppscotch: not in Homebrew Cask
+HostsX (hostsx): deprecated in Homebrew
+Ice Cubes: not in Homebrew Cask
+ImHex (imhex): deprecated in Homebrew
+ImageGlass: not in Homebrew Cask
+Insomnia (inso): nothing to install
+JankyBorders: not in Homebrew Cask
+Kaset: not in Homebrew Cask
+Koodo Reader (koodo-reader): deprecated in Homebrew
+LMMS (lmms): deprecated in Homebrew
+Lantern: not in Homebrew Cask
+Lap: not in Homebrew Cask
+LeafView: not in Homebrew Cask
+LinkLiar (linkliar): deprecated in Homebrew
+LobeHub: not in Homebrew Cask
+Localization Editor (localizationeditor): deprecated in Homebrew
+MacDown (macdown): deprecated in Homebrew
+MarkText (mark-text): deprecated in Homebrew
+MeshLab (meshlab): unsupported artifact "postflight_steps"
+Min (min): deprecated in Homebrew
+Multi: not in Homebrew Cask
+Multipass (multipass): unsupported artifact "postflight_steps"
+Neovim: not in Homebrew Cask
+NextAI Translator: not in Homebrew Cask
+NextChat: not in Homebrew Cask
+Nuclear (nuclear): deprecated in Homebrew
+Omnivore: not in Homebrew Cask
+OpenSCAD (openscad): deprecated in Homebrew
+OverSight (oversight): unsupported artifact "installer"
+PDF Archiver: not in Homebrew Cask
+PasteBar: not in Homebrew Cask
+Pasteboard Viewer: not in Homebrew Cask
+Pear Desktop: not in Homebrew Cask
+Pencil (pencil): deprecated in Homebrew
+Pine (pine): deprecated in Homebrew
+Plash: not in Homebrew Cask
+Platypus (platypus): deprecated in Homebrew
+Popcorn Time: not in Homebrew Cask
+QOwnNotes (qownnotes): deprecated in Homebrew
+Quick Look Plugins: not in Homebrew Cask
+QuickRecorder: not in Homebrew Cask
+RPCS3: not in Homebrew Cask
+RawTherapee (rawtherapee): nested container
+Rem: not in Homebrew Cask
+SYM: not in Homebrew Cask
+Screenpipe: not in Homebrew Cask
+ScriptManager: not in Homebrew Cask
+ScrollSnap: not in Homebrew Cask
+Selected: not in Homebrew Cask
+ShadowsocksX-NG (shadowsocksx-ng): deprecated in Homebrew
+Sidekick: not in Homebrew Cask
+SketchyBar: not in Homebrew Cask
+SlowQuitApps: not in Homebrew Cask
+Sniffnet: not in Homebrew Cask
+Soundflower (soundflower): deprecated in Homebrew
+Steam (steam): nested container
+Stringz: not in Homebrew Cask
+Strongbox: not in Homebrew Cask
+Sunshine: not in Homebrew Cask
+Synfig (synfigstudio): deprecated in Homebrew
+System Color Picker: not in Homebrew Cask
+TauView: not in Homebrew Cask
+Telephone: not in Homebrew Cask
+Tiny Wi-Fi Analyzer: not in Homebrew Cask
+TomatoBar (tomatobar): deprecated in Homebrew
+Tuneful: not in Homebrew Cask
+Ueli (ueli): deprecated in Homebrew
+Vim: not in Homebrew Cask
+VoiceOver Designer: not in Homebrew Cask
+WeekToDo (weektodo): deprecated in Homebrew
+Windows App (windows-app): pkg with install choices
+Wireshark (wireshark-app): several artifacts
+Xclean: not in Homebrew Cask
+XcodeCleaner: not in Homebrew Cask
+XcodeColorSense2: not in Homebrew Cask
+Yippy (yippy): deprecated in Homebrew
+bitchat: not in Homebrew Cask
+mpv (stolendata-mpv): deprecated in Homebrew
+qBittorrent (qbittorrent): deprecated in Homebrew
+qutebrowser (qutebrowser): deprecated in Homebrew
+stts: not in Homebrew Cask
+uPic: not in Homebrew Cask
+yabai: not in Homebrew Cask

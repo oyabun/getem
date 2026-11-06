@@ -1,0 +1,513 @@
+{
+ "maccy": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Maccy",
+  "checked": "2026-11-05",
+  "version": "2.8.0"
+ },
+ "openemu": {
+  "archs": [
+   "x86_64"
+  ],
+  "exe": "OpenEmu",
+  "checked": "2026-11-05",
+  "version": "2.4.1"
+ },
+ "jordanbaird-ice@beta": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Ice",
+  "checked": "2026-11-05",
+  "version": "0.11.13-dev.2"
+ },
+ "ollama-app": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Ollama",
+  "checked": "2026-11-05",
+  "version": "0.40.14"
+ },
+ "jan": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Jan-Desktop",
+  "checked": "2026-11-05",
+  "version": "0.8.8"
+ },
+ "iterm2": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "iTerm2",
+  "checked": "2026-11-05",
+  "version": "3.7.7"
+ },
+ "aerial": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Aerial",
+  "checked": "2026-11-05",
+  "version": "4.1.10"
+ },
+ "amethyst": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Amethyst",
+  "checked": "2026-11-05",
+  "version": "0.24.3"
+ },
+ "keycastr": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "KeyCastr",
+  "checked": "2026-11-05",
+  "version": "0.11.1"
+ },
+ "element": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Element",
+  "checked": "2026-11-05",
+  "version": "1.12.33"
+ },
+ "hiddenbar": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Hidden Bar",
+  "checked": "2026-11-05",
+  "version": "1.11.1"
+ },
+ "thaw": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Thaw",
+  "checked": "2026-11-05",
+  "version": "2.1.0"
+ },
+ "loop": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Loop",
+  "checked": "2026-11-05",
+  "version": "1.4.2"
+ },
+ "gitup-app": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "GitUp",
+  "checked": "2026-11-05",
+  "version": "1.5.0"
+ },
+ "mac-mouse-fix": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Mac Mouse Fix",
+  "checked": "2026-11-05",
+  "version": "3.1.0"
+ },
+ "medis": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Medis",
+  "checked": "2026-11-05",
+  "version": "2.16.1"
+ },
+ "netnewswire": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "NetNewsWire",
+  "checked": "2026-11-05",
+  "version": "7.2.1"
+ },
+ "sequel-ace": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Sequel Ace",
+  "checked": "2026-11-05",
+  "version": "6.1.0"
+ },
+ "puremac": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "PureMac",
+  "checked": "2026-11-05",
+  "version": "3.2.0"
+ },
+ "miaoyan": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "MiaoYan",
+  "checked": "2026-11-05",
+  "version": "4.7.0"
+ },
+ "sloth": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Sloth",
+  "checked": "2026-11-05",
+  "version": "3.6"
+ },
+ "keepingyouawake": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "KeepingYouAwake",
+  "checked": "2026-11-05",
+  "version": "1.6.8"
+ },
+ "notunes": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "noTunes",
+  "checked": "2026-11-05",
+  "version": "3.5"
+ },
+ "macpass": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "MacPass",
+  "checked": "2026-11-05",
+  "version": "0.8.2"
+ },
+ "swiftbar": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "SwiftBar",
+  "checked": "2026-11-05",
+  "version": "2.1.1"
+ },
+ "bleunlock": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "BLEUnlock",
+  "checked": "2026-11-05",
+  "version": "1.12.2"
+ },
+ "selfcontrol": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "selfcontrol-cli",
+  "checked": "2026-11-05",
+  "version": "4.0.2"
+ },
+ "reminders-menubar": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Reminders MenuBar",
+  "checked": "2026-11-05",
+  "version": "2.2.0"
+ },
+ "qlmarkdown": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "QLMarkdown",
+  "checked": "2026-11-05",
+  "version": "1.5.7"
+ },
+ "hot": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Hot",
+  "checked": "2026-11-05",
+  "version": "1.9.4"
+ },
+ "flycut": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Flycut",
+  "checked": "2026-11-05",
+  "version": "1.9.6"
+ },
+ "itsycal": {
+  "archs": [
+   "arm64"
+  ],
+  "exe": "Itsycal",
+  "checked": "2026-11-05",
+  "version": "0.27.3"
+ },
+ "losslessswitcher": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "LosslessSwitcher",
+  "checked": "2026-11-05",
+  "version": "2.0"
+ },
+ "cameracontroller": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "CameraController",
+  "checked": "2026-11-05",
+  "version": "1.4.0"
+ },
+ "alienator88-sentinel": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Sentinel",
+  "checked": "2026-11-05",
+  "version": "3.1.4"
+ },
+ "calendr": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Calendr",
+  "checked": "2026-11-05",
+  "version": "1.26.2"
+ },
+ "knockknock": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "KnockKnock",
+  "checked": "2026-11-05",
+  "version": "4.1.0"
+ },
+ "gray": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Gray",
+  "checked": "2026-11-05",
+  "version": "0.17.0"
+ },
+ "netiquette": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Netiquette",
+  "checked": "2026-11-05",
+  "version": "2.3.0"
+ },
+ "free-ruler": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Free Ruler",
+  "checked": "2026-11-05",
+  "version": "2.0.19"
+ },
+ "claude": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Claude",
+  "checked": "2026-11-05",
+  "version": "4.23118.0"
+ },
+ "atlas": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "atlas",
+  "checked": "2026-11-05",
+  "version": "0.1.1"
+ },
+ "godot": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Godot",
+  "checked": "2026-11-05",
+  "version": "4.7.2"
+ },
+ "taskexplorer": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "TaskExplorer",
+  "checked": "2026-11-05",
+  "version": "3.1.0"
+ },
+ "dhs": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "DHS",
+  "checked": "2026-11-05",
+  "version": "1.6.0"
+ },
+ "kextviewr": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "KextViewr",
+  "checked": "2026-11-05",
+  "version": "2.0.0"
+ },
+ "plex": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Plex",
+  "checked": "2026-11-05",
+  "version": "1.115.0.426"
+ },
+ "appcleaner": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "AppCleaner",
+  "checked": "2026-11-05",
+  "version": "3.7"
+ },
+ "readdle-spark": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "SparklyRemote",
+  "checked": "2026-11-05",
+  "version": "3.32.2.141405"
+ },
+ "core-eq": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "CoreEQ",
+  "checked": "2026-11-05",
+  "version": "1.10"
+ },
+ "bettertouchtool": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "BetterTouchTool",
+  "checked": "2026-11-05",
+  "version": "6.1104"
+ },
+ "processmonitor": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "ProcessMonitor",
+  "checked": "2026-11-05",
+  "version": "1.5.0"
+ },
+ "filemonitor": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "FileMonitor",
+  "checked": "2026-11-05",
+  "version": "1.3.0"
+ },
+ "whatsapp": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "WhatsApp",
+  "checked": "2026-11-05",
+  "version": "26.44.15"
+ },
+ "telegram": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "Telegram",
+  "checked": "2026-11-05",
+  "version": "13.2.0"
+ },
+ "the-unarchiver": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "The Unarchiver",
+  "checked": "2026-11-05",
+  "version": "4.3.9"
+ },
+ "sublime-text": {
+  "archs": [
+   "x86_64",
+   "arm64"
+  ],
+  "exe": "sublime_text",
+  "checked": "2026-11-05",
+  "version": "4215"
+ }
+}

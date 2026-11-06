@@ -1,0 +1,67 @@
+{
+  "objective-see": {
+    "name": "Objective-See",
+    "description": "Free macOS security tools: firewall, persistence scanner, network monitor and more",
+    "members": [
+      "lulu",
+      "knockknock",
+      "netiquette",
+      "taskexplorer",
+      "dhs",
+      "kextviewr",
+      "filemonitor",
+      "processmonitor"
+    ],
+    "icon": "https://github.com/objective-see.png?size=128"
+  },
+  "artcraft": {
+    "name": "ArtCraft",
+    "description": "Open-source creative apps written from scratch in Rust",
+    "members": [
+      "artcraft",
+      "photocraft",
+      "lightcraft",
+      "vectorcraft",
+      "designcraft",
+      "figcraft",
+      "filmcraft",
+      "effectcraft",
+      "soundcraft",
+      "pdfcraft",
+      "wordcraft",
+      "gridcraft",
+      "deckcraft",
+      "cadcraft",
+      "texturecraft",
+      "materialcraft",
+      "craft-anything"
+    ],
+    "icon": "https://getartcraft.com/artcraft-icon.svg"
+  },
+  "alienator88": {
+    "name": "Alienator88",
+    "description": "App cleanup and Mac maintenance tools from the same developer",
+    "members": [
+      "pearcleaner",
+      "alienator88-sentinel"
+    ]
+  },
+  "jetbrains": {
+    "name": "JetBrains",
+    "description": "IDEs for every language, and the Toolbox that installs and updates them",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "members": [
+      "jetbrains-toolbox",
+      "intellij-idea",
+      "pycharm",
+      "webstorm",
+      "goland",
+      "rustrover",
+      "clion",
+      "rider",
+      "phpstorm",
+      "rubymine",
+      "datagrip"
+    ]
+  }
+}

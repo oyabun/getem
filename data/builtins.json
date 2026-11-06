@@ -1,0 +1,46 @@
+[
+  {
+    "id": "xcode-cli",
+    "src": "xcode-cli",
+    "name": "Xcode Command Line Tools",
+    "description": "Compilers, git, make and the other developer tools macOS needs to build software, without the full Xcode",
+    "category": "developer-tools",
+    "homepage": "https://developer.apple.com/xcode/",
+    "icon": "https://github.com/apple.png?size=256",
+    "note": "Installed through Apple's own software update. Asks for your admin password."
+  },
+  {
+    "id": "xcode",
+    "src": "appstore:497799835",
+    "name": "Xcode",
+    "description": "Apple's IDE and SDKs for building apps for Mac, iPhone, iPad, Apple Watch and Vision Pro",
+    "category": "developer-tools",
+    "homepage": "https://developer.apple.com/xcode/",
+    "icon": "https://github.com/apple.png?size=256",
+    "note": "Apple only ships Xcode through the Mac App Store. The command opens its page there (or uses mas if you have it); you click Get. It's a large download.",
+    "dest": "Xcode.app"
+  },
+  {
+    "id": "shinybox",
+    "src": "appstore:6821971735",
+    "dest": "Shinybox.app",
+    "name": "Shinybox",
+    "description": "A personal library for Mac, iPad and iPhone: save links, notes, screenshots and files, then find them again with tags, smart lists and search inside your content",
+    "category": "notes-writing",
+    "homepage": "https://shinybox.net/",
+    "icon": "https://shinybox.net/images/web/app-icon.webp",
+    "note": "Only on the Mac App Store. The command opens its page there (or uses mas if you have it); you click Get. Free."
+  },
+  {
+    "id": "pi",
+    "src": "npm:@earendil-works/pi-coding-agent",
+    "dest": "pi",
+    "name": "Pi",
+    "description": "A coding agent that runs in your terminal and works on the files on your machine. Bring a subscription, an API key or a local model",
+    "category": "ai",
+    "homepage": "https://pi.dev/",
+    "repo": "earendil-works/pi",
+    "icon": "https://github.com/earendil-works.png?size=256",
+    "note": "A command-line tool, installed with npm: it needs Node.js (pick Node.js LTS from Languages & Runtimes too). Update later with `pi update`."
+  }
+]

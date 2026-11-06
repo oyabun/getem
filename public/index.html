@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <title>Get'Em! — set up a new Mac in minutes</title>
+  <meta name="description" content="A curated list of Mac apps for setting up a new Mac fast. Pick what you need, or start from a pack for your role, and get one Terminal command that installs it all.">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-black-micro-16.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-black-micro-32.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-black-48.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-white-micro-16.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-white-micro-32.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-white-48.png" media="(prefers-color-scheme: dark)">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <meta name="theme-color" content="#7c6df0">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get'Em!: set up a new Mac in minutes">
+  <meta property="og:description" content="A curated list of Mac apps. Pick what you need, or start from a pack for your role, and get one Terminal command that installs it all.">
+  <meta property="og:image" content="img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand">
+        <img class="brand-logo" src="img/logo-288.png" srcset="img/logo-288.png 1x, img/logo-512.png 2x" width="210" height="210" alt="" decoding="async">
+        <div class="brand-text">
+          <h1 class="wordmark">Get'Em<span class="bang">!</span></h1>
+          <p class="tagline"><span class="newmac" id="newmac">New Mac?</span> <span>One command, and you're ready to go.</span></p>
+          <p class="subline">Hand-picked Mac apps, installed straight from each publisher and checksum-verified.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="topbar-sentinel" id="topbar-sentinel" aria-hidden="true"></div>
+  <div class="topbar" id="topbar">
+    <div class="wrap tools">
+      <button type="button" class="mini-brand" id="mini-brand" aria-label="Back to the top" title="Back to the top" tabindex="-1">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="img/favicon-white-micro-96.png">
+          <img src="img/favicon-black-micro-96.png" width="40" height="40" alt="" decoding="async">
+        </picture>
+      </button>
+      <button type="button" id="side-toggle" class="side-toggle" aria-label="Toggle the sidebar"><span aria-hidden="true">☰</span></button>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search apps…" autocomplete="off" aria-label="Search apps">
+        <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" title="Clear search" hidden>×</button>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filters"></div>
+    </div>
+  </div>
+
+  <div class="wrap layout">
+    <nav class="cats" id="cats" aria-label="Browse"></nav>
+    <main id="catalog" aria-live="polite">
+      <p class="muted">Loading apps…</p>
+    </main>
+  </div>
+
+  <section class="wrap faq" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Questions, answered</h2>
+    <div class="faq-list">
+      <details class="faq-item" name="faq">
+        <summary><span>What is Get'Em?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>A hand-picked list of Mac apps. Pick what you want (or start from a pack for your role) and it writes one Terminal command that downloads and installs everything, so a new Mac is ready in minutes.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Where do the versions and downloads come from?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Versions, download links and checksums come from the <a href="https://formulae.brew.sh/cask/">Homebrew Cask API</a> and from each publisher's own release page, so every app is fetched from the people who make it. The catalog is rebuilt regularly; the date is at the bottom of the page.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Do I need Homebrew?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>No. The script downloads each app straight from its publisher. Homebrew is optional: apps that have a cask also show a <code>brew install</code> line in their details, and a few things (like some command-line tools) can add Homebrew to your install list for you.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>How do you check the downloads?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Every file is checked against a SHA-256 checksum before it is installed, and a mismatch stops the install. The checksum comes from the Homebrew Cask API or the publisher's release page. When a publisher doesn't list one, it is computed when the catalog is built and pinned, which catches later tampering or corruption but trusts that first download.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Why does it ask for my password?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Apps that come as a <code>.pkg</code> (Node.js, Python, Java, Go and a few more) need administrator rights to install, and so does writing to a root-owned folder. Those apps carry an <em>admin</em> tag. Plain drag-and-drop apps install without one.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Can I see what it will do first?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Yes. Turn on the dry run under the command (or add <code>--dry-run</code>) and it only prints what it would download and install.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Does anything leave my Mac?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>The page is static: no account, nothing to sign up for. The script talks only to this site, for the catalog, and to each app's publisher, for the download.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Which Macs does it support?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Intel and Apple Silicon. Open an app's details to see which chips it runs on and the macOS version it needs, shown on its preview. Apple Silicon-only apps are skipped on an Intel Mac.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>How do I update everything later?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Run the same command again any time: apps that are already current are skipped and older ones are updated. To refresh everything you've installed from this list, run <code id="update-cmd">curl -fsSL /install.sh | bash -s -- --update</code></p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Can I share my install list?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Yes. <em>Copy link</em> in the bottom bar gives a short address that restores the same selection, which is handy for a teammate's new Mac. <em>Download .sh</em> saves a script that also works offline.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>How do I remove an app?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Installed apps are normal Mac apps: drag them to the Trash, or use AppCleaner (in the Muggle pack) to sweep up their leftovers.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="wrap foot muted">
+    <p>Get'Em! · A curated list, built to get a Mac ready quickly. <span id="generated"></span></p>
+  </footer>
+
+  <div class="bar" id="bar" hidden>
+    <div class="wrap bar-inner">
+      <div class="bar-info">
+        <button type="button" class="folder-card" id="count" aria-expanded="false" aria-controls="drawer" title="Review the apps you picked">
+          <span class="folder" aria-hidden="true">
+            <span class="folder-back"></span>
+            <span class="folder-pages" id="folder-pages"></span>
+            <span class="folder-front">
+              <span class="folder-pill" id="folder-pill">Review</span>
+            </span>
+          </span>
+          <span class="folder-caption">
+            <span class="folder-n" id="folder-n"></span>
+            <span class="folder-sub" id="folder-sub"></span>
+          </span>
+        </button>
+      </div>
+      <div class="term" id="term" data-open="false">
+        <div class="term-bar">
+          <span class="dots" aria-hidden="true">
+            <button type="button" class="dot dot-r" tabindex="-1" title="Close (decorative)"></button>
+            <button type="button" class="dot dot-y" id="dot-collapse" tabindex="-1" title="Collapse the command"></button>
+            <button type="button" class="dot dot-g" id="dot-expand" tabindex="-1" title="Show the whole command"></button>
+          </span>
+          <span class="term-title">getem.sh — zsh</span>
+          <button type="button" class="term-toggle" id="term-toggle" aria-expanded="false" aria-controls="command" hidden>Show all ▾</button>
+        </div>
+        <code id="command" class="command"></code>
+      </div>
+      <div class="bar-actions">
+        <button type="button" id="copy" class="primary"><span class="btn-label">Copy<span class="long"> command</span></span></button>
+        <button type="button" id="term-show" class="term-show" aria-label="Show the command" aria-expanded="false" aria-controls="term"></button>
+        <button type="button" id="download"><span class="btn-label">Download .sh</span></button>
+        <button type="button" id="share" title="Copy a link that restores exactly this selection"><span class="btn-label">Copy link</span></button>
+      </div>
+      <p class="hint muted"><span id="hint-lead">Paste into Terminal. Click</span> <button type="button" class="dry" id="dry-run" aria-pressed="false" title="Add --dry-run to the command">--dry-run</button> <span id="hint-tail">to add it and preview first.</span><span id="admin-hint" hidden> Some picks use an installer package and will ask for your admin password.</span></p>
+    </div>
+  </div>
+
+  <dialog id="modal" aria-label="App details"></dialog>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+    <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Close">×</button>
+    <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Previous screenshot">‹</button>
+    <img id="lb-img" alt="">
+    <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Next screenshot">›</button>
+    <div class="lb-count" id="lb-count"></div>
+  </dialog>
+
+  <aside class="drawer" id="drawer" aria-label="Install list" hidden>
+    <header class="drawer-head">
+      <strong id="drawer-title">Install list</strong>
+      <button type="button" class="link" id="drawer-clear">Clear all</button>
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Close list">×</button>
+    </header>
+    <div class="drawer-list" id="drawer-list"></div>
+  </aside>
+
+  <dialog id="confirm" class="confirm" aria-labelledby="confirm-title">
+    <h2 id="confirm-title">This one is needed by something else</h2>
+    <p id="confirm-text"></p>
+    <div class="confirm-actions">
+      <button type="button" id="confirm-keep" class="primary">Keep it</button>
+      <button type="button" id="confirm-remove">Remove</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

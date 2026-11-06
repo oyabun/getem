@@ -1,0 +1,236 @@
+{
+  "muggle": {
+    "name": "Muggle",
+    "description": "The 101 basics for everyday, non-technical use: a browser, chat and video calls, music, office documents, passwords, a cleanup tool and friendly AI assistants. Pick what you like in each part",
+    "slots": [
+      {
+        "name": "Browser",
+        "pick": "one",
+        "apps": [
+          "google-chrome",
+          "firefox",
+          "brave-browser"
+        ],
+        "defaults": [
+          "google-chrome"
+        ]
+      },
+      {
+        "name": "Chat & calls",
+        "pick": "any",
+        "apps": [
+          "whatsapp",
+          "zoom",
+          "telegram",
+          "signal"
+        ],
+        "defaults": [
+          "whatsapp",
+          "zoom"
+        ]
+      },
+      {
+        "name": "Music & video",
+        "pick": "any",
+        "apps": [
+          "spotify",
+          "vlc",
+          "iina"
+        ],
+        "defaults": [
+          "spotify",
+          "vlc"
+        ]
+      },
+      {
+        "name": "AI assistant",
+        "pick": "any",
+        "apps": [
+          "chatgpt",
+          "claude"
+        ],
+        "defaults": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "name": "Passwords",
+        "pick": "one",
+        "apps": [
+          "bitwarden",
+          "1password"
+        ],
+        "defaults": [
+          "bitwarden"
+        ]
+      },
+      {
+        "name": "Essentials",
+        "pick": "all",
+        "apps": [
+          "libreoffice",
+          "google-drive",
+          "the-unarchiver",
+          "appcleaner"
+        ]
+      }
+    ]
+  },
+  "power-user": {
+    "name": "Power User",
+    "description": "Small upgrades for people who live on their Mac: system stats in the menu bar, window snapping, a tidy menu bar, archives and a fast terminal",
+    "members": [
+      "stats",
+      "rectangle",
+      "thaw",
+      "keka",
+      "ghostty"
+    ]
+  },
+  "developer": {
+    "name": "Developer",
+    "description": "Editor, terminal, Git, databases, API testing and local AI to build with",
+    "slots": [
+      {
+        "name": "Essentials",
+        "pick": "all",
+        "apps": [
+          "visual-studio-code",
+          "ghostty",
+          "homebrew"
+        ]
+      },
+      {
+        "name": "Runtimes",
+        "pick": "any",
+        "apps": [
+          "node",
+          "python3",
+          "go",
+          "temurin@25",
+          "dotnet-sdk"
+        ],
+        "defaults": [
+          "node",
+          "python3"
+        ]
+      },
+      {
+        "name": "Containers",
+        "pick": "any",
+        "apps": [
+          "docker-desktop"
+        ],
+        "defaults": [
+          "docker-desktop"
+        ]
+      },
+      {
+        "name": "Mobile",
+        "pick": "any",
+        "apps": [
+          "xcode",
+          "android-studio"
+        ],
+        "defaults": []
+      },
+      {
+        "name": "Databases",
+        "pick": "any",
+        "apps": [
+          "sequel-ace"
+        ],
+        "defaults": []
+      },
+      {
+        "name": "AI harness",
+        "pick": "any",
+        "apps": [
+          "claude"
+        ],
+        "defaults": [
+          "claude"
+        ]
+      },
+      {
+        "name": "Dev tools",
+        "pick": "any",
+        "apps": [
+          "bruno",
+          "gh",
+          "xcode-cli"
+        ],
+        "defaults": [
+          "bruno",
+          "gh",
+          "xcode-cli"
+        ]
+      }
+    ]
+  },
+  "designer": {
+    "name": "Designer",
+    "description": "Interface design, 3D and image optimisation for visual work, plus tidy window snapping",
+    "members": [
+      "figma",
+      "paper-design",
+      "blender",
+      "imageoptim",
+      "rectangle"
+    ]
+  },
+  "creator": {
+    "name": "Content Creator",
+    "description": "Record, edit audio, convert video, watch anything and shrink images",
+    "members": [
+      "obs",
+      "audacity",
+      "handbrake-app",
+      "iina",
+      "imageoptim"
+    ]
+  },
+  "writer": {
+    "name": "Writer & Student",
+    "description": "Notes, Markdown, e-books, office documents and grammar help",
+    "members": [
+      "obsidian",
+      "joplin",
+      "zettlr",
+      "calibre",
+      "libreoffice",
+      "grammarly-desktop",
+      "keka"
+    ]
+  },
+  "ai": {
+    "name": "AI Tinkerer",
+    "description": "The main assistants, local models with LM Studio, and Voicebox for voice",
+    "members": [
+      "chatgpt",
+      "claude",
+      "lm-studio",
+      "voicebox"
+    ]
+  },
+  "privacy": {
+    "name": "Privacy Nerd",
+    "description": "A firewall that asks before apps connect out, a mic and camera watch, a password manager and a private browser",
+    "members": [
+      "lulu",
+      "oversight",
+      "bitwarden",
+      "librewolf"
+    ]
+  },
+  "gamer": {
+    "name": "Gamer",
+    "description": "Emulators for retro consoles, GameCube and Wii, and Switch games on your Mac",
+    "members": [
+      "openemu",
+      "dolphin",
+      "nx2apple"
+    ]
+  }
+}

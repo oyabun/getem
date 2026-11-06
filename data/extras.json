@@ -1,0 +1,1538 @@
+[
+  {
+    "cask": "appcleaner",
+    "name": "AppCleaner",
+    "description": "Uninstall apps and sweep away the files they leave behind",
+    "category": "system-utilities",
+    "homepage": "https://freemacsoft.net/appcleaner/"
+  },
+  {
+    "cask": "caffeine",
+    "name": "Caffeine",
+    "description": "Keep your Mac awake with one click in the menu bar",
+    "category": "menu-bar",
+    "homepage": "https://intelliscapesolutions.com/apps/caffeine",
+    "repo": "IntelliScape/caffeine",
+    "icon": "https://github.com/IntelliScape.png?size=256"
+  },
+  {
+    "cask": "discord",
+    "name": "Discord",
+    "description": "Voice, video and text chat for communities and friends",
+    "category": "communication",
+    "homepage": "https://discord.com",
+    "icon": "https://github.com/discord.png?size=256"
+  },
+  {
+    "cask": "visual-studio-code",
+    "name": "Visual Studio Code",
+    "description": "Popular, extensible code editor from Microsoft",
+    "category": "code-editors",
+    "homepage": "https://code.visualstudio.com",
+    "repo": "microsoft/vscode",
+    "icon": "https://github.com/microsoft.png?size=256"
+  },
+  {
+    "cask": "netiquette",
+    "name": "Netiquette",
+    "description": "See every network connection your apps make",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/netiquette.html",
+    "repo": "objective-see/Netiquette",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "LNPANDY/NX2Apple",
+      "asset": "NX2Apple-macOS-arm64.zip",
+      "app": "NX2Apple.app",
+      "appleSiliconOnly": true
+    },
+    "id": "nx2apple",
+    "name": "NX2Apple",
+    "description": "One-click macOS app that builds your own Switch game dumps to run on iPhone, iPad and Mac",
+    "category": "games",
+    "homepage": "https://github.com/LNPANDY/NX2Apple",
+    "repo": "LNPANDY/NX2Apple",
+    "icon": "https://github.com/LNPANDY.png?size=256",
+    "minMacos": "13"
+  },
+  {
+    "github": {
+      "repo": "InsaneArts/atlas",
+      "asset": "Atlas-*-macos.zip",
+      "app": "Atlas.app"
+    },
+    "id": "atlas",
+    "name": "Atlas",
+    "description": "Give your AI agent its own hidden second desktop on your Mac, so it can click and type while you keep working",
+    "category": "ai",
+    "homepage": "https://atlas.insanearts.io",
+    "repo": "InsaneArts/atlas",
+    "icon": "https://github.com/InsaneArts.png?size=256",
+    "minMacos": "14"
+  },
+  {
+    "cask": "macusb",
+    "name": "macUSB",
+    "description": "Create bootable USB installers for macOS, Windows and Linux, and download macOS installers from Apple",
+    "category": "system-utilities",
+    "homepage": "https://www.macusb.app/",
+    "repo": "Kruszoneq/macUSB",
+    "icon": "https://github.com/Kruszoneq.png?size=256"
+  },
+  {
+    "cask": "slack",
+    "name": "Slack",
+    "description": "Team messaging, channels and huddles for work",
+    "category": "communication",
+    "homepage": "https://slack.com",
+    "icon": "https://github.com/slackhq.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "notion",
+    "name": "Notion",
+    "description": "Notes, docs, wikis and projects in one workspace",
+    "category": "notes-writing",
+    "homepage": "https://www.notion.com",
+    "icon": "https://github.com/makenotion.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "figma",
+    "name": "Figma",
+    "description": "Collaborative interface design, prototyping and whiteboarding. Free starter plan, paid plans for teams",
+    "category": "design",
+    "homepage": "https://www.figma.com/",
+    "icon": "https://github.com/figma.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "grammarly-desktop",
+    "name": "Grammarly",
+    "description": "AI writing assistant that checks grammar, tone and clarity",
+    "category": "notes-writing",
+    "homepage": "https://www.grammarly.com/desktop",
+    "icon": "https://github.com/grammarly.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "1password",
+    "name": "1Password",
+    "description": "Password manager for logins, passkeys and secrets",
+    "category": "security",
+    "homepage": "https://1password.com",
+    "icon": "https://github.com/1Password.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "tailscale-app",
+    "name": "Tailscale",
+    "description": "Zero-config VPN that connects your devices into a private network",
+    "category": "security",
+    "homepage": "https://tailscale.com",
+    "icon": "https://github.com/tailscale.png?size=256",
+    "paid": true
+  },
+  {
+    "github": {
+      "repo": "storytold/photocraft",
+      "asset": "photocraft-*-macos-universal.dmg",
+      "app": "PhotoCraft.app"
+    },
+    "id": "photocraft",
+    "name": "PhotoCraft",
+    "description": "PhotoCraft: An open-source, photo editor written by scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/photocraft",
+    "repo": "storytold/photocraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 77180
+  },
+  {
+    "github": {
+      "repo": "storytold/vectorcraft",
+      "asset": "vectorcraft-*-macos-universal.dmg",
+      "app": "VectorCraft.app"
+    },
+    "id": "vectorcraft",
+    "name": "VectorCraft",
+    "description": "VectorCraft: An open-source, vector art tool written by scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/vectorcraft",
+    "repo": "storytold/vectorcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 11401
+  },
+  {
+    "github": {
+      "repo": "storytold/filmcraft",
+      "asset": "filmcraft-*-macos-universal.dmg",
+      "app": "FilmCraft.app"
+    },
+    "id": "filmcraft",
+    "name": "FilmCraft",
+    "description": "FilmCraft: An open-source, nonlinear video editor written by scratch in pure Rust",
+    "category": "video",
+    "homepage": "https://getartcraft.com/apps/filmcraft",
+    "repo": "storytold/filmcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 17600
+  },
+  {
+    "github": {
+      "repo": "storytold/lightcraft",
+      "asset": "lightcraft-*-macos-universal.dmg",
+      "app": "LightCraft.app"
+    },
+    "id": "lightcraft",
+    "name": "LightCraft",
+    "description": "LightCraft: An open-source non-destructive photo editor written by scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/lightcraft",
+    "repo": "storytold/lightcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 15539
+  },
+  {
+    "github": {
+      "repo": "storytold/pdfcraft",
+      "asset": "pdfcraft-*-macos-universal.dmg",
+      "app": "PdfCraft.app"
+    },
+    "id": "pdfcraft",
+    "name": "PdfCraft",
+    "description": "PdfCraft: An open-source PDF reader and editor written by scratch in pure Rust",
+    "category": "office",
+    "homepage": "https://getartcraft.com/apps/pdfcraft",
+    "repo": "storytold/pdfcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 19688
+  },
+  {
+    "github": {
+      "repo": "storytold/effectcraft",
+      "asset": "effectcraft-*-macos-universal.dmg",
+      "app": "EffectCraft.app"
+    },
+    "id": "effectcraft",
+    "name": "EffectCraft",
+    "description": "EffectCraft: An open-source motion graphics and compositing tool written by scratch in pure Rust",
+    "category": "video",
+    "homepage": "https://getartcraft.com/apps/effectcraft",
+    "repo": "storytold/effectcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 8477
+  },
+  {
+    "github": {
+      "repo": "storytold/designcraft",
+      "asset": "designcraft-*-macos-universal.dmg",
+      "app": "DesignCraft.app"
+    },
+    "id": "designcraft",
+    "name": "DesignCraft",
+    "description": "DesignCraft: An open-source page and layout design editor written by scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/designcraft",
+    "repo": "storytold/designcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 5112
+  },
+  {
+    "github": {
+      "repo": "storytold/figcraft",
+      "asset": "figcraft-*-macos-universal.dmg",
+      "app": "FigCraft.app"
+    },
+    "id": "figcraft",
+    "name": "FigCraft",
+    "description": "FigCraft: interface design and prototyping; an open-source, clean-room reimplementation of collaborative design workflows in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/figcraft",
+    "repo": "storytold/figcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 4398
+  },
+  {
+    "github": {
+      "repo": "storytold/texturecraft",
+      "asset": "texturecraft-*-macos-universal.dmg",
+      "app": "TextureCraft.app"
+    },
+    "id": "texturecraft",
+    "name": "TextureCraft",
+    "description": "TextureCraft: An open-source, 3D texture painting workflow written from scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/texturecraft",
+    "repo": "storytold/texturecraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 444
+  },
+  {
+    "github": {
+      "repo": "storytold/materialcraft",
+      "asset": "materialcraft-*-macos-universal.dmg",
+      "app": "MaterialCraft.app"
+    },
+    "id": "materialcraft",
+    "name": "MaterialCraft",
+    "description": "MaterialCraft: An open-source, node-based material designer written from scratch in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/materialcraft",
+    "repo": "storytold/materialcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 207
+  },
+  {
+    "github": {
+      "repo": "storytold/wordcraft",
+      "asset": "wordcraft-*-macos-universal.dmg",
+      "app": "WordCraft.app"
+    },
+    "id": "wordcraft",
+    "name": "WordCraft",
+    "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
+    "category": "notes-writing",
+    "homepage": "https://getartcraft.com/apps/wordcraft",
+    "repo": "storytold/wordcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 17391
+  },
+  {
+    "github": {
+      "repo": "storytold/soundcraft",
+      "asset": "soundcraft-*-macos-universal.dmg",
+      "app": "SoundCraft.app"
+    },
+    "id": "soundcraft",
+    "name": "SoundCraft",
+    "description": "An open-source, clean-room reimplementation of Avid Pro Tools in pure Rust",
+    "category": "audio",
+    "homepage": "https://getartcraft.com/apps/soundcraft",
+    "repo": "storytold/soundcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 4101
+  },
+  {
+    "github": {
+      "repo": "storytold/deckcraft",
+      "asset": "deckcraft-*-macos-universal.dmg",
+      "app": "DeckCraft.app"
+    },
+    "id": "deckcraft",
+    "name": "DeckCraft",
+    "description": "Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust. Part of the ArtCraft Crafting Apps.",
+    "category": "office",
+    "homepage": "https://getartcraft.com/apps/deckcraft",
+    "repo": "storytold/deckcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 4626
+  },
+  {
+    "github": {
+      "repo": "storytold/cadcraft",
+      "asset": "cadcraft-*-macos-universal.dmg",
+      "app": "CADCraft.app"
+    },
+    "id": "cadcraft",
+    "name": "CADCraft",
+    "description": "CADCraft: computer-aided design and drafting — an open-source, clean-room AutoCAD-style app in pure Rust",
+    "category": "design",
+    "homepage": "https://getartcraft.com/apps/cadcraft",
+    "repo": "storytold/cadcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 7698
+  },
+  {
+    "github": {
+      "repo": "storytold/gridcraft",
+      "asset": "gridcraft-*-macos-universal.dmg",
+      "app": "GridCraft.app"
+    },
+    "id": "gridcraft",
+    "name": "GridCraft",
+    "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust. By ArtCraft.",
+    "category": "office",
+    "homepage": "https://getartcraft.com/apps/gridcraft",
+    "repo": "storytold/gridcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 7198
+  },
+  {
+    "github": {
+      "repo": "storytold/craft-anything",
+      "asset": "craft-anything-*-macos-universal.dmg",
+      "app": "Craft Anything.app"
+    },
+    "id": "craft-anything",
+    "name": "Craft Anything",
+    "description": "Craft Anything: understand how any software works, and craft your own.",
+    "category": "developer-tools",
+    "homepage": "https://getartcraft.com",
+    "repo": "storytold/craft-anything",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 14729
+  },
+  {
+    "github": {
+      "repo": "storytold/artcraft",
+      "asset": "ArtCraft_*_universal.dmg",
+      "app": "ArtCraft.app"
+    },
+    "id": "artcraft",
+    "name": "ArtCraft",
+    "description": "ArtCraft is an intentional crafting engine for artists, designers, and filmmakers",
+    "category": "ai",
+    "homepage": "https://getartcraft.com",
+    "repo": "storytold/artcraft",
+    "icon": "https://github.com/storytold.png?size=256",
+    "stars": 38975
+  },
+  {
+    "cask": "genoffice",
+    "name": "GenOffice",
+    "description": "Open-source AI office suite for documents, spreadsheets and slides",
+    "category": "office",
+    "homepage": "https://genoffice.ai/",
+    "repo": "genspark-ai/genoffice",
+    "icon": "https://github.com/genspark-ai.png?size=256"
+  },
+  {
+    "cask": "openoffice",
+    "name": "Apache OpenOffice",
+    "description": "Classic free office suite: Writer, Calc, Impress, Draw and Base",
+    "category": "productivity",
+    "homepage": "https://www.openoffice.org/",
+    "icon": "https://github.com/apache.png?size=256"
+  },
+  {
+    "cask": "libreoffice",
+    "name": "LibreOffice",
+    "description": "Full-featured free office suite: Writer, Calc, Impress, Draw and Base",
+    "category": "office",
+    "homepage": "https://www.libreoffice.org/",
+    "repo": "LibreOffice/core",
+    "icon": "https://github.com/LibreOffice.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "author-more/penpot-desktop",
+      "asset": "penpot-desktop-arm64.dmg",
+      "intelAsset": "penpot-desktop-x64.dmg",
+      "app": "Penpot Desktop.app"
+    },
+    "id": "penpot-desktop",
+    "name": "Penpot Desktop",
+    "description": "Desktop app for Penpot, the open-source design and prototyping tool (unofficial)",
+    "category": "design",
+    "homepage": "https://github.com/author-more/penpot-desktop",
+    "repo": "author-more/penpot-desktop",
+    "icon": "https://github.com/penpot.png?size=256"
+  },
+  {
+    "cask": "pencil",
+    "name": "Pencil",
+    "description": "GUI prototyping and wireframing tool",
+    "category": "design",
+    "homepage": "https://pencil.evolus.vn/",
+    "icon": "https://github.com/evolus.png?size=256"
+  },
+  {
+    "cask": "vscodium",
+    "name": "VSCodium",
+    "description": "VS Code built from source, without Microsoft telemetry or branding",
+    "category": "code-editors",
+    "homepage": "https://vscodium.com",
+    "repo": "VSCodium/vscodium",
+    "icon": "https://github.com/VSCodium.png?size=256"
+  },
+  {
+    "cask": "retroarch",
+    "name": "RetroArch",
+    "description": "Frontend for emulators, game engines and media players, running dozens of retro systems through libretro cores",
+    "category": "games",
+    "homepage": "https://www.retroarch.com/",
+    "repo": "libretro/RetroArch",
+    "icon": "https://github.com/libretro.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "OpenEmu/OpenEmu",
+      "asset": "OpenEmu_*.zip",
+      "exclude": "experimental",
+      "app": "OpenEmu.app"
+    },
+    "id": "openemu",
+    "name": "OpenEmu",
+    "description": "Retro game emulation with a unified library, automatic box art and controller mapping for NES, SNES, Game Boy, Genesis, PlayStation and more",
+    "category": "games",
+    "homepage": "https://openemu.org/",
+    "repo": "OpenEmu/OpenEmu",
+    "icon": "https://github.com/OpenEmu.png?size=256",
+    "stars": 22000
+  },
+  {
+    "github": {
+      "repo": "Whisky-App/Whisky",
+      "asset": "Whisky.zip",
+      "app": "Whisky.app",
+      "appleSiliconOnly": true
+    },
+    "id": "whisky",
+    "name": "Whisky",
+    "description": "Run Windows games on Apple Silicon with Wine and Apple's Game Porting Toolkit. No longer maintained",
+    "category": "games",
+    "homepage": "https://getwhisky.app/",
+    "repo": "Whisky-App/Whisky",
+    "icon": "https://github.com/Whisky-App.png?size=256",
+    "minMacos": "14",
+    "stars": 14000
+  },
+  {
+    "github": {
+      "repo": "Contessafry/Vermut",
+      "asset": "Vermut-*.dmg",
+      "app": "Vermut.app",
+      "appleSiliconOnly": true
+    },
+    "id": "vermut",
+    "name": "Vermut",
+    "description": "Run Windows games from Steam, GOG and Epic on Apple Silicon with Wine. Not notarized: first launch needs right-click, Open",
+    "category": "games",
+    "homepage": "https://github.com/Contessafry/Vermut",
+    "repo": "Contessafry/Vermut",
+    "icon": "https://github.com/Contessafry.png?size=256",
+    "minMacos": "14"
+  },
+  {
+    "cask": "lm-studio",
+    "name": "LM Studio",
+    "description": "Discover, download and run local LLMs, with a built-in chat and local API server",
+    "category": "ai",
+    "homepage": "https://lmstudio.ai/",
+    "repo": "lmstudio-ai/lms",
+    "icon": "https://github.com/lmstudio-ai.png?size=256"
+  },
+  {
+    "cask": "mstystudio",
+    "name": "Msty Studio",
+    "description": "Chat with local and online AI models in one app, with knowledge stacks and split chats",
+    "category": "ai",
+    "homepage": "https://msty.ai/",
+    "icon": "https://msty.ai/favicon.ico"
+  },
+  {
+    "cask": "raycast",
+    "name": "Raycast",
+    "description": "Fast launcher with extensions, clipboard history, window management and an AI assistant",
+    "category": "launchers",
+    "homepage": "https://raycast.com/",
+    "icon": "https://github.com/raycast.png?size=256"
+  },
+  {
+    "cask": "claude",
+    "name": "Claude",
+    "description": "Anthropic's desktop app for chatting with Claude, with projects, files and connectors",
+    "category": "ai",
+    "homepage": "https://claude.com/download",
+    "icon": "https://github.com/anthropics.png?size=256"
+  },
+  {
+    "cask": "chatgpt",
+    "name": "ChatGPT",
+    "description": "OpenAI's desktop app for ChatGPT, with a quick-access shortcut and voice",
+    "category": "ai",
+    "homepage": "https://chatgpt.com/",
+    "icon": "https://github.com/openai.png?size=256"
+  },
+  {
+    "cask": "deepseek-harness",
+    "name": "DeepSeek Harness",
+    "description": "Open-source, plugin-based agent harness from DeepSeek (preview), Apple Silicon only",
+    "category": "ai",
+    "homepage": "https://www.deepseek.com/harness/",
+    "repo": "deepseek-ai/deepseek-harness",
+    "icon": "https://github.com/deepseek-ai.png?size=256"
+  },
+  {
+    "cask": "cursor",
+    "name": "Cursor",
+    "description": "AI-first code editor built on VS Code",
+    "category": "code-editors",
+    "homepage": "https://www.cursor.com/",
+    "icon": "https://github.com/cursor.png?size=256"
+  },
+  {
+    "cask": "jan",
+    "name": "Jan",
+    "description": "Open-source ChatGPT alternative that runs local models offline",
+    "category": "ai",
+    "homepage": "https://jan.ai/",
+    "repo": "janhq/jan",
+    "icon": "https://github.com/janhq.png?size=256"
+  },
+  {
+    "cask": "opencode-desktop",
+    "name": "OpenCode",
+    "description": "Open-source AI coding agent with a desktop app",
+    "category": "ai",
+    "homepage": "https://opencode.ai/",
+    "repo": "sst/opencode",
+    "icon": "https://github.com/sst.png?size=256"
+  },
+  {
+    "cask": "antigravity",
+    "name": "Google Antigravity",
+    "description": "Google's agent-first coding environment",
+    "category": "ai",
+    "homepage": "https://antigravity.google/",
+    "icon": "https://github.com/google.png?size=256"
+  },
+  {
+    "cask": "gimp",
+    "name": "GIMP",
+    "description": "Free image editor for photo retouching, painting and graphic design",
+    "category": "design",
+    "homepage": "https://www.gimp.org/",
+    "icon": "https://github.com/GNOME.png?size=256"
+  },
+  {
+    "cask": "inkscape",
+    "name": "Inkscape",
+    "description": "Professional vector graphics editor for illustration, logos and diagrams",
+    "category": "design",
+    "homepage": "https://inkscape.org/",
+    "repo": "inkscape/inkscape",
+    "icon": "https://github.com/inkscape.png?size=256"
+  },
+  {
+    "cask": "freecad",
+    "name": "FreeCAD",
+    "description": "Parametric 3D CAD modeler for product design and engineering",
+    "category": "3d-printing",
+    "homepage": "https://www.freecad.org/",
+    "repo": "FreeCAD/FreeCAD",
+    "icon": "https://github.com/FreeCAD.png?size=256"
+  },
+  {
+    "cask": "openscad",
+    "name": "OpenSCAD",
+    "description": "Script-based 3D CAD modeler for precise, parametric parts",
+    "category": "design",
+    "homepage": "https://openscad.org/",
+    "repo": "openscad/openscad",
+    "icon": "https://github.com/openscad.png?size=256"
+  },
+  {
+    "cask": "blockbench",
+    "name": "Blockbench",
+    "description": "Low-poly 3D model editor and animator, popular for Minecraft",
+    "category": "design",
+    "homepage": "https://www.blockbench.net/",
+    "repo": "JannisX11/blockbench",
+    "icon": "https://github.com/JannisX11.png?size=256"
+  },
+  {
+    "cask": "godot",
+    "name": "Godot Engine",
+    "description": "Open-source 2D and 3D game engine",
+    "category": "games",
+    "homepage": "https://godotengine.org/",
+    "repo": "godotengine/godot",
+    "icon": "https://github.com/godotengine.png?size=256"
+  },
+  {
+    "cask": "shotcut",
+    "name": "Shotcut",
+    "description": "Cross-platform video editor with wide format support",
+    "category": "video",
+    "homepage": "https://shotcut.org/",
+    "repo": "mltframework/shotcut",
+    "icon": "https://github.com/mltframework.png?size=256"
+  },
+  {
+    "cask": "taskexplorer",
+    "name": "TaskExplorer",
+    "description": "See running processes with their network connections, loaded libraries and signing status",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/taskexplorer.html",
+    "repo": "objective-see/TaskExplorer",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "cask": "dhs",
+    "name": "Dylib Hijack Scanner",
+    "description": "Find apps and processes vulnerable to dylib hijacking",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/dhs.html",
+    "repo": "objective-see/DylibHijackScanner",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "cask": "kextviewr",
+    "name": "KextViewr",
+    "description": "View every kernel extension loaded on your Mac",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/kextviewr.html",
+    "repo": "objective-see/KextViewr",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "cask": "filemonitor",
+    "name": "FileMonitor",
+    "description": "Watch file-system events in real time, for security researchers",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/utilities.html",
+    "repo": "objective-see/FileMonitor",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "cask": "processmonitor",
+    "name": "ProcessMonitor",
+    "description": "Watch process creation and exit in real time, for security researchers",
+    "category": "security",
+    "homepage": "https://objective-see.org/products/utilities.html",
+    "repo": "objective-see/ProcessMonitor",
+    "icon": "https://github.com/objective-see.png?size=256"
+  },
+  {
+    "cask": "spotify",
+    "name": "Spotify",
+    "description": "Music and podcast streaming, free with ads or paid for premium",
+    "category": "audio",
+    "homepage": "https://www.spotify.com/",
+    "icon": "https://github.com/spotify.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "plex",
+    "name": "Plex",
+    "description": "Stream your own media library plus free movies, shows and live TV",
+    "category": "video",
+    "homepage": "https://www.plex.tv/",
+    "icon": "https://github.com/plexinc.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "comfy",
+    "name": "ComfyUI",
+    "description": "Node-based app for building and running image, video and audio generation workflows with local AI models",
+    "category": "ai",
+    "homepage": "https://comfy.org/",
+    "repo": "Comfy-Org/ComfyUI",
+    "icon": "https://github.com/Comfy-Org.png?size=256"
+  },
+  {
+    "cask": "hermes-desktop",
+    "name": "Hermes Agent Desktop",
+    "description": "Nous Research's desktop app for Hermes Agent, an open-source AI agent that learns your workflows (public preview)",
+    "category": "ai",
+    "homepage": "https://hermes-agent.nousresearch.com/desktop",
+    "repo": "NousResearch/hermes-agent",
+    "icon": "https://github.com/NousResearch.png?size=256"
+  },
+  {
+    "cask": "google-chrome",
+    "name": "Google Chrome",
+    "description": "Google's fast, widely compatible browser with sync across your devices",
+    "category": "browsers",
+    "homepage": "https://www.google.com/chrome/",
+    "icon": "https://github.com/GoogleChrome.png?size=256"
+  },
+  {
+    "cask": "firefox",
+    "name": "Firefox",
+    "description": "Mozilla's independent, open-source browser with strong privacy protections",
+    "category": "browsers",
+    "homepage": "https://www.mozilla.org/firefox/",
+    "repo": "mozilla/gecko-dev",
+    "icon": "https://github.com/mozilla.png?size=256"
+  },
+  {
+    "cask": "thunderbird",
+    "name": "Thunderbird",
+    "description": "Mozilla's free, open-source email client with calendar, contacts and add-ons",
+    "category": "email",
+    "homepage": "https://www.thunderbird.net/",
+    "repo": "thunderbird/thunderbird-android",
+    "icon": "https://github.com/thunderbird.png?size=256"
+  },
+  {
+    "cask": "proton-mail",
+    "name": "Proton Mail",
+    "description": "End-to-end encrypted email from Proton, with open-source apps (free plan available)",
+    "category": "email",
+    "homepage": "https://proton.me/mail",
+    "icon": "https://github.com/ProtonMail.png?size=256"
+  },
+  {
+    "cask": "readdle-spark",
+    "name": "Spark",
+    "description": "Smart email client with a unified inbox, snoozing and team collaboration (free, with paid plans)",
+    "category": "email",
+    "homepage": "https://sparkmailapp.com/",
+    "icon": "https://github.com/readdle.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "opensuperwhisper",
+    "name": "OpenSuperWhisper",
+    "description": "Open-source dictation: hold a hotkey, speak, and Whisper transcribes locally into any app",
+    "category": "ai",
+    "homepage": "https://github.com/Starmel/OpenSuperWhisper",
+    "repo": "Starmel/OpenSuperWhisper",
+    "icon": "https://github.com/Starmel.png?size=256"
+  },
+  {
+    "cask": "connectmenow",
+    "name": "ConnectMeNow",
+    "description": "Mount network shares (SMB, FTP, WebDAV, NFS, SSHFS) and open SSH connections from the menu bar. Free",
+    "category": "system-utilities",
+    "homepage": "https://www.tweaking4all.com/software/macosx-software/connectmenow-v4/"
+  },
+  {
+    "direct": {
+      "url": "https://disklens.app/downloads/DiskLens-1.0.28-mac-arm64.dmg",
+      "app": "DiskLens.app",
+      "version": "1.0.28"
+    },
+    "id": "disklens",
+    "name": "DiskLens",
+    "description": "See what fills your disk with an interactive sunburst chart, find big files and clear them. Free to try, unsigned",
+    "category": "system-utilities",
+    "homepage": "https://disklens.app/",
+    "minMacos": "11",
+    "paid": true
+  },
+  {
+    "github": {
+      "repo": "jamiepine/voicebox",
+      "asset": "Voicebox_*_aarch64.dmg",
+      "intelAsset": "Voicebox_*_x64.dmg",
+      "app": "Voicebox.app"
+    },
+    "id": "voicebox",
+    "name": "Voicebox",
+    "description": "Open-source voice studio that runs locally: clone voices, generate speech and dictate text. A free alternative to ElevenLabs",
+    "category": "ai",
+    "homepage": "https://voicebox.sh/",
+    "repo": "jamiepine/voicebox",
+    "icon": "https://github.com/jamiepine.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "AndreyPudov/core-eq",
+      "asset": "CoreEQ-*.zip",
+      "app": "CoreEQ.app"
+    },
+    "id": "core-eq",
+    "name": "Core EQ",
+    "description": "System-wide equalizer for macOS",
+    "category": "audio",
+    "homepage": "https://github.com/AndreyPudov/core-eq",
+    "repo": "AndreyPudov/core-eq",
+    "icon": "https://github.com/AndreyPudov.png?size=256",
+    "minMacos": "26"
+  },
+  {
+    "cask": "alfred",
+    "name": "Alfred",
+    "description": "Launcher, clipboard history and workflows for your Mac. Free core, with a paid Powerpack. Alfred 6 is not out yet",
+    "category": "launchers",
+    "homepage": "https://www.alfredapp.com/",
+    "icon": "https://github.com/alfredapp.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "textream",
+    "name": "Textream",
+    "description": "Teleprompter that highlights your script word by word as you speak. Free and open source",
+    "category": "video",
+    "homepage": "https://textream.net/",
+    "repo": "f/textream",
+    "icon": "https://github.com/f.png?size=256"
+  },
+  {
+    "cask": "vorssaint",
+    "name": "Vorssaint",
+    "description": "One menu bar app doing the job of a dozen paid utilities. Install only the tools you use. Free and open source",
+    "category": "menu-bar",
+    "homepage": "https://vorssaint.com",
+    "repo": "vorssaint/vorssaint-utils",
+    "icon": "https://github.com/vorssaint.png?size=256"
+  },
+  {
+    "direct": {
+      "url": "https://www.betterbird.eu/downloads/MacDiskImage/betterbird-153.6.0esr-bb12.en-US.mac-arm64.dmg",
+      "intelUrl": "https://www.betterbird.eu/downloads/MacDiskImage/betterbird-153.6.0esr-bb12.en-US.mac.dmg",
+      "app": "Betterbird.app",
+      "version": "153.6.0esr-bb12"
+    },
+    "id": "betterbird",
+    "name": "Betterbird",
+    "description": "A fine-tuned Thunderbird: the same open-source mail client with extra features and bug fixes",
+    "category": "email",
+    "homepage": "https://www.betterbird.eu/",
+    "icon": "https://github.com/Betterbird.png?size=256"
+  },
+  {
+    "direct": {
+      "url": "https://downloads.aieltokhy.com/PrivacyStage.dmg",
+      "app": "PrivacyStage.app",
+      "version": "latest",
+      "universal": true
+    },
+    "id": "privacystage",
+    "name": "PrivacyStage",
+    "description": "Share your screen without leaking: hide chosen windows, blur sensitive text and use a virtual camera in meetings. 7-day trial, then $6.99 once",
+    "category": "security",
+    "homepage": "https://aieltokhy.com/privacystage/",
+    "minMacos": "14",
+    "paid": true
+  },
+  {
+    "cask": "bettertouchtool",
+    "name": "BetterTouchTool",
+    "description": "Customize trackpad, mouse, keyboard and Touch Bar gestures, and snap windows. Free trial, then a paid license",
+    "category": "system-utilities",
+    "homepage": "https://folivora.ai/",
+    "icon": "https://github.com/folivora-ai.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "whatsapp",
+    "name": "WhatsApp",
+    "description": "Meta's messaging and calling app, now a native Mac app",
+    "category": "communication",
+    "homepage": "https://www.whatsapp.com/",
+    "icon": "https://github.com/WhatsApp.png?size=256"
+  },
+  {
+    "cask": "telegram",
+    "name": "Telegram",
+    "description": "Fast cloud messaging with channels, groups and bots. The Mac app is open source",
+    "category": "communication",
+    "homepage": "https://macos.telegram.org/",
+    "repo": "overtake/TelegramSwift",
+    "icon": "https://github.com/telegramdesktop.png?size=256"
+  },
+  {
+    "cask": "docker-desktop",
+    "name": "Docker Desktop",
+    "description": "Build, run and share containers on your Mac. Free for personal use and small teams, paid for larger companies",
+    "category": "virtualization",
+    "homepage": "https://www.docker.com/products/docker-desktop/",
+    "icon": "https://github.com/docker.png?size=256"
+  },
+  {
+    "cask": "orbstack",
+    "name": "OrbStack",
+    "description": "Fast, light Docker containers and Linux machines. A quicker alternative to Docker Desktop, free for personal use",
+    "category": "virtualization",
+    "homepage": "https://orbstack.dev/",
+    "icon": "https://github.com/orbstack.png?size=256"
+  },
+  {
+    "cask": "pen",
+    "name": "Pen",
+    "description": "Agentic design canvas: design with AI agents like Claude and ChatGPT, or refine by hand. Formerly Pencil",
+    "category": "design",
+    "homepage": "https://www.pen.dev/",
+    "icon": "https://github.com/highagency.png?size=256"
+  },
+  {
+    "cask": "paper-design",
+    "name": "Paper",
+    "description": "Design canvas that connects to your code, agents and data, and exports to HTML and CSS",
+    "category": "design",
+    "homepage": "https://paper.design/"
+  },
+  {
+    "github": {
+      "repo": "openclaw/openclaw",
+      "asset": "OpenClaw-*-arm64.dmg",
+      "intelAsset": "OpenClaw-*-x86_64.dmg",
+      "app": "OpenClaw.app"
+    },
+    "id": "openclaw",
+    "brew": "openclaw",
+    "name": "OpenClaw",
+    "description": "Open-source AI assistant that runs on your own Mac and takes requests from WhatsApp, Telegram or Discord. Manages email, calendar and files, browses and runs commands. MIT, free",
+    "category": "ai",
+    "homepage": "https://openclaw.ai/",
+    "repo": "openclaw/openclaw",
+    "icon": "https://github.com/openclaw.png?size=256",
+    "minMacos": "15"
+  },
+  {
+    "cask": "jetbrains-toolbox",
+    "name": "JetBrains Toolbox",
+    "description": "Installs and updates every JetBrains IDE from one place",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/toolbox-app/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": false
+  },
+  {
+    "cask": "intellij-idea",
+    "name": "IntelliJ IDEA",
+    "description": "JetBrains' flagship IDE for Java and Kotlin, with support for many other languages. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/idea/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "pycharm",
+    "name": "PyCharm",
+    "description": "JetBrains IDE for Python, data science and web development. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/pycharm/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "webstorm",
+    "name": "WebStorm",
+    "description": "JetBrains IDE for JavaScript, TypeScript and front-end frameworks. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/webstorm/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "goland",
+    "name": "GoLand",
+    "description": "JetBrains IDE for Go. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/go/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "rustrover",
+    "name": "RustRover",
+    "description": "JetBrains IDE for Rust. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/rust/",
+    "paid": true
+  },
+  {
+    "cask": "clion",
+    "name": "CLion",
+    "description": "JetBrains IDE for C and C++. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/clion/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "rider",
+    "name": "Rider",
+    "description": "JetBrains IDE for .NET and game development. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/rider/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "phpstorm",
+    "name": "PhpStorm",
+    "description": "JetBrains IDE for PHP and the web. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/phpstorm/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "rubymine",
+    "name": "RubyMine",
+    "description": "JetBrains IDE for Ruby and Rails. Free for non-commercial use, subscription for work",
+    "category": "code-editors",
+    "homepage": "https://www.jetbrains.com/ruby/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "datagrip",
+    "name": "DataGrip",
+    "description": "JetBrains database IDE for SQL and many database engines. Free for non-commercial use, subscription for work",
+    "category": "database",
+    "homepage": "https://www.jetbrains.com/datagrip/",
+    "icon": "https://github.com/JetBrains.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "android-studio",
+    "name": "Android Studio",
+    "description": "Google's official IDE for Android apps, built on IntelliJ. Includes Image Asset Studio (app and launcher icons) and Vector Asset Studio (SVG to Android vector drawables)",
+    "category": "code-editors",
+    "homepage": "https://developer.android.com/studio",
+    "icon": "https://github.com/android.png?size=256"
+  },
+  {
+    "cask": "obsidian",
+    "name": "Obsidian",
+    "description": "Private, local-first notes in plain Markdown files, linked into a knowledge graph, with a huge plugin library. Free for personal and work use",
+    "category": "notes-writing",
+    "homepage": "https://obsidian.md/",
+    "repo": "obsidianmd/obsidian-releases",
+    "icon": "https://github.com/obsidianmd.png?size=256"
+  },
+  {
+    "cask": "icon-composer",
+    "name": "Icon Composer",
+    "description": "Apple's app for building layered Liquid Glass icons for iPhone, iPad, Mac and Watch, ready for Xcode. Free",
+    "category": "developer-tools",
+    "homepage": "https://developer.apple.com/icon-composer/",
+    "icon": "https://github.com/apple.png?size=256"
+  },
+  {
+    "cask": "sf-symbols",
+    "name": "SF Symbols",
+    "description": "Apple's library of thousands of configurable symbols for app interfaces, with an app to browse, customize and export them. Free",
+    "category": "design",
+    "homepage": "https://developer.apple.com/sf-symbols/",
+    "icon": "https://github.com/apple.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "Homebrew/brew",
+      "asset": "Homebrew.pkg",
+      "app": "Homebrew.pkg",
+      "kind": "pkg"
+    },
+    "id": "homebrew",
+    "name": "Homebrew",
+    "description": "The package manager for macOS: install command-line tools and apps with one command. Needs the Xcode Command Line Tools, also in this list. Free and open source",
+    "category": "developer-tools",
+    "homepage": "https://brew.sh/",
+    "repo": "Homebrew/brew",
+    "icon": "https://github.com/Homebrew.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "cli/cli",
+      "asset": "gh_*_macOS_universal.pkg",
+      "app": "gh.pkg",
+      "kind": "pkg"
+    },
+    "id": "gh",
+    "name": "GitHub CLI",
+    "description": "GitHub on the command line: pull requests, issues, releases and Actions from your terminal (gh)",
+    "category": "git",
+    "homepage": "https://cli.github.com/",
+    "repo": "cli/cli",
+    "icon": "https://github.com/cli.png?size=256"
+  },
+  {
+    "cask": "opera",
+    "name": "Opera",
+    "description": "Browser with a built-in VPN, ad blocker and sidebar for messengers",
+    "category": "browsers",
+    "homepage": "https://www.opera.com/",
+    "icon": "https://github.com/operasoftware.png?size=256"
+  },
+  {
+    "cask": "microsoft-edge",
+    "name": "Microsoft Edge",
+    "description": "Microsoft's Chromium browser with vertical tabs, Copilot and Microsoft account sync",
+    "category": "browsers",
+    "homepage": "https://www.microsoft.com/edge",
+    "icon": "https://github.com/MicrosoftEdge.png?size=256"
+  },
+  {
+    "cask": "vivaldi",
+    "name": "Vivaldi",
+    "description": "Highly customizable browser with tab stacking, built-in mail and notes",
+    "category": "browsers",
+    "homepage": "https://vivaldi.com/",
+    "icon": "https://github.com/vivaldi.png?size=256"
+  },
+  {
+    "cask": "zoom",
+    "name": "Zoom",
+    "description": "Video meetings, webinars and chat. Free with limits, paid plans for more",
+    "category": "communication",
+    "homepage": "https://zoom.us/",
+    "icon": "https://github.com/zoom.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "dropbox",
+    "name": "Dropbox",
+    "description": "File sync and sharing across your devices. Free 2 GB, paid for more",
+    "category": "files",
+    "homepage": "https://www.dropbox.com/",
+    "icon": "https://github.com/dropbox.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "google-drive",
+    "name": "Google Drive",
+    "description": "Google's file sync and storage, with your Drive in Finder",
+    "category": "files",
+    "homepage": "https://www.google.com/drive/",
+    "icon": "https://github.com/google.png?size=256"
+  },
+  {
+    "cask": "anydesk",
+    "name": "AnyDesk",
+    "description": "Fast remote desktop access to other computers. Free for personal use",
+    "category": "remote-desktop",
+    "homepage": "https://anydesk.com/",
+    "icon": "https://github.com/anydesk.png?size=256"
+  },
+  {
+    "cask": "teamviewer",
+    "name": "TeamViewer",
+    "description": "Remote access and support for computers, free for personal use",
+    "category": "remote-desktop",
+    "homepage": "https://www.teamviewer.com/",
+    "icon": "https://github.com/teamviewer.png?size=256"
+  },
+  {
+    "cask": "windows-app",
+    "name": "Windows App",
+    "description": "Microsoft's client for Windows PCs, Windows 365 and Azure Virtual Desktop (formerly Remote Desktop)",
+    "category": "remote-desktop",
+    "homepage": "https://learn.microsoft.com/windows-app/",
+    "icon": "https://github.com/microsoft.png?size=256"
+  },
+  {
+    "cask": "steam",
+    "name": "Steam",
+    "description": "Valve's store and library for PC games, with many Mac titles",
+    "category": "games",
+    "homepage": "https://store.steampowered.com/",
+    "icon": "https://github.com/ValveSoftware.png?size=256"
+  },
+  {
+    "cask": "epic-games",
+    "name": "Epic Games Launcher",
+    "description": "Epic's store and launcher, with free weekly games",
+    "category": "games",
+    "homepage": "https://store.epicgames.com/",
+    "icon": "https://github.com/EpicGames.png?size=256"
+  },
+  {
+    "cask": "the-unarchiver",
+    "name": "The Unarchiver",
+    "description": "Opens almost any archive format: rar, 7z, zip, tar and many more. Free",
+    "category": "files",
+    "homepage": "https://theunarchiver.com/",
+    "icon": "https://github.com/MacPaw.png?size=256"
+  },
+  {
+    "cask": "onyx",
+    "name": "OnyX",
+    "description": "Free maintenance and cleaning utility: clear caches, rebuild databases and tweak hidden settings",
+    "category": "system-utilities",
+    "homepage": "https://www.titanium-software.fr/en/onyx.html"
+  },
+  {
+    "cask": "grandperspective",
+    "name": "GrandPerspective",
+    "description": "See what uses your disk space as a treemap, like WinDirStat for Mac",
+    "category": "system-utilities",
+    "homepage": "https://grandperspectiv.sourceforge.net/"
+  },
+  {
+    "cask": "skim",
+    "name": "Skim",
+    "description": "Lightweight PDF reader and annotator for notes and research",
+    "category": "reading",
+    "homepage": "https://skim-app.sourceforge.io/"
+  },
+  {
+    "cask": "sublime-text",
+    "name": "Sublime Text",
+    "description": "Fast, lightweight text and code editor. Free to evaluate, paid license for continued use",
+    "category": "code-editors",
+    "homepage": "https://www.sublimetext.com/",
+    "icon": "https://github.com/sublimehq.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "bambu-studio",
+    "name": "Bambu Studio",
+    "description": "Slicer for Bambu Lab 3D printers, and other FDM printers",
+    "category": "3d-printing",
+    "homepage": "https://bambulab.com/software",
+    "repo": "bambulab/BambuStudio",
+    "icon": "https://github.com/bambulab.png?size=256"
+  },
+  {
+    "cask": "ultimaker-cura",
+    "name": "UltiMaker Cura",
+    "description": "Popular open-source 3D printing slicer",
+    "category": "3d-printing",
+    "homepage": "https://ultimaker.com/software/ultimaker-cura/",
+    "repo": "Ultimaker/Cura",
+    "icon": "https://github.com/Ultimaker.png?size=256"
+  },
+  {
+    "cask": "xnviewmp",
+    "name": "XnView MP",
+    "description": "Fast image viewer, organizer and batch converter for hundreds of formats",
+    "category": "design",
+    "homepage": "https://www.xnview.com/"
+  },
+  {
+    "resolver": "node-lts",
+    "id": "node",
+    "name": "Node.js LTS",
+    "description": "JavaScript runtime for servers and tooling. Pick a long-term-support line; comes with npm",
+    "category": "runtimes",
+    "homepage": "https://nodejs.org/",
+    "repo": "nodejs/node",
+    "icon": "https://github.com/nodejs.png?size=256",
+    "groupName": "Node.js"
+  },
+  {
+    "resolver": "python",
+    "id": "python3",
+    "name": "Python 3",
+    "description": "The Python language and standard library, from python.org. Pick a version; includes IDLE and pip",
+    "category": "runtimes",
+    "homepage": "https://www.python.org/",
+    "repo": "python/cpython",
+    "icon": "https://github.com/python.png?size=256",
+    "groupName": "Python"
+  },
+  {
+    "resolver": "go",
+    "id": "go",
+    "name": "Go",
+    "description": "The Go language and toolchain, from go.dev. Pick a release",
+    "category": "runtimes",
+    "homepage": "https://go.dev/",
+    "repo": "golang/go",
+    "icon": "https://github.com/golang.png?size=256",
+    "groupName": "Go"
+  },
+  {
+    "cask": "temurin@25",
+    "name": "Java JDK 25 (Temurin LTS)",
+    "description": "Eclipse Temurin, the free OpenJDK build of Java. Pick the version you need; 25 and 21 are long-term-support releases",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "25 LTS",
+    "groupName": "Java JDK"
+  },
+  {
+    "cask": "temurin",
+    "name": "Java JDK 27 (Temurin)",
+    "description": "Eclipse Temurin, the newest Java release",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "27 (newest)",
+    "variantOf": "temurin@25"
+  },
+  {
+    "cask": "temurin@21",
+    "name": "Java JDK 21 (Temurin LTS)",
+    "description": "Eclipse Temurin OpenJDK 21, a long-term-support release",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "21 LTS",
+    "variantOf": "temurin@25"
+  },
+  {
+    "cask": "temurin@17",
+    "name": "Java JDK 17 (Temurin LTS)",
+    "description": "Eclipse Temurin OpenJDK 17, a long-term-support release",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "17 LTS",
+    "variantOf": "temurin@25"
+  },
+  {
+    "cask": "temurin@11",
+    "name": "Java JDK 11 (Temurin LTS)",
+    "description": "Eclipse Temurin OpenJDK 11, for older projects",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "11 LTS",
+    "variantOf": "temurin@25"
+  },
+  {
+    "cask": "temurin@8",
+    "name": "Java JDK 8 (Temurin LTS)",
+    "description": "Eclipse Temurin OpenJDK 8, for legacy projects",
+    "category": "runtimes",
+    "homepage": "https://adoptium.net/",
+    "icon": "https://github.com/adoptium.png?size=256",
+    "label": "8 LTS",
+    "variantOf": "temurin@25"
+  },
+  {
+    "cask": "dotnet-sdk",
+    "name": ".NET SDK",
+    "description": "Microsoft's .NET SDK and runtime for building C#, F# and ASP.NET apps",
+    "category": "runtimes",
+    "homepage": "https://dotnet.microsoft.com/",
+    "icon": "https://github.com/dotnet.png?size=256"
+  },
+  {
+    "cask": "unity-hub",
+    "name": "Unity Hub",
+    "description": "Installs and manages Unity editors and projects for making 2D, 3D and VR games. Free Personal plan",
+    "category": "developer-tools",
+    "homepage": "https://unity.com/",
+    "icon": "https://github.com/Unity-Technologies.png?size=256"
+  },
+  {
+    "cask": "cline-app",
+    "name": "Cline",
+    "description": "Cline's native desktop app (beta): the open-source Cline coding agent in its own window, no editor needed",
+    "category": "ai",
+    "homepage": "https://cline.bot/desktop",
+    "repo": "cline/cline",
+    "icon": "https://github.com/cline.png?size=256"
+  },
+  {
+    "direct": {
+      "url": "https://autoupdate.desktop.anaconda.com/kilo-desktop/latest/latest/macos/arm64/Kilo.dmg",
+      "app": "Kilo.app",
+      "version": "latest"
+    },
+    "id": "kilo-desktop",
+    "name": "Kilo Desktop",
+    "description": "Kilo's standalone desktop app (beta) for the open-source Kilo coding agent. Apple Silicon only, MIT licensed",
+    "category": "ai",
+    "homepage": "https://kilo.ai/",
+    "repo": "Kilo-Org/kilocode",
+    "icon": "https://github.com/Kilo-Org.png?size=256"
+  },
+  {
+    "cask": "prusaslicer",
+    "name": "PrusaSlicer",
+    "description": "Slicer from Prusa Research for FDM 3D printers, with a huge range of printer profiles. Open source",
+    "category": "3d-printing",
+    "homepage": "https://www.prusa3d.com/page/prusaslicer_424/",
+    "repo": "prusa3d/PrusaSlicer",
+    "icon": "https://github.com/prusa3d.png?size=256"
+  },
+  {
+    "cask": "orcaslicer",
+    "name": "OrcaSlicer",
+    "description": "Open-source slicer with advanced calibration tools, for Bambu, Prusa, Creality and many other printers",
+    "category": "3d-printing",
+    "homepage": "https://github.com/SoftFever/OrcaSlicer",
+    "repo": "SoftFever/OrcaSlicer",
+    "icon": "https://github.com/SoftFever.png?size=256"
+  },
+  {
+    "cask": "creality-print",
+    "name": "Creality Print",
+    "description": "Creality's slicer for its Ender, K1 and CR series printers",
+    "category": "3d-printing",
+    "homepage": "https://www.creality.com/pages/download",
+    "icon": "https://github.com/CrealityOfficial.png?size=256"
+  },
+  {
+    "cask": "elegoo-slicer",
+    "name": "ElegooSlicer",
+    "description": "Slicer for Elegoo's FDM printers, based on OrcaSlicer",
+    "category": "3d-printing",
+    "homepage": "https://www.elegoo.com/",
+    "icon": "https://github.com/ELEGOO-3D.png?size=256"
+  },
+  {
+    "cask": "chitubox",
+    "name": "CHITUBOX",
+    "description": "Slicer for resin (SLA and DLP) 3D printers",
+    "category": "3d-printing",
+    "homepage": "https://www.chitubox.com/"
+  },
+  {
+    "cask": "meshlab",
+    "name": "MeshLab",
+    "description": "View, clean and repair 3D meshes and scans. Open source",
+    "category": "3d-printing",
+    "homepage": "https://www.meshlab.net/",
+    "repo": "cnr-isti-vclab/meshlab",
+    "icon": "https://github.com/cnr-isti-vclab.png?size=256"
+  },
+  {
+    "cask": "shapr3d",
+    "name": "Shapr3D",
+    "description": "Approachable 3D CAD for product design and printing. Free tier, paid plans",
+    "category": "3d-printing",
+    "homepage": "https://www.shapr3d.com/",
+    "paid": true
+  },
+  {
+    "github": {
+      "repo": "docker/sbx-releases",
+      "asset": "DockerSandboxes-darwin.tar.gz",
+      "app": "Sbx.app",
+      "appleSiliconOnly": true
+    },
+    "id": "docker-sandboxes",
+    "bin": "Contents/MacOS/sbx",
+    "name": "Docker Sandboxes",
+    "description": "Run AI coding agents (Claude Code, Codex, Gemini CLI, OpenCode and more) in isolated sandboxes with controlled access to your files and network. Installs the sbx command; no Docker Desktop needed. Apple Silicon",
+    "category": "ai",
+    "homepage": "https://docs.docker.com/ai/sandboxes/",
+    "repo": "docker/sbx-releases",
+    "icon": "https://github.com/docker.png?size=256",
+    "minMacos": "14"
+  },
+  {
+    "cask": "t3-code",
+    "name": "T3 Code",
+    "description": "Open-source control plane for coding agents: run Claude Code, Codex, OpenCode, Cursor and more from one interface, with the subscriptions you already have",
+    "category": "ai",
+    "homepage": "https://t3.codes/",
+    "repo": "pingdotgg/t3code",
+    "icon": "https://github.com/pingdotgg.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "stablyai/orca",
+      "asset": "orca-macos-arm64.dmg",
+      "intelAsset": "orca-macos-x64.dmg",
+      "app": "Orca.app"
+    },
+    "id": "orca-ade",
+    "name": "Orca",
+    "description": "Agent development environment: run Claude Code, Codex and other coding agents in parallel, each in its own worktree, with terminals, a browser and diffs in one app",
+    "category": "ai",
+    "homepage": "https://www.onorca.dev/",
+    "repo": "stablyai/orca",
+    "icon": "https://github.com/stablyai.png?size=256"
+  },
+  {
+    "cask": "tor-browser",
+    "name": "Tor Browser",
+    "description": "Browse through the Tor network: your traffic is bounced through three relays so sites and observers can't trace it to you",
+    "category": "browsers",
+    "homepage": "https://www.torproject.org/",
+    "icon": "https://github.com/torproject.png?size=256"
+  },
+  {
+    "cask": "mullvad-browser",
+    "name": "Mullvad Browser",
+    "description": "A privacy browser made with the Tor Project: Tor Browser's anti-fingerprinting without the Tor network, to use with any VPN",
+    "category": "browsers",
+    "homepage": "https://mullvad.net/browser",
+    "icon": "https://github.com/mullvad.png?size=256"
+  },
+  {
+    "cask": "librewolf",
+    "name": "LibreWolf",
+    "description": "A hardened Firefox with no telemetry, uBlock Origin built in and strict privacy defaults. Open source",
+    "category": "browsers",
+    "homepage": "https://librewolf.net/",
+    "icon": "https://github.com/librewolf-community.png?size=256"
+  }
+]

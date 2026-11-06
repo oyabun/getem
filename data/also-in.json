@@ -1,0 +1,106 @@
+{
+  "genoffice": [
+    "notes-writing",
+    "ai"
+  ],
+  "libreoffice": [
+    "notes-writing"
+  ],
+  "pdfcraft": [
+    "reading",
+    "notes-writing"
+  ],
+  "gridcraft": [
+    "notes-writing"
+  ],
+  "deckcraft": [
+    "notes-writing"
+  ],
+  "wordcraft": [
+    "office"
+  ],
+  "grammarly-desktop": [
+    "ai"
+  ],
+  "raycast": [
+    "clipboard",
+    "window-management",
+    "ai"
+  ],
+  "alfred": [
+    "clipboard"
+  ],
+  "reminders-menubar": [
+    "menu-bar"
+  ],
+  "upscayl": [
+    "design"
+  ],
+  "diffusionbee": [
+    "design"
+  ],
+  "comfy": [
+    "design",
+    "video"
+  ],
+  "artcraft": [
+    "design"
+  ],
+  "voicebox": [
+    "audio"
+  ],
+  "opencode-desktop": [
+    "developer-tools"
+  ],
+  "antigravity": [
+    "code-editors",
+    "developer-tools"
+  ],
+  "cursor": [
+    "ai"
+  ],
+  "claude": [
+    "developer-tools"
+  ],
+  "ollama-app": [
+    "developer-tools"
+  ],
+  "datagrip": [
+    "code-editors"
+  ],
+  "icon-composer": [
+    "design"
+  ],
+  "sf-symbols": [
+    "developer-tools"
+  ],
+  "android-studio": [
+    "developer-tools",
+    "design"
+  ],
+  "freecad": [
+    "design"
+  ],
+  "shapr3d": [
+    "design"
+  ],
+  "docker-sandboxes": [
+    "developer-tools",
+    "virtualization"
+  ],
+  "t3-code": [
+    "code-editors"
+  ],
+  "orca-ade": [
+    "code-editors"
+  ],
+  "tor-browser": [
+    "security"
+  ],
+  "mullvad-browser": [
+    "security"
+  ],
+  "librewolf": [
+    "security"
+  ]
+}

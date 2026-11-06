@@ -1,0 +1,8 @@
+{
+  "pi": [
+    "node"
+  ],
+  "homebrew": [
+    "xcode-cli"
+  ]
+}

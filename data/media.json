@@ -1,0 +1,3005 @@
+{
+ "localsend": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ef/88/39/ef88398c-00e7-8733-37bb-4aacb1f9043d/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/78/ac/1e/78ac1e88-44ab-2fcf-d1c1-7e395eea448f/7ebb55e4-b9fe-43ad-91a4-747e7bd15f76_receive.png/392x696bb.png",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f2/99/a8/f299a807-a976-cc4d-7b3d-8a10844224c8/3945dfb2-68ad-4bb4-bb4c-33fb3752c290_selecting.png/392x696bb.png",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c7/90/c0/c790c0bb-2610-046d-693f-3bf05b7dea31/9565b4bf-d547-46af-b68a-efe66356586b_selecting-dark.png/392x696bb.png"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "zed": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://zed.dev/cdn-cgi/image/width=2048,quality=75,format=auto/img/parallel-agents/sidebar.webp",
+   "https://zed.dev/cdn-cgi/image/width=2048,quality=75,format=auto/https://images.zed.dev/video-posters/debugger.webp",
+   "https://zed.dev/cdn-cgi/image/width=2048,quality=75,format=auto/https://images.zed.dev/video-posters/agent.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "ollama-app": {
+  "icon": "https://ollama.com/public/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/ollama/ollama/assets/3325447/0d0b44e2-8f4a-4e99-9b52-a5c1c741c8f7"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "obs": {
+  "icon": "https://obsproject.com/favicon-96x96.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://obsproject.com/assets/images/features-new/hero_32_1_1.png",
+   "https://obsproject.com/assets/images/features-new/layouts.png",
+   "https://obsproject.com/assets/images/features-new/studio.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "photocraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/photocraft/HEAD/assets/app-icon/photocraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/photocraft/HEAD/docs/images/photocraft-demo.jpg",
+   "https://raw.githubusercontent.com/storytold/photocraft/HEAD/docs/images/photocraft-filters.jpg",
+   "https://raw.githubusercontent.com/storytold/photocraft/HEAD/docs/images/photocraft-adjustments.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "anythingllm": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/images/youtube.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "drawio": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.drawio.com/img/blog/sketch-theme-tutorial.png",
+   "https://www.drawio.com/img/home/editor-classic-aws.png",
+   "https://www.drawio.com/img/home/editor-simple-bpmn.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "mole-app": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/tw93/Mole/HEAD/docs/img/big-mole.png",
+   "https://raw.githubusercontent.com/tw93/Mole/HEAD/docs/img/mole-love.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "ghostty": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/fe853809-ba8b-400b-83ab-a9a0da25be8a"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "tabby": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/68/54/79/6854795c-d5c6-3705-6ca3-cdca21858e34/AppIcon-0-0-85-220-0-0-5-0-2x.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/17/a2/37/17a23736-3e6a-c5a5-6296-8658b560ad05/Frame_1_revised.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6c/98/fc/6c98fcc3-c307-dbb4-0a98-b2a38271e1bb/Frame_2.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/31/97/b1/3197b1ef-9bb7-da22-c39e-6a9e73e6f19d/Frame_3.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "joplin": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/home-top-img.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "dbeaver-community": {
+  "icon": "https://github.com/dbeaver/dbeaver/wiki/images/dbeaver-icon-64x64.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://dbeaver.io/product/dbeaver-sql-editor.png",
+   "https://dbeaver.io/product/dbeaver-gis-viewer.png",
+   "https://dbeaver.io/product/dbeaver-data-editor.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "bruno": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/usebruno/bruno/HEAD/assets/images/run-anywhere.png",
+   "https://raw.githubusercontent.com/usebruno/bruno/HEAD/assets/images/version-control.png",
+   "https://raw.githubusercontent.com/usebruno/bruno/HEAD/assets/images/landing-2-dark.png#gh-light-mode-only"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "upscayl": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/71/06/bd7106a1-1edd-099b-0ec4-f72567b5111f/icon.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/e4/a3/75/e4a3752c-1887-775a-2e26-ce104a30591d/28d85c6e-13d9-4b16-8d05-211072400bf0_Frame_100.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/b5/8d/ef/b58def77-9160-8331-d409-da4a54a9cb76/1de7e845-f421-42b3-9a0d-7a0da2af5b7b_Frame_101.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/ec/bf/c7/ecbfc744-356c-5838-e7ef-6cbb89ebbc1b/f23a5bdf-f34b-4ced-be95-711187098825_Frame_102.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "zen": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://zen-browser.app/_astro/ComImage.DV0rTSHO_Z1aH5BP.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "logseq": {
+  "icon": "https://asset.logseq.com/static/img/logo.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://user-images.githubusercontent.com/25513724/221387376-4dc419c2-0d0a-460c-a920-2d211e78b456.gif",
+   "https://user-images.githubusercontent.com/25513724/220608753-f33db466-af72-4611-b603-411440c15ed0.png?sanatize=true"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "losslesscut": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a3/0e/5b/a30e5b4c-dbc9-a2de-d5f9-df1e2ce7449e/icon.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/ba/20/79/ba2079fb-bcd1-0bc8-840f-d1051f127370/a391e289-ee8b-41da-a8dc-10cdca44254a_dark1.png-out.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/2e/e7/2e/2ee72ed9-2e57-5bcc-3789-de045b3d997b/7ca516d3-f567-4100-bc52-cd181de4422d_light1.png-out.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/a0/1f/11/a01f113b-288d-e53b-ed26-6aa46a0f807c/6006ee54-a656-4de6-bccc-9e90addc5c29_dark2.png-out.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "iina": {
+  "icon": "https://iina.io/img/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://iina.io/img/blog/150-release/plugin-store.png",
+   "https://iina.io/img/screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "stats": {
+  "icon": "https://cdn.mac-stats.com/assets/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn.mac-stats.com/assets/images/menus.png",
+   "https://cdn.mac-stats.com/assets/images/popups.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "hyper": {
+  "icon": "https://hyper.is/apple-touch-icon-152x152.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://assets.vercel.com/image/upload/v1590627842/hyper/og-image-3.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "mattermost": {
+  "icon": "https://mattermost.com/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://user-images.githubusercontent.com/7205829/136107976-7a894c9e-290a-490d-8501-e5fdbfc3785a.png",
+   "https://user-images.githubusercontent.com/30978331/272826427-6200c98f-7319-42c3-86d4-0b33ae99e01a.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "jan": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/f3f87889-c133-433b-b250-236218150d3f",
+   "https://www.jan.ai/_next/static/media/app-jan.fe40673b.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "folo": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e2/71/4a/e2714ad7-e11d-0525-e599-e310befca80d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/22/a1/a1/22a1a149-681d-e538-3204-6009ba5e7a02/01-hero.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8d/79/6d/8d796dc2-f716-ec07-613e-2074d01e5bf9/02-summary.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d4/34/e5/d434e51b-afc0-553d-3650-b46def2eb981/03-translate.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "balenaetcher": {
+  "icon": "https://etcher.balena.io/images/webclip.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://uploads-ssl.webflow.com/636ab6ba0e1bd250e3aaedaf/65ef146b4576693f0c5d825b_OG%20image.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "artcraft": {
+  "icon": "https://getartcraft.com/artcraft-icon.svg",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/21f103e3-cc19-4882-a630-9caa1b76ae31",
+   "https://github.com/user-attachments/assets/f93a616f-571d-474e-bcc0-53736de7303d",
+   "https://github.com/user-attachments/assets/d6f99391-e496-4c62-9e37-29734ba5f899"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "lapce": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/lapce/lapce/master/extra/images/screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "kitty": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/kovidgoyal/kitty/HEAD/docs/screenshots/screenshot.png",
+   "https://raw.githubusercontent.com/kovidgoyal/kitty/HEAD/docs/screenshots/choose-files.webp",
+   "https://raw.githubusercontent.com/kovidgoyal/kitty/HEAD/docs/screenshots/command-palette.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "utm": {
+  "icon": "https://getutm.app/assets/img/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/utmapp/UTM/HEAD/screenmac.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "another-redis-desktop-manager": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://cdn.jsdelivr.net/gh/qishibo/img/ardm/20260729160531924.png",
+   "https://cdn.jsdelivr.net/gh/qishibo/img/ardm/20260729160542512.png",
+   "https://cdn.jsdelivr.net/gh/qishibo/img/ardm/20260729160550004.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "monitorcontrol": {
+  "icon": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/Icon-cropped.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/screenshot.png",
+   "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_1.png",
+   "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_2.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "betterdisplay": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/0c2911d0-9157-4993-a850-d751fda3708e",
+   "https://user-images.githubusercontent.com/37590873/219133640-8b7a0179-20a7-4e02-8887-fbbd2eaad64b.png",
+   "https://github.com/user-attachments/assets/3a3e7683-1bfc-4ba1-9a91-4a458488899f"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "rectangle": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/c088d1e2-3661-4041-ac30-95da89ac4a41",
+   "https://rectangleapp.com/assets/images/shortcutScreenshot.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "keepassxc": {
+  "icon": "https://keepassxc.org/assets/img/apple-touch-icon-precomposed.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://keepassxc.org//assets/img/anssi-cspn-security-visa.png",
+   "https://keepassxc.org/assets/img/screenshots/thumbs/welcome_screen.png",
+   "https://keepassxc.org/assets/img/screenshots/thumbs/unlock_database.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "responsively": {
+  "icon": "https://responsively.app/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://user-images.githubusercontent.com/1283424/142834528-4cd5b8eb-eeae-4437-b749-d09c96dde160.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "picgo": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/12621342/34188165-e7cdf372-e56f-11e7-8732-1338c88b9bb7.jpg",
+   "https://user-images.githubusercontent.com/12621342/34188201-212cda84-e570-11e7-9b7a-abb298699d85.jpg",
+   "https://raw.githubusercontent.com/Molunerfinn/PicGo/dev/assets/picgo-v3.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "jordanbaird-ice@beta": {
+  "icon": "https://raw.githubusercontent.com/jordanbaird/Ice/HEAD/Ice/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/4423085c-4e4b-4f3d-ad0f-90a217c03470",
+   "https://github.com/user-attachments/assets/f1429589-6186-4e1b-8aef-592219d49b9b",
+   "https://github.com/user-attachments/assets/095442ba-f2d0-4bb4-9632-91e26ef8d45b"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "calibre": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "readest": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/60/5f/16/605f164c-d60d-0adc-7587-17a72d2cd926/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/fe/42/9cfe42c9-fe15-5700-b537-a830aad8b1a8/iphone-1.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b6/d8/59/b6d859c1-df52-32ab-bc04-b0d0c248ae97/iphone-2.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2a/7e/be/2a7ebe5e-4976-a626-b09f-3cda56ae4e72/iphone-4.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "cmux": {
+  "icon": "https://cmux.com/apple-icon.png?apple-icon.2ycvhapzlxf2q.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/manaflow-ai/cmux/HEAD/docs/assets/main-first-image.png",
+   "https://raw.githubusercontent.com/manaflow-ai/cmux/HEAD/docs/assets/notification-rings.png",
+   "https://raw.githubusercontent.com/manaflow-ai/cmux/HEAD/docs/assets/built-in-browser.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "beekeeper-studio": {
+  "icon": "https://www.beekeeperstudio.io/static/favicon/android-icon-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://user-images.githubusercontent.com/279769/203650152-4a34af1f-8a38-47cf-a273-d34d1c84feeb.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "db-browser-for-sqlcipher@nightly": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/sqlitebrowser/sqlitebrowser/raw/master/images/sqlitebrowser.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "handbrake-app": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://handbrake.fr/img/slides/slide1_mac.png",
+   "https://handbrake.fr/img/slides/slide2_mac.png",
+   "https://handbrake.fr/img/slides/slide3_mac.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "brave-browser": {
+  "icon": "https://brave.com/static-assets/images/cropped-brave_appicon_release-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://brave.com/home-assets/images/desktop-brave-allrecipes.png",
+   "https://brave.com/home-assets/images/desktop-chrome-allrecipes.png",
+   "https://brave.com/home-assets/images/desktop-edge-allrecipes.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "maccy": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ba/7c/1c/ba7c1c30-46f5-ff64-f126-407fde858b2d/AppIcon-0-0-85-220-0-0-6-0-2x.png/512x512bb.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/59/12/d8/5912d8f7-936d-992a-fbd3-c2ac51ab4984/ed8f76c6-46a1-46b2-b7ac-ff420a8f8c26_01-Main.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f5/b1/46/f5b14653-90fa-1467-8c9e-aace4f98df1d/cb67dc6d-b92a-43f9-93dc-f9739691d437_02-Types.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b1/47/96/b147962c-a405-9415-7553-7dd9182a3a6f/03-Search.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "manual"
+  ]
+ },
+ "karabiner-elements": {
+  "icon": "https://karabiner-elements.pqrs.org/favicons/apple-touch-icon-180x180.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://karabiner-elements.pqrs.org/images/logo.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "codeedit": {
+  "icon": "https://raw.githubusercontent.com/CodeEditApp/CodeEdit/main/.github/CodeEdit-Icon-128@2x.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://user-images.githubusercontent.com/806104/194004176-3143d19f-1ad9-449c-bd41-8c4f9998f44b.png",
+   "https://user-images.githubusercontent.com/806104/162766170-60f3b95a-ca30-4015-a3e3-a605df78b98a.png",
+   "https://user-images.githubusercontent.com/806104/162766594-eff7f985-31a9-48c5-9e58-139794fefa10.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "wave": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/wavetermdev/waveterm/HEAD/assets/wave-screenshot.webp",
+   "https://raw.githubusercontent.com/wavetermdev/waveterm/HEAD/assets/wave-light.png",
+   "https://raw.githubusercontent.com/wavetermdev/waveterm/HEAD/assets/wave-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "github": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/634063/202742985-bb3b3b94-8aca-404a-8d8a-fd6a6f030672.png",
+   "https://user-images.githubusercontent.com/634063/202742848-63fa1488-6254-49b5-af7c-96a6b50ea8af.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "blender": {
+  "icon": "https://www.blender.org/wp-content/themes/bthree/assets/icons/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://code.blender.org/wp-content/uploads/2018/12/springrg.jpg",
+   "https://www.blender.org/wp-content/uploads/2021/10/nodevember.jpg",
+   "https://www.blender.org/wp-content/uploads/2019/07/hero_p31_screenshot-1280x720.jpg?x12104"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "kodi": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/xbmc/xbmc/HEAD/docs/resources/kodi.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "openemu": {
+  "icon": "https://openemu.org/img/favicons/favicon-57.png",
+  "iconSource": "web",
+  "screenshots": [
+   "http://openemu.org/img/intro-md.png",
+   "https://openemu.org/img/intro-nes-grid.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "gitbutler": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/app-preview-light.png",
+   "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/cli-preview.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "aerial": {
+  "icon": "https://aerialscreensaver.github.io/icon-512.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://aerialscreensaver.github.io/screenshots/home-dashboard.webp",
+   "https://aerialscreensaver.github.io/screenshots/wallpaper-settings.webp",
+   "https://aerialscreensaver.github.io/screenshots/my-videos.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vlc": {
+  "icon": "http://images.videolan.org/images/favicon-192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "http://images.videolan.org/images/screenshots/skins.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "background-music": {
+  "icon": "https://raw.githubusercontent.com/kyleneideck/BackgroundMusic/HEAD/Images/README/pkg-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/kyleneideck/BackgroundMusic/HEAD/Images/README/Screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "pdfcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/pdfcraft/HEAD/assets/app-icon/pdfcraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/pdfcraft/HEAD/docs/images/pdfcraft-viewer.png",
+   "https://raw.githubusercontent.com/storytold/pdfcraft/HEAD/docs/images/pdfcraft-bookmarks.png",
+   "https://raw.githubusercontent.com/storytold/pdfcraft/HEAD/docs/images/pdfcraft-organize.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "blackhole-2ch": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/ExistentialAudio/BlackHole/HEAD/Images/audio-midi-setup.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "kap": {
+  "icon": "https://getkap.co/static/favicon/icon-256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://getkap.co/static/images/ogp/kap-ogp-v3-large.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "iterm2": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://iterm2.com/img/screenshots/split_panes.png",
+   "https://iterm2.com/img/screenshots/hotkey_window.png",
+   "https://iterm2.com/img/screenshots/find.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "audacity": {
+  "icon": "https://www.audacityteam.org/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.audacityteam.org/og-image.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "filmcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/filmcraft/HEAD/assets/app-icon/filmcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/filmcraft/HEAD/docs/images/filmcraft-hero.png",
+   "https://raw.githubusercontent.com/storytold/filmcraft/HEAD/docs/images/filmcraft-export.png",
+   "https://raw.githubusercontent.com/storytold/filmcraft/HEAD/docs/images/filmcraft-assembly.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "lightcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/lightcraft/HEAD/assets/app-icon/lightcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/lightcraft/HEAD/docs/images/hero-tetons.jpg",
+   "https://raw.githubusercontent.com/storytold/lightcraft/HEAD/docs/images/grid-demo.jpg",
+   "https://raw.githubusercontent.com/storytold/lightcraft/HEAD/docs/images/grid-pd.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "amethyst": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/ianyh/Amethyst/HEAD/docs/images/accessibility-permission.png",
+   "https://raw.githubusercontent.com/ianyh/Amethyst/HEAD/docs/images/auto-rearranage.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "dolphin": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://dolphin-emu.org/m/user/cache/c4/da/c4da031a7d4bcb25f17dee58ae56ad3a.jpg",
+   "https://dolphin-emu.org/m/user/cache/79/dc/79dce844714fac26c3fbba7c91ece0b6.jpg",
+   "https://dolphin-emu.org/m/user/cache/6b/b9/6bb995cbae31388a515d8bf07af1eada.jpg"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "signal": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://signal.org/assets/images/screenshots/download-desktop-mac.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "transmission": {
+  "icon": "https://transmissionbt.com/assets/images/icons/1024.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://transmissionbt.com/assets/images/homepage/carousel_homepage/screenshot_apple_light.png",
+   "https://transmissionbt.com/assets/images/homepage/screenshot_mac_full_window.png",
+   "https://transmissionbt.com/assets/images/homepage/screenshot_apple.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "keycastr": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/keycastr/keycastr/HEAD/assets/input_monitoring.png",
+   "https://raw.githubusercontent.com/keycastr/keycastr/HEAD/assets/accessibility.png",
+   "https://raw.githubusercontent.com/keycastr/keycastr/HEAD/assets/mouse-click-visualizer.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "hiddenbar": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple115/v4/01/1d/27/011d2738-c5ab-6827-3059-3d64dbcfb4cd/AppIcon-0-0-85-220-0-0-0-0-4-0-0-0-2x-sRGB-0-0-0-0-0.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/87/ef/ee/87efee47-0191-bf71-9710-0474d7671f03/pr_source.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/92/56/3f/92563f10-2d76-4c9d-d41e-498e64e75b60/pr_source.jpg/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ae/7d/8a/ae7d8a38-ee62-085b-8e86-c923a13e99e4/pr_source.jpg/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "wordcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/wordcraft/HEAD/assets/app-icon/wordcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/wordcraft/HEAD/docs/images/hero.png",
+   "https://raw.githubusercontent.com/storytold/wordcraft/HEAD/docs/images/design.png",
+   "https://raw.githubusercontent.com/storytold/wordcraft/HEAD/docs/images/review.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "pearcleaner": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/alienator88/Pearcleaner/assets/91337119/165f6961-f4fc-4199-bc68-580bacff6eaf",
+   "https://github.com/user-attachments/assets/62cd5fcb-92d3-4d3a-9664-161a7deabd46",
+   "https://github.com/user-attachments/assets/5095d30c-3665-4b24-bf00-756baac59026"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "craft-anything": {
+  "icon": "https://raw.githubusercontent.com/storytold/craft-anything/HEAD/assets/app-icon/craft-anything-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/craft-anything/HEAD/docs/images/project-website.png",
+   "https://raw.githubusercontent.com/storytold/craft-anything/HEAD/docs/images/make.png",
+   "https://raw.githubusercontent.com/storytold/craft-anything/HEAD/docs/images/project-game.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "bitwarden": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/64/32/07/643207ba-c963-8c19-34be-1bae132c59e6/icon.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/94/8b/af948b24-bbf2-3af4-1c45-e73c8e7ca70c/mac-safari-1.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4a/cb/8d/4acb8df9-2956-efa0-81de-66d481509657/mac-safari-2.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/7f/64/e0/7f64e021-5cb3-bd09-865a-21d031f6a268/mac-safari-3.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "element": {
+  "icon": "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/5f0e1775cd41ebe29c04cac1_webclip.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/6a161b5958af986213215aac_Air-gapped-ui-network.png",
+   "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/6a4785c97ec77946de2fed97_hp26-hero-ui.avif",
+   "https://element.io/assets-32bb636196f91ed59d7a49190e26b42c/5ef25c0d30ee3108da4c25e9/6a7214b19f8a3890349855f3_France-Travail-mono.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "lulu": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.com/images/LL/alert.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "diffusionbee": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/assets/1890549/3ee8e70b-ea17-4b26-8069-6d8c65aaa729",
+   "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/assets/1890549/ceb4b799-5003-47c6-a689-1a5dcd110935",
+   "https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/assets/1890549/5deb2129-b1c7-4f25-9718-754aa9a96008"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "whisky": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/42140194/229176642-57b80801-d29b-4123-b1c2-f3b31408ffc6.png",
+   "https://github.com/Whisky-App/Whisky/assets/42140194/d0a405e8-76ee-48f0-92b5-165d184a576b",
+   "https://github.com/Whisky-App/Whisky/assets/42140194/ed1a0d69-d8fb-442b-9330-6816ba8981ba"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "zettlr": {
+  "icon": "https://www.zettlr.com/themes/zettlr/assets/img/256x256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view.png",
+   "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view_dark.png",
+   "https://www.zettlr.com/themes/zettlr/assets/img/zettlr_v3.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "loop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/mrkai77/Loop/HEAD/assets/graphics/loop_demo.gif",
+   "https://raw.githubusercontent.com/mrkai77/Loop/HEAD/assets/graphics/Classic.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "playcover-community": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/PlayCover/PlayCover/HEAD/images/dark.png#gh-dark-mode-only",
+   "https://raw.githubusercontent.com/PlayCover/PlayCover/HEAD/images/light.png#gh-light-mode-only"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "medis": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "http://getmedis.com/screen.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "thaw": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/thaw-app/Thaw/HEAD/docs/images/readme-hero-light.jpeg",
+   "https://raw.githubusercontent.com/thaw-app/Thaw/HEAD/docs/images/readme-hero-dark.jpeg",
+   "https://raw.githubusercontent.com/thaw-app/brand-assets/main/headers/thaw-light.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mac-mouse-fix": {
+  "icon": "https://macmousefix.com/favicon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://macmousefix.com/_ipx/q_100/color-splash-dark-1.png",
+   "https://macmousefix.com/_ipx/q_100/color-splash.png",
+   "https://macmousefix.com/_ipx/q_100/color-splash-dark-2.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "krita": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://krita.org/images/hero-image-50.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "imageoptim": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "gitup-app": {
+  "icon": "https://retcon.app/images/app-icon-32@3x.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/e904078c-f6de-486f-8e61-e1e6cdc57afb",
+   "https://github.com/user-attachments/assets/de78def6-798a-439b-bce6-a926de9b0a6d",
+   "http://i.imgur.com/dWpJExk.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "netnewswire": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://netnewswire.com/images/NNW7-Light.png",
+   "https://netnewswire.com/images/NNW7-Dark.png",
+   "https://netnewswire.com/images/NNW5Dark.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "vectorcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/vectorcraft/HEAD/assets/app-icon/vectorcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/vectorcraft/HEAD/docs/images/shot-1-neon.png",
+   "https://raw.githubusercontent.com/storytold/vectorcraft/HEAD/docs/images/shot-2-ribbons.png",
+   "https://raw.githubusercontent.com/storytold/vectorcraft/HEAD/docs/images/shot-4-bezier.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "virtualbuddy": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/insidegui/VirtualBuddy/HEAD/assets/DeviceSupport.png",
+   "https://raw.githubusercontent.com/insidegui/VirtualBuddy/HEAD/assets/Showcase.jpg",
+   "https://raw.githubusercontent.com/insidegui/VirtualBuddy/HEAD/assets/GuestApp.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "finetune": {
+  "icon": "https://raw.githubusercontent.com/ronitsingh10/FineTune/HEAD/assets/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/ronitsingh10/FineTune/HEAD/assets/screenshot-eq.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "sloth": {
+  "icon": "https://raw.githubusercontent.com/sveinbjornt/Sloth/HEAD/resources/sloth_icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/sveinbjornt/Sloth/HEAD/resources/sloth_screenshot1.jpg",
+   "https://raw.githubusercontent.com/sveinbjornt/Sloth/HEAD/resources/sloth_screenshot2.jpg",
+   "https://raw.githubusercontent.com/sveinbjornt/Sloth/HEAD/resources/sloth_screenshot3.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "clipy": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://clipy-app.com/static/clipboard-history.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mockoon": {
+  "icon": "https://mockoon.com/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://mockoon.com/images/repos/main-hero.png",
+   "https://mockoon.com/images/pro-btn.png",
+   "https://mockoon.com/images/home/home-hero.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "miaoyan": {
+  "icon": "https://miaoyan.app/assets/icon-180.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/tw93/MiaoYan/main/assets/split-preview.png",
+   "https://raw.githubusercontent.com/tw93/static/main/miaoyan/miaoyan.gif",
+   "https://raw.githubusercontent.com/tw93/MiaoYan/main/Resources/app.icon/Assets/43.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "effectcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/effectcraft/HEAD/assets/app-icon/effectcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/effectcraft/HEAD/docs/images/effectcraft-hero.png",
+   "https://raw.githubusercontent.com/storytold/effectcraft/HEAD/docs/images/effectcraft-3d.png",
+   "https://raw.githubusercontent.com/storytold/effectcraft/HEAD/docs/images/effectcraft-graph-editor.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "podman-desktop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/podman-desktop/podman-desktop/HEAD/website/static/img/features/homepage.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "coteditor": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/coteditor/CotEditor/HEAD/screenshot@2x.png",
+   "https://coteditor.com/img/screenshots/screenshot@2x.png",
+   "https://coteditor.com/img/screenshots/darkmode@2x.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "macvim-app": {
+  "icon": "https://macvim.org/images/favicon-macvim-256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://macvim.org/images/macvim-screenshot-light.png",
+   "https://macvim.org/images/macvim-screenshot-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "postgres-app": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "http://postgresapp.com/img/PostgresAppIconLarge.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "sequel-ace": {
+  "icon": "https://sequel-ace.com/images/appIcon-1024.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/1ed88ef5-c89d-4dca-95d5-0a567aa1409b"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mullvad-vpn": {
+  "icon": "https://mullvad.net/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://media.mullvad.net/web/desktop-2024.png?width=395",
+   "https://media.mullvad.net/web/browser.png?width=600&height=517&aspect_ratio=600%3A517"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "cadcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/cadcraft/HEAD/assets/app-icon/cadcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/cadcraft/HEAD/docs/images/ui-layout.png",
+   "https://raw.githubusercontent.com/storytold/cadcraft/HEAD/docs/images/ui-bracket.png",
+   "https://getartcraft.com/images/apps/pdfcraft/hero.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "puremac": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/momenbasel/PureMac/HEAD/cli/screenshots/clean.png",
+   "https://raw.githubusercontent.com/momenbasel/PureMac/HEAD/screenshots/smart-care.png",
+   "https://raw.githubusercontent.com/momenbasel/PureMac/HEAD/screenshots/smart-care-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "keka": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.keka.io/img/Keka-Square-512x512.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "linearmouse": {
+  "icon": "https://linearmouse.app/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://linearmouse.app/hero/screenshots/buttons.png",
+   "https://linearmouse.app/hero/screenshots/buttons-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "gridcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/gridcraft/HEAD/assets/app-icon/gridcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/gridcraft/HEAD/docs/images/hero-sales.png",
+   "https://raw.githubusercontent.com/storytold/gridcraft/HEAD/docs/images/page-break.png",
+   "https://raw.githubusercontent.com/storytold/gridcraft/HEAD/docs/images/budget.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "applite": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/milanvarady/Applite/main/docs/screenshots/discover-light.png",
+   "https://raw.githubusercontent.com/milanvarady/Applite/main/docs/screenshots/discover-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "keepingyouawake": {
+  "icon": "https://keepingyouawake.app/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/newmarcel/KeepingYouAwake/HEAD/Extras/Screenshot@2x.jpg",
+   "https://keepingyouawake.app/screenshot@2x.a4259f34.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "requestly": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://requestly.com/img/features/env-variable.webp",
+   "https://requestly.com/img/avatars/harry-s.jpeg",
+   "https://requestly.com/img/features/dynamic-variables.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "eqmac": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/bitgapp/eqMac/raw/master/assets/screenshots/autoeq-promo.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vimr": {
+  "icon": "https://x.com/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/qvacua/vimr/develop/resources/screenshot1.png",
+   "https://raw.githubusercontent.com/qvacua/vimr/develop/resources/screenshot2.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "macpass": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.github.com/mstarke/MacPass/master/Assets/Screenshots/MacPass.png",
+   "https://macpass.app/img/screenshot_quicklook_text.png",
+   "https://macpass.app/img/screenshot_tabs.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "tablepro": {
+  "icon": "https://tablepro.app/logo.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/TableProApp/TablePro/HEAD/.github/assets/app-light.png",
+   "https://raw.githubusercontent.com/TableProApp/TablePro/HEAD/.github/assets/app-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "notunes": {
+  "icon": "https://raw.githubusercontent.com/tombonez/noTunes/HEAD/screenshots/app-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/tombonez/noTunes/HEAD/screenshots/app-icon.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "meetingbar": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/80/0f/d9/800fd919-6d19-dbf5-f3e6-c86f6ef62bfe/AppIcon-0-0-85-220-0-0-5-0-2x.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/09/74/0c097471-c6e2-9ef2-ccea-54a4fb33c536/b4d383d6-bd89-4bf0-8bcc-7614da2a1a04_screenshot__U00284_U0029.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/20/18/63/2018633e-9c52-fa2d-e388-3e8ed69581f7/ab731f95-8ad1-4cbc-9a63-9df6c4a08ca5_Next.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/64/05/a0/6405a02a-ded7-e7c8-6aa3-4b09e3166551/57cfe7ca-5cac-497c-9ec4-081817218047_Last.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "lunar": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://files.lunar.fyi/menu-density-demo.png",
+   "https://files.lunar.fyi/display-page.png",
+   "https://files.lunar.fyi/display-settings.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "atoll": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/Ebullioscopic/Atoll/HEAD/docs/images/charging-power-preview.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "designcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/designcraft/HEAD/assets/app-icon/designcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/designcraft/HEAD/docs/images/ui-spread.png",
+   "https://raw.githubusercontent.com/storytold/designcraft/HEAD/docs/images/page-3.png",
+   "https://raw.githubusercontent.com/storytold/designcraft/HEAD/docs/images/page-cover.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "heynote": {
+  "icon": "https://heynote.com/img/favicon/favicon-180.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://heynote.com/img/light/screenshot3.png",
+   "https://heynote.com/img/dark/screenshot3.png",
+   "https://heynote.com/img/light/blocks.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "deckcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/deckcraft/HEAD/assets/app-icon/deckcraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/deckcraft/HEAD/docs/images/editor.png",
+   "https://raw.githubusercontent.com/storytold/deckcraft/HEAD/docs/images/shape-format.png",
+   "https://raw.githubusercontent.com/storytold/deckcraft/HEAD/docs/images/format-pane.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "bleunlock": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "ferdium": {
+  "icon": "https://raw.githubusercontent.com/ferdium/ferdium-app/HEAD/build-helpers/images/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/ferdium/ferdium-app/HEAD/branding/screenshots/hero.png",
+   "https://raw.githubusercontent.com/ferdium/ferdium-app/HEAD/branding/screenshots/workspaces.png",
+   "https://raw.githubusercontent.com/ferdium/ferdium-app/HEAD/branding/screenshots/todos.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "selfcontrol": {
+  "icon": "http://selfcontrolapp.com/img/apple-touch-icon-57-precomposed.png",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "itsycal": {
+  "icon": "https://www.mowglii.com/static/apple-touch-icon.png?v=1793763308",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.mowglii.com/itsycal/menubar@2x.gif?v=1793763308"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "soundcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/soundcraft/HEAD/assets/app-icon/soundcraft-macos-512.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/soundcraft/HEAD/docs/images/mix.png",
+   "https://raw.githubusercontent.com/storytold/soundcraft/HEAD/docs/images/video.png",
+   "https://raw.githubusercontent.com/storytold/soundcraft/HEAD/docs/images/surround.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "figcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/figcraft/HEAD/assets/app-icon/figcraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/figcraft/HEAD/docs/images/shot-4-devmode.png",
+   "https://raw.githubusercontent.com/storytold/figcraft/HEAD/docs/images/art-app-home.png",
+   "https://raw.githubusercontent.com/storytold/figcraft/HEAD/docs/images/art-app-trail.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "swiftbar": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/222100/110520713-d5058000-80dc-11eb-9b15-baa09cb445bf.png",
+   "https://user-images.githubusercontent.com/222100/102021898-2d80e780-3d51-11eb-9e99-c71e92d14837.png",
+   "https://user-images.githubusercontent.com/222100/101261866-267e2780-3708-11eb-9042-a57ad0ac6c78.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "qlmarkdown": {
+  "icon": "https://raw.githubusercontent.com/sbarex/QLMarkdown/HEAD/assets/img/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/sbarex/QLMarkdown/HEAD/assets/img/system_setings1.png",
+   "https://raw.githubusercontent.com/sbarex/QLMarkdown/HEAD/assets/img/preview_quicklook.png",
+   "https://raw.githubusercontent.com/sbarex/QLMarkdown/HEAD/assets/img/preview_shortcut.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "reminders-menubar": {
+  "icon": "https://raw.githubusercontent.com/DamascenoRafael/reminders-menubar/HEAD/docs/images/reminders-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/DamascenoRafael/reminders-menubar/HEAD/docs/images/reminders-permission.png",
+   "https://raw.githubusercontent.com/DamascenoRafael/reminders-menubar/HEAD/docs/images/reminders-menubar-demo.gif",
+   "https://raw.githubusercontent.com/DamascenoRafael/reminders-menubar/HEAD/docs/images/reminder-menubar-light.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "hush": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/66/6e/5b666ee0-f168-1cab-4629-184ca1714709/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/24/9d/98/249d9810-4c4d-8996-399c-dbab8de7e664/iphone-6.5-hush.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "flycut": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "http://a3.mzstatic.com/us/r1000/047/Purple/fb/53/f2/mzi.mcaxwyjm.175x175-75.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "pika": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://superhighfives.com/assets/pika-readme%402x.png",
+   "https://user-images.githubusercontent.com/449385/103492506-4dbd3700-4e23-11eb-97ca-44a959f171c6.png",
+   "https://user-images.githubusercontent.com/449385/215260971-e09cdbea-588a-45a9-955c-cbfd1822c2b9.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "calendr": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/pakerwreah/Calendr/HEAD/resources/screenshot.png",
+   "https://github.com/pakerwreah/Calendr/assets/803954/8b3ebb0f-52ad-461c-91c3-7b4d2646712e",
+   "https://github.com/pakerwreah/Calendr/assets/803954/8e8d342d-9be5-4bad-b741-875cc407ec1a"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "hot": {
+  "icon": "https://xs-labs.com/favicon-apple-touch.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/macmade/Hot/HEAD/Assets/menu.png",
+   "https://raw.githubusercontent.com/macmade/Hot/HEAD/Assets/menu-arm.png",
+   "https://raw.githubusercontent.com/macmade/Hot/HEAD/Assets/sensors.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "bettershot": {
+  "icon": "https://raw.githubusercontent.com/KartikLabhshetwar/better-shot/HEAD/Resources/Assets.xcassets/AppIcon.appiconset/icon_128x128.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/KartikLabhshetwar/better-shot/HEAD/bettershot-landing/public/features/screenshot-editor-dark.webp",
+   "https://raw.githubusercontent.com/KartikLabhshetwar/better-shot/HEAD/bettershot-landing/public/features/video-editor-dark.webp",
+   "https://www.bettershot.site/features/screenshot-editor-dark.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vienna": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.vienna-rss.com/images/screenshot1.png",
+   "https://www.vienna-rss.com/images/screenshot2.png",
+   "https://www.vienna-rss.com/images/screenshot3.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "typewhisper": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/TypeWhisper/typewhisper-mac/HEAD/.github/screenshots/app-store/01-indicator.png",
+   "https://raw.githubusercontent.com/TypeWhisper/typewhisper-mac/HEAD/.github/screenshots/home.png",
+   "https://raw.githubusercontent.com/TypeWhisper/typewhisper-mac/HEAD/.github/screenshots/recording.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "losslessswitcher": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/23420208/164895657-35a6d8a3-7e85-4c7c-bcba-9d03bfd88b4d.png",
+   "https://user-images.githubusercontent.com/23420208/164896404-c6d27328-47e5-4eb3-bd8b-71e3c9013c46.png",
+   "https://user-images.githubusercontent.com/23420208/164895903-1c95fe89-6198-433a-9100-8d9af32ca24f.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "pencil2d": {
+  "icon": "https://www.pencil2d.org/apple-touch-icon.png?v=almN0Wkzb6",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "bettercapture": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/jsattler/BetterCapture/HEAD/website/public/bettercapture-header.png",
+   "https://bettercapture.app/screenshot-basic.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "alienator88-sentinel": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/dfea9f1c-d3ab-430e-93e4-c2da358db110",
+   "https://github.com/user-attachments/assets/3cc90bd1-7d9d-43ed-8a0f-7105d72d5eab"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "cameracontroller": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/itaybre/CameraController/HEAD/.github/Basic.png",
+   "https://raw.githubusercontent.com/itaybre/CameraController/HEAD/.github/Preferences.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "excalidrawz": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/chocoford/chocoford/main/public/Donation%20Button.png",
+   "https://raw.githubusercontent.com/chocoford/ExcalidrawZ/HEAD/assets/README/ExcalidrawZ%20-%20Overview.png",
+   "https://raw.githubusercontent.com/chocoford/ExcalidrawZ/HEAD/assets/README/File%20History.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "petrichor": {
+  "icon": "https://petrichor.page/images/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/kushalpandya/Petrichor/HEAD/.github/assets/hero_screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "capso": {
+  "icon": "https://www.awesomemacapp.com/icon.png?icon.946eb6fb.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/lzhgus/Capso/HEAD/.github/assets/beautify.jpeg",
+   "https://raw.githubusercontent.com/lzhgus/Capso/HEAD/.github/assets/hero.gif",
+   "https://raw.githubusercontent.com/lzhgus/Capso/HEAD/.github/assets/annotation.jpeg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "rockxy": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/RockxyApp/Rockxy/HEAD/docs/images/Rockxy-Demo-Preview.png",
+   "https://raw.githubusercontent.com/RockxyApp/Rockxy/HEAD/docs/images/features/TrafficCapture.png",
+   "https://raw.githubusercontent.com/RockxyApp/Rockxy/HEAD/docs/images/features/DemoAdvancedFilterSearch.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "gray": {
+  "icon": "https://raw.githubusercontent.com/zenangst/Gray/master/Resources/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/zenangst/Gray/master/Images/Screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mac-monitor": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/Brandon7CC/mac-monitor/HEAD/Resources/v3.0.0/overview-graphic-v3.0.png",
+   "https://raw.githubusercontent.com/Brandon7CC/mac-monitor/HEAD/Resources/v3.0.0/install-graphic-v3.0.png",
+   "https://raw.githubusercontent.com/Brandon7CC/mac-monitor/HEAD/Resources/v3.0.0/cli-v3.0.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "passepartout": {
+  "icon": "https://partout.io/s/favicon.png?1793086994",
+  "iconSource": "web",
+  "screenshots": [
+   "https://partout.io/s/passepartout-logo.png?1793086994"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "beaver-notes": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/Beaver-Notes/Beaver-Notes/assets/67503004/a7b38689-0363-49f0-8ed8-60e7358b1df6",
+   "https://raw.githubusercontent.com/Beaver-Notes/beaver-website/main/src/assets/logo.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mythic": {
+  "icon": "https://getmythic.app/apple-touch-icon-180x180.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/dd702812-0d06-47a5-bd25-3f2dcf40aeee",
+   "https://getmythic.app/mythic-window-light.avif",
+   "https://getmythic.app/mythic-library-grid-light.avif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "knockknock": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.org/images/KK/kk.png",
+   "https://objective-see.org/images/KK/unzip.png",
+   "https://objective-see.org/images/KK/grantFDA.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "tropy": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://tropy.org/assets/images/screenshot-1.jpg",
+   "https://tropy.org/assets/images/screenshot-2.jpg",
+   "https://tropy.org/assets/images/screenshot-3.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "monolingual": {
+  "icon": "https://ingmarstein.github.io/Monolingual/images/Monolingual_128.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://ingmarstein.github.io/Monolingual/images/Monolingual-2.0.0-en.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "pareto-security": {
+  "icon": "https://raw.githubusercontent.com/ParetoSecurity/pareto-mac/main/assets/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/ParetoSecurity/pareto-mac/main/assets/screenshot.png",
+   "https://raw.githubusercontent.com/ParetoSecurity/pareto-mac/main/assets/icon.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "texturecraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/texturecraft/HEAD/assets/app-icon/texturecraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/texturecraft/HEAD/docs/images/texturecraft-workspace.png",
+   "https://raw.githubusercontent.com/storytold/texturecraft/HEAD/docs/images/texturecraft-bake.png",
+   "https://raw.githubusercontent.com/storytold/texturecraft/HEAD/docs/images/texturecraft-export.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "macdown-3000": {
+  "icon": "https://macdown.app/assets/images/logo-160.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/schuyler/macdown3000/HEAD/assets/screenshot.png",
+   "https://macdown.app/assets/images/screenshot.png",
+   "https://macdown.app/assets/images/syntax-highlighting-demo.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "free-ruler": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3a/d6/14/3ad614c3-e050-15bc-79f9-a7acffeffd9e/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/67/71/53677103-b230-96b9-c3cd-075ac8e318d5/01-measure-anything.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/d3/ef/18d3ef27-bf9b-dcf3-d51b-e1d536648dd1/02-custom-colors.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e7/c6/d0/e7c6d034-a3c0-e0d6-2eff-0bbf0c3da56a/03-groups.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "materialcraft": {
+  "icon": "https://raw.githubusercontent.com/storytold/materialcraft/HEAD/assets/app-icon/materialcraft-1024.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://raw.githubusercontent.com/storytold/materialcraft/HEAD/docs/images/materialcraft-workspace.png",
+   "https://raw.githubusercontent.com/storytold/materialcraft/HEAD/docs/images/materialcraft-wood.png",
+   "https://raw.githubusercontent.com/storytold/materialcraft/HEAD/docs/images/materialcraft-lava.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "elephicon": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://user-images.githubusercontent.com/52094761/144979888-d796c672-ee0a-44cc-bfa2-abce6513d192.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "jukebox": {
+  "icon": "https://raw.githubusercontent.com/Jaysce/Jukebox/HEAD/Images/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/Jaysce/Jukebox/HEAD/Images/example.png",
+   "https://raw.githubusercontent.com/Jaysce/Jukebox/HEAD/Images/preferences.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "appcleaner": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "discord": {
+  "icon": "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6266bc493fb42d4e27bb8393_847541504914fd33810e70a0ea73177e.ico",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/672a05ddd346501810640d92_Witch%20(1).png",
+   "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/664723da94dd30e64e74357a_Discord_Website_Refresh_StatusHover.webp",
+   "https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/6a91b04dee3b20d605b76581_Card%20Characters.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "visual-studio-code": {
+  "icon": "https://code.visualstudio.com/assets/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/56af271c-949d-454c-a3ea-16188c063414"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "caffeine": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "atlas": {
+  "icon": "https://atlas.insanearts.io/icon-192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/InsaneArts/atlas/HEAD/assets/demo.webp",
+   "https://atlas.insanearts.io/macos/icons/preview.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "macusb": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/Kruszoneq/macUSB/HEAD/docs/readme-assets/app-screens/ConfirmationMacOSBigSur.png",
+   "https://raw.githubusercontent.com/Kruszoneq/macUSB/HEAD/docs/readme-assets/images/macusb-readme-hero.gif",
+   "https://raw.githubusercontent.com/Kruszoneq/macUSB/HEAD/docs/readme-assets/permissions/allow-in-the-background.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "netiquette": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.com/images/NQ/netiquette.png",
+   "https://objective-see.com/images/friends/cleanmymac.png",
+   "https://objective-see.com/images/friends/malwarebytes.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "nx2apple": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/LNPANDY/NX2Apple/HEAD/frontend/screenshots/launcher-library.webp",
+   "https://raw.githubusercontent.com/LNPANDY/NX2Apple/HEAD/frontend/screenshots/logo-light.png",
+   "https://raw.githubusercontent.com/LNPANDY/NX2Apple/HEAD/frontend/screenshots/logo-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "slack": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://a.slack-edge.com/cd054cc/marketing/img/agentforce/lp/updated-img-promo-2.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "tailscale-app": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "genoffice": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/genspark-ai/genoffice/HEAD/docs/assets/readme/hero.webp",
+   "https://raw.githubusercontent.com/genspark-ai/genoffice/HEAD/docs/assets/readme/html-ai.webp",
+   "https://raw.githubusercontent.com/genspark-ai/genoffice/HEAD/docs/assets/readme/cli-deck-in-app.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "notion": {
+  "icon": "https://www.notion.com/front-static/logo-ios.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://images.ctfassets.net/spoqsaf9291f/6FgNTTkMi3o7i3WmMGXI05/fac54bfafa54106f07b6234f8db2ca05/meeting-notes.gif",
+   "https://images.ctfassets.net/spoqsaf9291f/2eDNofPGEHPL7tL7ho1HfZ/5b673e9f9459f483f1024a45a90b19ac/researcher.gif",
+   "https://images.ctfassets.net/spoqsaf9291f/3Lufz68Poca8EIwGNOptBl/9d124ce4717646218605d8781a5aaa18/3-up.gif"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "grammarly-desktop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://static-web.grammarly.com/1e6ajr2k4140/9fkWtpOmPNDOwJCrtGgbI/843cbb82e0ad130697f1336029e968f8/UI_Clarity_Rephrase_Pro_NEW.png?w=1248",
+   "https://static-web.grammarly.com/1e6ajr2k4140/3POmfU0pVyghz5OkTRwJqX/0c97e8dc32e63a07ba022dd9897000c8/UI_Correctness_Grammar_Pro_NEW.png?w=1248",
+   "https://static-web.grammarly.com/1e6ajr2k4140/3VLiLtoIGIJLZfp7Z57UuQ/3219b97c0d9b03c393a357f7265bf157/Frame_2055245680.png?w=1248"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "1password": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://images.ctfassets.net/2h488pz7kgfv/4YXoxMAEHcmqarZJ6ibIjp/9bc1909cd2ea00448bdcd8bee6643e59/Screenshot_2026-01-29_at_3.28.02%C3%A2__PM.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "retroarch": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/libretro/RetroArch/HEAD/docs/XMB-main-menu.jpg",
+   "https://raw.githubusercontent.com/libretro/RetroArch/HEAD/docs/rgui-main-menu.jpg",
+   "https://raw.githubusercontent.com/libretro/RetroArch/HEAD/docs/glui-main-menu.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vermut": {
+  "icon": "https://raw.githubusercontent.com/Contessafry/Vermut/HEAD/brandkit/logo/Vermut.iconset/icon_256x256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/Contessafry/Vermut/HEAD/docs/screenshots/stores.png",
+   "https://raw.githubusercontent.com/Contessafry/Vermut/HEAD/docs/screenshots/library.png",
+   "https://raw.githubusercontent.com/Contessafry/Vermut/HEAD/docs/screenshots/bottle.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vscodium": {
+  "icon": "https://vscodium.com/img/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://vscodium.com/img/vscodium.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "penpot-desktop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "libreoffice": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.libreoffice.org/media/screenshot_writer_hero.png",
+   "https://www.libreoffice.org/media/screenshot_writer.png",
+   "https://www.libreoffice.org/media/screenshot_calc.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "chatgpt": {
+  "icon": "https://chatgpt.com/unauth-mweb/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn.openai.com/chatgpt/share-og.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "lm-studio": {
+  "icon": "https://lmstudio.ai/assets/marketing/logo-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://files.lmstudio.ai/lms-light.png",
+   "https://files.lmstudio.ai/lms-dark.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "deepseek-harness": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.deepseek.com/harness/images/feat-plugins-zh.webp",
+   "https://www.deepseek.com/harness/images/feat-trace-zh.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "raycast": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.raycast.com/opengraph-image-pwu6ef.png?opengraph-image.1f-98etzkaz5s.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "claude": {
+  "icon": "https://claude.com/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://assets.claude.com/2ec4bf68b8f42d0c232437207c5ff2ff914675e0.jpg?fm=webp&w=1200",
+   "https://assets.claude.com/e25eeb1c92abffd5ed51c24672cb6157fee38c88.jpg?fm=webp&w=1200"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "mstystudio": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://msty.ai/brands/go.png",
+   "https://msty.ai/product-ui/msty-ai-system.png",
+   "https://msty.ai/industry-v5/education.webp"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "antigravity": {
+  "icon": "https://antigravity.google/assets/image/antigravity-logo.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://antigravity.google/assets/image/product/new-chat.png",
+   "https://antigravity.google/assets/image/landing/antigravity-cli.png",
+   "https://antigravity.google/assets/image/landing/feature-3.jpg"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "opencode-desktop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/sst/opencode/HEAD/packages/web/src/assets/lander/screenshot.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "cursor": {
+  "icon": "https://cursor.com/marketing-static/icon-192x192-light.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cursor.com/marketing-static/demos/cursor-wallpaper.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "inkscape": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/inkscape/inkscape/HEAD/Freedom_Machine_by_Rizky_Djati_Munggaran_CC-By-SA.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "freecad": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/FreeCAD/FreeCAD/HEAD/.github/images/partdesign.jpg",
+   "https://www.freecad.org/images/screenshot-01.avif",
+   "https://www.freecad.org/images/screenshot-07.avif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "gimp": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "blockbench": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://web.blockbench.net/content/front_page_app.png",
+   "https://blockbench.net/_nuxt/front_page_app.-eXyXeFa.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "godot": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "shotcut": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.shotcut.org/assets/img/screenshots/Shotcut-18.11.18.png",
+   "https://shotcut.org/assets/img/screenshots/Shotcut-18.11.18.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "taskexplorer": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.com/images/TE/te_main.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "filemonitor": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.com/images/blog/blog_0x48/twitter.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "dhs": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "kextviewr": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.org/images/KV/kv.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "processmonitor": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://objective-see.com/images/blog/blog_0x47/twitter.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "spotify": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "plex": {
+  "icon": "https://watch.plex.tv/icons/icon-512x512.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://watch.plex.tv/_next/static/media/watch-social-share.14b2sbwc3buhf.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "comfy": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2",
+   "https://media.comfy.org/website/ltx-2.5/hero-poster.webp",
+   "https://media.comfy.org/website/wan-animate-2/hero-poster.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "google-chrome": {
+  "icon": "https://www.google.com/chrome/static/images/favicons/android-icon-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.google.com/chrome/static/images/homepage/homepage-v2.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "firefox": {
+  "icon": "https://www.firefox.com/media/img/favicons/firefox/browser/favicon-196x196.59e3822720be.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.firefox.com/media/img/firefox/flare/og.4d50d9b1674b.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "proton-mail": {
+  "icon": "https://proton.me/favicons/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://proton.me/images/social/proton-mail-og.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "thunderbird": {
+  "icon": "https://www.thunderbird.net/media/img/thunderbird/favicon-196.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.thunderbird.net/media/img/thunderbird/thunderbird-256.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "readdle-spark": {
+  "icon": "https://cdn-rdstaticassets.readdle.com/assets/spark/spark3/common/favicon-icons/spark-icon-180x180.png?1793870182",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn-rdstaticassets.readdle.com/assets/spark/spark3/common/share-banner/default.png?1793870182"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "opensuperwhisper": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "disklens": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "connectmenow": {
+  "icon": "https://www.tweaking4all.com/apple-touch-icon-512x512.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.tweaking4all.com/wp-content/uploads/2022/10/featured-image-connectmenow-4.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "voicebox": {
+  "icon": "https://voicebox.sh/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/jamiepine/voicebox/HEAD/.github/assets/app-screenshot-1.webp",
+   "https://raw.githubusercontent.com/jamiepine/voicebox/HEAD/.github/assets/app-screenshot-2.webp",
+   "https://raw.githubusercontent.com/jamiepine/voicebox/HEAD/.github/assets/app-screenshot-3.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "alfred": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/b4/7b/51/b47b5118-5ba5-a359-0bc6-e71494225963/appicon.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/53/b3/94/53b3941d-9b9d-a8c5-7c87-b517abcc9449/mzl.gnyzjpnu.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/da/3a/42/da3a42a8-03c7-fbcd-da1d-734de3a09e49/mzl.hlpeqmif.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple/v4/16/4f/d9/164fd9b1-c93f-f34c-9c56-d4c932be9266/mzl.muieyife.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "core-eq": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "textream": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a1/01/f8/a101f89d-dc93-1b52-88e6-dff4f4995a32/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b1/1f/bb/b11fbbf8-885c-d80b-44ae-2cc29a2b3ffa/01-word-tracking.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/f7/66/35f766d6-b412-ea8a-eb1e-df564ea653f0/02-guidance-modes.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8c/6f/0e/8c6f0e7e-68a3-cd08-8c14-ec8a9e337fba/03-accessibility.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "vorssaint": {
+  "icon": "https://vorssaint.com/app-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/vorssaint/vorssaint-utils/HEAD/docs/assets/readme/panel-controls.png",
+   "https://raw.githubusercontent.com/vorssaint/vorssaint-utils/HEAD/docs/assets/readme/panel-mixer.png",
+   "https://raw.githubusercontent.com/vorssaint/vorssaint-utils/HEAD/docs/assets/readme/panel-system.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "privacystage": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://aieltokhy.com/assets/img/og/og-privacystage.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "betterbird": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.betterbird.eu/media/img/betterbird-256.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "bettertouchtool": {
+  "icon": "https://folivora.ai/folivora/favicon-192.png",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "whatsapp": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/15/eb/39/15eb3965-bec3-4737-950a-9d9df5303e93/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/512x512bb.jpg",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d8/95/88/d89588dd-ce20-0f5b-95bc-f99814bf9a6c/6.9__Display_1-en_US.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/60/0f/39/600f39e2-82c1-d2dd-eb76-d9c58d88e1f9/6.9__Display_2-en_US.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/64/6b/4e646b15-085c-ab69-957f-790f1e17475b/6.9__Display_3-en_US.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "telegram": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/dd/de/a8/dddea8e9-6fb0-3211-a92b-21c9152f583d/AppIcon-0-0-85-220-0-0-6-0-2x-sRGB.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/81/4a/a1/814aa19f-2476-4832-c421-b424e153c666/pr_source.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/d7/16/e8/d716e8df-6341-89c9-6a56-55ac4e007c4c/pr_source.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/6a/47/09/6a470976-f992-9cb7-129b-a3785ce9f7d3/pr_source.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "docker-desktop": {
+  "icon": "https://www.docker.com/app/uploads/2024/02/cropped-docker-logo-favicon-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.docker.com/app/uploads/2023/06/meta-image-download-docker-desktop-1110x580.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "orbstack": {
+  "icon": "https://orbstack.dev/img/icon128.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://orbstack.dev/img/icon-square256.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "pen": {
+  "icon": "https://www.pen.dev/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.pen.dev/assets/marketing/a4ecda6/features/assets/previews/preview-coffee-desktop-light.webp",
+   "https://www.pen.dev/assets/marketing/a4ecda6/features/assets/previews/preview-coffee-desktop-dark.webp",
+   "https://www.pen.dev/assets/marketing/a4ecda6/features/assets/previews/preview-shader-desktop-light.webp"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "paper-design": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/d2/c4/9fd2c4fc-ffa4-b622-7675-591d6bc8c1af/AppIcon-0-0-85-220-0-0-5-0-2x.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/54/90/fd/5490fdea-a06b-6b37-cbd3-023cd3fa4cc6/d062bd93-7537-4784-a080-ac3fd13973a3__U622a_U5c4f2022-10-03_23.26.00.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/35/5f/b2/355fb24f-58ae-1b69-801c-f00e653e21d0/21dcc600-3ae7-4aee-8d40-cb7c73d400c9__U622a_U5c4f2022-10-05_14.49.20.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource122/v4/b8/85/49/b88549b6-3f56-e56e-4d11-5468bf18f9a8/e77b5af0-0bdd-4b73-823e-c571b05aa96f__U622a_U5c4f2022-10-03_23.24.37.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "openclaw": {
+  "icon": "https://openclaw.ai/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-banner-dark.png",
+   "https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-banner-light.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "intellij-idea": {
+  "icon": "https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/intellij-idea_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/intellij-idea/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "clion": {
+  "icon": "https://resources.jetbrains.com/storage/products/clion/img/meta/clion_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://www.jetbrains.com/_assets/rr/air-screenshot-Dg28BZH2.png",
+   "https://www.jetbrains.com/_assets/rr/code-intelligence-screenshot-HEhdexd2.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "rustrover": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/rust/img/meta/rustrover_preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "pycharm": {
+  "icon": "https://resources.jetbrains.com/storage/products/pycharm/img/meta/pycharm_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/pycharm/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "webstorm": {
+  "icon": "https://resources.jetbrains.com/storage/products/webstorm/img/meta/webstorm_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/webstorm/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "jetbrains-toolbox": {
+  "icon": "https://resources.jetbrains.com/storage/products/toolbox/img/meta/toolbox_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/toolbox/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "goland": {
+  "icon": "https://resources.jetbrains.com/storage/products/goland/img/meta/goland_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/goland/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "rubymine": {
+  "icon": "https://resources.jetbrains.com/storage/products/rubymine/img/meta/rubymine_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/rubymine/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "phpstorm": {
+  "icon": "https://resources.jetbrains.com/storage/products/phpstorm/img/meta/phpstorm_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://www.jetbrains.com/_assets/rr/hero-screenshot-dark-B8G2hHWu.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "android-studio": {
+  "icon": "https://www.gstatic.com/devrel-devsite/prod/veed85ba0e3651062c793a40796e84fb34afbf8489308d45f92d5448e587e3f03/android/images/touchicon-180.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://developer.android.com/static/images/social/android-developers.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "datagrip": {
+  "icon": "https://resources.jetbrains.com/storage/products/datagrip/img/meta/datagrip_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://www.jetbrains.com/_assets/rr/hero-screenshot-dark-DqkoCTyT.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "rider": {
+  "icon": "https://resources.jetbrains.com/storage/products/rider/img/meta/rider_logo_300x300.png",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://resources.jetbrains.com/storage/products/rider/img/meta/preview.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "obsidian": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://obsidian.md/images/home-wiki-hume.png",
+   "https://obsidian.md/images/publish-example-dark.png"
+  ],
+  "sources": [
+   "deep"
+  ]
+ },
+ "sf-symbols": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://developer.apple.com/sf-symbols/images/vx-poster-hero-sf-symbols_2x.jpg?1"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "icon-composer": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/82/6f/c6826fe2-aa2b-0983-91c6-161119ce19d0/AppIcon-0-0-85-220-0-0-5-0-2x.jpeg/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3f/63/46/3f63461a-581e-ca1b-b0ab-345af69d2d96/Screenshot_1.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/5f/7c/a5/5f7ca5b7-3bff-d312-2dde-f737b6990b65/Screenshot_2_sized.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/61/e6/19/61e61919-5e58-e6ef-b59c-7be4dbd2851e/Screenshot_3_sized.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "homebrew": {
+  "icon": "https://brew.sh/assets/img/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://brew.sh/assets/img/brew-install.gif"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "opera": {
+  "icon": "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/images/favicon/opera/apple-touch-icon.91bbceaeaa8a.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn-production-opera-website.operacdn.com/staticfiles/assets/images/og/og-opera-lp-home.7e5e3f2570b5.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "zoom": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://st1.zoom.us/homepage/20261103-1454/primary/dist/assets/zoommedia/meetings.jpg",
+   "https://st1.zoom.us/homepage/20261103-1454/primary/dist/assets/zoommedia/web.jpg",
+   "https://st1.zoom.us/homepage/20261103-1454/primary/dist/assets/zoommedia/contact-center.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "google-drive": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://lh3.googleusercontent.com/_HSqqBvJJpopAd2znZ8-VHWZ2-470iy7MSjVhdcJfXMF3-caNsWDwJrHQkBxbdGVg_tfsiAWOTpIzVJjARBVeHSlwXWxhQPULyP4=w1200-e365"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "microsoft-edge": {
+  "icon": "https://explore.microsoft.com/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "dropbox": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/product-ui/chat-gpt/dropbox-homepage-hero-2025-ui-transparent-1920x1280.png?id=5806f0b7-d0f5-47cc-98a8-6c1cd0846278&width=1920&output_type=png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "vivaldi": {
+  "icon": "https://vivaldi.com/wp-content/uploads/cropped-favicon-192x192.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://vivaldi.com/wp-content/uploads/vivaldi_8_og.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "grandperspective": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "epic-games": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "anydesk": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "onyx": {
+  "icon": "https://www.titanium-software.fr/android-icon-192x192.png",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "teamviewer": {
+  "icon": "https://www.teamviewer.com/assets/favicon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.teamviewer.com/poster.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "the-unarchiver": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/94/1e/21941eec-38e5-c8dd-4ecb-60f67cbf9e50/unarchiver.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/15/88/36/15883637-2e2e-f145-8c4f-4aa60296d07c/mzl.zkzrmifn.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/0b/61/b7/0b61b78d-f35f-9cf1-6a91-033f5819b9fd/pr_source.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/f3/b8/d7/f3b8d773-fa0d-6ddf-ae67-7a0dd689ee76/mzl.evyzlaav.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "bambu-studio": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "sublime-text": {
+  "icon": "https://www.sublimetext.com/images/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.sublimetext.com/images/og-full.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "skim": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "ultimaker-cura": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/Ultimaker/Cura/HEAD/cura-logo.PNG"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "temurin": {
+  "icon": "https://adoptium.net/favicon.ico?favicon.3kciqgdfn7eki.ico",
+  "iconSource": "web",
+  "screenshots": [
+   "https://adoptium.net/images/social-image.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "python3": {
+  "icon": "https://www.python.org/static/apple-touch-icon-precomposed.png",
+  "iconSource": "web",
+  "screenshots": [],
+  "sources": []
+ },
+ "xnviewmp": {
+  "icon": "https://www.xnview.com/ico/apple-touch-icon-57-precomposed.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://www.xnview.com/img/app-xnsoft-512.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "node": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://nodejs.org/en/next-data/og/announcement/Node.js%20%E2%80%94%20Run%20JavaScript%20Everywhere"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "go": {
+  "icon": "https://go.dev/images/favicon-gopher-plain.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://golang.org/doc/gopher/fiveyears.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "dotnet-sdk": {
+  "icon": "https://dotnet.microsoft.com/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://dotnet.microsoft.com/blob-assets/images/dotnet-icons/square.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "temurin@21": {
+  "icon": "https://adoptium.net/favicon.ico?favicon.3kciqgdfn7eki.ico",
+  "iconSource": "web",
+  "screenshots": [
+   "https://adoptium.net/images/social-image.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "temurin@17": {
+  "icon": "https://adoptium.net/favicon.ico?favicon.3kciqgdfn7eki.ico",
+  "iconSource": "web",
+  "screenshots": [
+   "https://adoptium.net/images/social-image.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "shapr3d": {
+  "icon": "https://cdn.prod.website-files.com/5fcde6f56fdac5769934eead/655a61da14b3ac921a89262e_favicon.ico",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cdn.prod.website-files.com/5fcde6f56fdac5769934eead/65fc6862033d2a9ae295d3dd_0c7c1320464f85144d84aa37516ba543_opengraph_image.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "chitubox": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "orcaslicer": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/HEAD/SoftFever_doc/mac_cant_open.png",
+   "https://raw.githubusercontent.com/SoftFever/OrcaSlicer/HEAD/SoftFever_doc/mac_security_setting.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "prusaslicer": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "elegoo-slicer": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "creality-print": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1a/0f/ab/1a0fab11-1f7a-f506-5993-ad90da1a4847/Icon.png/512x512bb.png",
+  "iconSource": "appstore",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/16/51/76/16517690-cb9d-3198-a8a2-dca89b895cb9/screenshot-1-home.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/98/0c/70/980c70df-e60c-18c5-90ad-a0a4790eb100/screenshot-2-editor.png/800x500bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/08/ef/a908ef0f-7139-89e5-2f29-0bbd63f73084/screenshot-3-devices.png/800x500bb.jpg"
+  ],
+  "sources": [
+   "appstore"
+  ]
+ },
+ "docker-sandboxes": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [],
+  "sources": []
+ },
+ "t3-code": {
+  "icon": "https://t3.codes/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://t3.codes/_astro/social-card.DMaenTWS_Z194KDS.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "orca-ade": {
+  "icon": "https://raw.githubusercontent.com/stablyai/orca/HEAD/resources/build/icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://raw.githubusercontent.com/stablyai/orca/HEAD/docs/assets/readme-features/orchestration.poster.jpg",
+   "https://raw.githubusercontent.com/stablyai/orca/HEAD/docs/assets/readme-features/chat-or-terminal.poster.jpg",
+   "https://raw.githubusercontent.com/stablyai/orca/HEAD/docs/assets/readme-features/remote.poster.jpg"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "xcode": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://developer.apple.com/xcode/images/h-xcc27-previews-light_2x.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "xcode-cli": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://developer.apple.com/xcode/images/h-xcc27-previews-light_2x.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "hermes-desktop": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://web-assets.nousresearch.com/marketing/2436f67acedddfea48028c5c0ee484a76833e5f5/assets/hermes-agent/og-image.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "kilo-desktop": {
+  "icon": "https://kilo.ai/favicon/android-chrome-512x512.png?v=3",
+  "iconSource": "web",
+  "screenshots": [
+   "https://github.com/user-attachments/assets/0536ca59-ed81-4512-9e05-d186187a1b52"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "pi": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://raw.githubusercontent.com/earendil-works/pi/HEAD/packages/coding-agent/docs/images/exy.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "cline-app": {
+  "icon": "https://cline.bot/assets/branding/favicons/favicon-256x256.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://cline.bot/cline_og_img.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "shinybox": {
+  "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/59/8b/35/598b355c-166b-1671-73b6-50966d633d32/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+  "iconSource": "manual",
+  "screenshots": [
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ae/49/b6/ae49b6c5-f608-808a-e80d-8c0f4bed0304/01-library-iphone-17.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1c/2e/ec/1c2eec5b-0202-3799-778e-9c6117c12d5b/02-lists-iphone-17.png/320x480bb.jpg",
+   "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e9/ae/72/e9ae7264-db88-4c74-41a7-97977290bc32/03-links-iphone-17.png/320x480bb.jpg"
+  ],
+  "sources": [
+   "manual"
+  ]
+ },
+ "tor-browser": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://www.torproject.org/static/images/tor-project-logo-onions.png"
+  ],
+  "sources": [
+   "og"
+  ]
+ },
+ "librewolf": {
+  "icon": null,
+  "iconSource": null,
+  "screenshots": [
+   "https://librewolf.net/screenshot-dark.png",
+   "https://librewolf.net/screenshot-light.png"
+  ],
+  "sources": [
+   "web"
+  ]
+ },
+ "mullvad-browser": {
+  "icon": "https://mullvad.net/apple-touch-icon.png",
+  "iconSource": "web",
+  "screenshots": [
+   "https://mullvad.net/images/browser-og.jpg"
+  ],
+  "sources": [
+   "og"
+  ]
+ }
+}
