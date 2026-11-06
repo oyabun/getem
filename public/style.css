@@ -1032,23 +1032,35 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 /* phones: the category and starter-pack pills under the bar already do this, so the toolbar copies (shown when the
    sidebar is hidden on a big screen) stay out of the way */
 @media (min-width: 901px) { body:not([data-sidebar="hidden"]) .tools .tool-field { display: none; } }
-/* phones and small tablets: search, price and theme share one row (the pills below do the browsing) */
+/* ================= phones and small tablets: search + a menu button; the menu holds packs, categories, price, theme ================= */
+.menu-toggle { display: none; }
+.tools-menu { display: contents; }
+.theme-label { display: none; }
 @media (max-width: 900px) {
-  /* row 1: search, theme, price. Row 2: the starter-pack and category dropdowns, side by side. No sidebar. */
   .cats { display: none !important; }
   .tools { flex-wrap: wrap; }
-  .tools .filters { display: contents; }
-  .tools .search-wrap { order: 1; flex: 1 1 55%; } /* wide enough that the two dropdowns always wrap together */
-  .theme-switch { order: 2; }
-  .tools .dd-price { order: 3; flex: none; }
-  .tools .tool-field { order: 4; flex: 1 1 calc(50% - 0.3rem); min-width: 0; }
-  .tools .tool-field .dd { width: 100%; max-width: none; }
-  .tools .tool-field .dd .dd-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-}
-/* phones: the theme switch shows only the current choice; tapping it moves to the next one */
-@media (max-width: 640px) {
-  .theme-switch { padding: 3px; }
-  .theme-switch button:not([aria-pressed="true"]) { display: none; }
-  .theme-switch button { width: 32px; }
+  .tools .search-wrap { order: 1; flex: 1 1 0; min-width: 0; }
+  .menu-toggle {
+    display: grid; place-items: center; order: 2; flex: none; position: relative;
+    width: var(--ctl-h, 40px); height: var(--ctl-h, 40px); padding: 0; border-radius: 10px; color: var(--text);
+  }
+  .menu-toggle[aria-expanded="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  /* a dot when a pack, category or price filter is on, so you know the menu is hiding something */
+  .menu-toggle.has-filters::after { content: ""; position: absolute; top: 7px; right: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--accent-strong); box-shadow: 0 0 0 2px var(--card); }
+  .tools-menu { display: none; }
+  .topbar.menu-open .tools-menu {
+    display: flex; flex-direction: column; gap: 0.85rem; order: 3; flex: 1 1 100%;
+    padding: 0.9rem; background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+    max-height: calc(100vh - var(--topbar-h, 60px) - 2rem); overflow-y: auto;
+  }
+  .topbar.menu-open .tools-menu .filters { display: flex !important; flex-direction: column; align-items: stretch; gap: 0.85rem; overflow: visible; padding: 0; flex: none; }
+  .tools-menu .tool-field { display: flex !important; flex-direction: column; align-items: stretch; gap: 0.35rem; }
+  .tools-menu .tool-field-label { display: block !important; }
+  .tools-menu .dd, .tools-menu .dd-tool { width: 100%; max-width: none; }
+  .tools-menu .dd-price .dd-text { display: inline; }
+  .tools-menu .dd .dd-label { display: inline; }
+  .tools-menu .theme-switch { display: flex; width: 100%; order: 0; }
+  .tools-menu .theme-switch button { flex: 1; width: auto; gap: 0.4rem; display: inline-flex; align-items: center; justify-content: center; }
+  .tools-menu .theme-label { display: inline; font-size: 0.85rem; }
 }
 @media (max-width: 900px) { section.cat:not(.pack) > h2 { top: var(--topbar-h, 0px); } }

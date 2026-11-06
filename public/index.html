@@ -49,7 +49,10 @@
         <input id="search" type="search" placeholder="Search apps…" autocomplete="off" aria-label="Search apps">
         <button type="button" class="search-clear" id="search-clear" aria-label="Clear search" title="Clear search" hidden>×</button>
       </div>
-      <div class="filters" id="filters" role="group" aria-label="Filters"></div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Filters and theme" aria-expanded="false" aria-controls="tools-menu"></button>
+      <div class="tools-menu" id="tools-menu">
+        <div class="filters" id="filters" role="group" aria-label="Filters"></div>
+      </div>
     </div>
   </div>
 

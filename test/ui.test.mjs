@@ -437,6 +437,18 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   const needs = $$(".faq-act[data-needs-list]");
   check("list actions follow the selection", needs.every((b) => b.getAttribute("aria-disabled") === String(!$$("#catalog .app.selected").length)));
 }
+// ---- the phone menu: packs, categories, price and theme behind one button ----
+{
+  const bar = $("#topbar");
+  check("the menu holds the pack and category dropdowns, price and the theme switch", !!$("#tools-menu #filters .dd-price") && $$("#tools-menu .tool-field").length === 2 && !!$("#tools-menu .theme-switch"));
+  click($("#menu-toggle"));
+  check("the menu button opens it", bar.classList.contains("menu-open") && $("#menu-toggle").getAttribute("aria-expanded") === "true");
+  pick($$("#tools-menu .tool-field .dd")[1], "AI");
+  check("choosing a category closes it", !bar.classList.contains("menu-open"));
+  check("a dot on the button says a filter is on", $("#menu-toggle").classList.contains("has-filters"));
+  click($$("#tools-menu .tool-field .dd")[1].querySelector(".dd-clear"));
+  check("no dot once everything is cleared", !$("#menu-toggle").classList.contains("has-filters") || !!window.localStorage.getItem("profile"));
+}
 // ---- versions and theme ----
 {
   const root = window.document.documentElement;

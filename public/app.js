@@ -463,6 +463,7 @@ function appOk(a, q) {
 }
 
 function setProfile(slug) {
+  setMenu(false);
   activeProfile = slug;
   store.set("profile", activeProfile);
   if (activeProfile) { activeCat = "all"; store.set("cat", "all"); }
@@ -522,6 +523,7 @@ function packSection(q) {
 }
 
 function setCat(slug) {
+  setMenu(false);
   activeCat = slug;
   store.set("cat", slug);
   // choosing something inside a group, or the group itself, opens that group in the sidebar
@@ -802,6 +804,7 @@ function syncMascot() {
 
 function render() {
   syncMascot();
+  $("#menu-toggle")?.classList.toggle("has-filters", activeCat !== "all" || Boolean(activeProfile) || filters.price !== DEFAULT_PRICE);
   const q = $("#search").value.trim().toLowerCase();
   const hits = catalog.apps.filter((a) => !a.variantOf && appOk(a, q));
   const counts = new Map();
@@ -1233,20 +1236,13 @@ function setupTheme() {
   }
   const box = el("div", { className: "theme-switch", role: "group", ariaLabel: "Theme" },
     ...THEMES.map(([value, icon, label]) => {
-      const b = el("button", { type: "button", title: label, ariaLabel: label }, lucide(icon, 16));
+      const b = el("button", { type: "button", title: label, ariaLabel: label }, lucide(icon, 16), el("span", { className: "theme-label" }, label.replace("Match my system", "System")));
       b.setAttribute("aria-label", label);
       b.dataset.theme = value;
-      b.addEventListener("click", () => {
-        // on a phone only the current choice is visible, so tapping it moves on to the next one
-        const compact = window.matchMedia?.("(max-width: 640px)").matches;
-        const next = compact && value === theme ? THEMES[(THEMES.findIndex(([v]) => v === theme) + 1) % THEMES.length][0] : value;
-        theme = next;
-        store.set("theme", next === "system" ? "" : next);
-        applyTheme();
-      });
+      b.addEventListener("click", () => { theme = value; store.set("theme", value === "system" ? "" : value); applyTheme(); });
       return b;
     }));
-  $("#filters").before(box);
+  $("#tools-menu").append(box);
   applyTheme();
 }
 
@@ -1283,8 +1279,27 @@ function syncFaqActions() {
   for (const b of document.querySelectorAll(".faq-act[data-needs-list]")) b.setAttribute("aria-disabled", String(!has));
 }
 
+// Phones and small tablets: the starter pack, category, price and theme controls live behind one menu button.
+// Choosing a pack or a category closes it; so do Escape and a tap outside the top bar.
+function setMenu(open) {
+  $("#topbar").classList.toggle("menu-open", open);
+  $("#menu-toggle").setAttribute("aria-expanded", String(open));
+  $("#menu-toggle").replaceChildren(lucide(open ? "x" : "menu", 20));
+}
+function setupMenu() {
+  setMenu(false);
+  $("#menu-toggle").addEventListener("click", () => setMenu(!$("#topbar").classList.contains("menu-open")));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !openMenu && $("#topbar").classList.contains("menu-open")) setMenu(false); });
+  document.addEventListener("pointerdown", (e) => {
+    if (!$("#topbar").classList.contains("menu-open")) return;
+    const path = e.composedPath();
+    if (!path.includes($("#topbar")) && !path.some((n) => n.classList?.contains("dd-menu"))) setMenu(false);
+  });
+}
+
 async function main() {
   decorate();
+  setupMenu();
   setupTheme();
   watchTopbar();
   // Hovering "New Mac?" (or tapping it on a touch screen) throws a little confetti from the words.
