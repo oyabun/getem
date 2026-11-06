@@ -9,10 +9,10 @@ Hand-picked Mac apps, installed straight from each publisher and checksum-verifi
 
 ![Get'Em! with the Developer starter pack chosen and ten apps in the install list](docs/screenshot.png)
 
-Pick apps (or a starter pack for your role) on a web page and get one Terminal command that installs them all:
+Pick apps (or a starter pack for your role) at **[getem.sh](https://getem.sh)** and get one Terminal command that installs them all:
 
 ```sh
-curl -fsSL https://your-site/install.sh | bash -s -- iina rectangle stats
+curl -fsSL https://getem.sh/install.sh | bash -s -- iina rectangle stats
 ```
 
 - **The list is ours.** `data/apps.json` holds the core picks, `data/extras.json` the apps added later and `data/builtins.json` the ones installed through Apple or npm. Nothing is pulled in automatically, so an app is listed only if we chose it.
