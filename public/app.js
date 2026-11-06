@@ -1025,6 +1025,7 @@ function update() {
   ensureDeps();
   syncCards();
   syncPack?.();
+  syncFaqActions();
   const list = ids();
   history.replaceState(null, "", list.length ? `#s=${encodeSelection()}` : location.pathname);
   $("#bar").hidden = !list.length;
@@ -1232,6 +1233,36 @@ function setupTheme() {
   applyTheme();
 }
 
+// Words in the FAQ that do what they say: open an app, show a pack, copy a command, toggle --dry-run.
+// The ones that need a list ("Copy link", "--dry-run", "Download .sh") only work once you've picked something.
+const FAQ_ICON = { "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
+function setupFaqActions() {
+  for (const b of document.querySelectorAll(".faq-act")) {
+    const act = b.dataset.act;
+    const app = act === "app" ? byId(b.dataset.app) : null;
+    if (act === "app" && !app) { b.replaceWith(document.createTextNode(b.textContent)); continue; }
+    b.append(el("span", { className: "faq-act-ic", ariaHidden: "true" }, app ? icon(app, "icon icon-xs") : lucide(FAQ_ICON[act], 14)));
+    b.title = {
+      app: `About ${app?.name}`, profile: "Show this starter pack", "copy-update": "Copy this command",
+      "copy-link": "Copy a link to your install list", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
+    }[act];
+    b.addEventListener("click", async () => {
+      if (b.getAttribute("aria-disabled") === "true") { toast("Pick some apps first"); return; }
+      if (act === "app") openModal(app);
+      else if (act === "profile") { setProfile(b.dataset.profile); window.scrollTo({ top: Math.max(0, $("#catalog").getBoundingClientRect().top + scrollY - (($("#topbar").offsetHeight || 0) + 16)), behavior: "smooth" }); }
+      else if (act === "copy-update") { await navigator.clipboard.writeText($("#update-cmd").textContent); toast("Update command copied"); }
+      else if (act === "copy-link") { await copyLink(); toast("Link to your install list copied"); }
+      else if (act === "download") downloadScript();
+      else if (act === "dry-run") { dryRun = !dryRun; syncDry(); renderCommand(); toast(dryRun ? "--dry-run is on: the command only shows what it would do" : "--dry-run is off"); }
+    });
+  }
+  syncFaqActions();
+}
+function syncFaqActions() {
+  const has = selected.size > 0;
+  for (const b of document.querySelectorAll(".faq-act[data-needs-list]")) b.setAttribute("aria-disabled", String(!has));
+}
+
 async function main() {
   decorate();
   setupTheme();
@@ -1257,6 +1288,7 @@ async function main() {
   for (const d of document.querySelectorAll(".faq-item")) {
     d.addEventListener("toggle", () => { if (d.open) for (const o of document.querySelectorAll(".faq-item[open]")) if (o !== d) o.open = false; });
   }
+  setupFaqActions();
   $("#search").addEventListener("input", () => { $("#search-clear").hidden = !$("#search").value; render(); });
   $("#search-clear").addEventListener("click", () => { $("#search").value = ""; $("#search-clear").hidden = true; $("#search").focus(); render(); });
   $("#search").addEventListener("keydown", (e) => { if (e.key === "Escape" && $("#search").value) { e.preventDefault(); $("#search-clear").click(); } });

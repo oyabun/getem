@@ -977,3 +977,18 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 }
 .slot-any .slot-hint::before { border-radius: 2px; }
 .slot-all .slot-hint::before { background: var(--accent); border-radius: 2px; }
+
+/* FAQ words that act: a dotted underline, and an icon that slides in on hover */
+.faq-act {
+  font: inherit; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0; vertical-align: baseline;
+  text-decoration: underline dotted; text-decoration-color: color-mix(in oklab, var(--accent) 50%, transparent); text-underline-offset: 3px;
+}
+.faq-act code { color: inherit; }
+.faq-act-ic { display: inline-grid; place-items: center; width: 0; opacity: 0; overflow: hidden; transition: width 0.18s ease, opacity 0.18s ease, margin 0.18s ease; }
+.faq-act:hover .faq-act-ic, .faq-act:focus-visible .faq-act-ic { width: 18px; opacity: 1; margin-left: 0.3rem; }
+.faq-act:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.faq-act[aria-disabled="true"] { color: inherit; cursor: default; text-decoration: none; }
+.faq-act[aria-disabled="true"] .faq-act-ic { display: none; }
+.icon-xs { width: 18px; height: 18px; font-size: 0.6rem; border-radius: 22%; }
+@media (prefers-reduced-motion: reduce) { .faq-act-ic { transition: none; } }
