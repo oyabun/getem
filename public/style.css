@@ -997,3 +997,15 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 .faq-act[aria-disabled="true"] { color: inherit; cursor: default; text-decoration: none; }
 .faq-act[aria-disabled="true"] .faq-act-ic { display: none; }
 @media (prefers-reduced-motion: reduce) { .faq-act-ic { transition: none; } }
+
+/* Copy command: on hover a slow gradient in the logo's colours drifts across the button */
+@keyframes copy-glow { from { background-position: 0% 50%; } to { background-position: 200% 50%; } }
+#copy { position: relative; transition: box-shadow 0.25s ease, transform 0.15s ease; }
+#copy:not(.done):hover {
+  background-image: linear-gradient(110deg, #6a59e0, #8b7bf2, #c86fe0, #f472b6, #8b7bf2, #6a59e0);
+  background-size: 200% 100%; border-color: transparent;
+  animation: copy-glow 2.4s linear infinite;
+  box-shadow: 0 6px 20px rgb(139 123 242 / 0.4);
+}
+#copy:not(.done):active { transform: translateY(1px); }
+@media (prefers-reduced-motion: reduce) { #copy:not(.done):hover { animation: none; background-position: 30% 50%; } }
