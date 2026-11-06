@@ -4,8 +4,9 @@
   --text: #16181d;
   --muted: #646a73;
   --line: #e4e6ea;
-  --accent: #2563eb;
-  --accent-soft: #eef3fe;
+  --accent: #6a59e0;
+  --accent-soft: #f1eefd;
+  --accent-strong: #6a59e0;
   --radius: 14px;
   color-scheme: light dark;
   font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -17,8 +18,9 @@
     --text: #ebedf0;
     --muted: #979ca5;
     --line: #2b2f36;
-    --accent: #5b8cff;
-    --accent-soft: #1d2840; }
+    --accent: #9d8ff6;
+    --accent-soft: #262140;
+    --accent-strong: #6a59e0; }
 }
 :root[data-theme="dark"] {
     --bg: #111317;
@@ -26,8 +28,9 @@
     --text: #ebedf0;
     --muted: #979ca5;
     --line: #2b2f36;
-    --accent: #5b8cff;
-    --accent-soft: #1d2840; }
+    --accent: #9d8ff6;
+    --accent-soft: #262140;
+    --accent-strong: #6a59e0; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); padding-bottom: 12rem; }
 a { color: var(--accent); }
@@ -78,7 +81,7 @@ section.cat > p { margin: 0.1rem 0 0.8rem; }
   width: 20px; height: 20px; flex: none; border-radius: 50%; border: 1.5px solid var(--line);
   display: grid; place-items: center; color: #fff; font-size: 0.75rem; padding: 0; background: none;
 }
-.app.selected .check { background: var(--accent); border-color: var(--accent); }
+.app.selected .check { background: var(--accent-strong); border-color: var(--accent-strong); }
 .app.selected .check::after { content: "✓"; }
 
 dialog {
@@ -120,7 +123,7 @@ button {
   font: inherit; padding: 0.5rem 0.9rem; border-radius: 9px; cursor: pointer;
   border: 1px solid var(--line); background: var(--card); color: var(--text);
 }
-button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button.primary { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
 button.link { border: 0; background: none; padding: 0; color: var(--accent); }
 @media (max-width: 760px) {
   .bar-inner { grid-template-columns: 1fr; }
@@ -279,7 +282,7 @@ body[data-sidebar="hidden"] .cats { display: none; }
   border: 0; border-radius: 10px; background: none; font-size: 0.92rem; transition: background 0.15s;
 }
 .side-item:hover { background: var(--accent-soft); }
-.side-item.active { background: var(--accent); color: #fff; font-weight: 600; }
+.side-item.active { background: var(--accent-strong); color: #fff; font-weight: 600; }
 .side-ic { width: 1.4rem; flex: none; display: grid; place-items: center; }
 .side-name { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .side-n { font-size: 0.75rem; opacity: 0.65; font-variant-numeric: tabular-nums; }
@@ -303,7 +306,7 @@ body[data-sidebar="rail"] .side-item { justify-content: center; padding: 0.5rem 
   .side-head, .side-h { display: none; }
   body[data-sidebar] .side-item { width: auto; flex: none; white-space: nowrap; border: 1px solid var(--line); border-radius: 999px; background: var(--card); padding: 0.35rem 0.8rem; justify-content: flex-start; }
   body[data-sidebar] .side-name, body[data-sidebar] .side-n { display: inline; }
-  .side-item.active { border-color: var(--accent); background: var(--accent); }
+  .side-item.active { border-color: var(--accent-strong); background: var(--accent-strong); }
 }
 
 /* ---- toolbar filters ---- */
@@ -313,7 +316,7 @@ body[data-sidebar="rail"] .side-item { justify-content: center; padding: 0.5rem 
 .seg { display: inline-flex; padding: 2px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
 .seg-b { padding: 0.28rem 0.7rem; border: 0; border-radius: 8px; background: none; font-size: 0.85rem; transition: background 0.15s, color 0.15s; }
 .seg-b:hover { background: var(--accent-soft); }
-.seg-b.active { background: var(--accent); color: #fff; }
+.seg-b.active { background: var(--accent-strong); color: #fff; }
 .chip-toggle { padding: 0.32rem 0.8rem; border-radius: 999px; font-size: 0.85rem; }
 .chip-toggle.active { background: linear-gradient(135deg, #fef3c7, #fde68a); border-color: #f59e0b; color: #92400e; font-weight: 600; }
 @media (prefers-color-scheme: dark) {
@@ -646,7 +649,7 @@ a.ext .lucide:last-child { opacity: 0.55; }
   font: 0.78rem/1.5 ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace; cursor: pointer; transition: background 0.15s, color 0.15s;
 }
 .dry:hover { border-style: solid; background: var(--accent-soft); }
-.dry.on { background: var(--accent); border-color: var(--accent); border-style: solid; color: #fff; }
+.dry.on { background: var(--accent-strong); border-color: var(--accent-strong); border-style: solid; color: #fff; }
 .t-dry { color: #f0883e; font-weight: 600; }
 
 /* dependencies: a confirm dialog and a small notice */
@@ -710,7 +713,7 @@ a.ext .lucide:last-child { opacity: 0.55; }
 /* phones: no sidebar toggle (the categories are the row of pills), and the selected pill stays readable */
 @media (max-width: 900px) {
   .tools .side-toggle { display: none; }
-  body[data-sidebar] .side-item.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  body[data-sidebar] .side-item.active { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
 }
 
 /* the lead line: "New Mac?" is the part that throws confetti */
