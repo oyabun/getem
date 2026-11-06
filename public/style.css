@@ -869,8 +869,11 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 .dd-opt.sub { padding-left: 1.9rem; font-size: 0.86rem; }
 
 /* the group in small type above a category heading */
-.crumb { display: inline-flex; align-items: center; gap: 0.2rem; margin-right: 0.45rem; font-size: 0.62em; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); vertical-align: 0.18em; }
-.crumb svg { opacity: 0.7; }
+.crumb { font: inherit; font-weight: 500; letter-spacing: inherit; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+.crumb:hover { color: var(--accent); }
+.crumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.crumb-sep { display: inline-grid; place-items: center; margin: 0 0.3rem; color: var(--muted); opacity: 0.6; vertical-align: -0.12em; }
+.crumb-sep svg { width: 0.8em; height: 0.8em; }
 
 /* phones and small tablets: groups as pills, and a second row with the categories of the chosen group */
 @media (max-width: 900px) {

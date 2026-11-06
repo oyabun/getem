@@ -824,9 +824,14 @@ function render() {
   const want = activeSlugs();
   const pack = activeCat === "all" ? packSection(q) : null;
   const sections = groups.flatMap((g) => g.cats.filter((c) => !want || want.has(c.slug)).map((c) => {
-    // inside a group the heading carries the group in small type: "DEVELOP › Editors"
-    const title = g.cats.length > 1
-      ? [el("span", { className: "crumb" }, g.name, lucide("chevron-right", 12)), c.label]
+    // inside a group the heading leads with the group, quieter, and clicking it shows the whole group: "Internet › Communication"
+    let crumb = null;
+    if (g.cats.length > 1) {
+      crumb = el("button", { type: "button", className: "crumb", title: `Show all of ${g.name}` }, g.name);
+      crumb.addEventListener("click", () => setCat(`group:${g.slug}`));
+    }
+    const title = crumb
+      ? [crumb, el("span", { className: "crumb-sep", ariaHidden: "true" }, lucide("chevron-right", 18)), c.label]
       : [catInfo(c.slug)?.name || c.label];
     return el("section", { className: "cat" },
       el("h2", {}, ...title),
