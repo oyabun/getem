@@ -1028,3 +1028,19 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 .icon.has-img .icon-clip { background: transparent; }
 /* the install list opens above the sticky top bar, not under it */
 .drawer { z-index: 32; }
+
+/* phones: the category and starter-pack pills under the bar already do this, so the toolbar copies (shown when the
+   sidebar is hidden on a big screen) stay out of the way */
+@media (max-width: 900px) { .tools .tool-field { display: none; } }
+/* phones and small tablets: search, price and theme share one row (the pills below do the browsing) */
+@media (max-width: 900px) {
+  .tools { flex-wrap: nowrap; }
+  .tools .filters { flex: 0 0 auto; overflow: visible; }
+  .theme-switch { order: 0; }
+}
+/* phones: the theme switch shows only the current choice; tapping it moves to the next one */
+@media (max-width: 640px) {
+  .theme-switch { padding: 3px; }
+  .theme-switch button:not([aria-pressed="true"]) { display: none; }
+  .theme-switch button { width: 32px; }
+}

@@ -1235,7 +1235,14 @@ function setupTheme() {
       const b = el("button", { type: "button", title: label, ariaLabel: label }, lucide(icon, 16));
       b.setAttribute("aria-label", label);
       b.dataset.theme = value;
-      b.addEventListener("click", () => { theme = value; store.set("theme", value === "system" ? "" : value); applyTheme(); });
+      b.addEventListener("click", () => {
+        // on a phone only the current choice is visible, so tapping it moves on to the next one
+        const compact = window.matchMedia?.("(max-width: 640px)").matches;
+        const next = compact && value === theme ? THEMES[(THEMES.findIndex(([v]) => v === theme) + 1) % THEMES.length][0] : value;
+        theme = next;
+        store.set("theme", next === "system" ? "" : next);
+        applyTheme();
+      });
       return b;
     }));
   $("#filters").before(box);
