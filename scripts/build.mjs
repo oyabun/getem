@@ -412,7 +412,7 @@ async function main() {
   ].map(tsvField).join("\t"));
   await writeFile(path("public/catalog.tsv"), `# Getem.sh catalog ${generated}\n${rows.join("\n")}\n`);
 
-  const siteUrl = (process.env.SITE_URL || (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) || "").replace(/\/$/, "");
+  const siteUrl = (process.env.SITE_URL || "").replace(/\/$/, "");
   let installer = await readFile(path("src/install.sh"), "utf8");
   if (siteUrl) installer = installer.replaceAll("__SITE_URL__", siteUrl);
   await writeFile(path("public/install.sh"), installer, { mode: 0o755 });

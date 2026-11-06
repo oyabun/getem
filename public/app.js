@@ -872,7 +872,9 @@ const ids = () => catalog.apps.filter((a) => selected.has(a.id)).map((a) => a.id
 // --dry-run: the install script only prints what it would do. Off by default and never remembered, so a pasted
 // command installs unless you chose otherwise this time.
 let dryRun = false;
-const command = () => `curl -fsSL ${location.origin}/install.sh | bash -s -- ${dryRun ? "--dry-run " : ""}${ids().join(" ")}`;
+// Where this site lives, folder included (GitHub Pages serves it under /<repo>/), without a trailing slash.
+const SITE = new URL(".", location.href).href.replace(/\/$/, "");
+const command = () => `curl -fsSL ${SITE}/install.sh | bash -s -- ${dryRun ? "--dry-run " : ""}${ids().join(" ")}`;
 
 function syncDry() {
   const b = $("#dry-run");
@@ -993,7 +995,7 @@ function syncCards() {
 function renderCommand() {
   const t = (cls, text) => el("span", { className: `t-${cls}` }, text);
   const parts = [
-    t("prompt", "$ "), t("cmd", "curl"), " ", t("flag", "-fsSL"), " ", t("url", `${location.origin}/install.sh`), " ",
+    t("prompt", "$ "), t("cmd", "curl"), " ", t("flag", "-fsSL"), " ", t("url", `${SITE}/install.sh`), " ",
     t("pipe", "|"), " ", t("cmd", "bash"), " ", t("flag", "-s"), " ", t("flag", "--"),
     ...(dryRun ? [" ", t("dry", "--dry-run")] : []),
     ...ids().flatMap((id) => [" ", t("id", id)]),
@@ -1056,7 +1058,7 @@ async function downloadScript() {
   ].join("\n");
   const out = script
     .replace(/(# @@EMBED_START@@[^\n]*\n)[\s\S]*?(\n# @@EMBED_END@@)/, (_, start, end) => `${start}${embed}${end}`)
-    .replaceAll("__SITE_URL__", location.origin);
+    .replaceAll("__SITE_URL__", SITE);
   const url = URL.createObjectURL(new Blob([out], { type: "text/x-shellscript" }));
   el("a", { href: url, download: "getem-install.sh" }).click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
@@ -1290,7 +1292,7 @@ async function main() {
   if (filters.price === "free" && catalog.apps.some((a) => a.paid && selected.has(a.id))) filters.price = "all";
   $("#side-toggle").addEventListener("click", () => { sidebarShown = !sidebarShown; store.set("sidebarShown", sidebarShown ? "1" : "0"); applySidebar(); });
   renderSideToggle();
-  $("#update-cmd").textContent = `curl -fsSL ${location.origin}/install.sh | bash -s -- --update`;
+  $("#update-cmd").textContent = `curl -fsSL ${SITE}/install.sh | bash -s -- --update`;
   $("#generated").textContent = `Catalog updated ${new Date(catalog.generated).toLocaleDateString()}.`;
   // One answer open at a time (also for browsers without <details name>).
   for (const d of document.querySelectorAll(".faq-item")) {

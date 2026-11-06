@@ -37,9 +37,17 @@ are listed in `data/skipped.txt`, with the reason.
 
 ## Deploy
 
-It's a static site: run `npm run build` and publish the `public/` folder on any static host. Set `SITE_URL`
-to the site's address when building, so the generated `install.sh` knows where to fetch the catalog from.
-Versions are fixed at build time, so rebuild regularly (daily, for example) to stay current.
+It's a static site, published with GitHub Pages by `.github/workflows/pages.yml`. The workflow runs
+`npm run build` and publishes the `public/` folder on every push to `main`, once a day (so versions and
+checksums stay current) and on demand from the Actions tab.
+
+One-time setup: in the repository's **Settings → Pages**, set **Source** to **GitHub Actions**. The site is then
+served at `https://<user>.github.io/getem/`. With a custom domain, set it there and add a repository variable
+`SITE_URL` with the full address (for example `https://getem.sh`), so the generated `install.sh` fetches the
+catalog from it.
+
+When you curate locally, run `npm run build` and commit `data/stable-ids.json` with your change: it gives
+each app a permanent slot so shared links keep working.
 
 ## Credits
 
