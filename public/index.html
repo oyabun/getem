@@ -71,6 +71,10 @@
         <p>A hand-picked list of Mac apps. Pick what you want (or start from a pack for your role) and it writes one Terminal command that downloads and installs everything, so a new Mac is ready in minutes.</p>
       </details>
       <details class="faq-item" name="faq">
+        <summary><span>Pasting a command into Terminal looks scary. Is it safe?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Being careful with commands from the internet is a good habit, so here's what this one does. It runs a <a href="install.sh" target="_blank" rel="noopener">public script</a> you can read first. The script downloads each app straight from its publisher and checks it against the publisher's SHA-256 checksum wherever one is published. Add <code>--dry-run</code> and it only shows what it would do, without installing anything. Still not sure? <button type="button" class="faq-act" data-act="ask-ai">Ask your AI assistant</button>: this copies your command with a short prompt, ready to paste into ChatGPT, Claude or any assistant, so it can explain the command before you run it.</p>
+      </details>
+      <details class="faq-item" name="faq">
         <summary><span>Where do the versions and downloads come from?</span><span class="faq-plus" aria-hidden="true"></span></summary>
         <p>Versions, download links and checksums come from the <a href="https://formulae.brew.sh/cask/">Homebrew Cask API</a> and from each publisher's own release page, so every app is fetched from the people who make it. The catalog is rebuilt regularly; the date is at the bottom of the page.</p>
       </details>
@@ -147,9 +151,11 @@
         <code id="command" class="command"></code>
       </div>
       <div class="bar-actions">
-        <button type="button" id="copy" class="primary"><span class="btn-label">Copy<span class="long"> command</span></span></button>
+        <div class="split" role="group" aria-label="Get your install command">
+          <button type="button" id="copy" class="primary"><span class="btn-label">Copy<span class="long"> command</span></span></button>
+          <button type="button" id="get-more" class="primary split-more" aria-label="More ways to get it: download the script, or ask your AI first" title="More: download .sh, ask your AI first" aria-haspopup="listbox" aria-expanded="false"></button>
+        </div>
         <button type="button" id="term-show" class="term-show" aria-label="Show the command" aria-expanded="false" aria-controls="term"></button>
-        <button type="button" id="download"><span class="btn-label">Download .sh</span></button>
         <button type="button" id="share" title="Copy a link that restores exactly this selection"><span class="btn-label">Copy link</span></button>
       </div>
       <p class="hint muted"><span id="hint-lead">Paste into Terminal. Click</span> <button type="button" class="dry" id="dry-run" aria-pressed="false" title="Add --dry-run to the command">--dry-run</button> <span id="hint-tail">to add it and preview first.</span><span id="admin-hint" hidden> Some picks use an installer package and will ask for your admin password.</span></p>

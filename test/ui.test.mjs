@@ -441,6 +441,19 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   const needs = $$(".faq-act[data-needs-list]");
   check("list actions follow the selection", needs.every((b) => b.getAttribute("aria-disabled") === String(!$$("#catalog .app.selected").length)));
 }
+// ---- one button to get the script: Copy command, with Download .sh and Ask your AI behind its arrow ----
+{
+  check("Download .sh is no longer a separate button", !$("#download") && !!$(".split #copy") && !!$(".split #get-more"));
+  click($("#get-more"));
+  const opts = $$(".dd-menu .dd-opt-name").map((n) => n.textContent);
+  check("the arrow offers Copy command, Download .sh and Ask your AI first", opts.join("|") === "Copy command|Download .sh|Ask your AI first", opts.join("|"));
+  let clip = ""; window.navigator.clipboard = { writeText: async (t) => { clip = t; } };
+  click($$(".dd-menu .dd-opt").find((o) => /Ask your AI/.test(o.textContent)));
+  await new Promise((r) => setTimeout(r, 20));
+  check("Ask your AI copies a prompt with the command and the script's address", /explain what it does/.test(clip) && /curl -fsSL \S+\/install\.sh \| bash -s --/.test(clip) && /The script it runs is public: \S+\/install\.sh/.test(clip), clip.slice(0, 120));
+  check("the menu closes after choosing", $$(".dd-menu").length === 0);
+  check("the safety question is in the FAQ, with Ask your AI", /looks scary/.test($("#faq").textContent) && !!$('.faq-act[data-act="ask-ai"]'));
+}
 // ---- the phone menu: packs, categories, price and theme behind one button ----
 {
   const bar = $("#topbar");

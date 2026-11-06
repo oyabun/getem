@@ -575,7 +575,7 @@ body[data-sidebar="rail"] .profile-select { background-image: none; padding-righ
 .side-toggle, .modal-close, .drawer-close, .side-collapse, .search-clear, .row-x, .lb-btn { display: grid; place-items: center; }
 .search-icon { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: var(--muted); display: grid; pointer-events: none; }
 .tools .search-wrap #search { padding-left: 2.35rem; }
-#copy, #download { display: inline-flex; align-items: center; gap: 0.45rem; }
+#copy { display: inline-flex; align-items: center; gap: 0.45rem; }
 #copy.done { background: #16a34a; border-color: #16a34a; }
 .tag-rec, .term-toggle, .chip-toggle, .stars { display: inline-flex; align-items: center; gap: 0.3rem; }
 .tag-rec .lucide { fill: currentColor; }
@@ -818,8 +818,11 @@ section.pack { margin: 0 0 3.4rem; }
   .bar .bar-info { order: 1; position: static; }
   .bar .bar-actions { order: 2; flex: 1 1 0; min-width: 0; display: flex; gap: 0.4rem; }
   #copy { flex: 1; justify-content: center; height: 44px; }
-  #download, #share, .term-show { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 44px; height: 44px; padding: 0; }
-  #download .btn-label, #share .btn-label { display: none; }
+  #share, .term-show { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 44px; height: 44px; padding: 0; }
+  #share .btn-label { display: none; }
+  .split { flex: 1; min-width: 0; }
+  .split #copy { flex: 1; }
+  .split-more { height: 44px; }
   .term-show.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
   /* the folder shrinks to a pill with the count */
   .bar .bar-info .folder-card {
@@ -1090,3 +1093,14 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 
 /* the folder tile stays put on hover (a transformed parent also breaks Safari's frosted glass); the pages still lift */
 .folder-card:hover { transform: none; }
+
+/* Copy command + an arrow for the other ways to get the script (Download .sh, Ask your AI first) */
+.split { display: inline-flex; align-items: stretch; }
+.split #copy { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+.split-more {
+  display: inline-grid; place-items: center; width: 38px; padding: 0; margin-left: 1px;
+  border-top-left-radius: 0; border-bottom-left-radius: 0; box-shadow: inset 1px 0 0 rgb(255 255 255 / 0.25);
+}
+.split-more[aria-expanded="true"] svg { transform: rotate(180deg); }
+.split-more svg { transition: transform 0.15s; }
+.split-more:hover { filter: brightness(1.1); }

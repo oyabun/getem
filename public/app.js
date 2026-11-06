@@ -1083,6 +1083,19 @@ async function copyLink() {
   }, 1500);
 }
 
+// A prompt for an AI assistant to look the command over before you run it.
+const aiPrompt = () => [
+  "I'm setting up my Mac with getem.sh. Before I run this command in Terminal, can you explain what it does and tell me if anything in it looks unsafe?",
+  "",
+  selected.size ? command() : `curl -fsSL ${SITE}/install.sh | bash -s -- --dry-run`,
+  "",
+  `The script it runs is public: ${SITE}/install.sh`,
+].join("\n");
+async function copyAiPrompt() {
+  await navigator.clipboard.writeText(aiPrompt());
+  toast("Copied a prompt for your AI assistant: paste it into ChatGPT, Claude or any other");
+}
+
 async function copyCommand() {
   await navigator.clipboard.writeText(command());
   const btn = $("#copy");
@@ -1161,11 +1174,10 @@ function decorate() {
   $("#lb-prev").replaceChildren(lucide("chevron-left", 26));
   $("#lb-next").replaceChildren(lucide("chevron-right", 26));
   $("#copy").prepend(lucide("copy", 16));
-  $("#download").prepend(lucide("download", 16));
+  $("#get-more").replaceChildren(lucide("chevron-down", 16));
   $("#share").prepend(lucide("link", 16));
   // On a phone the bar is one compact row: the folder becomes a pill, the other buttons keep only their icons,
   // and the terminal opens on demand. These names keep the icon-only buttons readable to screen readers.
-  $("#download").setAttribute("aria-label", "Download .sh");
   $("#share").setAttribute("aria-label", "Copy link");
   $("#count").prepend(el("span", { className: "folder-mini-ic" }, lucide("folder-open", 18)));
   $("#term-show").replaceChildren(lucide("terminal", 18));
@@ -1249,7 +1261,7 @@ function setupTheme() {
 
 // Words in the FAQ that do what they say: open an app, show a pack, copy a command, toggle --dry-run.
 // The ones that need a list ("Copy link", "--dry-run", "Download .sh") only work once you've picked something.
-const FAQ_ICON = { app: "square-plus", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
+const FAQ_ICON = { "ask-ai": "bot", app: "square-plus", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
 function setupFaqActions() {
   for (const b of document.querySelectorAll(".faq-act")) {
     const act = b.dataset.act;
@@ -1258,7 +1270,7 @@ function setupFaqActions() {
     b.append(el("span", { className: "faq-act-ic", ariaHidden: "true" }, lucide(FAQ_ICON[act], 14)));
     b.title = {
       app: `Add ${app?.name} to your install list`, profile: "Show this starter pack", "copy-update": "Copy this command",
-      "copy-link": "Copy a link to your install list", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
+      "copy-link": "Copy a link to your install list", "ask-ai": "Copy your command with a prompt for an AI assistant", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
     }[act];
     b.addEventListener("click", async () => {
       if (b.getAttribute("aria-disabled") === "true") { toast("Pick some apps first"); return; }
@@ -1270,6 +1282,7 @@ function setupFaqActions() {
       else if (act === "copy-update") { await navigator.clipboard.writeText($("#update-cmd").textContent); toast("Update command copied"); }
       else if (act === "copy-link") { await copyLink(); toast("Link to your install list copied"); }
       else if (act === "download") downloadScript();
+      else if (act === "ask-ai") copyAiPrompt();
       else if (act === "dry-run") { dryRun = !dryRun; syncDry(); renderCommand(); toast(dryRun ? "--dry-run is on: the command only shows what it would do" : "--dry-run is off"); }
     });
   }
@@ -1362,7 +1375,17 @@ async function main() {
   new ResizeObserver(measure).observe($("#cats"));   // padding changes count too
   new ResizeObserver(measure).observe($("#count"));
   addEventListener("resize", measure);
-  $("#download").addEventListener("click", downloadScript);
+  // One button for getting the script: Copy command, with the other ways behind its arrow.
+  $("#get-more").addEventListener("click", (e) => {
+    e.stopPropagation();
+    const btn = $("#get-more");
+    if (openMenu?.btn === btn) { closeMenu(); return; }
+    openDropdown(btn, [
+      { value: "copy", text: "Copy command", icon: "copy", hint: "Paste it into Terminal" },
+      { value: "download", text: "Download .sh", icon: "download", hint: "A script with your apps built in; works offline" },
+      { value: "ask-ai", text: "Ask your AI first", icon: "bot", hint: "Copies a prompt for ChatGPT, Claude or any assistant to check the command" },
+    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadScript(); else copyAiPrompt(); });
+  });
   // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
   // on different elements is delivered to their common parent (the dialog itself), so without this a press on
   // "Add to install list" that ends a little off the button would close the details.
