@@ -171,7 +171,11 @@ click($$("#filters .dd-tool")[1].querySelector(".dd-clear"));
 check("category x resets to all categories", $$("#filters .dd-tool")[1].querySelector(".dd-text").textContent === "All categories" && !$$("#filters .dd-tool")[1].querySelector(".dd-clear"));
 click($("#side-toggle"));
 check("☰ shows it again", window.document.body.dataset.sidebar === "expanded");
-check("profile and category dropdowns leave the toolbar when the sidebar is shown; Price stays", $$("#filters .dd-tool:not(.dd-price)").length === 0 && !!$("#filters .dd-price"));
+// The toolbar keeps its dropdowns in the page (phones always use them); on a wide screen the stylesheet hides them
+// while the sidebar is shown, keyed on body[data-sidebar].
+const css = readFileSync(root + "style.css", "utf8");
+check("with the sidebar shown, the toolbar dropdowns are hidden on wide screens; Price stays", window.document.body.dataset.sidebar !== "hidden" && /@media \(min-width: 901px\) \{ body:not\(\[data-sidebar="hidden"\]\) \.tools \.tool-field \{ display: none; \} \}/.test(css) && !!$("#filters .dd-price"));
+check("on phones the dropdowns replace the sidebar", /\.cats \{ display: none !important; \}/.test(css) && $$("#filters .tool-field").length === 2);
 click($(".side-collapse"));
 check("« shrinks to the rail", window.document.body.dataset.sidebar === "rail");
 check("rail dropdown shows only the icon", !!$("#cats .dd-compact") && !$("#cats .dd-compact .dd-text") && !!$("#cats .dd-compact svg.lucide"));

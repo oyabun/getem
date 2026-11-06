@@ -1031,12 +1031,19 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 
 /* phones: the category and starter-pack pills under the bar already do this, so the toolbar copies (shown when the
    sidebar is hidden on a big screen) stay out of the way */
-@media (max-width: 900px) { .tools .tool-field { display: none; } }
+@media (min-width: 901px) { body:not([data-sidebar="hidden"]) .tools .tool-field { display: none; } }
 /* phones and small tablets: search, price and theme share one row (the pills below do the browsing) */
 @media (max-width: 900px) {
-  .tools { flex-wrap: nowrap; }
-  .tools .filters { flex: 0 0 auto; overflow: visible; }
-  .theme-switch { order: 0; }
+  /* row 1: search, theme, price. Row 2: the starter-pack and category dropdowns, side by side. No sidebar. */
+  .cats { display: none !important; }
+  .tools { flex-wrap: wrap; }
+  .tools .filters { display: contents; }
+  .tools .search-wrap { order: 1; flex: 1 1 55%; } /* wide enough that the two dropdowns always wrap together */
+  .theme-switch { order: 2; }
+  .tools .dd-price { order: 3; flex: none; }
+  .tools .tool-field { order: 4; flex: 1 1 calc(50% - 0.3rem); min-width: 0; }
+  .tools .tool-field .dd { width: 100%; max-width: none; }
+  .tools .tool-field .dd .dd-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 }
 /* phones: the theme switch shows only the current choice; tapping it moves to the next one */
 @media (max-width: 640px) {
@@ -1044,3 +1051,4 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
   .theme-switch button:not([aria-pressed="true"]) { display: none; }
   .theme-switch button { width: 32px; }
 }
+@media (max-width: 900px) { section.cat:not(.pack) > h2 { top: var(--topbar-h, 0px); } }

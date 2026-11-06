@@ -754,9 +754,10 @@ function renderFilters(total, groups) {
     onChange: (v) => { filters.price = v; store.set("price", v); render(); },
     clear: filters.price !== DEFAULT_PRICE ? { title: "Show all prices", onClear: () => { filters.price = DEFAULT_PRICE; store.set("price", DEFAULT_PRICE); render(); } } : null,
   });
-  // With the sidebar hidden, profile and category switching moves here as dropdowns.
+  // Profile and category dropdowns. They show in the toolbar when the sidebar is hidden, and always on phones and
+  // small tablets, where they replace the sidebar (CSS decides which).
   let pickers = [];
-  if (sidebarMode() === "hidden") {
+  {
     const catOptions = [
       { value: "all", text: "All categories", icon: "layout-grid", count: total },
       ...groups.flatMap((g) => g.cats.length > 1
