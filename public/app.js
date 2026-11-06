@@ -11,9 +11,8 @@ const store = {
 // Toolbar filters (remembered between visits).
 // The Install (Brew / Download) filter is parked for now: flip this to bring the control back.
 const SHOW_INSTALL_FILTER = false;
-// No price filter by default: every app is listed, paid ones carry a "paid" tag.
-const DEFAULT_PRICE = "all";
-const filters = { price: store.get("price") || DEFAULT_PRICE, source: SHOW_INSTALL_FILTER ? store.get("source") || "any" : "any" };
+// Every app is listed; paid ones carry a "paid" tag (there is no price filter).
+const filters = { source: SHOW_INSTALL_FILTER ? store.get("source") || "any" : "any" };
 // ☰ shows or hides the sidebar; « (inside it) switches between full width and an icon rail.
 // The sidebar starts hidden (packs and categories are dropdowns in the toolbar); ☰ opens it, and that is remembered.
 let sidebarShown = store.get("sidebarShown") === "1";
@@ -455,8 +454,6 @@ function activeSlugs() {
 const catsOf = (a) => [a.category, ...(a.also || [])];
 
 function appOk(a, q) {
-  if (filters.price === "free" && a.paid) return false;
-  if (filters.price === "paid" && !a.paid) return false;
   if (filters.source === "brew" && !a.brew) return false;
   if (filters.source === "download" && a.brew) return false;
   const versions = (a.variants || []).map((v) => `${v.label} ${v.id}`).join(" ");
@@ -736,7 +733,7 @@ function renderSidebar(hits, groups) {
   );
 }
 
-// Toolbar filters: price, how it installs, and recommended-only.
+// Toolbar filters: the starter-pack and category dropdowns (and the parked install filter).
 function renderFilters(total, groups) {
   const seg = (key, label, opts) => {
     const group = el("div", { className: "seg", role: "group", ariaLabel: label });
@@ -747,16 +744,6 @@ function renderFilters(total, groups) {
     }
     return el("div", { className: "filter" }, el("span", { className: "filter-label" }, label), group);
   };
-  const priceOptions = [
-    { value: "all", text: "All prices", icon: "tag", hint: "Free and paid apps" },
-    { value: "free", text: "Free", icon: "gift", hint: "Free apps only" },
-    { value: "paid", text: "Paid", icon: "circle-dollar-sign", hint: "Paid and freemium apps only" },
-  ];
-  const price = dropdown({
-    label: "Price", value: filters.price, options: priceOptions, className: "dd-tool dd-price",
-    onChange: (v) => { filters.price = v; store.set("price", v); render(); },
-    clear: filters.price !== DEFAULT_PRICE ? { title: "Show all prices", onClear: () => { filters.price = DEFAULT_PRICE; store.set("price", DEFAULT_PRICE); render(); } } : null,
-  });
   // Profile and category dropdowns. They show in the toolbar when the sidebar is hidden, and always on phones and
   // small tablets, where they replace the sidebar (CSS decides which).
   let pickers = [];
@@ -785,7 +772,6 @@ function renderFilters(total, groups) {
   }
   $("#filters").replaceChildren(...[
     ...pickers,
-    price,
     SHOW_INSTALL_FILTER ? seg("source", "Install", [["any", "Any", "Every app"], ["brew", "Brew", "Apps that also have a Homebrew cask"], ["download", "Download", "Apps with no Homebrew cask: downloaded straight from the publisher or the App Store"]]) : null,
   ].filter(Boolean));
 }
@@ -805,7 +791,7 @@ function syncMascot() {
 
 function render() {
   syncMascot();
-  $("#menu-toggle")?.classList.toggle("has-filters", activeCat !== "all" || Boolean(activeProfile) || filters.price !== DEFAULT_PRICE);
+  $("#menu-toggle")?.classList.toggle("has-filters", activeCat !== "all" || Boolean(activeProfile));
   const q = $("#search").value.trim().toLowerCase();
   const hits = catalog.apps.filter((a) => !a.variantOf && appOk(a, q));
   const counts = new Map();
@@ -851,15 +837,14 @@ function render() {
   $("#catalog").replaceChildren(...all, ...(all.length === 0 || filtersActive() ? [endCap(all.length === 0)] : []));
 }
 
-// What "no filters" means: no search, every category, no starter pack, and the default (free) price.
-const filtersActive = () => Boolean($("#search").value.trim()) || activeCat !== "all" || Boolean(activeProfile) || filters.price !== DEFAULT_PRICE;
+// What "no filters" means: no search, every category and no starter pack.
+const filtersActive = () => Boolean($("#search").value.trim()) || activeCat !== "all" || Boolean(activeProfile);
 
 function clearFilters() {
   $("#search").value = "";
   $("#search-clear").hidden = true;
   activeCat = "all"; store.set("cat", "all");
   activeProfile = ""; store.set("profile", "");
-  filters.price = DEFAULT_PRICE; store.set("price", DEFAULT_PRICE);
   render();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
@@ -1293,7 +1278,7 @@ function syncFaqActions() {
   for (const b of document.querySelectorAll(".faq-act[data-needs-list]")) b.setAttribute("aria-disabled", String(!has));
 }
 
-// Phones and small tablets: the starter pack, category, price and theme controls live behind one menu button.
+// Phones and small tablets: the starter pack, category and theme controls live behind one menu button.
 // Choosing a pack or a category closes it; so do Escape and a tap outside the top bar.
 function setMenu(open) {
   $("#topbar").classList.toggle("menu-open", open);
@@ -1327,8 +1312,6 @@ async function main() {
   for (const id of fromLink) selected.add(id);
   for (const id of selected) if (!known.has(id)) selected.delete(id);
   if (selected.size) toast(`Loaded ${selected.size} app${selected.size === 1 ? "" : "s"} from a shared link`);
-  // Apps already picked (a shared link) must be visible, so open the price filter if they are paid.
-  if (filters.price === "free" && catalog.apps.some((a) => a.paid && selected.has(a.id))) filters.price = "all";
   $("#side-toggle").addEventListener("click", () => { sidebarShown = !sidebarShown; store.set("sidebarShown", sidebarShown ? "1" : "0"); applySidebar(); });
   renderSideToggle();
   $("#update-cmd").textContent = `curl -fsSL ${SITE}/install.sh | bash -s -- --update`;

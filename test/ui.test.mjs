@@ -58,19 +58,8 @@ const pick = (trigger, name) => {
 check("categories and chrome use Lucide svgs", $$("#cats .side-ic svg.lucide").length > 20 && !!$("#side-toggle svg.lucide") && !!$("#copy svg.lucide"), `side icons=${$$("#cats .side-ic svg.lucide").length}`);
 check("filters share the search row", !!$(".tools #filters") && !!$(".tools #search"));
 check("by default every app is listed, paid ones included", $$("#catalog .app").some((n) => catalog.apps.find((a) => a.id === n.dataset.id)?.paid));
-check("price is a dropdown, no recommended filter, install filter parked", !!$("#filters .dd-price") && $("#filters .dd-price .dd-label").textContent === "Price" && !$("#filters .chip-toggle") && $$("#filters .seg-b").length === 0 && !/null/.test($("#filters").textContent));
+check("no price filter, no recommended filter, install filter parked", !$("#filters .dd-price") && !$(".dd-price"));
 const allCount = cardsCount();
-
-const setPrice = (name) => pick($("#filters .dd-price"), name);
-check("no clear x while the price is the default", !$("#filters .dd-price .dd-clear"));
-setPrice("Free");
-check("price=Free hides the paid apps", !$$("#catalog .app").some((n) => catalog.apps.find((a) => a.id === n.dataset.id)?.paid) && cardsCount() < allCount, `${allCount} -> ${cardsCount()}`);
-setPrice("Paid");
-const paidIds = $$("#catalog .app").map((n) => n.dataset.id);
-check("price=Paid only paid", paidIds.length > 0 && paidIds.every((id) => catalog.apps.find((a) => a.id === id).paid), `n=${paidIds.length}`);
-check("the price dropdown shows a clear x once a price is set", !!$("#filters .dd-price .dd-clear"));
-click($("#filters .dd-price .dd-clear"));
-check("the x brings back all prices, and disappears", $("#filters .dd-price .dd-text").textContent === "All prices" && !$("#filters .dd-price .dd-clear") && cardsCount() === allCount, `${cardsCount()}/${allCount}`);
 
 // profile: pick Developer -> pack section + badge
 pick($("#cats .dd"), "Developer");
@@ -166,7 +155,7 @@ check("drawer row remove unselects every copy of that card", $$(`#catalog .app[d
 // sidebar: ☰ shows/hides, « shrinks to a rail
 click($("#side-toggle"));
 check("☰ hides the sidebar", window.document.body.dataset.sidebar === "hidden");
-check("hidden sidebar -> toolbar dropdowns: headings above, no repeated Category label", $$("#filters .dd-tool:not(.dd-price)").length === 2 && $$("#filters .dd-tool .dd-label").map((l) => l.textContent).join() === "I'm a,Price" && $$("#filters .tool-field-label").map((l) => l.textContent).join() === "Starter packs,Categories", $$("#filters .tool-field-label").map((l) => l.textContent).join());
+check("hidden sidebar -> toolbar dropdowns: headings above, no repeated Category label", $$("#filters .dd-tool").length === 2 && $$("#filters .dd-tool .dd-label").map((l) => l.textContent).join() === "I'm a" && $$("#filters .tool-field-label").map((l) => l.textContent).join() === "Starter packs,Categories", $$("#filters .tool-field-label").map((l) => l.textContent).join());
 pick($$("#filters .dd-tool")[1], "AI");
 check("category dropdown switches category", $$("#catalog .cat h2").every((h) => h.textContent === "AI") && $$("#catalog .app").length > 5, `cards=${$$("#catalog .app").length}`);
 check("category dropdown shows a clear x when a category is set", !!$$("#filters .dd-tool")[1].querySelector(".dd-clear"));
@@ -177,7 +166,7 @@ check("☰ shows it again", window.document.body.dataset.sidebar === "expanded")
 // The toolbar keeps its dropdowns in the page (phones always use them); on a wide screen the stylesheet hides them
 // while the sidebar is shown, keyed on body[data-sidebar].
 const css = readFileSync(root + "style.css", "utf8");
-check("with the sidebar shown, the toolbar dropdowns are hidden on wide screens; Price stays", window.document.body.dataset.sidebar !== "hidden" && /@media \(min-width: 901px\) \{ body:not\(\[data-sidebar="hidden"\]\) \.tools \.tool-field \{ display: none; \} \}/.test(css) && !!$("#filters .dd-price"));
+check("with the sidebar shown, the toolbar dropdowns are hidden on wide screens", window.document.body.dataset.sidebar !== "hidden" && /@media \(min-width: 901px\) \{ body:not\(\[data-sidebar="hidden"\]\) \.tools \.tool-field \{ display: none; \} \}/.test(css));
 check("on phones the dropdowns replace the sidebar", /\.cats \{ display: none !important; \}/.test(css) && $$("#filters .tool-field").length === 2);
 click($(".side-collapse"));
 check("« shrinks to the rail", window.document.body.dataset.sidebar === "rail");
@@ -363,11 +352,6 @@ if (shots.length) { click(shots[0]); check("lightbox opens", $("#lightbox").hasA
   check("no results: message plus clear button", /No apps match/.test($("#catalog .endcap").textContent) && !!$("#catalog .endcap-clear"));
   click($("#catalog .endcap-clear"));
   check("clearing empties the search box too", $("#search").value === "" && $$("#catalog .app").length > 50);
-  // a price filter and a profile count as filters as well
-  pick($("#filters .dd-price"), "Paid");
-  check("a changed price shows the clear button", !!$("#catalog .endcap-clear"));
-  click($("#catalog .endcap-clear"));
-  check("clearing restores the default price", $("#filters .dd-price .dd-text").textContent === "All prices");
 }
 
 // ---- permalinks ----
@@ -454,10 +438,10 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   check("the menu closes after choosing", $$(".dd-menu").length === 0);
   check("the safety question is in the FAQ, with Ask your AI", /looks scary/.test($("#faq").textContent) && !!$('.faq-act[data-act="ask-ai"]'));
 }
-// ---- the phone menu: packs, categories, price and theme behind one button ----
+// ---- the phone menu: packs, categories and theme behind one button ----
 {
   const bar = $("#topbar");
-  check("the menu holds the pack and category dropdowns, price and the theme switch", !!$("#tools-menu #filters .dd-price") && $$("#tools-menu .tool-field").length === 2 && !!$("#tools-menu .theme-switch"));
+  check("the menu holds the pack and category dropdowns and the theme switch", $$("#tools-menu .tool-field").length === 2 && !!$("#tools-menu .theme-switch"));
   click($("#menu-toggle"));
   check("the menu button opens it", bar.classList.contains("menu-open") && $("#menu-toggle").getAttribute("aria-expanded") === "true");
   pick($$("#tools-menu .tool-field .dd")[1], "AI");
