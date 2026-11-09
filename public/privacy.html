@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <title>Privacy · Get'Em!</title>
+  <meta name="description" content="What Get'Em! collects (anonymous visit counts, no cookies), who handles it and how to reach us.">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-black-micro-32.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-white-micro-32.png" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#7c6df0">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="c9e2712f-9937-41af-bb24-9b1c7e4b3c4e" data-domains="getem.sh" data-exclude-hash="true"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal { max-width: 720px; padding-top: 3rem; padding-bottom: 2rem; line-height: 1.65; }
+    .legal .back { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; text-decoration: none; }
+    .legal h1 { margin: 0 0 0.25rem; font-size: 2.2rem; letter-spacing: -0.02em; }
+    .legal h2 { margin: 2rem 0 0.5rem; font-size: 1.15rem; letter-spacing: -0.01em; }
+    .legal p, .legal li { color: var(--muted); }
+    .legal ul { padding-left: 1.2rem; }
+    .legal li + li { margin-top: 0.35rem; }
+    .legal strong { color: var(--text); }
+    .legal code { font-size: 0.85em; padding: 0.1em 0.35em; border-radius: 5px; background: var(--card); border: 1px solid var(--line); }
+    body { padding-bottom: 0; }
+  </style>
+</head>
+<body>
+  <main class="wrap legal">
+    <a class="back" href="./">← Back to Get'Em!</a>
+    <h1>Privacy</h1>
+    <p class="muted">Last updated 9 November 2026</p>
+
+    <p><strong>The short version:</strong> Get'Em! counts visits and button clicks anonymously, without cookies. Nothing is collected that identifies you, nothing is sold, and the install script sends nothing back.</p>
+
+    <h2>Who runs this site</h2>
+    <p>Get'Em! (getem.sh) is run by <strong>Javier Alonso Gómez</strong>, who is responsible for the data described here. For anything about privacy, write to <a href="mailto:rgpd@getem.sh">rgpd@getem.sh</a>.</p>
+
+    <h2>What is collected</h2>
+    <p>The page uses <a href="https://umami.is" target="_blank" rel="noopener">Umami</a>, a cookie-free analytics tool, to record:</p>
+    <ul>
+      <li>pages viewed, the site you came from, and your browser, operating system, device type, screen size, language and country;</li>
+      <li>which buttons are used, such as copying the command, previewing or downloading the script, asking an AI, copying a link, picking a pack or turning on Install with Homebrew, along with how many apps were in the list. The names of the apps you pick are not sent.</li>
+    </ul>
+    <p>Your IP address is used only for a moment to work out your country and is not stored. To count unique visitors, Umami combines it with your browser details into a code that changes every day, so you can't be followed from one day to the next or to other sites.</p>
+
+    <h2>Why</h2>
+    <p>To see how many people use Get'Em! and which parts help, so the list and the page can get better. The legal basis is legitimate interest (Article 6(1)(f) GDPR). As no cookies are set and nothing is read from your device for analytics, no consent banner is needed.</p>
+
+    <h2>Who handles the data</h2>
+    <ul>
+      <li><strong>Umami Software, Inc.</strong> hosts the analytics in its EU region, under a data processing agreement.</li>
+      <li><strong>GitHub, Inc.</strong> (GitHub Pages) hosts the site itself. Like any web host, GitHub receives your IP address when the page loads and may keep it in its logs for security. See the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>. GitHub is a US company and takes part in the EU–US Data Privacy Framework.</li>
+    </ul>
+    <p>Nobody else gets the data, and it is never sold or used for ads.</p>
+
+    <h2>How long it's kept</h2>
+    <p>Analytics are kept for as long as the Umami plan allows, currently up to 6 months, and are then deleted.</p>
+
+    <h2>What stays on your device</h2>
+    <p>The page remembers a few choices in your browser's local storage so they're still there next time: the light or dark theme, the role and category you picked, which sections are open and the app versions you chose. They never leave your device, and clearing your browser's site data removes them.</p>
+
+    <h2>The install script</h2>
+    <p>The command and the downloaded <code>.sh</code> file talk only to getem.sh, to fetch the catalog, and to each app's publisher, to download the app. They don't send analytics or anything about your Mac. If you add Homebrew to your list, apps that have a Homebrew cask are installed through Homebrew, which downloads from its own servers too; for those installs the script switches Homebrew's analytics off (<code>HOMEBREW_NO_ANALYTICS</code>), without changing your own Homebrew settings.</p>
+
+    <h2>Questions</h2>
+    <p>Get'Em keeps nothing that identifies you, so there's no personal data to look up, correct or delete. If you have a question about this page, write to <a href="mailto:rgpd@getem.sh">rgpd@getem.sh</a>. You can also contact the data protection authority where you live (in Spain, the <a href="https://www.aepd.es" target="_blank" rel="noopener">AEPD</a>).</p>
+    <p>Don't want to be counted at all? Any content blocker stops the Umami script, and the site works exactly the same without it.</p>
+
+    <h2>Changes</h2>
+    <p>If this changes, this page is updated and the date at the top changes with it.</p>
+  </main>
+  <footer class="wrap foot muted">
+    <p>Get'Em! · <a href="./">Back to the list</a></p>
+  </footer>
+</body>
+</html>

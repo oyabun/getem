@@ -47,7 +47,7 @@ test("catalog.tsv has one row per app, with the same ids", () => {
   const rows = tsv.map((l) => l.split("\t")[0]);
   assert.deepEqual(new Set(rows), ids);
   assert.equal(rows.length, ids.size);
-  for (const l of tsv) assert.equal(l.split("\t").length, 14, l.slice(0, 60));
+  for (const l of tsv) assert.equal(l.split("\t").length, 15, l.slice(0, 60));
 });
 
 test("starter packs only name real apps, and their parts are well formed", () => {

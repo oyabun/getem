@@ -250,14 +250,61 @@ if (shots.length) { click(shots[0]); check("lightbox opens", $("#lightbox").hasA
   check("the list's x asks before removing a needed app", $("#confirm").hasAttribute("open") && sel("homebrew"));
   click($("#confirm-keep"));
 
-  // the brew command in an app's details needs Homebrew
+  // the details explain Homebrew as an option, folded away until Homebrew is in the list
   click($("#count")); click($("#drawer-clear"));
   click(find("VLC", "vlc"));
-  check("details of a brew-installable app say it needs Homebrew", /Needs Homebrew/.test($("#modal .brew-need")?.textContent || ""), $("#modal .brew-need")?.textContent);
-  click($("#modal .brew-need .link"));
+  const alt = () => $("#modal .brew-alt");
+  check("details of a brew-installable app fold Homebrew under 'Already use Homebrew?'", !!alt() && !alt().open && /Already use Homebrew\?/.test(alt().querySelector("summary").textContent));
+  check("it says Get'Em downloads from the publisher without Homebrew", /downloads this app straight from the publisher/.test(alt().textContent), alt().textContent);
+  click(alt().querySelector(".brew-need .link"));
   clearSearch();
   check("Add Homebrew from the details adds it and its tools", sel("homebrew") && sel("xcode-cli"));
-  check("the note then says it is in the list", /in your install list/.test($("#modal .brew-need").textContent));
+  check("then it says the app will be installed with Homebrew, and opens", alt().open && /installs this app with Homebrew/.test(alt().textContent), alt().textContent);
+  check("turning it on from the details adds --brew to the command", /bash -s -- --brew /.test($("#command").textContent.replace(/\s+/g, " ")), $("#command").textContent.replace(/\s+/g, " ").slice(0, 90));
+  $("#modal").close?.(); $("#modal").removeAttribute("open");
+  // the switch in the install list
+  click(find("VLC", "vlc").querySelector(".check")); clearSearch();
+  if ($("#drawer").hidden) click($("#count"));
+  check("the install list shows the Install with Homebrew switch, on", !$("#drawer-brew").hidden && $("#use-brew").checked);
+  check("apps with a cask carry a Homebrew tag in the list", $$("#drawer-list .row-via").length > 0);
+  check("Homebrew is locked while the switch is on", !!$$("#drawer-list .row-x.locked").length);
+  perApp: {
+    const tag = () => [...$$("#drawer-list .row")].find((r) => /VLC/.test(r.textContent))?.querySelector(".row-via");
+    click(tag());
+    check("clicking an app's Homebrew tag keeps that one on the publisher's download", tag().textContent === "Publisher" && /\bvlc:direct\b/.test($("#command").textContent), $("#command").textContent.replace(/\s+/g, " "));
+    click(tag());
+    check("and clicking again puts it back on Homebrew", tag().textContent === "Homebrew" && !/:direct/.test($("#command").textContent));
+  }
+  removeHomebrew: {
+    const lockBtn = $$("#drawer-list .row-x.locked")[0];
+    click(lockBtn);
+    check("trying to remove it explains why and keeps it", sel("homebrew") && /needed while Install with Homebrew is on/.test($("#toast").textContent), $("#toast").textContent);
+  }
+  click($("#drawer-clear"));
+  check("Clear all turns Install with Homebrew off", !$("#use-brew").checked);
+  click(find("VLC", "vlc").querySelector(".check")); clearSearch();
+  check("so the next pick doesn't bring Homebrew back", sel("vlc") && !sel("homebrew") && !sel("xcode-cli") && !/--brew/.test($("#command").textContent));
+  if ($("#drawer").hidden) click($("#count"));
+  $("#use-brew").checked = true; $("#use-brew").dispatchEvent(new window.Event("change"));
+  $("#use-brew").checked = false; $("#use-brew").dispatchEvent(new window.Event("change"));
+  check("turning the switch off drops --brew and unlocks Homebrew", !/--brew/.test($("#command").textContent) && !$$("#drawer-list .row-x.locked").length);
+  // adding Homebrew offers to install the apps with it, from the card and from its details
+  click($("#drawer-clear"));
+  click(find("VLC", "vlc").querySelector(".check")); clearSearch();
+  click(find("Homebrew", "homebrew").querySelector(".check")); clearSearch();
+  const act = $("#toast .toast-act");
+  check("ticking Homebrew suggests moving the list's apps to Homebrew", !!act && /Move the app in your list that Homebrew has to Homebrew\?/.test($("#toast").textContent) && /Move them to Homebrew/.test(act.textContent), $("#toast").textContent);
+  click(act);
+  check("taking the offer turns Install with Homebrew on", /--brew/.test($("#command").textContent));
+  check("and confirms what happens to the list, with no second step", /will be installed and kept up to date by Homebrew/.test($("#toast").textContent) && !$("#toast .toast-act") && !/--update/.test($("#command").textContent), $("#toast").textContent);
+  $("#use-brew").checked = false; $("#use-brew").dispatchEvent(new window.Event("change"));
+  click(find("Homebrew", "homebrew")); clearSearch();
+  const offer = $("#modal .brew-offer input[role=switch]");
+  check("Homebrew's details carry the switch, off", !!offer && !offer.checked);
+  offer.checked = true; offer.dispatchEvent(new window.Event("change"));
+  check("turning it on there adds --brew and locks Homebrew's button", /--brew/.test($("#command").textContent) && $("#modal .modal-actions button.primary, #modal button.primary")?.disabled === true, $("#modal button.primary")?.textContent);
+  offer.checked = false; offer.dispatchEvent(new window.Event("change"));
+  $("#modal").removeAttribute("open");
 }
 
 // ---- confetti on "New Mac?" ----
@@ -430,13 +477,44 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   check("Download .sh is no longer a separate button", !$("#download") && !!$(".split #copy") && !!$(".split #get-more"));
   click($("#get-more"));
   const opts = $$(".dd-menu .dd-opt-name").map((n) => n.textContent);
-  check("the arrow offers Copy command, Download .sh and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Download .sh|Not feeling safe? Ask your AI", opts.join("|"));
+  check("the arrow offers Copy command, Download .sh, Preview script and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Download .sh|Preview script|Not feeling safe? Ask your AI", opts.join("|"));
   let clip = ""; window.navigator.clipboard = { writeText: async (t) => { clip = t; } };
   click($$(".dd-menu .dd-opt").find((o) => /Ask your AI/.test(o.textContent)));
   await new Promise((r) => setTimeout(r, 20));
   check("Ask your AI copies a prompt with the command and the script's address", /explain what it does/.test(clip) && /curl -fsSL \S+\/install\.sh \| bash -s --/.test(clip) && /The script it runs is public: \S+\/install\.sh/.test(clip), clip.slice(0, 120));
   check("the menu closes after choosing", $$(".dd-menu").length === 0);
+  click($("#get-more"));
+  click($$(".dd-menu .dd-opt").find((o) => /Preview script/.test(o.textContent)));
+  await new Promise((r) => setTimeout(r, 20));
+  check("Preview script opens the script view for your list", $("#script-view").hasAttribute("open") && /^\d+ apps? built in/.test($("#script-meta").textContent), $("#script-meta").textContent);
+  $("#script-view").removeAttribute("open");
   check("the safety question is in the FAQ, with Ask your AI", /looks scary/.test($("#faq").textContent) && !!$('.faq-act[data-act="ask-ai"]'));
+}
+// ---- the FAQ follows the search ----
+{
+  const all = $$("#faq .faq-item").length;
+  $("#search").value = "homebrew"; $("#search").dispatchEvent(new window.Event("input"));
+  const shown = $$("#faq .faq-item").filter((i) => !i.hidden);
+  check("searching keeps only the FAQ questions that mention it", shown.length > 0 && shown.length < all && shown.every((i) => /homebrew/i.test(i.textContent)), `${shown.length}/${all}`);
+  check("the FAQ heading says what it's showing", /Questions about .homebrew./.test($("#faq-title").textContent), $("#faq-title").textContent);
+  $("#search").value = "qwxzv"; $("#search").dispatchEvent(new window.Event("input"));
+  check("no matching question hides the FAQ", $("#faq").hidden);
+  $("#search").value = ""; $("#search").dispatchEvent(new window.Event("input"));
+  check("clearing the search brings the whole FAQ back", !$("#faq").hidden && $$("#faq .faq-item").every((i) => !i.hidden) && $("#faq-title").textContent === "Questions, answered");
+}
+// ---- long dropdowns get a search box ----
+{
+  const catDd = $$("#topbar .tool-field .dd").find((d) => /categor/i.test(d.closest(".tool-field")?.textContent || "")) || $$("#topbar .tool-field .dd")[1];
+  click(catDd);
+  const search = $(".dd-menu .dd-search");
+  check("the categories menu has a search box", !!search && $$(".dd-menu .dd-opt").length > 12);
+  search.value = "audio"; search.dispatchEvent(new window.Event("input"));
+  const shown = $$(".dd-menu .dd-opt").filter((o) => !o.hidden);
+  check("typing narrows the options to the matches", shown.length >= 1 && shown.length < $$(".dd-menu .dd-opt").length && shown.every((o) => /audio/i.test(o.textContent)), shown.map((o) => o.textContent).join("|"));
+  search.value = "zzzz"; search.dispatchEvent(new window.Event("input"));
+  check("no match says so", !$(".dd-menu .dd-empty").hidden);
+  closeMenuFromTest: { window.document.dispatchEvent(new window.KeyboardEvent("keydown", { key: "Escape" })); }
+  check("short menus (the packs) have no search box", (() => { click($$("#topbar .tool-field .dd")[0]); const has = !!$(".dd-menu .dd-search"); window.document.dispatchEvent(new window.KeyboardEvent("keydown", { key: "Escape" })); return !has; })());
 }
 // ---- the phone menu: packs, categories and theme behind one button ----
 {

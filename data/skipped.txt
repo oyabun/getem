@@ -48,6 +48,7 @@ HiPixel: not in Homebrew Cask
 Hiddify: not in Homebrew Cask
 Hoppscotch: not in Homebrew Cask
 HostsX (hostsx): deprecated in Homebrew
+Hyper (hyper): deprecated in Homebrew
 Ice Cubes: not in Homebrew Cask
 ImHex (imhex): deprecated in Homebrew
 ImageGlass: not in Homebrew Cask

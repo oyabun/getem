@@ -380,18 +380,6 @@
    "web"
   ]
  },
- "picgo": {
-  "icon": null,
-  "iconSource": null,
-  "screenshots": [
-   "https://user-images.githubusercontent.com/12621342/34188165-e7cdf372-e56f-11e7-8732-1338c88b9bb7.jpg",
-   "https://user-images.githubusercontent.com/12621342/34188201-212cda84-e570-11e7-9b7a-abb298699d85.jpg",
-   "https://raw.githubusercontent.com/Molunerfinn/PicGo/dev/assets/picgo-v3.gif"
-  ],
-  "sources": [
-   "web"
-  ]
- },
  "jordanbaird-ice@beta": {
   "icon": "https://raw.githubusercontent.com/jordanbaird/Ice/HEAD/Ice/Assets.xcassets/AppIcon.appiconset/icon_256x256.png",
   "iconSource": "web",

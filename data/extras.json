@@ -1485,7 +1485,8 @@
     "homepage": "https://docs.docker.com/ai/sandboxes/",
     "repo": "docker/sbx-releases",
     "icon": "https://github.com/docker.png?size=256",
-    "minMacos": "14"
+    "minMacos": "14",
+    "brew": "docker/tap/sbx"
   },
   {
     "cask": "t3-code",

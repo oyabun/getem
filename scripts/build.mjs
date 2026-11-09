@@ -404,11 +404,12 @@ async function main() {
   const generated = new Date().toISOString();
   await writeFile(path("public/catalog.json"), JSON.stringify({ generated, order, categories, groups, families, profiles, apps: unique }));
 
-  // id kind src dest version min_macos url_arm sha_arm url_intel sha_intel user_agent referer name bin
+  // id kind src dest version min_macos url_arm sha_arm url_intel sha_intel user_agent referer name bin cask
+  // (cask: the Homebrew cask token, used when the list includes Homebrew; new columns only ever go at the end)
   const rows = unique.map((a) => [
     a.id, a.kind, a.src, a.dest, a.version, a.minMacos,
     a.arm?.url, a.arm?.sha256, a.intel?.url, a.intel?.sha256,
-    a.userAgent, a.referer, a.name, a.bin,
+    a.userAgent, a.referer, a.name, a.bin, a.brew,
   ].map(tsvField).join("\t"));
   await writeFile(path("public/catalog.tsv"), `# Getem.sh catalog ${generated}\n${rows.join("\n")}\n`);
 

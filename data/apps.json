@@ -560,15 +560,6 @@
    "slug": "cmux"
   },
   {
-   "name": "PicGo",
-   "repo": "Molunerfinn/PicGo",
-   "description": "Image upload and management tool",
-   "category": "design",
-   "homepage": "https://picgo.app/",
-   "stars": 27453,
-   "slug": "picgo"
-  },
-  {
    "name": "Focalboard",
    "repo": "mattermost-community/focalboard",
    "description": "Open source project management",

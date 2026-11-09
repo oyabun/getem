@@ -1,4 +1,4 @@
-import { lucide } from "./icons.js?v=b4d60b8c7f";
+import { lucide } from "./icons.js?v=4d465df885";
 const $ = (sel) => document.querySelector(sel);
 // A link carries the selection as #s=<code> (see encodeSelection) or, in older links, as a plain list #a,b,c.
 const rawHash = location.hash.slice(1);
@@ -147,12 +147,17 @@ function pickVersion(app, id) {
 }
 
 let toastTimer;
-function toast(message) {
+function toast(message, action = null) {
   const t = $("#toast");
-  t.textContent = message;
+  t.replaceChildren(message);
+  if (action) {
+    const b = el("button", { type: "button", className: "toast-act" }, action.label);
+    b.addEventListener("click", () => { t.hidden = true; action.run(); });
+    t.append(" ", b);
+  }
   t.hidden = false;
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => (t.hidden = true), 3500);
+  toastTimer = setTimeout(() => (t.hidden = true), action ? 8000 : 3500);
 }
 
 function ensureDeps() {
@@ -190,7 +195,28 @@ function askRemove(id, deps) {
   dlg.showModal();
 }
 
+function setBrew(on, { quiet = false } = {}) {
+  useBrew = on;
+  document.dispatchEvent(new Event("brewchange"));
+  syncFaqActions();
+  track("use-brew", { on });
+  if (on && !selected.has("homebrew") && byId("homebrew")) selected.add("homebrew");
+  update();
+  render();
+  if (!quiet) toast(on
+    ? `Install with Homebrew is on: ${brewCount() ? `the ${brewCount() === 1 ? "app" : `${brewCount()} apps`} in your list that Homebrew has will be installed and kept up to date by Homebrew` : "apps you add that Homebrew has will be installed by it"}`
+    : "Install with Homebrew is off: apps download straight from their publishers");
+}
+
+// Apps in the list (other than Homebrew and its tools) that Homebrew can install.
+const brewCount = () => catalog.apps.filter((a) => selected.has(a.id) && a.brew && a.id !== "homebrew" && a.id !== "xcode-cli").length;
+
 function removeApp(id) {
+  // Homebrew can't go while the list is set to install with it; say why instead of quietly breaking the command.
+  if (useBrew && (id === "homebrew" || id === "xcode-cli")) {
+    toast(`${nameOf(id)} is needed while Install with Homebrew is on. Turn that off at the top of your install list to remove it.`);
+    return;
+  }
   const deps = dependentsOf(id);
   if (!deps.length) { selected.delete(id); update(); return; }
   askRemove(id, deps);
@@ -198,7 +224,18 @@ function removeApp(id) {
 
 function toggle(id) {
   if (selected.has(id)) removeApp(id);
-  else { selected.add(id); update(); }
+  else {
+    selected.add(id);
+    update();
+    // Adding Homebrew is the moment to ask whether it should install the other apps too.
+    if (id === "homebrew" && !useBrew) {
+      const n = brewCount();
+      toast(n
+        ? `Homebrew added. Move the ${n === 1 ? "app" : `${n} apps`} in your list that Homebrew has to Homebrew? It installs them and keeps them up to date.`
+        : "Homebrew added. Want it to install the apps you pick, where it has them?",
+        { label: n ? "Move them to Homebrew" : "Install my apps with Homebrew", run: () => setBrew(true) });
+    }
+  }
 }
 
 // "Version  [ 21 LTS v ]" on a card whose app comes in several versions.
@@ -301,26 +338,63 @@ function gallery(app) {
   return row;
 }
 
-// Homebrew is optional: only apps with a cask get a brew command. Everything else installs from the
-// publisher's own download, which is what the curl command does for every app anyway.
+// Homebrew is optional. Without it, the Get'Em command downloads every app from its publisher. With Homebrew in the
+// list, apps that have a cask are installed with `brew install --cask` instead, so Homebrew manages and updates them.
+// The details say which way this app will go, with the Homebrew part folded away under "Already use Homebrew?".
+const hasBrewApp = () => catalog.apps.some((a) => a.id === "homebrew");
+// The Homebrew command for an app: a cask from Homebrew's catalog, or a package in the publisher's own tap (docker/tap/sbx).
+const brewInstall = (app) => app.brew.includes("/") ? `brew install ${app.brew}` : `brew install --cask ${app.brew}`;
+// The Install with Homebrew switch, for places other than the install list (Homebrew's own details).
+function brewSwitch(label) {
+  const input = el("input", { type: "checkbox", role: "switch" });
+  input.checked = useBrew;
+  input.addEventListener("change", () => setBrew(input.checked));
+  return { input, node: el("label", { className: "brew-switch" }, input, el("span", { className: "brew-switch-track", ariaHidden: "true" }), el("span", { className: "brew-switch-label" }, label)) };
+}
 function brewLine(app) {
   if (app.note) return el("p", { className: "brew muted" }, app.note);
-  if (!app.brew) return el("p", { className: "brew muted" }, "Not in Homebrew. The install command downloads it straight from the publisher.");
-  const cmd = `brew install --cask ${app.brew}`;
+  if (app.id === "homebrew") {
+    const sw = brewSwitch("Also install my apps with Homebrew");
+    const note = el("p", { className: "brew-note muted" });
+    const sync = () => {
+      sw.input.checked = useBrew;
+      box.classList.toggle("on", useBrew);
+      note.textContent = useBrew
+        ? "On: the apps in your list that Homebrew has are installed and kept up to date by Homebrew (if one is already on your Mac, Homebrew takes it over). Apps Homebrew doesn't have still come from their publisher."
+        : "Off: this only adds Homebrew itself, and the apps in your list download straight from their publishers. Turn it on to move them to Homebrew instead. A Homebrew you already have is never reinstalled.";
+    };
+    sw.input.addEventListener("change", () => sync());
+    const box = el("div", { className: "brew-offer" }, sw.node, note);
+    sync();
+    return box;
+  }
+  if (!app.brew) return el("p", { className: "brew muted" }, "Not in Homebrew: the Get'Em command always downloads it straight from the publisher.");
+  const cmd = brewInstall(app);
   const copy = el("button", { type: "button" }, "Copy");
   copy.addEventListener("click", async () => {
     await navigator.clipboard.writeText(cmd);
     copy.textContent = "Copied";
     setTimeout(() => (copy.textContent = "Copy"), 1500);
   });
-  const row = el("div", { className: "brew" }, el("code", {}, cmd), copy);
-  if (app.id === "homebrew" || !catalog.apps.some((a) => a.id === "homebrew")) return row;
-  // The brew command only works where Homebrew is installed, so offer to add it to the list.
+  const text = el("p", { className: "brew-need muted" });
   const add = el("button", { type: "button", className: "link" });
-  const sync = () => { const on = selected.has("homebrew"); add.replaceChildren(on ? lucide("check", 13) : "", on ? "Homebrew is in your install list" : "Add Homebrew to install list"); add.disabled = on; };
-  add.addEventListener("click", () => { toggle("homebrew"); sync(); render(); });
+  add.addEventListener("click", () => { setBrew(true); sync(); });
+  const sync = () => {
+    const on = useBrew;
+    add.hidden = on || !hasBrewApp();
+    add.replaceChildren("Turn on Install with Homebrew");
+    text.replaceChildren(on
+      ? "Install with Homebrew is on, so the Get'Em command installs this app with Homebrew and Homebrew keeps it up to date. If it's already on your Mac, Homebrew takes it over."
+      : "Right now the Get'Em command downloads this app straight from the publisher. Turn on Install with Homebrew and it installs it with Homebrew instead, so Homebrew keeps it current (a copy you already have moves over too). If Homebrew already manages it on your Mac, Get'Em leaves it to Homebrew.");
+    text.append(" ", add);
+    box.open = box.open || on;
+  };
+  const box = el("details", { className: "brew-alt" },
+    el("summary", {}, "Already use Homebrew?"),
+    text,
+    el("div", { className: "brew" }, el("code", {}, cmd), copy));
   sync();
-  return el("div", { className: "brew-wrap" }, row, el("p", { className: "brew-need muted" }, "Needs Homebrew installed on your Mac. ", add));
+  return box;
 }
 
 // Apps from the same publisher, with one button to install the whole family.
@@ -390,14 +464,25 @@ function openModal(app) {
     cat && ["Category", catsOf(app).map((slug) => catalog.categories.find((c) => c.slug === slug)?.name).filter(Boolean).join(", ")],
     app.stars > 0 && ["GitHub stars", el("span", { className: "stars" }, lucide("star", 13), fmtStars(app.stars))],
     app.variants && ["Versions", app.variants.map((v) => v.label).join(", ")],
-    ["Installer", app.kind === "builtin" ? "Built into the install script" : app.kind === "pkg" ? "Package (.pkg), asks for your admin password" : "Drag-and-drop app, no password needed"],
+    ["Installer", app.kind === "builtin" ? "Built into the install script" : app.brew && useBrew ? `Homebrew (${brewInstall(app)})` : app.kind === "pkg" ? "Package (.pkg), asks for your admin password" : "Drag-and-drop app, no password needed"],
   ].filter(Boolean);
   const links = [
     app.homepage && el("a", { href: app.homepage, target: "_blank", rel: "noopener noreferrer", className: "ext" }, lucide("globe", 15), "Website", lucide("external-link", 12)),
     app.repo && el("a", { href: `https://github.com/${app.repo}`, target: "_blank", rel: "noopener noreferrer", className: "ext" }, lucide("code-xml", 15), "GitHub", lucide("external-link", 12)),
   ].filter(Boolean);
   const action = el("button", { type: "button", className: "primary" });
-  const syncAction = () => (action.textContent = selected.has(currentOf(app).id) ? "Remove from install list" : "Add to install list");
+  const syncAction = () => {
+    const locked = useBrew && (app.id === "homebrew" || app.id === "xcode-cli") && selected.has(currentOf(app).id);
+    action.disabled = locked;
+    action.title = locked ? "Needed while Install with Homebrew is on" : "";
+    action.textContent = locked ? "Needed for Install with Homebrew" : selected.has(currentOf(app).id) ? "Remove from install list" : "Add to install list";
+  };
+  if (app.id === "homebrew" || app.id === "xcode-cli") {
+    // Follow the switch while these details are open, and stop listening once they close.
+    const stop = new AbortController();
+    document.addEventListener("brewchange", syncAction, { signal: stop.signal });
+    dialog.addEventListener("close", () => stop.abort(), { once: true });
+  }
   action.addEventListener("click", () => { toggle(currentOf(app).id); syncAction(); render(); });
   syncAction();
   const close = el("button", { type: "button", className: "modal-close", ariaLabel: "Close" }, lucide("x", 18));
@@ -565,6 +650,11 @@ function closeMenu() {
 function openDropdown(btn, options, value, onChange) {
   closeMenu();
   const menu = el("div", { className: "dd-menu", role: "listbox" });
+  // Long menus (categories) get a search box on top that narrows the options as you type.
+  const search = options.length > 12 ? el("input", { type: "search", className: "dd-search", placeholder: "Search…", ariaLabel: "Search the options", autocomplete: "off", spellcheck: false }) : null;
+  const empty = el("p", { className: "dd-empty muted", hidden: true }, "Nothing matches");
+  if (search) menu.append(el("div", { className: "dd-search-wrap" }, lucide("search", 15), search));
+  const visible = () => [...menu.querySelectorAll(".dd-opt")].filter((o) => !o.hidden);
   for (const o of options) {
     const on = o.value === value;
     const opt = el("button", { type: "button", className: `dd-opt${on ? " selected" : ""}${o.indent ? " sub" : ""}`, role: "option" },
@@ -575,25 +665,40 @@ function openDropdown(btn, options, value, onChange) {
     );
     opt.setAttribute("aria-selected", on);
     opt.addEventListener("click", () => { closeMenu(); onChange(o.value); });
+    opt.dataset.find = `${o.text} ${o.hint || ""}`.toLowerCase();
     menu.append(opt);
+  }
+  if (search) {
+    menu.append(empty);
+    search.addEventListener("input", () => {
+      const q = search.value.trim().toLowerCase();
+      for (const opt of menu.querySelectorAll(".dd-opt")) opt.hidden = !!q && !opt.dataset.find.includes(q);
+      empty.hidden = visible().length > 0;
+    });
+    search.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") { e.preventDefault(); visible()[0]?.click(); }
+    });
   }
   document.body.append(menu);
   const r = btn.getBoundingClientRect();
   const below = innerHeight - r.bottom - 12, above = r.top - 12;
   const up = below < 280 && above > below;
   const width = Math.max(r.width, 250);
-  menu.style.left = `${Math.max(8, Math.min(r.left, innerWidth - width - 8))}px`;
   menu.style.minWidth = `${width}px`;
+  // Measure the real width (long hints can make it wider than the button) so the menu never runs off the right edge.
+  const real = Math.max(width, menu.offsetWidth || 0);
+  menu.style.left = `${Math.max(8, Math.min(r.left, innerWidth - real - 8))}px`;
   menu.style.maxHeight = `${Math.min(up ? above : below, 440)}px`;
   if (up) menu.style.bottom = `${innerHeight - r.top + 6}px`; else menu.style.top = `${r.bottom + 6}px`;
   btn.setAttribute("aria-expanded", "true");
   const outside = (e) => { if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu(); };
   const keys = (e) => {
-    const items = [...menu.querySelectorAll(".dd-opt")];
+    const items = visible();
     const i = items.indexOf(document.activeElement);
     if (e.key === "Escape") { e.preventDefault(); closeMenu(); btn.focus(); }
+    else if (!items.length) return;
     else if (e.key === "ArrowDown") { e.preventDefault(); items[(i + 1) % items.length].focus(); }
-    else if (e.key === "ArrowUp") { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); if (i <= 0 && search) search.focus(); else items[(i - 1 + items.length) % items.length].focus(); }
   };
   const scroll = (e) => { if (!menu.contains(e.target)) closeMenu(); };
   document.addEventListener("mousedown", outside, true);
@@ -601,7 +706,8 @@ function openDropdown(btn, options, value, onChange) {
   addEventListener("resize", closeMenu);
   addEventListener("scroll", scroll, true);
   openMenu = { menu, btn, outside, keys, scroll };
-  (menu.querySelector(".selected") || menu.querySelector(".dd-opt")).focus();
+  if (search && !window.matchMedia?.("(pointer: coarse)").matches) search.focus();
+  else (menu.querySelector(".selected") || menu.querySelector(".dd-opt")).focus();
 }
 
 // The small x inside a dropdown that resets it. It sits inside the trigger button, so it is a span with a button role.
@@ -794,10 +900,29 @@ function syncMascot() {
   mascot.classList.toggle("in", on);
 }
 
+// The FAQ follows the search box: only the questions that mention the words stay, under a heading that says so, and the
+// section hides when none do. With no search it is the full list again.
+function filterFaq(q) {
+  const faq = $("#faq");
+  if (!faq) return;
+  const title = $("#faq-title");
+  title.dataset.text ??= title.textContent;
+  const words = q.split(/\s+/).filter(Boolean);
+  let shown = 0;
+  for (const item of faq.querySelectorAll(".faq-item")) {
+    const hit = !words.length || words.every((w) => item.textContent.toLowerCase().includes(w));
+    item.hidden = !hit;
+    if (hit) shown++;
+  }
+  faq.hidden = shown === 0;
+  title.textContent = words.length ? `Questions about “${q}”` : title.dataset.text;
+}
+
 function render() {
   syncMascot();
   $("#menu-toggle")?.classList.toggle("has-filters", activeCat !== "all" || Boolean(activeProfile));
   const q = $("#search").value.trim().toLowerCase();
+  filterFaq(q);
   const hits = catalog.apps.filter((a) => !a.variantOf && appOk(a, q));
   const counts = new Map();
   for (const a of hits) for (const slug of catsOf(a)) counts.set(slug, (counts.get(slug) || 0) + 1);
@@ -866,12 +991,20 @@ function endCap(empty) {
 }
 
 const ids = () => catalog.apps.filter((a) => selected.has(a.id)).map((a) => a.id);
+// Apps kept on the publisher's download while Install with Homebrew is on: the command marks them id:direct.
+const noBrew = new Set();
+const brewsApp = (app) => useBrew && !!app.brew && app.id !== "homebrew" && app.id !== "xcode-cli" && !noBrew.has(app.id);
+const cmdIds = () => ids().map((id) => (useBrew && noBrew.has(id) && byId(id)?.brew ? `${id}:direct` : id));
 // --dry-run: the install script only prints what it would do. Off by default and never remembered, so a pasted
 // command installs unless you chose otherwise this time.
 let dryRun = false;
+// --brew: apps that have a Homebrew cask are installed and updated with Homebrew. A choice for this list only: it isn't
+// remembered between visits and Clear all turns it off, so Homebrew never shows up in a fresh list on its own. While
+// it's on, Homebrew stays in the list (the script needs it).
+let useBrew = false;
 // Where this site lives, folder included (GitHub Pages serves it under /<repo>/), without a trailing slash.
 const SITE = new URL(".", location.href).href.replace(/\/$/, "");
-const command = () => `curl -fsSL ${SITE}/install.sh | bash -s -- ${dryRun ? "--dry-run " : ""}${ids().join(" ")}`;
+const command = () => `curl -fsSL ${SITE}/install.sh | bash -s -- ${dryRun ? "--dry-run " : ""}${useBrew ? "--brew " : ""}${cmdIds().join(" ")}`;
 
 function syncDry() {
   const b = $("#dry-run");
@@ -956,6 +1089,7 @@ function renderPicked() {
   if (!picks.length) pickedOpen = false;
   drawer.hidden = !pickedOpen;
   $("#count").setAttribute("aria-expanded", pickedOpen);
+  syncBrewSwitch(picks);
   if (!pickedOpen) return;
   $("#drawer-title").textContent = `Install list · ${picks.length} app${picks.length === 1 ? "" : "s"}`;
   const cats = catalog.categories.filter((c) => picks.some((a) => a.category === c.slug));
@@ -963,14 +1097,50 @@ function renderPicked() {
   for (const cat of cats) {
     rows.push(el("h3", { className: "drawer-cat" }, cat.name));
     for (const app of picks.filter((a) => a.category === cat.slug)) {
-      const remove = el("button", { type: "button", className: "row-x", ariaLabel: `Remove ${app.name}`, title: `Remove ${app.name}` }, lucide("trash-2", 15));
+      const locked = useBrew && (app.id === "homebrew" || app.id === "xcode-cli");
+      const remove = el("button", { type: "button", className: `row-x${locked ? " locked" : ""}`, ariaLabel: locked ? `${app.name} is needed for Install with Homebrew` : `Remove ${app.name}`, title: locked ? "Needed while Install with Homebrew is on" : `Remove ${app.name}` }, lucide(locked ? "lock" : "trash-2", 15));
       remove.addEventListener("click", () => removeApp(app.id));
       const open = el("button", { type: "button", className: "row-name", title: `About ${app.name}` }, app.name);
       open.addEventListener("click", () => openModal(app));
-      rows.push(el("div", { className: "row" }, icon(app, "icon icon-sm"), open, remove));
+      // While Install with Homebrew is on, each app Homebrew has says where it comes from; click to switch that one app.
+      let via = null;
+      if (useBrew && app.brew && app.id !== "homebrew" && app.id !== "xcode-cli") {
+        const on = brewsApp(app);
+        via = el("button", { type: "button", className: `row-via${on ? "" : " off"}`, ariaPressed: String(on),
+          title: on ? `Installs with Homebrew (${brewInstall(app)}). Click to download it from its publisher instead` : "Downloads from its publisher. Click to install it with Homebrew instead" },
+          on ? "Homebrew" : "Publisher");
+        via.addEventListener("click", () => {
+          if (on) noBrew.add(app.id); else noBrew.delete(app.id);
+          track("app-brew", { app: app.id, on: !on });
+          update();
+          toast(on ? `${app.name} will download from its publisher` : `${app.name} will install with Homebrew`);
+        });
+      }
+      rows.push(el("div", { className: "row" }, icon(app, "icon icon-sm"), open, ...(via ? [via] : []), remove));
     }
   }
   $("#drawer-list").replaceChildren(...rows);
+}
+
+// The switch at the top of the install list, and what it means for these picks.
+function syncBrewSwitch(picks = catalog.apps.filter((a) => selected.has(a.id))) {
+  const box = $("#drawer-brew");
+  box.hidden = !byId("homebrew");
+  $("#use-brew").checked = useBrew;
+  box.classList.toggle("on", useBrew);
+  const apps = picks.filter((a) => a.id !== "homebrew" && a.id !== "xcode-cli");
+  const note = $("#brew-note");
+  if (!useBrew) {
+    const viaBrew = apps.filter((a) => a.brew).length;
+    note.replaceChildren(viaBrew
+      ? `Off: every app downloads straight from its publisher. Turn it on and Homebrew installs and updates the ${viaBrew === apps.length ? (viaBrew === 1 ? "app" : `${viaBrew} apps`) : `${viaBrew} of ${apps.length} apps`} here that it has.`
+      : "Off: every app downloads straight from its publisher. Turn it on to install apps with Homebrew where it has them.");
+    return;
+  }
+  const viaBrew = apps.filter(brewsApp).length;
+  note.replaceChildren(apps.length
+    ? `${viaBrew} of ${apps.length} app${apps.length === 1 ? "" : "s"} in your list install with Homebrew${viaBrew < apps.length ? "; the rest come from their publisher" : ""}. Click an app's tag to switch it.`
+    : "Apps that have a Homebrew cask will install with Homebrew.");
 }
 
 // The same app can be on the page twice (starter pack and its category), so every copy of a card
@@ -995,7 +1165,8 @@ function renderCommand() {
     t("prompt", "$ "), t("cmd", "curl"), " ", t("flag", "-fsSL"), " ", t("url", `${SITE}/install.sh`), " ",
     t("pipe", "|"), " ", t("cmd", "bash"), " ", t("flag", "-s"), " ", t("flag", "--"),
     ...(dryRun ? [" ", t("dry", "--dry-run")] : []),
-    ...ids().flatMap((id) => [" ", t("id", id)]),
+    ...(useBrew ? [" ", t("flag", "--brew")] : []),
+    ...cmdIds().flatMap((id) => [" ", t("id", id)]),
     " ", t("caret", " "),
   ];
   $("#command").replaceChildren(...parts.map((p) => (typeof p === "string" ? document.createTextNode(p) : p)));
@@ -1026,6 +1197,8 @@ function syncTerm() {
 }
 
 function update() {
+  // An emptied list ends Install with Homebrew, so the next first pick doesn't drag Homebrew back in.
+  if (useBrew && !selected.size) { useBrew = false; document.dispatchEvent(new Event("brewchange")); }
   ensureDeps();
   syncCards();
   syncPack?.();
@@ -1040,14 +1213,15 @@ function update() {
 }
 
 // A downloaded script carries its own catalog rows, so it works offline from this site.
-async function downloadScript() {
-  track("download-script", { apps: selected.size });
+// The script for your list: install.sh with your apps and their catalog rows built in, so it runs offline.
+async function buildScript() {
   const [script, tsv] = await Promise.all(["install.sh", "catalog.tsv"].map((f) => fetch(f).then((r) => r.text())));
   const wanted = new Set(ids());
   const rows = tsv.split("\n").filter((line) => wanted.has(line.split("\t")[0]));
   const embed = [
     "EMBEDDED=1",
-    `DEFAULT_APPS="${ids().join(" ")}"`,
+    `DEFAULT_APPS="${cmdIds().join(" ")}"`,
+    `DEFAULT_BREW=${useBrew ? 1 : 0}`,
     "embedded_catalog() {",
     "cat <<'__GETEM_CATALOG__'",
     ...rows,
@@ -1057,9 +1231,28 @@ async function downloadScript() {
   const out = script
     .replace(/(# @@EMBED_START@@[^\n]*\n)[\s\S]*?(\n# @@EMBED_END@@)/, (_, start, end) => `${start}${embed}${end}`)
     .replaceAll("__SITE_URL__", SITE);
+  return out;
+}
+async function downloadScript() {
+  track("download-script", { apps: selected.size });
+  const out = await buildScript();
   const url = URL.createObjectURL(new Blob([out], { type: "text/x-shellscript" }));
   el("a", { href: url, download: "getem-install.sh" }).click();
   setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+// Read the exact script before running it: the same file Download .sh saves, with comments dimmed so the commands stand out.
+async function previewScript() {
+  track("preview-script", { apps: selected.size });
+  const dlg = $("#script-view");
+  const out = await buildScript();
+  const lines = out.replace(/\n$/, "").split("\n");
+  $("#script-meta").textContent = `${selected.size} app${selected.size === 1 ? "" : "s"} built in · ${lines.length} lines · nothing runs until you paste it into Terminal`;
+  $("#script-code").replaceChildren(...lines.map((line) => el("span", { className: /^\s*#/.test(line) ? "sh-line sh-comment" : "sh-line" }, line || " ")));
+  $("#script-copy").onclick = async () => { await navigator.clipboard.writeText(out); toast("Script copied"); };
+  $("#script-download").onclick = () => { dlg.close(); downloadScript(); };
+  dlg.showModal();
+  $("#script-code").parentElement.scrollTop = 0;
 }
 
 async function copyLink() {
@@ -1255,7 +1448,7 @@ function setupTheme() {
 
 // Words in the FAQ that do what they say: open an app, show a pack, copy a command, toggle --dry-run.
 // The ones that need a list ("Copy link", "--dry-run", "Download .sh") only work once you've picked something.
-const FAQ_ICON = { "ask-ai": "bot", app: "square-plus", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", profile: "funnel" };
+const FAQ_ICON = { "ask-ai": "bot", app: "square-plus", "dry-run": "flask-conical", "copy-update": "copy", "copy-link": "link", download: "download", preview: "file-code", profile: "funnel", "use-brew": "package" };
 function setupFaqActions() {
   for (const b of document.querySelectorAll(".faq-act")) {
     const act = b.dataset.act;
@@ -1276,7 +1469,9 @@ function setupFaqActions() {
       else if (act === "copy-update") { await navigator.clipboard.writeText($("#update-cmd").textContent); toast("Update command copied"); }
       else if (act === "copy-link") { await copyLink(); toast("Link to your install list copied"); }
       else if (act === "download") downloadScript();
+      else if (act === "preview") previewScript();
       else if (act === "ask-ai") copyAiPrompt();
+      else if (act === "use-brew") setBrew(!useBrew);
       else if (act === "dry-run") { dryRun = !dryRun; syncDry(); renderCommand(); toast(dryRun ? "--dry-run is on: the command only shows what it would do" : "--dry-run is off"); }
     });
   }
@@ -1284,6 +1479,12 @@ function setupFaqActions() {
 }
 function syncFaqActions() {
   const has = selected.size > 0;
+  // "Install with Homebrew" in the FAQ is the same switch as the one in the install list, and says which way it'll flip.
+  for (const b of document.querySelectorAll('.faq-act[data-act="use-brew"]')) {
+    b.firstChild.textContent = useBrew ? "Install with Homebrew is on (turn off)" : "Install with Homebrew";
+    b.setAttribute("aria-pressed", String(useBrew));
+    b.title = useBrew ? "Go back to downloading every app from its publisher" : "Install the apps in your list that Homebrew has with Homebrew";
+  }
   for (const b of document.querySelectorAll(".faq-act[data-needs-list]")) b.setAttribute("aria-disabled", String(!has));
 }
 
@@ -1324,6 +1525,7 @@ async function main() {
   $("#side-toggle").addEventListener("click", () => { sidebarShown = !sidebarShown; store.set("sidebarShown", sidebarShown ? "1" : "0"); applySidebar(); });
   renderSideToggle();
   $("#update-cmd").textContent = `curl -fsSL ${SITE}/install.sh | bash -s -- --update`;
+  $("#use-brew").addEventListener("change", (e) => setBrew(e.target.checked));
   $("#generated").textContent = `Catalog updated ${new Date(catalog.generated).toLocaleDateString()}.`;
   // One answer open at a time (also for browsers without <details name>).
   for (const d of document.querySelectorAll(".faq-item")) {
@@ -1343,7 +1545,7 @@ async function main() {
   addEventListener("resize", syncTerm);
   $("#count").addEventListener("click", () => { pickedOpen = !pickedOpen; update(); });
   $("#drawer-close").addEventListener("click", () => { pickedOpen = false; update(); });
-  $("#drawer-clear").addEventListener("click", () => { selected.clear(); pickedOpen = false; render(); update(); });
+  $("#drawer-clear").addEventListener("click", () => { selected.clear(); noBrew.clear(); useBrew = false; document.dispatchEvent(new Event("brewchange")); pickedOpen = false; render(); update(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && pickedOpen && !document.querySelector("dialog[open]")) { pickedOpen = false; update(); } });
   // A click anywhere outside the list and the folder closes it.
   document.addEventListener("click", (e) => {
@@ -1375,8 +1577,9 @@ async function main() {
     openDropdown(btn, [
       { value: "copy", text: "Copy command", icon: "copy", hint: "Paste it into Terminal" },
       { value: "download", text: "Download .sh", icon: "download", hint: "A script with your apps built in; works offline" },
+      { value: "preview", text: "Preview script", icon: "file-code", hint: "Read the exact script for your list before you run it" },
       { value: "ask-ai", text: "Not feeling safe? Ask your AI", icon: "bot", hint: "Copies the command with a prompt: paste it into ChatGPT, Claude or any assistant and let it check it for you" },
-    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadScript(); else copyAiPrompt(); });
+    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadScript(); else if (v === "preview") previewScript(); else copyAiPrompt(); });
   });
   // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
   // on different elements is delivered to their common parent (the dialog itself), so without this a press on

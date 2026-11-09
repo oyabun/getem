@@ -19,8 +19,8 @@
   <meta property="og:description" content="A curated list of Mac apps. Pick what you need, or start from a pack for your role, and get one Terminal command that installs it all.">
   <meta property="og:image" content="img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="c9e2712f-9937-41af-bb24-9b1c7e4b3c4e" data-domains="getem.sh"></script>
-  <link rel="stylesheet" href="style.css?v=2befadc5df">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="c9e2712f-9937-41af-bb24-9b1c7e4b3c4e" data-domains="getem.sh" data-exclude-hash="true"></script>
+  <link rel="stylesheet" href="style.css?v=a63d81ca3a">
 </head>
 <body>
   <header class="top">
@@ -81,11 +81,7 @@
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Do I need Homebrew?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>No. The script downloads each app straight from its publisher. Homebrew is optional: apps that have a cask also show a <code>brew install</code> line in their details, and a few things (like some command-line tools) can add Homebrew to your install list for you.</p>
-      </details>
-      <details class="faq-item" name="faq">
-        <summary><span>How do you check the downloads?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>Every file is checked against a SHA-256 checksum before it is installed, and a mismatch stops the install. The checksum comes from the Homebrew Cask API or the publisher's release page. When a publisher doesn't list one, it is computed when the catalog is built and pinned, which catches later tampering or corruption but trusts that first download.</p>
+        <p>No. Every app downloads straight from its publisher, and Get'Em never runs Homebrew unless you ask it to. If you already use Homebrew, it's never reinstalled or changed, and apps it already manages are left to it. Rather have Homebrew manage your apps? Turn on <button type="button" class="faq-act" data-act="use-brew">Install with Homebrew</button>.</p>
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Why does it ask for my password?</span><span class="faq-plus" aria-hidden="true"></span></summary>
@@ -93,19 +89,11 @@
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Can I see what it will do first?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>Yes. Turn on the dry run under the command (or add <button type="button" class="faq-act" data-act="dry-run" data-needs-list><code>--dry-run</code></button>) and it only prints what it would download and install.</p>
-      </details>
-      <details class="faq-item" name="faq">
-        <summary><span>Does anything leave my Mac?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>The page is static: no account, nothing to sign up for. The script talks only to this site, for the catalog, and to each app's publisher, for the download.</p>
+        <p>Yes. Turn on the dry run under the command (or add <button type="button" class="faq-act" data-act="dry-run" data-needs-list><code>--dry-run</code></button>) and it only prints what it would download and install. You can also <button type="button" class="faq-act" data-act="preview" data-needs-list>preview the script</button> for your list and read every line before running it.</p>
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Do you track me?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>Only anonymous counts. This page uses <a href="https://umami.is" target="_blank" rel="noopener">Umami</a> to see how many people visit and which buttons get used, like copying the command or picking a pack. It sets no cookies, stores nothing on your device and doesn't follow you to other sites. Nothing is collected that identifies you, and the install script itself sends nothing.</p>
-      </details>
-      <details class="faq-item" name="faq">
-        <summary><span>Which Macs does it support?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>Intel and Apple Silicon. Open an app's details to see which chips it runs on and the macOS version it needs, shown on its preview. Apple Silicon-only apps are skipped on an Intel Mac.</p>
+        <p>No. There's no account and no cookies. The page counts visits and button clicks anonymously with <a href="https://umami.is" target="_blank" rel="noopener">Umami</a>, and nothing it collects identifies you. The install script sends nothing about you: it only talks to this site, for the catalog, and to each app's publisher, for the download. With Install with Homebrew on, Homebrew also fetches from its own servers, with its analytics turned off. <a href="privacy.html">Privacy details</a>.</p>
       </details>
       <details class="faq-item" name="faq">
         <summary><span>How do I update everything later?</span><span class="faq-plus" aria-hidden="true"></span></summary>
@@ -113,7 +101,7 @@
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Can I share my install list?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>Yes. <button type="button" class="faq-act" data-act="copy-link" data-needs-list>Copy link</button> in the bottom bar gives a short address that restores the same selection, which is handy for a teammate's new Mac. <button type="button" class="faq-act" data-act="download" data-needs-list>Download .sh</button> saves a script that also works offline.</p>
+        <p>Yes. <button type="button" class="faq-act" data-act="copy-link" data-needs-list>Copy a link to your list</button> and send it: opening it brings back the same picks, handy for a teammate's new Mac. Or <button type="button" class="faq-act" data-act="download" data-needs-list>download it as a .sh script</button>, which also works offline.</p>
       </details>
       <details class="faq-item" name="faq">
         <summary><span>How do I remove an app?</span><span class="faq-plus" aria-hidden="true"></span></summary>
@@ -123,7 +111,7 @@
   </section>
 
   <footer class="wrap foot muted">
-    <p>Get'Em! · A curated list, built to get a Mac ready quickly. <span id="generated"></span></p>
+    <p>Get'Em! · A curated list, built to get a Mac ready quickly. <span id="generated"></span> · <a href="privacy.html">Privacy</a></p>
   </footer>
 
   <div class="bar" id="bar" hidden>
@@ -183,6 +171,14 @@
       <button type="button" class="link" id="drawer-clear">Clear all</button>
       <button type="button" class="drawer-close" id="drawer-close" aria-label="Close list">×</button>
     </header>
+    <div class="drawer-brew" id="drawer-brew">
+      <label class="brew-switch">
+        <input type="checkbox" id="use-brew" role="switch">
+        <span class="brew-switch-track" aria-hidden="true"></span>
+        <span class="brew-switch-label">Install with Homebrew</span>
+      </label>
+      <p class="brew-note muted" id="brew-note"></p>
+    </div>
     <div class="drawer-list" id="drawer-list"></div>
   </aside>
 
@@ -194,8 +190,22 @@
       <button type="button" id="confirm-remove">Remove</button>
     </div>
   </dialog>
+  <dialog id="script-view" class="script-view" aria-labelledby="script-title">
+    <header class="script-head">
+      <div>
+        <h2 id="script-title">Your install script</h2>
+        <p id="script-meta" class="muted"></p>
+      </div>
+      <button type="button" class="modal-close" aria-label="Close" onclick="this.closest('dialog').close()">×</button>
+    </header>
+    <pre class="script-code"><code id="script-code"></code></pre>
+    <div class="confirm-actions">
+      <button type="button" id="script-copy">Copy script</button>
+      <button type="button" id="script-download" class="primary">Download .sh</button>
+    </div>
+  </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="app.js?v=b63fe177c2" type="module"></script>
+  <script src="app.js?v=bb9047f4cb" type="module"></script>
 </body>
 </html>
