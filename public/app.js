@@ -4,6 +4,9 @@ const $ = (sel) => document.querySelector(sel);
 const rawHash = location.hash.slice(1);
 const selected = new Set(rawHash.startsWith("s=") ? [] : rawHash.split(",").filter(Boolean));
 let catalog;
+// Anonymous usage counts through Umami (see "Do you track me?" in the FAQ). When the script is blocked or still loading,
+// the event is simply dropped.
+const track = (name, data) => { try { window.umami?.track(name, data); } catch {} };
 const store = {
   get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
@@ -464,6 +467,7 @@ function setProfile(slug) {
   setMenu(false);
   activeProfile = slug;
   store.set("profile", activeProfile);
+  if (slug) track("pick-pack", { pack: slug });
   if (activeProfile) { activeCat = "all"; store.set("cat", "all"); }
   render();
 }
@@ -493,6 +497,7 @@ function packSection(q) {
   };
   btn.addEventListener("click", () => {
     const add = toAdd();
+    track(add.length ? "add-pack" : "remove-pack", { pack: activeProfile, apps: add.length });
     if (add.length) for (const id of add) selected.add(idOf(id));
     else for (const s of slots) for (const id of s.apps) selected.delete(idOf(id));
     update();
@@ -1036,6 +1041,7 @@ function update() {
 
 // A downloaded script carries its own catalog rows, so it works offline from this site.
 async function downloadScript() {
+  track("download-script", { apps: selected.size });
   const [script, tsv] = await Promise.all(["install.sh", "catalog.tsv"].map((f) => fetch(f).then((r) => r.text())));
   const wanted = new Set(ids());
   const rows = tsv.split("\n").filter((line) => wanted.has(line.split("\t")[0]));
@@ -1057,6 +1063,7 @@ async function downloadScript() {
 }
 
 async function copyLink() {
+  track("copy-link", { apps: selected.size });
   await navigator.clipboard.writeText(`${location.origin}${location.pathname}#s=${encodeSelection()}`);
   const btn = $("#share");
   const label = btn.querySelector(".btn-label");
@@ -1077,11 +1084,13 @@ const aiPrompt = () => [
   `The script it runs is public: ${SITE}/install.sh`,
 ].join("\n");
 async function copyAiPrompt() {
+  track("ask-ai", { apps: selected.size });
   await navigator.clipboard.writeText(aiPrompt());
   toast("Copied! Paste it into ChatGPT, Claude or any AI assistant and let it check the command for you");
 }
 
 async function copyCommand() {
+  track("copy-command", { apps: selected.size, dryRun });
   await navigator.clipboard.writeText(command());
   const btn = $("#copy");
   const label = btn.querySelector(".btn-label");
