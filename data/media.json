@@ -2908,10 +2908,10 @@
   ]
  },
  "hermes-desktop": {
-  "icon": null,
-  "iconSource": null,
+  "icon": "https://raw.githubusercontent.com/NousResearch/hermes-agent/cd582ed706cec677572d4da6f1c0dbdc5ca8c410/apps/desktop/assets/icon-mac.png",
+  "iconSource": "manual",
   "screenshots": [
-   "https://web-assets.nousresearch.com/marketing/2436f67acedddfea48028c5c0ee484a76833e5f5/assets/hermes-agent/og-image.png"
+   "https://web-assets.nousresearch.com/marketing/efcd9b62d7bee4c15c650dc727c43b285b382213/assets/hermes-agent/og-image.png"
   ],
   "sources": [
    "og"

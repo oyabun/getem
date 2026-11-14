@@ -20,7 +20,7 @@
   <meta property="og:image" content="img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <script defer src="https://cloud.umami.is/script.js" data-website-id="c9e2712f-9937-41af-bb24-9b1c7e4b3c4e" data-domains="getem.sh" data-exclude-hash="true"></script>
-  <link rel="stylesheet" href="style.css?v=a63d81ca3a">
+  <link rel="stylesheet" href="style.css?v=b8ab41bc5b">
 </head>
 <body>
   <header class="top">
@@ -55,6 +55,7 @@
         <div class="filters" id="filters" role="group" aria-label="Filters"></div>
       </div>
     </div>
+    <aside class="wrap toolup" id="toolup" aria-label="toolup.sh, for your AI agents" hidden><div class="toolup-in"></div></aside>
   </div>
 
   <div class="wrap layout">
@@ -72,6 +73,14 @@
         <p>A hand-picked list of Mac apps. Pick what you want (or start from a pack for your role) and it writes one Terminal command that downloads and installs everything, so a new Mac is ready in minutes.</p>
       </details>
       <details class="faq-item" name="faq">
+        <summary><span>Isn't this like Ninite or macapps.link?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Same idea, and both deserve the credit. <a href="https://ninite.com/" target="_blank" rel="noopener">Ninite</a> does it for Windows: tick your apps and get one installer. <a href="https://macapps.link/" target="_blank" rel="noopener">macapps.link</a> brought it to the Mac as a single Terminal command. Get'Em follows the same path, with a hand-picked catalog that's rebuilt regularly, packs for your role, checksum checks and a dry run so you can see what it will do first.</p>
+      </details>
+      <details class="faq-item" name="faq">
+        <summary><span>Why do some apps show up more than once?</span><span class="faq-plus" aria-hidden="true"></span></summary>
+        <p>Some apps do more than one job, so they're listed in every category they fit: <button type="button" class="faq-act" data-act="app" data-app="raycast">Raycast</button>, for one, is a launcher, a clipboard manager and a window manager. It's still one app: pick it anywhere and it's ticked everywhere, counted once in your list and installed once. Already have it on your Mac? It isn't installed twice: the command skips apps that are already up to date and leaves the ones Homebrew manages to Homebrew.</p>
+      </details>
+      <details class="faq-item" name="faq">
         <summary><span>Pasting a command into Terminal looks scary. Is it safe?</span><span class="faq-plus" aria-hidden="true"></span></summary>
         <p>Being careful with commands from the internet is a good habit, so here's what this one does. It runs a <a href="install.sh" target="_blank" rel="noopener">public script</a> you can read first. The script downloads each app straight from its publisher and checks it against the publisher's SHA-256 checksum wherever one is published. Add <code>--dry-run</code> and it only shows what it would do, without installing anything. Still not sure? <button type="button" class="faq-act" data-act="ask-ai">Ask your AI assistant</button>: this copies your command with a short prompt, ready to paste into ChatGPT, Claude or any assistant, so it can explain the command before you run it.</p>
       </details>
@@ -81,7 +90,7 @@
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Do I need Homebrew?</span><span class="faq-plus" aria-hidden="true"></span></summary>
-        <p>No. Every app downloads straight from its publisher, and Get'Em never runs Homebrew unless you ask it to. If you already use Homebrew, it's never reinstalled or changed, and apps it already manages are left to it. Rather have Homebrew manage your apps? Turn on <button type="button" class="faq-act" data-act="use-brew">Install with Homebrew</button>.</p>
+        <p>No. Every app downloads straight from its publisher, and Get'Em never runs Homebrew unless you ask it to. If you already use Homebrew, it's never reinstalled or changed, and apps it already manages are left to it. Rather have Homebrew manage your apps? Turn on <button type="button" class="faq-act" data-act="use-brew">Install with Homebrew</button>. You can still choose app by app: in your install list, each app Homebrew has shows <strong>Homebrew</strong> or <strong>Publisher</strong>, and a click switches it.</p>
       </details>
       <details class="faq-item" name="faq">
         <summary><span>Why does it ask for my password?</span><span class="faq-plus" aria-hidden="true"></span></summary>
@@ -146,10 +155,9 @@
       <div class="bar-actions">
         <div class="split" role="group" aria-label="Get your install command">
           <button type="button" id="copy" class="primary"><span class="btn-label">Copy<span class="long"> command</span></span></button>
-          <button type="button" id="get-more" class="primary split-more" aria-label="More ways to get it: download the script, or check it with your AI first" title="More: download .sh, or check it with your AI" aria-haspopup="listbox" aria-expanded="false"></button>
+          <button type="button" id="get-more" class="primary split-more" aria-label="More: copy a link to your list, download the script, preview it, or check it with your AI" title="More: copy link, download .sh, preview, ask your AI" aria-haspopup="listbox" aria-expanded="false"></button>
         </div>
         <button type="button" id="term-show" class="term-show" aria-label="Show the command" aria-expanded="false" aria-controls="term"></button>
-        <button type="button" id="share" title="Copy a link that restores exactly this selection"><span class="btn-label">Copy link</span></button>
       </div>
       <p class="hint muted"><span id="hint-lead">Paste into Terminal. Click</span> <button type="button" class="dry" id="dry-run" aria-pressed="false" title="Add --dry-run to the command">--dry-run</button> <span id="hint-tail">to add it and preview first.</span><span id="admin-hint" hidden> Some picks use an installer package and will ask for your admin password.</span></p>
     </div>
@@ -206,6 +214,6 @@
   </dialog>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-  <script src="app.js?v=bb9047f4cb" type="module"></script>
+  <script src="app.js?v=951cb029ff" type="module"></script>
 </body>
 </html>

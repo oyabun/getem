@@ -297,6 +297,24 @@ if (shots.length) { click(shots[0]); check("lightbox opens", $("#lightbox").hasA
   click(act);
   check("taking the offer turns Install with Homebrew on", /--brew/.test($("#command").textContent));
   check("and confirms what happens to the list, with no second step", /will be installed and kept up to date by Homebrew/.test($("#toast").textContent) && !$("#toast .toast-act") && !/--update/.test($("#command").textContent), $("#toast").textContent);
+  // an AI agent in the list brings up the toolup.sh banner under the top bar, until it's closed
+  {
+    check("no toolup.sh banner without an AI agent", $("#toolup").hidden);
+    click(find("Claude", "claude").querySelector(".check")); clearSearch();
+    const box = $("#toolup");
+    check("adding Claude shows the toolup.sh banner in the sticky bar", !box.hidden && !!box.closest("#topbar") && /Claude/.test(box.textContent) && /Skills and MCP servers/.test(box.textContent), box.textContent);
+    check("it links to toolup.sh in a new tab", $("#toolup .toolup-cta")?.getAttribute("href") === "https://toolup.sh/" && $("#toolup .toolup-cta").target === "_blank");
+    click(find("ChatGPT", "chatgpt").querySelector(".check")); clearSearch();
+    check("it names every agent in the list", /Claude and ChatGPT/.test($("#toolup .toolup-title").textContent), $("#toolup .toolup-title").textContent);
+    click(find("Claude", "claude").querySelector(".check")); click(find("ChatGPT", "chatgpt").querySelector(".check")); clearSearch();
+    check("it goes away when the agents leave the list", $("#toolup").hidden);
+    click(find("Antigravity", "antigravity").querySelector(".check")); clearSearch();
+    click($("#toolup .toolup-close"));
+    check("closing it hides it, remembered", $("#toolup").hidden && window.localStorage.getItem("toolup-banner") === "closed");
+    click(find("Claude", "claude").querySelector(".check")); clearSearch();
+    check("and it stays closed for the next agent", $("#toolup").hidden);
+    click(find("Claude", "claude").querySelector(".check")); click(find("Antigravity", "antigravity").querySelector(".check")); clearSearch();
+  }
   $("#use-brew").checked = false; $("#use-brew").dispatchEvent(new window.Event("change"));
   click(find("Homebrew", "homebrew")); clearSearch();
   const offer = $("#modal .brew-offer input[role=switch]");
@@ -428,14 +446,14 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   }
   $("#search").value = ""; $("#search").dispatchEvent(new window.Event("input"));
   let copiedLink = ""; window.navigator.clipboard = { writeText: async (t) => { copiedLink = t; } };
-  click($("#share")); await new Promise((r) => setTimeout(r, 20));
+  click($("#get-more")); click([...$$(".dd-opt")].find((o) => /Copy link/.test(o.textContent))); await new Promise((r) => setTimeout(r, 20));
   check("Copy link gives a short #s= permalink", /^http:\/\/localhost:3000\/#s=[A-Za-z0-9_-]+$/.test(copiedLink) && copiedLink.length < 110, `${copiedLink.length} chars: ${copiedLink}`);
   check("the page address matches the link", window.location.hash === copiedLink.slice(copiedLink.indexOf("#")));
   const here = picked({ w: window, q: $, qa: $$ });
   const page2 = await bootAt(copiedLink);
   check("opening the link restores exactly the same apps", picked(page2) === here && here.split("|").length >= 6, here.split("|").length + " apps");
   check("it says where they came from", /shared link/.test(page2.q("#toast").textContent), page2.q("#toast").textContent);
-  page2.q("#share").dispatchEvent(new page2.w.MouseEvent("click", { bubbles: true })); await new Promise((r) => setTimeout(r, 20));
+  page2.q('.faq-act[data-act="copy-link"]').dispatchEvent(new page2.w.MouseEvent("click", { bubbles: true })); await new Promise((r) => setTimeout(r, 20));
   check("the same selection always gives the same code", page2.copied() === copiedLink);
   const page3 = await bootAt("http://localhost:3000/#vlc,iina,keka");
   check("a first visit starts with the sidebar hidden, packs and categories in the toolbar", page3.w.document.body.dataset.sidebar === "hidden" && page3.qa("#filters .tool-field").length === 2);
@@ -477,7 +495,8 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   check("Download .sh is no longer a separate button", !$("#download") && !!$(".split #copy") && !!$(".split #get-more"));
   click($("#get-more"));
   const opts = $$(".dd-menu .dd-opt-name").map((n) => n.textContent);
-  check("the arrow offers Copy command, Download .sh, Preview script and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Download .sh|Preview script|Not feeling safe? Ask your AI", opts.join("|"));
+  check("the arrow offers Copy command, Copy link, Download .sh, Preview script and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Copy link|Download .sh|Preview script|Not feeling safe? Ask your AI", opts.join("|"));
+  check("Copy link is no longer a separate button", !$("#share"));
   let clip = ""; window.navigator.clipboard = { writeText: async (t) => { clip = t; } };
   click($$(".dd-menu .dd-opt").find((o) => /Ask your AI/.test(o.textContent)));
   await new Promise((r) => setTimeout(r, 20));
@@ -531,11 +550,11 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
 // ---- versions and theme ----
 {
   const root = window.document.documentElement;
-  check("the theme switcher has system, light and dark", $$(".theme-switch button").length === 3 && $(".theme-switch button[aria-pressed=true]")?.dataset.theme === "system");
-  click($(".theme-switch button[data-theme=dark]"));
-  check("choosing dark sets data-theme and is remembered", root.dataset.theme === "dark" && window.localStorage.getItem("theme") === "dark");
-  click($(".theme-switch button[data-theme=system]"));
-  check("system removes the override", !root.hasAttribute("data-theme"));
+  check("the theme switcher is one button, following the system (light here) at first", $$(".theme-switch button").length === 1 && !root.hasAttribute("data-theme") && /dark mode/i.test($(".theme-switch button").getAttribute("aria-label")));
+  click($(".theme-switch button"));
+  check("clicking it switches to dark, remembered", root.dataset.theme === "dark" && window.localStorage.getItem("theme") === "dark" && /light mode/i.test($(".theme-switch button").getAttribute("aria-label")));
+  click($(".theme-switch button"));
+  check("clicking again goes back to following the system", !root.hasAttribute("data-theme") && !window.localStorage.getItem("theme"));
   const names = $$("#catalog .app .app-name").map((n) => n.textContent);
   check("Java, Node.js, Python and Go are one card each", ["Java JDK", "Node.js", "Python", "Go"].every((n) => names.filter((x) => x === n).length === 1), names.filter((n) => /Java|Node|Python|^Go/.test(n)).join("|"));
   check("other versions are not listed as their own cards", !names.some((n) => /^Java JDK \d|Node.js \d|Python 3\.\d/.test(n)));

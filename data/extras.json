@@ -731,7 +731,7 @@
     "category": "ai",
     "homepage": "https://hermes-agent.nousresearch.com/desktop",
     "repo": "NousResearch/hermes-agent",
-    "icon": "https://github.com/NousResearch.png?size=256"
+    "icon": "https://raw.githubusercontent.com/NousResearch/hermes-agent/cd582ed706cec677572d4da6f1c0dbdc5ca8c410/apps/desktop/assets/icon-mac.png"
   },
   {
     "cask": "google-chrome",
@@ -1535,5 +1535,206 @@
     "category": "browsers",
     "homepage": "https://librewolf.net/",
     "icon": "https://github.com/librewolf-community.png?size=256"
+  },
+  {
+    "cask": "cyberduck",
+    "name": "Cyberduck",
+    "description": "File transfers over SFTP, FTP, WebDAV and cloud storage (S3, Google Drive, Dropbox ...). Free, open source",
+    "category": "files",
+    "homepage": "https://cyberduck.io/",
+    "icon": "https://github.com/iterate-ch.png?size=256"
+  },
+  {
+    "cask": "istat-menus",
+    "name": "iStat Menus",
+    "description": "Detailed system stats in the menu bar: CPU, GPU, memory, network, disks, sensors and battery",
+    "category": "menu-bar",
+    "homepage": "https://bjango.com/mac/istatmenus/",
+    "icon": "https://github.com/bjango.png?size=256",
+    "paid": true
+  },
+  {
+    "cask": "macshot",
+    "name": "macshot",
+    "description": "Screenshots and screen recordings with annotation, blur, scrolling capture, OCR and uploads. Free, open source",
+    "category": "screen-capture",
+    "homepage": "https://macshot.io/",
+    "icon": "https://github.com/sw33tLie.png?size=256"
+  },
+  {
+    "cask": "opendisk",
+    "name": "OpenDisk",
+    "description": "See what's taking up your disk space and clear it out. Open source",
+    "category": "system-utilities",
+    "homepage": "https://opendisk.app/",
+    "icon": "https://github.com/137137137.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "lihaoyun6/QuickRecorder",
+      "asset": "QuickRecorder_v*.dmg",
+      "app": "QuickRecorder.app"
+    },
+    "id": "quickrecorder",
+    "name": "QuickRecorder",
+    "description": "A lightweight screen recorder: screen, window, app or camera, with system audio. Free, open source",
+    "category": "screen-capture",
+    "homepage": "https://lihaoyun6.github.io/quickrecorder/",
+    "icon": "https://github.com/lihaoyun6.png?size=256"
+  },
+  {
+    "cask": "only-switch",
+    "name": "OnlySwitch",
+    "description": "Quick toggles in the menu bar: hide the notch, dark mode, hidden files, keep awake and dozens more. Open source",
+    "category": "menu-bar",
+    "homepage": "https://github.com/jacklandrin/OnlySwitch",
+    "icon": "https://github.com/jacklandrin.png?size=256"
+  },
+  {
+    "cask": "eul",
+    "name": "eul",
+    "description": "CPU, memory, battery, network and disk stats in the menu bar. Open source",
+    "category": "menu-bar",
+    "homepage": "https://github.com/gao-sun/eul",
+    "icon": "https://github.com/gao-sun.png?size=256"
+  },
+  {
+    "cask": "codexbar",
+    "name": "CodexBar",
+    "description": "Keep an eye on your Codex, Claude and other coding-agent limits and usage from the menu bar. Open source",
+    "category": "menu-bar",
+    "homepage": "https://codexbar.app/",
+    "icon": "https://github.com/steipete.png?size=256"
+  },
+  {
+    "cask": "recordly",
+    "name": "Recordly",
+    "description": "Screen recorder for creators, with automatic zooms and cursor effects. Open source",
+    "category": "screen-capture",
+    "homepage": "https://github.com/webadderallorg/Recordly",
+    "icon": "https://github.com/webadderallorg.png?size=256"
+  },
+  {
+    "cask": "openchamber",
+    "name": "OpenChamber",
+    "description": "A desktop app for the OpenCode AI coding agent. Open source",
+    "category": "ai",
+    "homepage": "https://openchamber.dev/",
+    "icon": "https://github.com/openchamber.png?size=256"
+  },
+  {
+    "cask": "cog-app",
+    "name": "Cog",
+    "description": "A lightweight music player that plays almost any format, including chiptunes and lossless. Free, open source",
+    "category": "audio",
+    "homepage": "https://cog.losno.co/",
+    "icon": "https://github.com/losnoco.png?size=256"
+  },
+  {
+    "cask": "purge",
+    "name": "Purge",
+    "description": "Clears caches and junk files by moving them to the Trash, so nothing is lost for good",
+    "category": "system-utilities",
+    "homepage": "https://purgemac.com/",
+    "icon": "https://github.com/jithin-sabu.png?size=256"
+  },
+  {
+    "cask": "herdr-app",
+    "name": "Herdr",
+    "description": "A desktop app for your terminals and coding agents, side by side",
+    "category": "terminal",
+    "homepage": "https://herdr.dev/"
+  },
+  {
+    "cask": "easydmg",
+    "name": "EasyDMG",
+    "description": "Installs apps from .dmg files in one click: opens, copies to Applications and cleans up",
+    "category": "system-utilities",
+    "homepage": "https://easydmg.app/",
+    "icon": "https://github.com/jeff-schumann.png?size=256"
+  },
+  {
+    "github": {
+      "repo": "darktable-org/darktable",
+      "asset": "darktable-*-arm64.dmg",
+      "app": "darktable.app",
+      "appleSiliconOnly": true
+    },
+    "id": "darktable",
+    "name": "darktable",
+    "description": "Raw photo developer and photography workflow, an open-source Lightroom alternative. Not notarized: first launch needs right-click, Open",
+    "category": "design",
+    "homepage": "https://www.darktable.org/",
+    "icon": "https://github.com/darktable-org.png?size=256",
+    "minMacos": "14"
+  },
+  {
+    "github": {
+      "repo": "fontforge/fontforge",
+      "asset": "FontForge-*-MacOS.app.dmg",
+      "app": "FontForge.app"
+    },
+    "id": "fontforge",
+    "name": "FontForge",
+    "description": "Create and edit fonts: outline and bitmap, with conversion between formats. Open source. Not notarized: first launch needs right-click, Open",
+    "category": "design",
+    "homepage": "https://fontforge.org/",
+    "icon": "https://github.com/fontforge.png?size=256",
+    "minMacos": "13"
+  },
+  {
+    "github": {
+      "repo": "DhaliwalX/fotufilm-engine",
+      "asset": "Fotufilm-macOS.zip",
+      "app": "Fotufilm.app",
+      "appleSiliconOnly": true
+    },
+    "id": "fotufilm",
+    "name": "Fotufilm",
+    "description": "Film simulation for your photos, modelled on each film stock's real spectral data. Open source",
+    "category": "design",
+    "homepage": "https://fotufilm.com/",
+    "icon": "https://github.com/DhaliwalX.png?size=256",
+    "minMacos": "14"
+  },
+  {
+    "direct": {
+      "url": "https://kittylauncher.com/downloads/Kitty-Launcher-2.1.3.zip",
+      "app": "Kitty Launcher 2.app",
+      "version": "2.1.3",
+      "universal": true
+    },
+    "id": "kitty-launcher",
+    "name": "Kitty Launcher",
+    "description": "Open a whole workspace with one shortcut (apps, files, servers, sound setup) and close it all when you're done. Free",
+    "category": "launchers",
+    "homepage": "https://kittylauncher.com/",
+    "minMacos": "14"
+  },
+  {
+    "direct": {
+      "url": "https://assets.prequel.sh/desktop/0.14.1/Prequel-0.14.1-arm64.dmg",
+      "app": "Prequel.app",
+      "version": "0.14.1"
+    },
+    "id": "prequel",
+    "name": "Prequel",
+    "description": "A screen recorder that does the editing for you: zooms on every click, your camera framed, a background behind it. Free plan, paid plans",
+    "category": "screen-capture",
+    "homepage": "https://prequel.sh/",
+    "paid": true
+  },
+  {
+    "direct": {
+      "url": "https://assets.genmotion.dev/desktop/0.6.2/GenMotion-0.6.2-arm64.dmg",
+      "app": "GenMotion.app",
+      "version": "0.6.2"
+    },
+    "id": "genmotion",
+    "name": "GenMotion",
+    "description": "An AI video editor you drive in plain language (with Claude Code): it animates the scenes, previews them and exports MP4. Free plan, paid plans",
+    "category": "video",
+    "homepage": "https://genmotion.dev/",
+    "paid": true
   }
 ]

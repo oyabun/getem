@@ -6,8 +6,11 @@
  "https://www.betterbird.eu/downloads/MacDiskImage/betterbird-153.6.0esr-bb12.en-US.mac.dmg": "c9bc8a7af549205ea4299dc614ce22905347cc10399cd605be7257efa6a8af84",
  "https://downloads.aieltokhy.com/PrivacyStage.dmg": "c7bb4c492f866b772aa904c6fca4fc6743f37353711905c5848dd3a0866db282",
  "https://www.python.org/ftp/python/3.15.2/python-3.15.2-macos11.pkg": "2c6104475535b720b45774c68b0dfc9fcca2235353cf9ff81e05488f89845396",
- "https://autoupdate.desktop.anaconda.com/kilo-desktop/latest/latest/macos/arm64/Kilo.dmg": "69a4c170eedd5bf390aee7fbc5d4178f66651f61dc9f131e3065e1a478b2bcd8",
+ "https://autoupdate.desktop.anaconda.com/kilo-desktop/latest/latest/macos/arm64/Kilo.dmg": "cf24f448004a7afea788d538074e97b7e077d5dc72e1c5cb5f83fc067d49c03e",
  "https://www.python.org/ftp/python/3.14.10/python-3.14.10-macos11.pkg": "286c7018aa2730f6747ca433dccdc2b31be45f078a9ea0ffa44d5f06368fd2d7",
  "https://www.python.org/ftp/python/3.13.17/python-3.13.17-macos11.pkg": "3053592af66128269efab37fe7851a4894920b27c442aeec99ce4d34d17c07e3",
- "https://www.python.org/ftp/python/3.12.10/python-3.12.10-macos11.pkg": "8373e58da4ea146b3eb1c1f9834f19a319440b6b679b06050b1f9ee3237aa8e4"
+ "https://www.python.org/ftp/python/3.12.10/python-3.12.10-macos11.pkg": "8373e58da4ea146b3eb1c1f9834f19a319440b6b679b06050b1f9ee3237aa8e4",
+ "https://kittylauncher.com/downloads/Kitty-Launcher-2.1.3.zip": "6d5ce6cf5b5e5afc1d67dff35972c8f336405adda5800296972a02dfa3be2fb0",
+ "https://assets.prequel.sh/desktop/0.14.1/Prequel-0.14.1-arm64.dmg": "19760c29b332780efe60716e9bdf9990eb3caf8f682c067f1e8e598b244e035a",
+ "https://assets.genmotion.dev/desktop/0.6.2/GenMotion-0.6.2-arm64.dmg": "034893ed7c2f26af1746227e3b8680763ec39a42e35f6e357a74414d6449d1ea"
 }

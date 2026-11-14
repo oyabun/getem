@@ -101,5 +101,8 @@
   },
   "rustrover": {
     "noIcon": true
+  },
+  "hermes-desktop": {
+    "icon": "https://raw.githubusercontent.com/NousResearch/hermes-agent/cd582ed706cec677572d4da6f1c0dbdc5ca8c410/apps/desktop/assets/icon-mac.png"
   }
 }

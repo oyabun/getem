@@ -24,7 +24,6 @@ Cling: not in Homebrew Cask
 Control Room: not in Homebrew Cask
 CopyQ (copyq): deprecated in Homebrew
 Cronica: not in Homebrew Cask
-Darktable (darktable): deprecated in Homebrew
 DeaDBeeF (deadbeef@nightly): deprecated in Homebrew
 DevHub: not in Homebrew Cask
 Dozer: not in Homebrew Cask
@@ -35,7 +34,6 @@ ExifCleaner (exifcleaner): deprecated in Homebrew
 Fazm: not in Homebrew Cask
 Flameshot (flameshot): deprecated in Homebrew
 Focalboard: not in Homebrew Cask
-FontForge (fontforge-app): deprecated in Homebrew
 FreeChat: not in Homebrew Cask
 FreeTube (freetube): deprecated in Homebrew
 Freeter: not in Homebrew Cask
@@ -75,7 +73,6 @@ NextChat: not in Homebrew Cask
 Nuclear (nuclear): deprecated in Homebrew
 Omnivore: not in Homebrew Cask
 OpenSCAD (openscad): deprecated in Homebrew
-OverSight (oversight): unsupported artifact "installer"
 PDF Archiver: not in Homebrew Cask
 PasteBar: not in Homebrew Cask
 Pasteboard Viewer: not in Homebrew Cask
@@ -87,7 +84,6 @@ Platypus (platypus): deprecated in Homebrew
 Popcorn Time: not in Homebrew Cask
 QOwnNotes (qownnotes): deprecated in Homebrew
 Quick Look Plugins: not in Homebrew Cask
-QuickRecorder: not in Homebrew Cask
 RPCS3: not in Homebrew Cask
 RawTherapee (rawtherapee): nested container
 Rem: not in Homebrew Cask

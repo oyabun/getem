@@ -1012,16 +1012,6 @@
    "slug": "lulu"
   },
   {
-   "name": "Darktable",
-   "repo": "darktable-org/darktable",
-   "description": "Photography workflow and RAW editor",
-   "category": "design",
-   "homepage": "https://www.darktable.org",
-   "icon": "https://github.com/darktable-org.png?size=256",
-   "stars": 13382,
-   "slug": "darktable"
-  },
-  {
    "name": "CopyQ",
    "repo": "hluk/CopyQ",
    "description": "Advanced clipboard manager",
@@ -1275,15 +1265,6 @@
    "slug": "virtualbuddy"
   },
   {
-   "name": "QuickRecorder",
-   "repo": "lihaoyun6/QuickRecorder",
-   "description": "Lightweight macOS screen recorder",
-   "category": "screen-capture",
-   "homepage": "https://lihaoyun6.github.io/quickrecorder/",
-   "stars": 8765,
-   "slug": "quickrecorder"
-  },
-  {
    "name": "MiaoYan",
    "repo": "tw93/MiaoYan",
    "description": "Quiet, local-first Markdown writing app",
@@ -1351,16 +1332,6 @@
    "icon": "https://github.com/podman-desktop.png?size=256",
    "stars": 8122,
    "slug": "podman-desktop"
-  },
-  {
-   "name": "FontForge",
-   "repo": "fontforge/fontforge",
-   "description": "Font editor for creating typefaces",
-   "category": "design",
-   "homepage": "http://fontforge.github.io/",
-   "icon": "https://github.com/fontforge.png?size=256",
-   "stars": 8058,
-   "slug": "fontforge"
   },
   {
    "name": "MacVim",

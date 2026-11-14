@@ -1,4 +1,4 @@
-import { lucide } from "./icons.js?v=4d465df885";
+import { lucide } from "./icons.js?v=bf67b63727";
 const $ = (sel) => document.querySelector(sel);
 // A link carries the selection as #s=<code> (see encodeSelection) or, in older links, as a plain list #a,b,c.
 const rawHash = location.hash.slice(1);
@@ -236,6 +236,40 @@ function toggle(id) {
         { label: n ? "Move them to Homebrew" : "Install my apps with Homebrew", run: () => setBrew(true) });
     }
   }
+}
+
+// toolup.sh, our sister site for AI agents' skills and MCP servers: a banner under the sticky top bar while the list has
+// an AI agent in it, until it's closed (remembered).
+const TOOLUP_AGENTS = new Set(["claude", "chatgpt", "antigravity", "cursor", "openclaw", "hermes-desktop"]);
+const TOOLUP_URL = "https://toolup.sh/";
+let toolupShown = false;
+function syncToolup() {
+  const box = $("#toolup");
+  if (!box) return;
+  const agents = catalog.apps.filter((a) => selected.has(a.id) && TOOLUP_AGENTS.has(a.id));
+  const show = agents.length > 0 && store.get("toolup-banner") !== "closed";
+  box.hidden = !show;
+  if (!show) return;
+  if (!toolupShown) { toolupShown = true; track("toolup-banner", { apps: agents.map((a) => a.id).join(",") }); }
+  const names = agents.map((a) => a.name.replace(/^Google /, ""));
+  const who = names.length > 2 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names.join(" and ");
+  const faces = el("span", { className: "toolup-faces", ariaHidden: "true" },
+    ...agents.slice(0, 4).map((a) => icon(a, "icon toolup-face")));
+  const link = el("a", { className: "toolup-cta", href: TOOLUP_URL, target: "_blank", rel: "noopener" }, "Tool up", lucide("arrow-up-right", 15));
+  link.addEventListener("click", () => track("toolup-open", { apps: agents.map((a) => a.id).join(",") }));
+  const close = el("button", { type: "button", className: "toolup-close", ariaLabel: "Hide this", title: "Hide this" }, lucide("x", 16));
+  close.addEventListener("click", () => { store.set("toolup-banner", "closed"); track("toolup-close"); syncToolup(); });
+  box.querySelector(".toolup-in").replaceChildren(
+    el("img", { className: "toolup-box", src: "img/toolup-box.webp", alt: "", width: 76, height: 66, decoding: "async" }),
+    el("div", { className: "toolup-text" },
+      el("p", { className: "toolup-kicker" }, faces, el("span", {}, "From the makers of Get'Em")),
+      el("p", { className: "toolup-title" }, `Now give ${who} superpowers.`),
+      el("p", { className: "toolup-sub" }, "Skills and MCP servers for every AI agent on your Mac: pick them once on ", el("strong", {}, "toolup.sh"), ", paste one line, and they all get them."),
+      el("ul", { className: "toolup-perks" },
+        el("li", {}, lucide("sparkles", 13), "Skills"),
+        el("li", {}, lucide("plug", 13), "MCP servers"),
+        el("li", {}, lucide("terminal", 13), "One line"))),
+    link, close);
 }
 
 // "Version  [ 21 LTS v ]" on a card whose app comes in several versions.
@@ -1184,13 +1218,16 @@ function syncTerm() {
   const term = $("#term"), cmd = $("#command"), toggle = $("#term-toggle");
   term.dataset.open = termOpen;
   toggle.setAttribute("aria-expanded", termOpen);
-  toggle.replaceChildren(termOpen ? "Collapse" : "Show all", lucide(termOpen ? "chevron-up" : "chevron-down", 12));
-  // Only offer the toggle when the command is longer than the collapsed two lines.
+  toggle.replaceChildren(termOpen ? "Show less" : "Show all", lucide(termOpen ? "chevron-up" : "chevron-down", 12));
+  // Only offer the toggle when the command is longer than the collapsed two lines. Measure it laid out open, either
+  // way: the clamped box reports a few pixels more than its two lines, which offered "Show all" with nothing to show.
   requestAnimationFrame(() => {
+    term.dataset.open = "true";
     const cs = getComputedStyle(cmd);
     const lineH = parseFloat(cs.lineHeight) || 22;
     const pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom);
     const longer = cmd.scrollHeight > lineH * 2 + pad + 2;
+    term.dataset.open = termOpen;
     toggle.hidden = !longer;
     term.classList.toggle("more", longer && !termOpen);
   });
@@ -1203,6 +1240,7 @@ function update() {
   syncCards();
   syncPack?.();
   syncFaqActions();
+  syncToolup();
   const list = ids();
   history.replaceState(null, "", list.length ? `#s=${encodeSelection()}` : location.pathname);
   $("#bar").hidden = !list.length;
@@ -1258,14 +1296,7 @@ async function previewScript() {
 async function copyLink() {
   track("copy-link", { apps: selected.size });
   await navigator.clipboard.writeText(`${location.origin}${location.pathname}#s=${encodeSelection()}`);
-  const btn = $("#share");
-  const label = btn.querySelector(".btn-label");
-  btn.querySelector(".lucide").replaceWith(lucide("check", 16));
-  label.textContent = "Link copied";
-  setTimeout(() => {
-    btn.querySelector(".lucide").replaceWith(lucide("link", 16));
-    label.textContent = "Copy link";
-  }, 1500);
+  toast("Link to your install list copied");
 }
 
 // A prompt for an AI assistant to look the command over before you run it.
@@ -1362,10 +1393,8 @@ function decorate() {
   $("#lb-next").replaceChildren(lucide("chevron-right", 26));
   $("#copy").prepend(lucide("copy", 16));
   $("#get-more").replaceChildren(lucide("chevron-down", 16));
-  $("#share").prepend(lucide("link", 16));
   // On a phone the bar is one compact row: the folder becomes a pill, the other buttons keep only their icons,
   // and the terminal opens on demand. These names keep the icon-only buttons readable to screen readers.
-  $("#share").setAttribute("aria-label", "Copy link");
   $("#count").prepend(el("span", { className: "folder-mini-ic" }, lucide("folder-open", 18)));
   $("#term-show").replaceChildren(lucide("terminal", 18));
   $("#term-show").addEventListener("click", () => {
@@ -1395,9 +1424,9 @@ function watchTopbar() {
   }).observe($("#topbar-sentinel"));
 }
 
-// Theme: follows the system until the switcher picks light or dark (remembered). index.html sets data-theme before
-// the first paint; this keeps it, the favicons and the small logo in step, and builds the switcher.
-const THEMES = [["system", "monitor", "Match my system"], ["light", "sun", "Light"], ["dark", "moon", "Dark"]];
+// Theme: follows the system until the toggle picks the other one (remembered; picking the system's own theme again
+// goes back to following it). index.html sets data-theme before the first paint; this keeps it, the favicons and the
+// small logo in step, and builds the one-button toggle.
 let theme = ["light", "dark"].includes(store.get("theme")) ? store.get("theme") : "system";
 function applyTheme() {
   const root = document.documentElement;
@@ -1407,8 +1436,16 @@ function applyTheme() {
   for (const n of document.querySelectorAll("source[data-dark]")) {
     n.setAttribute("media", media(n.dataset.media, n.dataset.dark === "1"));
   }
-  for (const b of document.querySelectorAll(".theme-switch button")) b.setAttribute("aria-pressed", b.dataset.theme === theme);
+  const dark = isDark();
+  for (const b of document.querySelectorAll(".theme-switch button")) {
+    const label = dark ? "Switch to light mode" : "Switch to dark mode";
+    b.replaceChildren(lucide(dark ? "sun" : "moon", 16), el("span", { className: "theme-label" }, dark ? "Light mode" : "Dark mode"));
+    b.title = label;
+    b.setAttribute("aria-label", label);
+    b.dataset.theme = dark ? "dark" : "light";
+  }
 }
+const isDark = () => (theme === "system" ? systemDark.matches : theme === "dark");
 // The tab icon sits in the browser's own tab bar, which follows the system, not this page: white on a dark system,
 // black on a light one. Some browsers ignore `media` on icon links, so swap in one set and follow system changes.
 const systemDark = window.matchMedia?.("(prefers-color-scheme: dark)") || { matches: false };
@@ -1427,21 +1464,21 @@ function syncFavicon() {
 
 function setupTheme() {
   syncFavicon();
-  systemDark.addEventListener?.("change", syncFavicon);
+  systemDark.addEventListener?.("change", () => { syncFavicon(); applyTheme(); });
   for (const n of document.querySelectorAll("source[media]")) {
     const m = n.getAttribute("media");
     if (!m.includes("prefers-color-scheme")) continue;
     n.dataset.media = m;
     n.dataset.dark = m.includes("dark") ? "1" : "0";
   }
-  const box = el("div", { className: "theme-switch", role: "group", ariaLabel: "Theme" },
-    ...THEMES.map(([value, icon, label]) => {
-      const b = el("button", { type: "button", title: label, ariaLabel: label }, lucide(icon, 16), el("span", { className: "theme-label" }, label.replace("Match my system", "System")));
-      b.setAttribute("aria-label", label);
-      b.dataset.theme = value;
-      b.addEventListener("click", () => { theme = value; store.set("theme", value === "system" ? "" : value); applyTheme(); });
-      return b;
-    }));
+  const b = el("button", { type: "button" });
+  b.addEventListener("click", () => {
+    const next = isDark() ? "light" : "dark";
+    theme = next === (systemDark.matches ? "dark" : "light") ? "system" : next;
+    store.set("theme", theme === "system" ? "" : theme);
+    applyTheme();
+  });
+  const box = el("div", { className: "theme-switch" }, b);
   $("#tools-menu").append(box);
   applyTheme();
 }
@@ -1467,7 +1504,7 @@ function setupFaqActions() {
       }
       else if (act === "profile") { setProfile(b.dataset.profile); window.scrollTo({ top: Math.max(0, $("#catalog").getBoundingClientRect().top + scrollY - (($("#topbar").offsetHeight || 0) + 16)), behavior: "smooth" }); }
       else if (act === "copy-update") { await navigator.clipboard.writeText($("#update-cmd").textContent); toast("Update command copied"); }
-      else if (act === "copy-link") { await copyLink(); toast("Link to your install list copied"); }
+      else if (act === "copy-link") await copyLink();
       else if (act === "download") downloadScript();
       else if (act === "preview") previewScript();
       else if (act === "ask-ai") copyAiPrompt();
@@ -1536,7 +1573,6 @@ async function main() {
   $("#search-clear").addEventListener("click", () => { $("#search").value = ""; $("#search-clear").hidden = true; $("#search").focus(); render(); });
   $("#search").addEventListener("keydown", (e) => { if (e.key === "Escape" && $("#search").value) { e.preventDefault(); $("#search-clear").click(); } });
   $("#copy").addEventListener("click", copyCommand);
-  $("#share").addEventListener("click", copyLink);
   $("#term-toggle").addEventListener("click", () => setTerm(!termOpen));
   $("#dry-run").addEventListener("click", () => { dryRun = !dryRun; syncDry(); renderCommand(); });
   syncDry();
@@ -1563,6 +1599,9 @@ async function main() {
     // The folder pokes up out of the bar; the list opens above the folder's top edge.
     const top = $("#count").getBoundingClientRect().top;
     if (top > 0) document.documentElement.style.setProperty("--pop-bottom", `${Math.round(innerHeight - top + 14)}px`);
+    // ...and lines up with the folder, wherever the centred bar puts it.
+    const right = $("#count").getBoundingClientRect().right;
+    if (right > 0) document.documentElement.style.setProperty("--pop-right", `${Math.max(8, Math.round(document.documentElement.clientWidth - right))}px`);
   };
   new ResizeObserver(measure).observe($("#bar"));
   new ResizeObserver(measure).observe($("#topbar"), { box: "border-box" });
@@ -1576,10 +1615,11 @@ async function main() {
     if (openMenu?.btn === btn) { closeMenu(); return; }
     openDropdown(btn, [
       { value: "copy", text: "Copy command", icon: "copy", hint: "Paste it into Terminal" },
+      { value: "link", text: "Copy link", icon: "link", hint: "A short link that brings back exactly this list, handy for a teammate's new Mac" },
       { value: "download", text: "Download .sh", icon: "download", hint: "A script with your apps built in; works offline" },
       { value: "preview", text: "Preview script", icon: "file-code", hint: "Read the exact script for your list before you run it" },
       { value: "ask-ai", text: "Not feeling safe? Ask your AI", icon: "bot", hint: "Copies the command with a prompt: paste it into ChatGPT, Claude or any assistant and let it check it for you" },
-    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadScript(); else if (v === "preview") previewScript(); else copyAiPrompt(); });
+    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "link") copyLink(); else if (v === "download") downloadScript(); else if (v === "preview") previewScript(); else copyAiPrompt(); });
   });
   // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
   // on different elements is delivered to their common parent (the dialog itself), so without this a press on
