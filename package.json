@@ -9,6 +9,7 @@
     "dev": "node scripts/serve.mjs",
     "media": "node scripts/media.mjs",
     "arch": "node scripts/arch.mjs",
+    "nix": "node scripts/nix.mjs",
     "test": "node --test \"test/*.test.mjs\""
   },
   "engines": {

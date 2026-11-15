@@ -23,6 +23,7 @@ Everything the build reads. Files are either **yours** (edit by hand) or **gener
 | `families.json` | Apps from one publisher, shown together in the details (Objective-See, JetBrains ...). |
 | `requires.json` | Dependencies: picking Pi adds Node.js, Homebrew adds the command-line tools. |
 | `media-overrides.json` | Icons, screenshots or homepages set by hand when the automatic search gets it wrong. |
+| `nix-overrides.json` | Fixes when `npm run nix` finds the wrong nixpkgs package for an app (`"app-id": "attr"`, or `null` for "not in nixpkgs"). |
 | `category-overrides.json` | Moves an `apps.json` app to another category without editing it. Empty today: edit `apps.json` instead. |
 
 ## Generated
@@ -34,4 +35,5 @@ Everything the build reads. Files are either **yours** (edit by hand) or **gener
 | `hashes.json` | `npm run build` | Checksums computed for big downloads, so they aren't re-downloaded each build. |
 | `media.json` | `npm run media` | Icons and screenshots found for each app. |
 | `media-missing.txt` | `npm run media` | Apps that still have no screenshot. |
+| `nix.json` | `npm run nix` | Each app's nixpkgs package for macOS and for Linux, checked with Nix itself, for the page's Nix config. |
 | `arch.json` | `npm run arch` | Which chips each zip download really supports (read from the app's binary). |

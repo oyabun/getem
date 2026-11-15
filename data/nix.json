@@ -1,0 +1,698 @@
+{
+ "channel": "nixos-26.05",
+ "apps": {
+  "1password": {
+   "darwin": "_1password-gui",
+   "linux": "_1password-gui",
+   "unfree": true
+  },
+  "android-studio": {
+   "linux": "android-studio",
+   "unfree": true
+  },
+  "antigravity": {
+   "darwin": "antigravity",
+   "linux": "antigravity",
+   "unfree": true
+  },
+  "anydesk": {
+   "linux": "anydesk",
+   "unfree": true
+  },
+  "appcleaner": {
+   "darwin": "appcleaner",
+   "unfree": true
+  },
+  "audacity": {
+   "darwin": "audacity",
+   "linux": "audacity",
+   "unfree": false
+  },
+  "bambu-studio": {
+   "linux": "bambu-studio",
+   "unfree": true
+  },
+  "beekeeper-studio": {
+   "darwin": "beekeeper-studio",
+   "linux": "beekeeper-studio",
+   "unfree": false
+  },
+  "betterdisplay": {
+   "darwin": "betterdisplay",
+   "unfree": true
+  },
+  "bitwarden": {
+   "darwin": "bitwarden-desktop",
+   "linux": "bitwarden-desktop",
+   "unfree": false
+  },
+  "blackhole-2ch": {
+   "darwin": "blackhole",
+   "unfree": false
+  },
+  "blender": {
+   "darwin": "blender",
+   "linux": "blender",
+   "unfree": false
+  },
+  "blockbench": {
+   "darwin": "blockbench",
+   "linux": "blockbench",
+   "unfree": false
+  },
+  "brave-browser": {
+   "darwin": "brave",
+   "linux": "brave",
+   "unfree": false
+  },
+  "bruno": {
+   "darwin": "bruno",
+   "linux": "bruno",
+   "unfree": false
+  },
+  "caffeine": {
+   "darwin": "caffeine",
+   "unfree": false
+  },
+  "calibre": {
+   "linux": "calibre",
+   "unfree": false
+  },
+  "chatgpt": {
+   "darwin": "chatgpt",
+   "unfree": true
+  },
+  "clion": {
+   "darwin": "jetbrains.clion",
+   "linux": "jetbrains.clion",
+   "unfree": true
+  },
+  "cursor": {
+   "darwin": "code-cursor",
+   "linux": "code-cursor",
+   "unfree": true
+  },
+  "cyberduck": {
+   "darwin": "cyberduck",
+   "unfree": false
+  },
+  "darktable": {
+   "darwin": "darktable",
+   "linux": "darktable",
+   "unfree": false
+  },
+  "datagrip": {
+   "darwin": "jetbrains.datagrip",
+   "linux": "jetbrains.datagrip",
+   "unfree": true
+  },
+  "db-browser-for-sqlcipher@nightly": {
+   "darwin": "sqlitebrowser",
+   "linux": "sqlitebrowser",
+   "unfree": false
+  },
+  "dbeaver-community": {
+   "darwin": "dbeaver-bin",
+   "linux": "dbeaver-bin",
+   "unfree": false
+  },
+  "discord": {
+   "darwin": "discord",
+   "linux": "discord",
+   "unfree": true
+  },
+  "dolphin": {
+   "darwin": "dolphin-emu",
+   "linux": "dolphin-emu",
+   "unfree": false
+  },
+  "dotnet-sdk": {
+   "darwin": "dotnet-sdk",
+   "linux": "dotnet-sdk",
+   "unfree": false
+  },
+  "drawio": {
+   "darwin": "drawio",
+   "linux": "drawio",
+   "unfree": false
+  },
+  "dropbox": {
+   "linux": "dropbox",
+   "unfree": true
+  },
+  "element": {
+   "darwin": "element-desktop",
+   "linux": "element-desktop",
+   "unfree": false
+  },
+  "ferdium": {
+   "linux": "ferdium",
+   "unfree": false
+  },
+  "firefox": {
+   "darwin": "firefox-bin",
+   "linux": "firefox-bin",
+   "unfree": true
+  },
+  "folo": {
+   "linux": "folo",
+   "unfree": false
+  },
+  "fontforge": {
+   "darwin": "fontforge",
+   "linux": "fontforge",
+   "unfree": false
+  },
+  "freecad": {
+   "linux": "freecad",
+   "unfree": false
+  },
+  "gh": {
+   "darwin": "gh",
+   "linux": "gh",
+   "unfree": false
+  },
+  "ghostty": {
+   "darwin": "ghostty-bin",
+   "linux": "ghostty",
+   "unfree": false
+  },
+  "gimp": {
+   "linux": "gimp",
+   "unfree": false
+  },
+  "gitbutler": {
+   "darwin": "gitbutler",
+   "linux": "gitbutler",
+   "unfree": true
+  },
+  "github": {
+   "linux": "github-desktop",
+   "unfree": false
+  },
+  "go": {
+   "darwin": "go_1_27",
+   "linux": "go_1_27",
+   "unfree": false
+  },
+  "go-1.26": {
+   "darwin": "go_1_26",
+   "linux": "go_1_26",
+   "unfree": false
+  },
+  "godot": {
+   "darwin": "godot",
+   "linux": "godot",
+   "unfree": false
+  },
+  "goland": {
+   "darwin": "jetbrains.goland",
+   "linux": "jetbrains.goland",
+   "unfree": true
+  },
+  "google-chrome": {
+   "darwin": "google-chrome",
+   "linux": "google-chrome",
+   "unfree": true
+  },
+  "grandperspective": {
+   "darwin": "grandperspective",
+   "unfree": false
+  },
+  "handbrake-app": {
+   "linux": "handbrake",
+   "unfree": false
+  },
+  "heynote": {
+   "linux": "heynote",
+   "unfree": true
+  },
+  "hiddenbar": {
+   "darwin": "hidden-bar",
+   "unfree": false
+  },
+  "iina": {
+   "darwin": "iina",
+   "unfree": false
+  },
+  "inkscape": {
+   "darwin": "inkscape",
+   "linux": "inkscape",
+   "unfree": false
+  },
+  "intellij-idea": {
+   "darwin": "jetbrains.idea",
+   "linux": "jetbrains.idea",
+   "unfree": true
+  },
+  "istat-menus": {
+   "darwin": "istat-menus",
+   "unfree": true
+  },
+  "iterm2": {
+   "darwin": "iterm2",
+   "unfree": false
+  },
+  "itsycal": {
+   "darwin": "itsycal",
+   "unfree": false
+  },
+  "jan": {
+   "darwin": "jan",
+   "linux": "jan",
+   "unfree": false
+  },
+  "jetbrains-toolbox": {
+   "darwin": "jetbrains-toolbox",
+   "linux": "jetbrains-toolbox",
+   "unfree": true
+  },
+  "joplin": {
+   "darwin": "joplin-cli",
+   "linux": "joplin-cli",
+   "unfree": false
+  },
+  "jordanbaird-ice@beta": {
+   "darwin": "ice-bar",
+   "unfree": false
+  },
+  "karabiner-elements": {
+   "darwin": "karabiner-elements",
+   "unfree": false
+  },
+  "keepassxc": {
+   "darwin": "keepassxc",
+   "linux": "keepassxc",
+   "unfree": false
+  },
+  "keka": {
+   "darwin": "keka",
+   "unfree": true
+  },
+  "keycastr": {
+   "darwin": "keycastr",
+   "unfree": false
+  },
+  "kitty": {
+   "darwin": "kitty",
+   "linux": "kitty",
+   "unfree": false
+  },
+  "kodi": {
+   "linux": "kodi",
+   "unfree": false
+  },
+  "krita": {
+   "linux": "krita",
+   "unfree": false
+  },
+  "lapce": {
+   "darwin": "lapce",
+   "linux": "lapce",
+   "unfree": false
+  },
+  "libreoffice": {
+   "darwin": "libreoffice-bin",
+   "linux": "libreoffice",
+   "unfree": false
+  },
+  "librewolf": {
+   "darwin": "librewolf",
+   "linux": "librewolf",
+   "unfree": false
+  },
+  "lm-studio": {
+   "darwin": "lmstudio",
+   "linux": "lmstudio",
+   "unfree": true
+  },
+  "localsend": {
+   "darwin": "localsend",
+   "linux": "localsend",
+   "unfree": false
+  },
+  "logseq": {
+   "darwin": "logseq",
+   "linux": "logseq",
+   "unfree": false
+  },
+  "loop": {
+   "darwin": "loopwm",
+   "unfree": false
+  },
+  "losslesscut": {
+   "darwin": "losslesscut",
+   "linux": "losslesscut",
+   "unfree": false
+  },
+  "lunar": {
+   "darwin": "lunar",
+   "unfree": true
+  },
+  "maccy": {
+   "darwin": "maccy",
+   "unfree": false
+  },
+  "macvim-app": {
+   "darwin": "macvim",
+   "unfree": false
+  },
+  "mattermost": {
+   "linux": "mattermost-desktop",
+   "unfree": false
+  },
+  "meetingbar": {
+   "darwin": "meetingbar",
+   "unfree": false
+  },
+  "microsoft-edge": {
+   "darwin": "microsoft-edge",
+   "linux": "microsoft-edge",
+   "unfree": true
+  },
+  "mockoon": {
+   "linux": "mockoon",
+   "unfree": false
+  },
+  "monitorcontrol": {
+   "darwin": "monitorcontrol",
+   "unfree": false
+  },
+  "mullvad-browser": {
+   "linux": "mullvad-browser",
+   "unfree": false
+  },
+  "mullvad-vpn": {
+   "linux": "mullvad-vpn",
+   "unfree": false
+  },
+  "netnewswire": {
+   "darwin": "net-news-wire",
+   "unfree": false
+  },
+  "node": {
+   "darwin": "nodejs_26",
+   "linux": "nodejs_26",
+   "unfree": false
+  },
+  "node-22": {
+   "darwin": "nodejs_22",
+   "linux": "nodejs_22",
+   "unfree": false
+  },
+  "node-24": {
+   "darwin": "nodejs_24",
+   "linux": "nodejs_24",
+   "unfree": false
+  },
+  "notion": {
+   "darwin": "notion-app",
+   "unfree": true
+  },
+  "obs": {
+   "linux": "obs-studio",
+   "unfree": false
+  },
+  "obsidian": {
+   "darwin": "obsidian",
+   "linux": "obsidian",
+   "unfree": true
+  },
+  "ollama-app": {
+   "darwin": "ollama",
+   "linux": "ollama",
+   "unfree": false
+  },
+  "opencode-desktop": {
+   "darwin": "opencode-desktop",
+   "linux": "opencode-desktop",
+   "unfree": false
+  },
+  "orbstack": {
+   "darwin": "orbstack",
+   "unfree": true
+  },
+  "pareto-security": {
+   "darwin": "paretosecurity",
+   "linux": "paretosecurity",
+   "unfree": false
+  },
+  "pencil2d": {
+   "linux": "pencil2d",
+   "unfree": false
+  },
+  "penpot-desktop": {
+   "linux": "penpot-desktop",
+   "unfree": false
+  },
+  "phpstorm": {
+   "darwin": "jetbrains.phpstorm",
+   "linux": "jetbrains.phpstorm",
+   "unfree": true
+  },
+  "pika": {
+   "darwin": "pika",
+   "unfree": false
+  },
+  "plex": {
+   "linux": "plex",
+   "unfree": true
+  },
+  "podman-desktop": {
+   "darwin": "podman-desktop",
+   "linux": "podman-desktop",
+   "unfree": false
+  },
+  "prusaslicer": {
+   "darwin": "prusa-slicer",
+   "linux": "prusa-slicer",
+   "unfree": false
+  },
+  "pycharm": {
+   "darwin": "jetbrains.pycharm",
+   "linux": "jetbrains.pycharm",
+   "unfree": true
+  },
+  "python3": {
+   "darwin": "python315",
+   "linux": "python315",
+   "unfree": false
+  },
+  "python3-3.12": {
+   "darwin": "python312",
+   "linux": "python312",
+   "unfree": false
+  },
+  "python3-3.13": {
+   "darwin": "python313",
+   "linux": "python313",
+   "unfree": false
+  },
+  "python3-3.14": {
+   "darwin": "python314",
+   "linux": "python314",
+   "unfree": false
+  },
+  "raycast": {
+   "darwin": "raycast",
+   "unfree": true
+  },
+  "readest": {
+   "linux": "readest",
+   "unfree": false
+  },
+  "rectangle": {
+   "darwin": "rectangle",
+   "unfree": false
+  },
+  "requestly": {
+   "darwin": "requestly",
+   "linux": "requestly",
+   "unfree": false
+  },
+  "retroarch": {
+   "darwin": "retroarch",
+   "linux": "retroarch",
+   "unfree": false
+  },
+  "rider": {
+   "darwin": "jetbrains.rider",
+   "linux": "jetbrains.rider",
+   "unfree": true
+  },
+  "rubymine": {
+   "darwin": "jetbrains.ruby-mine",
+   "linux": "jetbrains.ruby-mine",
+   "unfree": true
+  },
+  "rustrover": {
+   "darwin": "jetbrains.rust-rover",
+   "linux": "jetbrains.rust-rover",
+   "unfree": true
+  },
+  "shotcut": {
+   "darwin": "shotcut",
+   "linux": "shotcut",
+   "unfree": false
+  },
+  "signal": {
+   "darwin": "signal-desktop",
+   "linux": "signal-desktop",
+   "unfree": false
+  },
+  "skim": {
+   "darwin": "skimpdf",
+   "unfree": false
+  },
+  "slack": {
+   "darwin": "slack",
+   "linux": "slack",
+   "unfree": true
+  },
+  "sloth": {
+   "darwin": "sloth-app",
+   "unfree": false
+  },
+  "spotify": {
+   "darwin": "spotify",
+   "linux": "spotify",
+   "unfree": true
+  },
+  "stats": {
+   "darwin": "stats",
+   "unfree": false
+  },
+  "sublime-text": {
+   "linux": "sublime4",
+   "unfree": true
+  },
+  "swiftbar": {
+   "darwin": "swiftbar",
+   "unfree": false
+  },
+  "t3-code": {
+   "darwin": "t3code",
+   "linux": "t3code",
+   "unfree": false
+  },
+  "teamviewer": {
+   "linux": "teamviewer",
+   "unfree": true
+  },
+  "telegram": {
+   "darwin": "telegram-desktop",
+   "linux": "telegram-desktop",
+   "unfree": false
+  },
+  "temurin@11": {
+   "darwin": "temurin-bin-11",
+   "linux": "temurin-bin-11",
+   "unfree": false
+  },
+  "temurin@17": {
+   "darwin": "temurin-bin-17",
+   "linux": "temurin-bin-17",
+   "unfree": false
+  },
+  "temurin@21": {
+   "darwin": "temurin-bin-21",
+   "linux": "temurin-bin-21",
+   "unfree": false
+  },
+  "temurin@25": {
+   "darwin": "temurin-bin-25",
+   "linux": "temurin-bin-25",
+   "unfree": false
+  },
+  "temurin@8": {
+   "linux": "temurin-bin-8",
+   "unfree": false
+  },
+  "thunderbird": {
+   "darwin": "thunderbird",
+   "linux": "thunderbird",
+   "unfree": false
+  },
+  "tor-browser": {
+   "linux": "tor-browser",
+   "unfree": false
+  },
+  "transmission": {
+   "darwin": "transmission_4",
+   "linux": "transmission_4",
+   "unfree": false
+  },
+  "ultimaker-cura": {
+   "linux": "cura-appimage",
+   "unfree": false
+  },
+  "unity-hub": {
+   "linux": "unityhub",
+   "unfree": true
+  },
+  "upscayl": {
+   "darwin": "upscayl",
+   "linux": "upscayl",
+   "unfree": false
+  },
+  "utm": {
+   "darwin": "utm",
+   "unfree": false
+  },
+  "visual-studio-code": {
+   "darwin": "vscode",
+   "linux": "vscode",
+   "unfree": true
+  },
+  "vivaldi": {
+   "linux": "vivaldi",
+   "unfree": true
+  },
+  "vlc": {
+   "darwin": "vlc-bin",
+   "linux": "vlc",
+   "unfree": false
+  },
+  "vscodium": {
+   "darwin": "vscodium",
+   "linux": "vscodium",
+   "unfree": false
+  },
+  "wave": {
+   "darwin": "waveterm",
+   "linux": "waveterm",
+   "unfree": false
+  },
+  "webstorm": {
+   "darwin": "jetbrains.webstorm",
+   "linux": "jetbrains.webstorm",
+   "unfree": true
+  },
+  "whatsapp": {
+   "darwin": "whatsapp-for-mac",
+   "unfree": true
+  },
+  "whisky": {
+   "darwin": "whisky",
+   "unfree": false
+  },
+  "xnviewmp": {
+   "linux": "xnviewmp",
+   "unfree": true
+  },
+  "zed": {
+   "darwin": "zed-editor",
+   "linux": "zed-editor",
+   "unfree": false
+  },
+  "zettlr": {
+   "linux": "zettlr",
+   "unfree": false
+  },
+  "zoom": {
+   "darwin": "zoom-us",
+   "linux": "zoom-us",
+   "unfree": true
+  }
+ }
+}

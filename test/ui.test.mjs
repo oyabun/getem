@@ -495,7 +495,7 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   check("Download .sh is no longer a separate button", !$("#download") && !!$(".split #copy") && !!$(".split #get-more"));
   click($("#get-more"));
   const opts = $$(".dd-menu .dd-opt-name").map((n) => n.textContent);
-  check("the arrow offers Copy command, Copy link, Download .sh, Preview script and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Copy link|Download .sh|Preview script|Not feeling safe? Ask your AI", opts.join("|"));
+  check("the arrow offers Copy command, Copy link, Download .sh, Preview script, Nix config and Not feeling safe? Ask your AI", opts.join("|") === "Copy command|Copy link|Download .sh|Preview script|Nix config|Not feeling safe? Ask your AI", opts.join("|"));
   check("Copy link is no longer a separate button", !$("#share"));
   let clip = ""; window.navigator.clipboard = { writeText: async (t) => { clip = t; } };
   click($$(".dd-menu .dd-opt").find((o) => /Ask your AI/.test(o.textContent)));
@@ -507,6 +507,23 @@ const picked = (page) => { page.q("#count").dispatchEvent(new page.w.MouseEvent(
   await new Promise((r) => setTimeout(r, 20));
   check("Preview script opens the script view for your list", $("#script-view").hasAttribute("open") && /^\d+ apps? built in/.test($("#script-meta").textContent), $("#script-meta").textContent);
   $("#script-view").removeAttribute("open");
+  // Nix config: the same list as a nix-darwin, Home Manager or NixOS module.
+  click($("#get-more"));
+  click($$(".dd-menu .dd-opt").find((o) => /Nix config/.test(o.textContent)));
+  const nixCode = () => $("#nix-code").textContent;
+  const inList = catalog.apps.filter((a) => $$("#catalog .app.selected").some((n) => n.dataset.id === a.id) && a.id !== "homebrew");
+  const macNix = inList.find((a) => a.nix?.darwin);
+  const caskOnly = inList.find((a) => !a.nix?.darwin && a.brew);
+  check("Nix config opens on nix-darwin, with the count from nixpkgs", $("#nix-view").hasAttribute("open") && $("#nix-seg .active")?.textContent === "nix-darwin" && /^\d+ of \d+ from nixpkgs/.test($("#nix-meta").textContent), $("#nix-meta").textContent);
+  check("it lists apps nixpkgs builds for macOS by their attribute", !macNix || (/environment\.systemPackages = with pkgs; \[/.test(nixCode()) && nixCode().includes(`${macNix.nix.darwin} `)), macNix?.nix.darwin);
+  check("and the ones nixpkgs lacks as Homebrew casks", !caskOnly || new RegExp(`homebrew\\.casks = \\[[\\s\\S]*"${caskOnly.brew}"`).test(nixCode()), caskOnly?.brew);
+  check("allowUnfree only when an unfree app is in it", /allowUnfree = true/.test(nixCode()) === inList.some((a) => a.nix?.darwin && a.nix.unfree));
+  click($$("#nix-seg .seg-b").find((b) => b.textContent === "Home Manager"));
+  check("Home Manager uses home.packages and hands the rest to the Get'Em command", /home\.packages = with pkgs; \[|None of your apps/.test(nixCode()) && !/homebrew\.casks/.test(nixCode()) && (!caskOnly || /bash -s -- .*\b/.test(nixCode())), nixCode().slice(0, 200));
+  click($$("#nix-seg .seg-b").find((b) => b.textContent === "NixOS"));
+  check("NixOS keeps only apps with a Linux build", !/homebrew/.test(nixCode()) && inList.filter((a) => a.nix && !a.nix.linux).every((a) => !nixCode().includes(`    ${a.nix.darwin} `)) && inList.filter((a) => a.nix?.linux).every((a) => nixCode().includes(`    ${a.nix.linux} `)), $("#nix-meta").textContent);
+  click($$("#nix-seg .seg-b").find((b) => b.textContent === "nix-darwin"));
+  $("#nix-view").removeAttribute("open");
   check("the safety question is in the FAQ, with Ask your AI", /looks scary/.test($("#faq").textContent) && !!$('.faq-act[data-act="ask-ai"]'));
 }
 // ---- the FAQ follows the search ----

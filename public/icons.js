@@ -1,6 +1,7 @@
 // Lucide icons (https://lucide.dev, ISC license), inlined so the page needs no icon CDN.
 // lucide(name, size) returns an <svg> element that takes its colour from the text around it.
 const PATHS = {
+  "snowflake": `<path d="M2 12h20" /> <path d="M12 2v20" /> <path d="m20 16-4-4 4-4" /> <path d="m4 8 4 4-4 4" /> <path d="m16 4-4 4-4-4" /> <path d="m8 20 4-4 4 4" />`,
   "plug": `<path d="M12 22v-5" /> <path d="M9 8V2" /> <path d="M15 8V2" /> <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" />`,
   "arrow-up-right": `<path d="M7 7h10v10" /> <path d="M7 17 17 7" />`,
   "menu": `<path d="M4 5h16" /> <path d="M4 12h16" /> <path d="M4 19h16" />`,

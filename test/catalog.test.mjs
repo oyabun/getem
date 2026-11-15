@@ -98,3 +98,14 @@ test("shared links keep working: every app has a permanent slot, none reused", (
   for (const id of ids) assert.ok(stableIds.includes(id), `${id} has no slot`);
   assert.deepEqual(catalog.order, stableIds);
 });
+
+test("nixpkgs matches name real apps and safe attributes", () => {
+  const nix = JSON.parse(read("data/nix.json"));
+  for (const id of Object.keys(JSON.parse(read("data/nix-overrides.json")))) assert.ok(ids.has(id), `data/nix-overrides.json: ${id}`);
+  for (const [id, n] of Object.entries(nix.apps)) {
+    assert.ok(ids.has(id), `data/nix.json: ${id}`);
+    assert.ok(n.darwin || n.linux, id);
+    for (const attr of [n.darwin, n.linux].filter(Boolean)) assert.match(attr, /^[A-Za-z_][A-Za-z0-9_'-]*(\.[A-Za-z_][A-Za-z0-9_'-]*)?$/, id);
+    assert.deepEqual(byId.get(id).nix, n, `${id}: run npm run build after npm run nix`);
+  }
+});

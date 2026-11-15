@@ -20,6 +20,7 @@ curl -fsSL https://getem.sh/install.sh | bash -s -- iina rectangle stats
 - **Versions:** Java, Node.js, Python and Go are one card each with a version dropdown.
 - **Versions, download URLs and SHA-256 checksums:** from the [Homebrew Cask API](https://formulae.brew.sh/api/cask.json) or, for apps outside Homebrew, the publisher's GitHub release page or a fixed download link. Homebrew itself is optional on the user's Mac.
 - **Installer:** downloads from each publisher, verifies the checksum, and handles dmg, zip, tar and pkg files. It picks the Apple Silicon or Intel build and skips apps that are already up to date. Add `--dry-run` to preview, `--force` to reinstall or `--update` to refresh everything installed from the list. With `--brew` (the page's *Install with Homebrew* switch), apps that have a cask are installed with `brew install --cask` so Homebrew manages them, and Homebrew is installed first if missing; an app from the list that's already there is handed over to Homebrew; without `--brew` Homebrew is never run and apps it already manages are left to it, and an existing Homebrew is never reinstalled.
+- **Nix:** *Nix config* (under the arrow next to Copy) gives the same list as a module for nix-darwin, Home Manager or NixOS. Apps come from nixpkgs where it builds them; with nix-darwin the rest that Homebrew has become `homebrew.casks`, and anything left gets a Get'Em command. `data/nix.json` holds each app's package, found by `npm run nix` and checked with Nix.
 - **Share and download:** a short link restores the same selection, and **Download .sh** produces a script with the chosen apps built in.
 
 ## Develop
@@ -27,6 +28,7 @@ curl -fsSL https://getem.sh/install.sh | bash -s -- iina rectangle stats
 ```sh
 npm run build   # refresh versions and checksums → public/catalog.json, catalog.tsv, install.sh
 npm run media   # find icons and screenshots for new apps (add -- --deep for a harder pass)
+npm run nix     # find each app in nixpkgs → data/nix.json (needs Nix or Docker to verify; then npm run build)
 npm run dev     # http://localhost:3000
 npm test        # catalog checks, the installer in --dry-run, and the page itself in jsdom
 ```

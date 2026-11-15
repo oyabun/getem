@@ -346,6 +346,11 @@ async function main() {
     if (m?.icon) { if (a.icon && a.icon !== m.icon) a.iconAlt = a.icon; a.icon = m.icon; }
     a.screenshots = m?.screenshots || [];
   }
+  // nixpkgs packages found by `npm run nix`, for the page's Nix config: the attribute name, where it builds, and
+  // whether it needs allowUnfree.
+  let nixData = { apps: {} };
+  try { nixData = JSON.parse(await readFile(path("data/nix.json"), "utf8")); } catch {}
+  for (const a of unique) if (nixData.apps[a.id]) a.nix = nixData.apps[a.id];
   // Families: sets of apps from one publisher, shown together in the app modal (data/families.json).
   const familyDefs = JSON.parse(await readFile(path("data/families.json"), "utf8"));
   const ids = new Set(unique.map((a) => a.id));

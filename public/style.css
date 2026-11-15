@@ -1053,6 +1053,10 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 .sh-comment { color: var(--muted); }
 @media (max-width: 640px) { .script-code { font-size: 11.5px; } .sh-line::before { width: 2.6em; } }
 
+/* Nix config: the preview view with a nix-darwin / Home Manager / NixOS switch above the code. */
+.nix-seg { align-self: flex-start; }
+.nix-seg .seg-b.active { cursor: default; }
+
 /* "Already use Homebrew?" in an app's details: folded by default, opened once Homebrew is in the list. */
 .brew-alt { margin: 0 0 1.25rem; font-size: 0.85rem; }
 .brew-alt summary { cursor: pointer; color: var(--accent); width: fit-content; list-style: none; }
