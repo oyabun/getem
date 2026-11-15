@@ -197,6 +197,7 @@ function askRemove(id, deps) {
 
 function setBrew(on, { quiet = false } = {}) {
   useBrew = on;
+  if (on && useNix) { useNix = false; store.set("useNix", "0"); }
   document.dispatchEvent(new Event("brewchange"));
   syncFaqActions();
   track("use-brew", { on });
@@ -1040,8 +1041,22 @@ let useBrew = false;
 const SITE = new URL(".", location.href).href.replace(/\/$/, "");
 const command = () => `curl -fsSL ${SITE}/install.sh | bash -s -- ${dryRun ? "--dry-run " : ""}${useBrew ? "--brew " : ""}${cmdIds().join(" ")}`;
 
+function nixFullLink() {
+  const b = el("button", { type: "button", className: "link" }, "See the whole file");
+  b.addEventListener("click", openNix);
+  return b;
+}
 function syncDry() {
   const b = $("#dry-run");
+  b.hidden = useNix;
+  const long = $("#copy .btn-label .long");   // missing for a moment while the button says "Copied"
+  if (long) long.textContent = useNix ? " config" : " command";
+  if (useNix) {
+    const f = NIX_FLAVORS[nixFlavor];
+    $("#hint-lead").textContent = `Save it as getem.nix, add it to your imports and run ${f.run}.`;
+    $("#hint-tail").replaceChildren(" ", nixFullLink());
+    return;
+  }
   b.classList.toggle("on", dryRun);
   b.setAttribute("aria-pressed", dryRun);
   b.title = dryRun ? "Remove --dry-run from the command" : "Add --dry-run to the command";
@@ -1124,6 +1139,7 @@ function renderPicked() {
   drawer.hidden = !pickedOpen;
   $("#count").setAttribute("aria-expanded", pickedOpen);
   syncBrewSwitch(picks);
+  syncNixSwitch();
   if (!pickedOpen) return;
   $("#drawer-title").textContent = `Install list · ${picks.length} app${picks.length === 1 ? "" : "s"}`;
   const cats = catalog.categories.filter((c) => picks.some((a) => a.category === c.slug));
@@ -1138,7 +1154,15 @@ function renderPicked() {
       open.addEventListener("click", () => openModal(app));
       // While Install with Homebrew is on, each app Homebrew has says where it comes from; click to switch that one app.
       let via = null;
-      if (useBrew && app.brew && app.id !== "homebrew" && app.id !== "xcode-cli") {
+      if (useNix && app.id !== "homebrew") {
+        // While Use Nix is on, each app says where the config gets it from.
+        const how = nixPlan().via(app);
+        const linux = nixFlavor === "nixos";
+        via = el("span", { className: `row-via fixed${how === "left" ? " off" : ""}`,
+          title: how === "nix" ? `From nixpkgs: ${app.nix[linux ? "linux" : "darwin"]}` : how === "cask" ? `nixpkgs doesn't have it for macOS: nix-darwin installs the ${app.brew} cask with Homebrew` : linux ? "No Linux package in nixpkgs, so it's left out" : "Not in nixpkgs: the config ends with a Get'Em command for it" },
+          how === "nix" ? "nixpkgs" : how === "cask" ? "Homebrew" : linux ? "Mac only" : "Get'Em");
+      }
+      else if (useBrew && app.brew && app.id !== "homebrew" && app.id !== "xcode-cli") {
         const on = brewsApp(app);
         via = el("button", { type: "button", className: `row-via${on ? "" : " off"}`, ariaPressed: String(on),
           title: on ? `Installs with Homebrew (${brewInstall(app)}). Click to download it from its publisher instead` : "Downloads from its publisher. Click to install it with Homebrew instead" },
@@ -1156,10 +1180,23 @@ function renderPicked() {
   $("#drawer-list").replaceChildren(...rows);
 }
 
+// Use Nix, under the Homebrew switch: when on, it picks the flavor and says how much of the list nixpkgs covers.
+function syncNixSwitch() {
+  const box = $("#drawer-nix");
+  $("#use-nix").checked = useNix;
+  box.classList.toggle("on", useNix);
+  $("#nix-flavors").hidden = !useNix;
+  if (useNix) $("#nix-flavors").replaceChildren(...nixSeg());
+  $("#nix-note").textContent = useNix
+    ? `${nixMeta(nixPlan(), nixFlavor === "nixos")}.`
+    : "Off: you get the install command. Turn it on to get your list as nix-darwin, Home Manager or NixOS config instead.";
+}
+
 // The switch at the top of the install list, and what it means for these picks.
 function syncBrewSwitch(picks = catalog.apps.filter((a) => selected.has(a.id))) {
   const box = $("#drawer-brew");
-  box.hidden = !byId("homebrew");
+  // nix-darwin brings its own Homebrew casks, so the Homebrew switch steps aside while Use Nix is on.
+  box.hidden = !byId("homebrew") || useNix;
   $("#use-brew").checked = useBrew;
   box.classList.toggle("on", useBrew);
   const apps = picks.filter((a) => a.id !== "homebrew" && a.id !== "xcode-cli");
@@ -1195,6 +1232,18 @@ function syncCards() {
 // Copying uses command(), so the clipboard still gets one plain line.
 function renderCommand() {
   const t = (cls, text) => el("span", { className: `t-${cls}` }, text);
+  $("#term .term-title").textContent = useNix ? `getem.nix — ${NIX_FLAVORS[nixFlavor].text}` : "getem.sh — zsh";
+  if (useNix) {
+    // The gist of the file, wrapped like the command: what comes from nixpkgs, what from Homebrew. Copy takes the whole module.
+    const { fromNix, casks, left, os } = nixPlan();
+    const parts = [t("cmd", NIX_FLAVORS[nixFlavor].key), " = ", t("pipe", "with"), " pkgs; [", ...fromNix.flatMap((a) => [" ", t("id", a.nix[os])]), " ];"];
+    if (casks.length) parts.push(" ", t("cmd", "homebrew.casks"), " = [", ...casks.flatMap((a) => [" ", t("url", `"${a.brew}"`)]), " ];");
+    if (left.length) parts.push(" ", t("comment", `# ${nixFlavor === "nixos" ? "left out" : "via Get'Em"}: ${left.map((a) => a.id).join(" ")}`));
+    parts.push(" ", t("caret", " "));
+    $("#command").replaceChildren(...parts.map((p) => (typeof p === "string" ? document.createTextNode(p) : p)));
+    syncTerm();
+    return;
+  }
   const parts = [
     t("prompt", "$ "), t("cmd", "curl"), " ", t("flag", "-fsSL"), " ", t("url", `${SITE}/install.sh`), " ",
     t("pipe", "|"), " ", t("cmd", "bash"), " ", t("flag", "-s"), " ", t("flag", "--"),
@@ -1247,7 +1296,8 @@ function update() {
   renderFolder();
   renderPicked();
   renderCommand();
-  $("#admin-hint").hidden = !catalog.apps.some((a) => selected.has(a.id) && a.kind === "pkg");
+  syncDry();
+  $("#admin-hint").hidden = useNix || !catalog.apps.some((a) => selected.has(a.id) && a.kind === "pkg");
 }
 
 // A downloaded script carries its own catalog rows, so it works offline from this site.
@@ -1303,17 +1353,33 @@ const NIX_FLAVORS = {
   nixos: { text: "NixOS", key: "environment.systemPackages", file: "/etc/nixos/configuration.nix", run: "sudo nixos-rebuild switch" },
 };
 let nixFlavor = NIX_FLAVORS[store.get("nixFlavor")] ? store.get("nixFlavor") : "darwin";
+// Use Nix: the bar shows your list as Nix config instead of the install command. Unlike Install with Homebrew it is
+// remembered, since it's about how you manage your Mac rather than about this one list.
+let useNix = store.get("useNix") === "1";
 const nameList = (apps) => {
   const n = apps.map((a) => a.name);
   return n.length > 4 ? `${n.slice(0, 3).join(", ")} and ${n.length - 3} more` : n.length > 1 ? `${n.slice(0, -1).join(", ")} and ${n.at(-1)}` : n[0];
 };
-function nixConfig(flavor) {
-  const f = NIX_FLAVORS[flavor], linux = flavor === "nixos", os = linux ? "linux" : "darwin";
+// Where each picked app comes from under a flavor: nixpkgs, a Homebrew cask (nix-darwin only) or neither.
+function nixPlan(flavor = nixFlavor) {
+  const os = flavor === "nixos" ? "linux" : "darwin";
   // Homebrew itself stays out: nix-darwin's homebrew module expects it installed, and Nix replaces it everywhere else.
   const picks = catalog.apps.filter((a) => selected.has(a.id) && a.id !== "homebrew");
   const fromNix = picks.filter((a) => a.nix?.[os]);
   const casks = flavor === "darwin" ? picks.filter((a) => !fromNix.includes(a) && a.brew) : [];
   const left = picks.filter((a) => !fromNix.includes(a) && !casks.includes(a));
+  const via = (a) => (fromNix.includes(a) ? "nix" : casks.includes(a) ? "cask" : "left");
+  return { os, picks, fromNix, casks, left, via };
+}
+function nixMeta({ picks, fromNix, casks, left }, linux) {
+  const meta = [`${fromNix.length} of ${picks.length} from nixpkgs`];
+  if (casks.length) meta.push(`${casks.length} as Homebrew cask${casks.length === 1 ? "" : "s"}`);
+  if (left.length) meta.push(linux ? `${left.length} left out (Mac only)` : `${left.length} left for the Get'Em command`);
+  return meta.join(" · ");
+}
+function nixConfig(flavor) {
+  const f = NIX_FLAVORS[flavor], linux = flavor === "nixos";
+  const plan = nixPlan(flavor), { os, picks, fromNix, casks, left } = plan;
   const unfree = fromNix.filter((a) => a.nix.unfree);
   const rows = (apps, key) => {
     const w = Math.max(...apps.map((a) => key(a).length));
@@ -1338,36 +1404,55 @@ function nixConfig(flavor) {
     lines.push(`# Not in nixpkgs${casks.length || flavor === "darwin" ? " or Homebrew" : ""}: install ${left.length === 1 ? "this one" : "these"} with Get'Em instead.`,
       `#   curl -fsSL ${SITE}/install.sh | bash -s -- ${useBrew && flavor === "home" ? "--brew " : ""}${left.map((a) => a.id).join(" ")}`);
   }
-  const meta = [`${fromNix.length} of ${picks.length} from nixpkgs`];
-  if (casks.length) meta.push(`${casks.length} as Homebrew cask${casks.length === 1 ? "" : "s"}`);
-  if (left.length) meta.push(linux ? `${left.length} left out (Mac only)` : `${left.length} left for the Get'Em command`);
-  return { text: lines.join("\n") + "\n", meta: meta.join(" · ") };
+  return { text: lines.join("\n") + "\n", meta: nixMeta(plan, linux) };
+}
+
+function setNix(on, { quiet = false } = {}) {
+  useNix = on;
+  store.set("useNix", on ? "1" : "0");
+  track("use-nix", { on, flavor: nixFlavor });
+  // nix-darwin brings its own Homebrew casks, so the two switches don't mix.
+  if (on && useBrew) { useBrew = false; document.dispatchEvent(new Event("brewchange")); }
+  update();
+  if (!quiet) toast(on ? `Use Nix is on: copy your list as ${NIX_FLAVORS[nixFlavor].text} config instead of the install command` : "Use Nix is off: back to the install command");
+}
+function setNixFlavor(flavor) {
+  nixFlavor = flavor;
+  store.set("nixFlavor", flavor);
+  update();
+  if ($("#nix-view").hasAttribute("open")) showNix();
+}
+// The flavor switch: nix-darwin / Home Manager / NixOS, in the install list and in the full-file view.
+function nixSeg() {
+  return Object.entries(NIX_FLAVORS).map(([flavor, f]) => {
+    const b = el("button", { type: "button", className: `seg-b${flavor === nixFlavor ? " active" : ""}`, role: "tab", textContent: f.text, ariaSelected: String(flavor === nixFlavor) });
+    b.dataset.flavor = flavor;
+    b.addEventListener("click", () => setNixFlavor(flavor));
+    return b;
+  });
+}
+async function copyNix() {
+  track("copy-nix", { apps: selected.size, flavor: nixFlavor });
+  await navigator.clipboard.writeText(nixConfig(nixFlavor).text);
+}
+function downloadNix() {
+  track("download-nix", { flavor: nixFlavor });
+  const url = URL.createObjectURL(new Blob([nixConfig(nixFlavor).text], { type: "text/plain" }));
+  el("a", { href: url, download: "getem.nix" }).click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function showNix() {
   const { text, meta } = nixConfig(nixFlavor);
   $("#nix-meta").textContent = meta;
   $("#nix-code").replaceChildren(...text.replace(/\n$/, "").split("\n").map((line) => el("span", { className: /^\s*#/.test(line) ? "sh-line sh-comment" : "sh-line" }, line || " ")));
-  for (const b of $("#nix-seg").children) { const on = b.dataset.flavor === nixFlavor; b.classList.toggle("active", on); b.setAttribute("aria-selected", String(on)); }
+  $("#nix-seg").replaceChildren(...nixSeg());
   return text;
 }
 function openNix() {
   track("nix-config", { apps: selected.size, flavor: nixFlavor });
   const dlg = $("#nix-view");
-  if (!$("#nix-seg").children.length) {
-    $("#nix-seg").append(...Object.entries(NIX_FLAVORS).map(([flavor, f]) => {
-      const b = el("button", { type: "button", className: "seg-b", role: "tab", textContent: f.text });
-      b.dataset.flavor = flavor;
-      b.addEventListener("click", () => { nixFlavor = flavor; store.set("nixFlavor", flavor); showNix(); });
-      return b;
-    }));
-    $("#nix-copy").addEventListener("click", async () => { track("copy-nix", { flavor: nixFlavor }); await navigator.clipboard.writeText(showNix()); toast("Nix config copied"); });
-    $("#nix-download").addEventListener("click", () => {
-      track("download-nix", { flavor: nixFlavor });
-      const url = URL.createObjectURL(new Blob([showNix()], { type: "text/plain" }));
-      el("a", { href: url, download: "getem.nix" }).click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
-    });
-  }
+  $("#nix-copy").onclick = async () => { await copyNix(); toast("Nix config copied"); };
+  $("#nix-download").onclick = downloadNix;
   showNix();
   dlg.showModal();
   $("#nix-code").parentElement.scrollTop = 0;
@@ -1394,8 +1479,11 @@ async function copyAiPrompt() {
 }
 
 async function copyCommand() {
-  track("copy-command", { apps: selected.size, dryRun });
-  await navigator.clipboard.writeText(command());
+  if (useNix) await copyNix();
+  else {
+    track("copy-command", { apps: selected.size, dryRun });
+    await navigator.clipboard.writeText(command());
+  }
   const btn = $("#copy");
   const label = btn.querySelector(".btn-label");
   btn.classList.add("done");
@@ -1404,7 +1492,7 @@ async function copyCommand() {
   setTimeout(() => {
     btn.classList.remove("done");
     btn.querySelector(".lucide").replaceWith(lucide("copy", 16));
-    label.replaceChildren("Copy", el("span", { className: "long" }, " command"));
+    label.replaceChildren("Copy", el("span", { className: "long" }, useNix ? " config" : " command"));
   }, 1500);
 }
 
@@ -1575,7 +1663,6 @@ function setupFaqActions() {
     b.title = {
       app: `Add ${app?.name} to your install list`, profile: "Show this starter pack", "copy-update": "Copy this command",
       "copy-link": "Copy a link to your install list", "ask-ai": "Copy your command with a prompt for an AI assistant", download: "Download your install script", "dry-run": "Toggle --dry-run on your command",
-      nix: "Your install list as nix-darwin, Home Manager or NixOS config",
     }[act];
     b.addEventListener("click", async () => {
       if (b.getAttribute("aria-disabled") === "true") { toast("Pick some apps first"); return; }
@@ -1588,7 +1675,7 @@ function setupFaqActions() {
       else if (act === "copy-link") await copyLink();
       else if (act === "download") downloadScript();
       else if (act === "preview") previewScript();
-      else if (act === "nix") openNix();
+      else if (act === "nix") setNix(!useNix);
       else if (act === "ask-ai") copyAiPrompt();
       else if (act === "use-brew") setBrew(!useBrew);
       else if (act === "dry-run") { dryRun = !dryRun; syncDry(); renderCommand(); toast(dryRun ? "--dry-run is on: the command only shows what it would do" : "--dry-run is off"); }
@@ -1603,6 +1690,11 @@ function syncFaqActions() {
     b.firstChild.textContent = useBrew ? "Install with Homebrew is on (turn off)" : "Install with Homebrew";
     b.setAttribute("aria-pressed", String(useBrew));
     b.title = useBrew ? "Go back to downloading every app from its publisher" : "Install the apps in your list that Homebrew has with Homebrew";
+  }
+  for (const b of document.querySelectorAll('.faq-act[data-act="nix"]')) {
+    b.firstChild.textContent = useNix ? "Use Nix is on (turn off)" : "Use Nix";
+    b.setAttribute("aria-pressed", String(useNix));
+    b.title = useNix ? "Go back to the install command" : "Get your list as nix-darwin, Home Manager or NixOS config";
   }
   for (const b of document.querySelectorAll(".faq-act[data-needs-list]")) b.setAttribute("aria-disabled", String(!has));
 }
@@ -1645,6 +1737,7 @@ async function main() {
   renderSideToggle();
   $("#update-cmd").textContent = `curl -fsSL ${SITE}/install.sh | bash -s -- --update`;
   $("#use-brew").addEventListener("change", (e) => setBrew(e.target.checked));
+  $("#use-nix").addEventListener("change", (e) => setNix(e.target.checked));
   $("#generated").textContent = `Catalog updated ${new Date(catalog.generated).toLocaleDateString()}.`;
   // One answer open at a time (also for browsers without <details name>).
   for (const d of document.querySelectorAll(".faq-item")) {
@@ -1695,14 +1788,24 @@ async function main() {
     e.stopPropagation();
     const btn = $("#get-more");
     if (openMenu?.btn === btn) { closeMenu(); return; }
+    if (useNix) {
+      openDropdown(btn, [
+        { value: "copy", text: "Copy config", icon: "copy", hint: `Your list as ${NIX_FLAVORS[nixFlavor].text} config` },
+        { value: "download", text: "Download getem.nix", icon: "download", hint: "The same file, ready to add to your imports" },
+        { value: "preview", text: "See the whole file", icon: "file-code", hint: "Read it, or switch between nix-darwin, Home Manager and NixOS" },
+        { value: "link", text: "Copy link", icon: "link", hint: "A short link that brings back exactly this list" },
+        { value: "off", text: "Back to the install command", icon: "terminal", hint: "Turn Use Nix off" },
+      ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "download") downloadNix(); else if (v === "preview") openNix(); else if (v === "link") copyLink(); else setNix(false); });
+      return;
+    }
     openDropdown(btn, [
       { value: "copy", text: "Copy command", icon: "copy", hint: "Paste it into Terminal" },
       { value: "link", text: "Copy link", icon: "link", hint: "A short link that brings back exactly this list, handy for a teammate's new Mac" },
       { value: "download", text: "Download .sh", icon: "download", hint: "A script with your apps built in; works offline" },
       { value: "preview", text: "Preview script", icon: "file-code", hint: "Read the exact script for your list before you run it" },
-      { value: "nix", text: "Nix config", icon: "snowflake", hint: "Your list as a module for nix-darwin, Home Manager or NixOS, to declare instead of install" },
+      { value: "nix", text: "Use Nix instead", icon: "snowflake", hint: "Get your list as nix-darwin, Home Manager or NixOS config, to declare instead of install" },
       { value: "ask-ai", text: "Not feeling safe? Ask your AI", icon: "bot", hint: "Copies the command with a prompt: paste it into ChatGPT, Claude or any assistant and let it check it for you" },
-    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "link") copyLink(); else if (v === "download") downloadScript(); else if (v === "preview") previewScript(); else if (v === "nix") openNix(); else copyAiPrompt(); });
+    ], null, (v) => { if (v === "copy") copyCommand(); else if (v === "link") copyLink(); else if (v === "download") downloadScript(); else if (v === "preview") previewScript(); else if (v === "nix") setNix(true); else copyAiPrompt(); });
   });
   // Close on a backdrop click only when the press also started on the backdrop. A click whose press and release land
   // on different elements is delivered to their common parent (the dialog itself), so without this a press on

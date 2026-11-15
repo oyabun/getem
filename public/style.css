@@ -1055,6 +1055,10 @@ body[data-sidebar="rail"] .side-subs, body[data-sidebar="rail"] .side-expand { d
 
 /* Nix config: the preview view with a nix-darwin / Home Manager / NixOS switch above the code. */
 .nix-seg { align-self: flex-start; }
+.nix-flavors { margin-top: 0.55rem; }
+.nix-flavors[hidden] { display: none; }
+.row-via.fixed { cursor: default; }
+.t-comment { color: #8b949e; }
 .nix-seg .seg-b.active { cursor: default; }
 
 /* "Already use Homebrew?" in an app's details: folded by default, opened once Homebrew is in the list. */
