@@ -1187,8 +1187,10 @@ function syncNixSwitch() {
   box.classList.toggle("on", useNix);
   $("#nix-flavors").hidden = !useNix;
   if (useNix) $("#nix-flavors").replaceChildren(...nixSeg());
+  // Home Manager can't install casks: say when nix-darwin would cover more of the list with them.
+  const moreOnDarwin = nixFlavor === "home" ? nixPlan("darwin").casks.length : 0;
   $("#nix-note").textContent = useNix
-    ? `${nixMeta(nixPlan(), nixFlavor === "nixos")}.`
+    ? `${nixMeta(nixPlan(), nixFlavor === "nixos")}.${moreOnDarwin ? ` With nix-darwin, Homebrew casks would cover ${moreOnDarwin} of those too.` : ""}`
     : "Off: you get the install command. Turn it on to get your list as nix-darwin, Home Manager or NixOS config instead.";
 }
 

@@ -1,4 +1,4 @@
-# Getem.sh catalog 2026-11-15T21:08:29.720Z
+# Getem.sh catalog 2026-11-15T21:13:14.379Z
 ollama-app	app	Ollama.app	Ollama.app	0.40.16	14	https://github.com/ollama/ollama/releases/download/v0.40.16/Ollama-darwin.zip	4715531bc49d21337381b193765041e535a9fb4716f84e5d6eccc3a9af1b5303	https://github.com/ollama/ollama/releases/download/v0.40.16/Ollama-darwin.zip	4715531bc49d21337381b193765041e535a9fb4716f84e5d6eccc3a9af1b5303	-	-	Ollama	-	ollama-app
 localsend	app	LocalSend.app	LocalSend.app	1.18.2	-	https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2.dmg	126860d56f6f49b11845f601aac51de27a49b16d2b48102415da91e0e37e5155	https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2.dmg	126860d56f6f49b11845f601aac51de27a49b16d2b48102415da91e0e37e5155	-	-	LocalSend	-	localsend
 zed	app	Zed.app	Zed.app	1.28.1	12	https://github.com/zed-industries/zed/releases/download/v1.28.1/Zed-aarch64.dmg	0ca1a4f1e89e3825f49af26fa31afcf0cc3e50da1f4ba9889f0735f5f0beffe4	https://github.com/zed-industries/zed/releases/download/v1.28.1/Zed-x86_64.dmg	e6e1a385f7289d667f730f11c948161ca462fe2679488b0d72848173638d6749	-	-	Zed	-	zed
