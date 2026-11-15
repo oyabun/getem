@@ -12,7 +12,7 @@ import { brotliDecompressSync } from "node:zlib";
 
 const CHANNEL = "nixos-26.05";
 // The systems a package must build for: Apple Silicon Macs, and the usual NixOS PC.
-const SYSTEM = { darwin: "aarch64-darwin", linux: "x86_64-linux" };
+const SYSTEM = { darwin: "aarch64-darwin", linux: "x86_64-linux", intel: "x86_64-darwin" };
 const root = new URL("..", import.meta.url);
 const path = (p) => new URL(p, root);
 
@@ -38,7 +38,8 @@ async function main() {
   // Platforms are system names or patterns ({ kernel: { families: { darwin } } }); a package that lists none builds
   // everywhere, as in nixpkgs itself (the JetBrains IDEs). This list is evaluated on Linux, so a package broken only on
   // macOS still looks fine here: verify() below asks Nix itself.
-  const fits = (p, os) => (typeof p === "string" ? p === SYSTEM[os] : Boolean(p?.kernel?.families?.[os] || p?.kernel?.name === os));
+  const kernel = (os) => (os === "intel" ? "darwin" : os);
+  const fits = (p, os) => (typeof p === "string" ? p === SYSTEM[os] : Boolean(p?.kernel?.families?.[kernel(os)] || p?.kernel?.name === kernel(os)));
   const builds = (attr, os) => {
     const m = pkgs[attr].meta || {};
     if (m.broken || m.knownVulnerabilities?.length || (m.badPlatforms || []).some((p) => fits(p, os))) return false;
@@ -80,6 +81,8 @@ async function main() {
     if (!entry.darwin && !entry.linux) continue;
     const unfree = (a) => a && [].concat(pkgs[a].meta?.license || []).some((l) => l.free === false);
     out[app.id] = { ...entry, unfree: Boolean(unfree(entry.darwin) || unfree(entry.linux)) };
+    // The check below is for Apple Silicon; flag the macOS packages that don't build for Intel Macs at all.
+    if (entry.darwin && !builds(entry.darwin, "intel")) out[app.id].appleSiliconOnly = true;
     matched++;
   }
   for (const miss of await verify(out)) {

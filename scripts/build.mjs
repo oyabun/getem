@@ -407,7 +407,7 @@ async function main() {
 
   await mkdir(path("public"), { recursive: true });
   const generated = new Date().toISOString();
-  await writeFile(path("public/catalog.json"), JSON.stringify({ generated, order, categories, groups, families, profiles, apps: unique }));
+  await writeFile(path("public/catalog.json"), JSON.stringify({ generated, nixChannel: nixData.channel || null, order, categories, groups, families, profiles, apps: unique }));
 
   // id kind src dest version min_macos url_arm sha_arm url_intel sha_intel user_agent referer name bin cask
   // (cask: the Homebrew cask token, used when the list includes Homebrew; new columns only ever go at the end)

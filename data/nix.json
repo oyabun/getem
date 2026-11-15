@@ -63,7 +63,8 @@
   "brave-browser": {
    "darwin": "brave",
    "linux": "brave",
-   "unfree": false
+   "unfree": false,
+   "appleSiliconOnly": true
   },
   "bruno": {
    "darwin": "bruno",
@@ -324,7 +325,8 @@
   "lm-studio": {
    "darwin": "lmstudio",
    "linux": "lmstudio",
-   "unfree": true
+   "unfree": true,
+   "appleSiliconOnly": true
   },
   "localsend": {
    "darwin": "localsend",

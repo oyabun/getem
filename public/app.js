@@ -1350,7 +1350,7 @@ async function previewScript() {
 // for macOS and one for Linux); on nix-darwin the rest
 // that Homebrew has become homebrew.casks, and whatever is left is handed back to the Get'Em command.
 const NIX_FLAVORS = {
-  darwin: { text: "nix-darwin", key: "environment.systemPackages", file: "your nix-darwin configuration", run: "darwin-rebuild switch" },
+  darwin: { text: "nix-darwin", key: "environment.systemPackages", file: "your nix-darwin configuration", run: "sudo darwin-rebuild switch" },
   home: { text: "Home Manager", key: "home.packages", file: "your Home Manager configuration", run: "home-manager switch" },
   nixos: { text: "NixOS", key: "environment.systemPackages", file: "/etc/nixos/configuration.nix", run: "sudo nixos-rebuild switch" },
 };
@@ -1383,22 +1383,26 @@ function nixConfig(flavor) {
   const f = NIX_FLAVORS[flavor], linux = flavor === "nixos";
   const plan = nixPlan(flavor), { os, picks, fromNix, casks, left } = plan;
   const unfree = fromNix.filter((a) => a.nix.unfree);
-  const rows = (apps, key) => {
+  // Each row names the app, and what it needs that the config can't check on your Mac.
+  const rows = (apps, key, note = () => null) => {
     const w = Math.max(...apps.map((a) => key(a).length));
-    return apps.map((a) => `    ${key(a).padEnd(w)}  # ${a.name}`);
+    return apps.map((a) => `    ${key(a).padEnd(w)}  # ${a.name}${note(a) ? ` (${note(a)})` : ""}`);
   };
+  const channel = catalog.nixChannel?.replace(/^nixos-/, "") || "the stable channel";
   const lines = [
     `# Your Get'Em! list for ${f.text}: ${location.origin}${location.pathname}#s=${encodeSelection()}`,
-    `# Save it as getem.nix next to ${f.file}, add ./getem.nix to its imports, then run: ${f.run}`,
+    `# Save it as getem.nix next to ${f.file} and add ./getem.nix to its imports`,
+    `# (in a flake: to the modules list, and git add getem.nix), then run: ${f.run}${flavor === "home" ? "" : " (add --flake .#<host> for a flake)"}`,
+    `# Package names are checked against nixpkgs ${channel}${linux ? "" : " on Apple Silicon"}; on nixpkgs-unstable a few may be renamed.`,
     "{ pkgs, ... }:",
     "{",
   ];
   if (unfree.length) lines.push(`  nixpkgs.config.allowUnfree = true;  # ${nameList(unfree)} ${unfree.length === 1 ? "isn't" : "aren't"} open source`, "");
-  if (fromNix.length) lines.push(`  ${f.key} = with pkgs; [`, ...rows(fromNix, (a) => a.nix[os]), "  ];");
+  if (fromNix.length) lines.push(`  ${f.key} = with pkgs; [`, ...rows(fromNix, (a) => a.nix[os], (a) => (!linux && a.nix.appleSiliconOnly ? "Apple Silicon only" : null)), "  ];");
   else lines.push(`  # None of your apps are in nixpkgs for ${linux ? "Linux" : "macOS"}.`);
   if (casks.length) {
     lines.push("", "  # Not in nixpkgs for macOS: nix-darwin installs these with Homebrew (Homebrew itself must be installed).",
-      "  homebrew.enable = true;", "  homebrew.casks = [", ...rows(casks, (a) => `"${a.brew}"`), "  ];");
+      "  homebrew.enable = true;", "  homebrew.casks = [", ...rows(casks, (a) => `"${a.brew}"`, (a) => (a.minMacos ? `macOS ${a.minMacos} or later` : null)), "  ];");
   }
   lines.push("}");
   if (left.length && linux) lines.push(`# Left out, with no Linux package in nixpkgs: ${left.map((a) => a.name).join(", ")}.`);
