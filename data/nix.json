@@ -228,10 +228,6 @@
    "linux": "heynote",
    "unfree": true
   },
-  "hiddenbar": {
-   "darwin": "hidden-bar",
-   "unfree": false
-  },
   "iina": {
    "darwin": "iina",
    "unfree": false

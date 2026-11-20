@@ -43,6 +43,7 @@ HapticKey (haptickey): deprecated in Homebrew
 Helix: not in Homebrew Cask
 Hello HTTP: not in Homebrew Cask
 HiPixel: not in Homebrew Cask
+Hidden Bar: not in Homebrew Cask
 Hiddify: not in Homebrew Cask
 Hoppscotch: not in Homebrew Cask
 HostsX (hostsx): deprecated in Homebrew
@@ -56,7 +57,6 @@ Kaset: not in Homebrew Cask
 Koodo Reader (koodo-reader): deprecated in Homebrew
 LMMS (lmms): deprecated in Homebrew
 Lantern: not in Homebrew Cask
-Lap: not in Homebrew Cask
 LeafView: not in Homebrew Cask
 LinkLiar (linkliar): deprecated in Homebrew
 LobeHub: not in Homebrew Cask
@@ -72,6 +72,7 @@ NextAI Translator: not in Homebrew Cask
 NextChat: not in Homebrew Cask
 Nuclear (nuclear): deprecated in Homebrew
 Omnivore: not in Homebrew Cask
+OpenClaw: no checksum for OpenClaw-*-arm64.dmg in openclaw/openclaw v2026.11.6
 OpenSCAD (openscad): deprecated in Homebrew
 PDF Archiver: not in Homebrew Cask
 PasteBar: not in Homebrew Cask
@@ -97,7 +98,7 @@ Sidekick: not in Homebrew Cask
 SketchyBar: not in Homebrew Cask
 SlowQuitApps: not in Homebrew Cask
 Sniffnet: not in Homebrew Cask
-Soundflower (soundflower): deprecated in Homebrew
+Soundflower: not in Homebrew Cask
 Steam (steam): nested container
 Stringz: not in Homebrew Cask
 Strongbox: not in Homebrew Cask

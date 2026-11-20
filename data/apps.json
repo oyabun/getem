@@ -952,7 +952,7 @@
    "name": "ImageGlass",
    "repo": "d2phap/ImageGlass",
    "description": "Fast image viewer for 90+ formats including WebP, AVIF and HEIC",
-   "category": "images",
+   "category": "design",
    "homepage": "https://imageglass.org",
    "stars": 14788,
    "slug": "imageglass"
@@ -1637,7 +1637,7 @@
    "name": "Lap",
    "repo": "julyx10/lap",
    "description": "Offline-first photo manager for large local libraries",
-   "category": "images",
+   "category": "design",
    "homepage": "https://julyx10.github.io/lap/",
    "stars": 4166,
    "slug": "lap"
@@ -1694,7 +1694,7 @@
    "name": "uPic",
    "repo": "gee1k/uPic",
    "description": "Native macOS image host client",
-   "category": "images",
+   "category": "design",
    "homepage": "https://blog.svend.cc/upic",
    "stars": 3724,
    "slug": "upic"
@@ -2156,7 +2156,7 @@
    "name": "HiPixel",
    "repo": "okooo5km/HiPixel",
    "description": "AI image upscaling powered by Upscayl models",
-   "category": "images",
+   "category": "design",
    "homepage": "https://hipixel.5km.tech",
    "stars": 1169,
    "slug": "hipixel"

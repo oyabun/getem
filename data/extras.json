@@ -1736,5 +1736,21 @@
     "category": "video",
     "homepage": "https://genmotion.dev/",
     "paid": true
+  },
+  {
+    "github": {
+      "repo": "FrigadeHQ/yogurt",
+      "asset": "Yogurt-mac-arm64.dmg",
+      "app": "Yogurt.app",
+      "appleSiliconOnly": true
+    },
+    "id": "yogurt",
+    "name": "Yogurt",
+    "description": "Private AI meeting notes: records your mic and system audio, transcribes and summarises on your Mac, with no bot in the call. Open source, an alternative to Granola",
+    "category": "ai",
+    "homepage": "https://www.yogurt.so/",
+    "repo": "FrigadeHQ/yogurt",
+    "icon": "https://github.com/FrigadeHQ.png?size=256",
+    "minMacos": "14.4"
   }
 ]
